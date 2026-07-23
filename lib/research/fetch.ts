@@ -69,11 +69,10 @@ export async function fetchBackfillCandidates(
   days = 180,
   focusCategories: ResearchCategory[] = [],
 ): Promise<ResearchSource[]> {
-  const sources = [
+  const primarySources = [
     fetchOpenAlex,
     fetchEuropePmc,
     fetchCrossref,
-    fetchSemanticScholar,
   ] as const;
   const queries = [
     "psychology",
@@ -81,12 +80,23 @@ export async function fetchBackfillCandidates(
   ];
   const batches: ResearchSource[][] = [];
   for (const query of queries) {
-    const queryBatches = await Promise.all(
-      sources.map((fetchSource) => fetchSource(now, days, query)),
+    const primaryBatches = await Promise.all(
+      primarySources.map((fetchSource) => fetchSource(now, days, query)),
     );
-    batches.push(...queryBatches);
+    const eligiblePrimary = primaryBatches.flatMap((items) =>
+      items.filter(isEligibleCandidate),
+    );
+    if (eligiblePrimary.length > 0) {
+      batches.push(eligiblePrimary);
+      continue;
+    }
+    batches.push(
+      (await fetchSemanticScholar(now, days, query)).filter(
+        isEligibleCandidate,
+      ),
+    );
   }
-  return batches.flatMap((items) => items.filter(isEligibleCandidate));
+  return batches.flat();
 }
 export async function fetchOpenAlex(now: Date, days: number, search = "psychology"): Promise<ResearchSource[]> {
   const key = process.env.OPENALEX_API_KEY;
