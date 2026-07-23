@@ -1,7 +1,7 @@
 import { describe, expect, it } from "vitest";
 import { dailyResearchSchema } from "@/lib/schemas/research";
 import { deduplicatePapers } from "@/lib/research/deduplicate";
-import { isPrimarilyEnglish, isWithinPublicationWindow, normalizeDoi, validHttpsUrl } from "@/lib/research/normalize";
+import { inferStudyType, isPrimarilyEnglish, isWithinPublicationWindow, normalizeDoi, validHttpsUrl } from "@/lib/research/normalize";
 import { rankPapers } from "@/lib/research/rank";
 import { ensureGrounded } from "@/lib/research/summarizer";
 import type { ResearchSource } from "@/lib/research/types";
@@ -18,6 +18,9 @@ describe("research selection rules", () => {
     expect(isPrimarilyEnglish("Memory and attention", "en")).toBe(true);
     expect(isPrimarilyEnglish("記憶與注意力", "zh")).toBe(false);
     expect(normalizeDoi("https://doi.org/10.1177/ABC.1")).toBe("10.1177/abc.1");
+  });
+  it("does not misclassify a systematic review when meta-analysis was precluded", () => {
+    expect(inferStudyType("A PRISMA Systematic Review of Hyperscanning in Autism", "Heterogeneity precluded meta-analysis.")).toBe("systematic_review");
   });
   it("deduplicates by DOI and normalized title", () => {
     expect(deduplicatePapers([source(), source({ id: "w2", doi: "https://doi.org/10.1000/TEST" })])).toHaveLength(1);

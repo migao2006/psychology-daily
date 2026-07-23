@@ -24,8 +24,11 @@ export function isPrimarilyEnglish(title: string, language?: string): boolean {
   return letters.length > 0 && letters.filter((character) => /[A-Za-z]/.test(character)).length / letters.length >= 0.85;
 }
 export function inferStudyType(title: string, abstract: string): StudyType {
+  const titleText = title.toLowerCase();
   const text = `${title} ${abstract}`.toLowerCase();
-  if (/meta-analysis|meta analysis/.test(text)) return "meta_analysis";
+  if (/meta-analysis|meta analysis/.test(titleText)) return "meta_analysis";
+  if (/systematic review/.test(titleText)) return "systematic_review";
+  if (/(?:conducted|performed|undertook|random-effects|fixed-effects|pooled).{0,32}(?:meta-analysis|meta analysis)|meta-analytic/.test(text)) return "meta_analysis";
   if (/systematic review/.test(text)) return "systematic_review";
   if (/registered report/.test(text)) return "registered_report";
   if (/randomi[sz]ed|random allocation|controlled trial/.test(text)) return "randomized_trial";
