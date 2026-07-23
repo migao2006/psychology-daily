@@ -1,0 +1,717 @@
+[
+  {
+    "id": "lesson-01",
+    "slug": "what-is-psychology",
+    "sequence": 1,
+    "title": "心理學是什麼",
+    "category": "心理學基礎",
+    "difficulty": 1,
+    "estimatedMinutes": 6,
+    "summary": "心理學以系統化方法研究行為與心智歷程，不只是分析個性或提供諮商。",
+    "definition": "心理學（psychology）是一門以科學方法研究行為、思考、情緒與人際互動的學科。",
+    "explanation": "心理學家把可觀察的行為與較難直接觀察的心智歷程轉成可以測量的問題，再用研究資料修正解釋。領域橫跨腦與認知、發展、社會互動、人格、健康及臨床工作。心理學知識不是靠直覺或單一故事定案，而是看多項研究能否反覆支持同一個解釋。",
+    "dailyExample": "你想知道睡前滑手機是否影響隔天專注力。心理學研究會先定義「滑多久」與「專注力怎麼測」，比較不同人或不同情境，再評估其他可能因素，而不是只憑某一天的感覺下結論。",
+    "commonMisconceptions": [
+      "心理學家能讀心；實際上研究者只能透過可觀察資料與經過驗證的測量作推論。",
+      "心理學等於心理治療；治療只是應用領域之一，心理學也包含大量基礎與方法研究。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "心理科學使用觀察、測量、比較與可檢驗假設來建立知識。",
+        "evidenceLevel": "established",
+        "limitations": "不同分支採用的方法與能回答的問題不同，沒有單一方法適合所有心理現象。",
+        "sourceUrl": "https://openstax.org/books/psychology-2e/pages/1-introduction"
+      }
+    ],
+    "applications": [
+      "遇到心理學主張時，先問它如何測量、與誰比較、是否有其他解釋。",
+      "把日常直覺視為待檢驗的假設，而不是已證實的事實。"
+    ],
+    "quiz": [
+      {
+        "id": "l01-q1",
+        "conceptId": "psychology-definition",
+        "prompt": "下列哪一項最符合現代心理學？",
+        "options": ["只研究心理疾病", "以科學方法研究行為與心智歷程", "只依賴個人經驗", "能直接讀取想法"],
+        "correctIndex": 1,
+        "explanation": "心理學涵蓋正常與臨床現象，核心是用可檢驗的方法研究行為與心智歷程。"
+      },
+      {
+        "id": "l01-q2",
+        "conceptId": "evidence",
+        "prompt": "朋友說「我身邊三個人都這樣，所以人人都這樣」，最適合的回應是？",
+        "options": ["個人經驗就是充分證據", "需要更有系統、更多元的資料", "只要說得有自信就可信", "心理現象無法研究"],
+        "correctIndex": 1,
+        "explanation": "少數身邊案例可能有選擇偏差，不能代表整體。"
+      },
+      {
+        "id": "l01-q3",
+        "conceptId": "scope",
+        "prompt": "哪一項也是心理學的研究範圍？",
+        "options": ["注意力如何受干擾", "星座必然決定人格", "用眼神判斷所有謊言", "不需資料的人格判讀"],
+        "correctIndex": 0,
+        "explanation": "注意力可被操作與測量；其餘選項把未受支持的說法當成確定事實。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Psychology 2e, Chapter 1: Introduction",
+        "authors": ["Rose M. Spielman", "William J. Jenkins", "Marilyn D. Lovett"],
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/1-introduction",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-02",
+    "slug": "scientific-research-in-psychology",
+    "sequence": 2,
+    "title": "心理學如何進行科學研究",
+    "category": "研究方法與統計思維",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "研究從明確問題、可測量定義與合適設計開始，結果還要接受同儕檢視與再現。",
+    "definition": "科學研究是用透明、系統化且可檢驗的程序蒐集證據，評估某個解釋是否站得住腳。",
+    "explanation": "研究者先把抽象概念做成操作型定義，例如用反應時間測量注意表現。接著依問題選擇觀察、問卷、實驗或其他設計，事先決定樣本、分析與排除規則能降低事後挑選結果的空間。完成後，資料與推論還要接受限制檢查；單一研究通常只回答一小部分問題。",
+    "dailyExample": "要研究「音樂是否幫助讀書」，需先說清楚音樂種類、音量、學習材料與成效指標，還要考慮參與者原本的偏好，而不是只問一句「你覺得有用嗎？」",
+    "commonMisconceptions": [
+      "研究發表就代表永遠正確；發表是公開檢驗的開始，不是終點。",
+      "數字一定客觀；測量方式、缺失資料與分析選擇仍會影響結果。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "透明報告、預先註冊與資料共享可讓研究更容易被檢查與再現。",
+        "evidenceLevel": "supported",
+        "limitations": "並非所有資料都能公開，預先註冊也不能自動保證設計品質。",
+        "sourceUrl": "https://www.cos.io/initiatives/prereg"
+      }
+    ],
+    "applications": [
+      "閱讀報導時找出研究問題、測量方式、比較對象與主要限制。",
+      "把「有統計顯著」與「效果對生活是否重要」分開判斷。"
+    ],
+    "quiz": [
+      {
+        "id": "l02-q1",
+        "conceptId": "operationalization",
+        "prompt": "操作型定義的主要功能是什麼？",
+        "options": ["讓概念可以被測量", "讓結果保證正確", "取代研究問題", "避免所有偏差"],
+        "correctIndex": 0,
+        "explanation": "操作型定義把抽象概念轉為具體可觀察或可測量的指標。"
+      },
+      {
+        "id": "l02-q2",
+        "conceptId": "study-design",
+        "prompt": "研究設計應優先依據什麼選擇？",
+        "options": ["最吸睛的方法", "研究問題與倫理限制", "研究者最喜歡的答案", "社群按讚數"],
+        "correctIndex": 1,
+        "explanation": "不同問題需要不同設計，並須符合研究倫理。"
+      },
+      {
+        "id": "l02-q3",
+        "conceptId": "scientific-cycle",
+        "prompt": "一篇研究完成後，最合理的看法是？",
+        "options": ["結論再也不能修改", "仍需與其他證據及再現結果一起評估", "只看標題即可", "有數字就沒有不確定性"],
+        "correctIndex": 1,
+        "explanation": "科學知識會隨累積證據修正，需看完整方法、限制及其他研究。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Psychology 2e, Chapter 2: Psychological Research",
+        "authors": ["Rose M. Spielman", "William J. Jenkins", "Marilyn D. Lovett"],
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/2-introduction",
+        "source": "OpenStax"
+      },
+      {
+        "title": "Preregistration",
+        "url": "https://www.cos.io/initiatives/prereg",
+        "source": "Center for Open Science"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-03",
+    "slug": "correlation-is-not-causation",
+    "sequence": 3,
+    "title": "相關不等於因果",
+    "category": "研究方法與統計思維",
+    "difficulty": 1,
+    "estimatedMinutes": 6,
+    "summary": "兩個變項一起改變，不代表其中一個造成另一個。",
+    "definition": "相關（correlation）描述變項之間共同變化的程度；因果（causation）則主張改變一個因素會導致另一個結果改變。",
+    "explanation": "看到相關時至少要考慮三種可能：A影響B、B影響A，或第三個因素同時影響A與B。相關研究對發現模式與預測很有價值，尤其在無法或不宜實驗操弄時，但因果推論需要更強的設計與假設。即使相關很高，也不能只靠數值決定方向。",
+    "dailyExample": "夏天冰品銷量和曬傷人數同時上升，不表示吃冰造成曬傷；氣溫和戶外活動可能是共同因素。",
+    "commonMisconceptions": [
+      "相關係數接近1就證明因果；它只表示線性關聯強。",
+      "相關不等於因果所以毫無用處；相關仍能描述、預測並提出後續研究問題。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "觀察資料的因果解釋需要處理混淆、時間順序與替代解釋。",
+        "evidenceLevel": "established",
+        "limitations": "進階因果推論方法可以增強論證，但仍依賴無法完全驗證的假設。",
+        "sourceUrl": "https://openstax.org/books/introductory-statistics-2e/pages/12-1-linear-equations"
+      }
+    ],
+    "applications": [
+      "新聞寫「X與Y相關」時，把「造成」先改成「同時出現」再閱讀。",
+      "列出可能的反向因果與至少一個共同原因。"
+    ],
+    "quiz": [
+      {
+        "id": "l03-q1",
+        "conceptId": "third-variable",
+        "prompt": "冰品銷量與曬傷人數同時上升，最合理的第三變項是？",
+        "options": ["氣溫與戶外活動", "冰品顏色", "研究標題", "相關係數本身"],
+        "correctIndex": 0,
+        "explanation": "高溫可能同時提高買冰與戶外曝曬的機會。"
+      },
+      {
+        "id": "l03-q2",
+        "conceptId": "correlation",
+        "prompt": "相關研究能可靠告訴我們什麼？",
+        "options": ["兩變項一起變化的模式", "唯一因果方向", "所有第三變項都已排除", "每個人都會符合平均模式"],
+        "correctIndex": 0,
+        "explanation": "相關描述共同變化，無法單獨確立方向與因果。"
+      },
+      {
+        "id": "l03-q3",
+        "conceptId": "causal-language",
+        "prompt": "研究只測量社群使用時間與孤獨感，哪個標題較恰當？",
+        "options": ["社群使用造成孤獨", "社群使用時間與孤獨感呈現關聯", "刪除社群必然治療孤獨", "孤獨完全由社群決定"],
+        "correctIndex": 1,
+        "explanation": "若沒有足以支持因果的設計，應使用關聯語言。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Psychology 2e: Correlational Research",
+        "authors": ["Rose M. Spielman", "William J. Jenkins", "Marilyn D. Lovett"],
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/2-2-approaches-to-research",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-04",
+    "slug": "experimental-control-and-random-assignment",
+    "sequence": 4,
+    "title": "實驗組、控制組與隨機分派",
+    "category": "研究方法與統計思維",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "好的實驗用比較與隨機分派降低組間原有差異，讓因果推論更有根據。",
+    "definition": "實驗組接受研究操弄，控制組提供比較基準；隨機分派讓每位參與者以已知機率進入不同條件。",
+    "explanation": "研究者操弄自變項並測量依變項，再看組別差異是否符合預測。隨機分派不是讓樣本代表全人口，而是讓未測量差異較不容易系統性集中在某一組。盲法、安慰劑、標準化程序與事先分析計畫可以進一步減少期待與選擇性報告。",
+    "dailyExample": "測試新記憶練習時，把參與者隨機分到新練習或一般複習，再用相同測驗比較。若讓自認記憶好的人自行選新練習，組別起點可能已不同。",
+    "commonMisconceptions": [
+      "隨機分派等於隨機抽樣；前者改善組間可比性，後者關乎樣本代表性。",
+      "控制組一定什麼都不做；它可以接受既有方法、安慰處理或不同劑量。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "在可行且合乎倫理時，隨機對照設計能強化平均因果效果的估計。",
+        "evidenceLevel": "established",
+        "limitations": "不遵從分派、失訪、測量偏差與特定樣本仍會限制解釋與推廣。",
+        "sourceUrl": "https://openstax.org/books/psychology-2e/pages/2-2-approaches-to-research"
+      }
+    ],
+    "applications": [
+      "看到實驗研究時確認分派方式，而不是只看有沒有兩組。",
+      "分開判斷內部效度（因果）與外部效度（能否推廣）。"
+    ],
+    "quiz": [
+      {
+        "id": "l04-q1",
+        "conceptId": "random-assignment",
+        "prompt": "隨機分派主要改善什麼？",
+        "options": ["組別起點的可比性", "樣本必然代表全國", "受試者一定不知道組別", "研究一定無誤差"],
+        "correctIndex": 0,
+        "explanation": "隨機分派降低既有差異集中於特定組別的機會。"
+      },
+      {
+        "id": "l04-q2",
+        "conceptId": "control-group",
+        "prompt": "控制組的核心用途是？",
+        "options": ["提供比較基準", "保證結果顯著", "排除所有倫理問題", "只收沒有反應的人"],
+        "correctIndex": 0,
+        "explanation": "沒有合適比較，就難判斷變化是否來自操弄。"
+      },
+      {
+        "id": "l04-q3",
+        "conceptId": "sampling-vs-assignment",
+        "prompt": "哪個做法較直接關係到樣本能否代表母體？",
+        "options": ["隨機抽樣", "隨機分派", "增加題目字數", "只報平均數"],
+        "correctIndex": 0,
+        "explanation": "隨機抽樣處理從母體如何選人；隨機分派處理樣本內如何分組。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Psychology 2e: Experimental Research",
+        "authors": ["Rose M. Spielman", "William J. Jenkins", "Marilyn D. Lovett"],
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/2-2-approaches-to-research",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-05",
+    "slug": "samples-and-representativeness",
+    "sequence": 5,
+    "title": "樣本與代表性",
+    "category": "研究方法與統計思維",
+    "difficulty": 1,
+    "estimatedMinutes": 6,
+    "summary": "樣本大小影響精確度，抽樣方式與涵蓋族群則影響能否推廣。",
+    "definition": "樣本是實際被研究的一群人；代表性是樣本在與問題相關的特徵上，能否合理反映目標母體。",
+    "explanation": "大樣本通常讓估計更穩定，但不會自動修正系統性偏差。若問卷只在單一平台、單一學校或自願者中招募，即使人數很多也可能漏掉重要族群。評估研究時要先問「研究想談的是誰」，再比較「實際研究的是誰」。",
+    "dailyExample": "用健身房會員調查全市運動習慣，即使回收一萬份，也可能高估一般人的運動量，因為抽樣框本身偏向常運動者。",
+    "commonMisconceptions": [
+      "樣本越大就一定代表所有人；系統性抽樣偏差不會因人數增加而消失。",
+      "研究不能代表全世界就沒有價值；它仍可能適用於明確界定的族群並提供可再檢驗線索。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "心理與行為研究長期大量依賴較富裕、受教育及工業化社會的樣本。",
+        "evidenceLevel": "supported",
+        "limitations": "不同研究領域與年代的樣本多樣性不同，不能把概括批評套到每一篇研究。",
+        "sourceUrl": "https://doi.org/10.1017/S0140525X0999152X"
+      }
+    ],
+    "applications": [
+      "閱讀研究時記錄年齡、地點、招募方式、排除條件與流失情形。",
+      "把結論改寫成「對這個樣本而言」，再判斷可推廣多遠。"
+    ],
+    "quiz": [
+      {
+        "id": "l05-q1",
+        "conceptId": "large-sample",
+        "prompt": "一萬名健身房會員能代表全市居民嗎？",
+        "options": ["一定可以，因為樣本大", "不一定，招募來源可能偏向常運動者", "只要平均數漂亮就可以", "只要匿名就可以"],
+        "correctIndex": 1,
+        "explanation": "大樣本提高精確度，但招募框偏差仍會影響代表性。"
+      },
+      {
+        "id": "l05-q2",
+        "conceptId": "target-population",
+        "prompt": "判斷代表性時第一個問題應是？",
+        "options": ["研究想推論到哪個母體", "圖表用了幾種顏色", "作者有幾篇論文", "摘要有多長"],
+        "correctIndex": 0,
+        "explanation": "代表性必須相對於特定目標母體來談。"
+      },
+      {
+        "id": "l05-q3",
+        "conceptId": "generalizability",
+        "prompt": "研究只包含大學生，最穩健的表述是？",
+        "options": ["結果必然適用所有年齡", "結果先適用於相近的大學生族群", "研究完全無價值", "可直接當作臨床診斷"],
+        "correctIndex": 1,
+        "explanation": "推廣範圍應與實際樣本及情境相符。"
+      }
+    ],
+    "references": [
+      {
+        "title": "The weirdest people in the world?",
+        "authors": ["Joseph Henrich", "Steven J. Heine", "Ara Norenzayan"],
+        "year": 2010,
+        "doi": "10.1017/S0140525X0999152X",
+        "url": "https://doi.org/10.1017/S0140525X0999152X",
+        "source": "Behavioral and Brain Sciences"
+      },
+      {
+        "title": "Psychology 2e: Analyzing Findings",
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/2-3-analyzing-findings",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-06",
+    "slug": "replication-and-research-limits",
+    "sequence": 6,
+    "title": "再現性與心理學研究限制",
+    "category": "心理學基礎",
+    "difficulty": 2,
+    "estimatedMinutes": 8,
+    "summary": "研究結果需要被重複檢驗；不能再現可能來自假陽性、設計差異或效果受情境限制。",
+    "definition": "再現（replication）是以相同或相關方法再次檢驗一項發現，看結果是否穩定出現。",
+    "explanation": "直接再現盡量重複原程序，概念再現則用不同方式測同一理論。未能再現不等於原研究必然造假，也不等於現象完全不存在；可能涉及樣本、測量、分析彈性、發表偏差或真實效果比原先估計小。最好的做法是看多次研究、預先規劃與統合證據。",
+    "dailyExample": "一篇小型研究說某種背景音能大幅提升記憶。後續不同團隊若用更大樣本與事先登錄分析，結果可幫助判斷效果是否穩定、大小是否被高估。",
+    "commonMisconceptions": [
+      "一次再現失敗就證明原研究錯誤；還需檢查方法差異與整體證據。",
+      "同儕審查會抓出所有問題；審查能改善品質，但無法重新執行研究或保證資料無誤。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "大型再現計畫顯示，部分心理學結果的效果大小與再現率低於原始報告。",
+        "evidenceLevel": "supported",
+        "limitations": "再現率受選題、再現方式及判準影響，不能用單一百分比代表整個心理學。",
+        "sourceUrl": "https://doi.org/10.1126/science.aac4716"
+      },
+      {
+        "claim": "透明方法、資料與分析有助於辨識錯誤並累積證據。",
+        "evidenceLevel": "supported",
+        "limitations": "開放做法仍需兼顧隱私、倫理與不同研究資源。",
+        "sourceUrl": "https://doi.org/10.17226/25303"
+      }
+    ],
+    "applications": [
+      "對驚人且單一的研究結論保留暫時性，找後續再現或統合分析。",
+      "區分「沒有證據證明有效」與「已證明沒有效果」。"
+    ],
+    "quiz": [
+      {
+        "id": "l06-q1",
+        "conceptId": "replication",
+        "prompt": "再現研究最主要的目的為何？",
+        "options": ["檢查發現是否穩定", "讓原作者難堪", "保證新結果相同", "取代所有理論"],
+        "correctIndex": 0,
+        "explanation": "再現讓研究社群評估結果能否在相同或相關條件下再次出現。"
+      },
+      {
+        "id": "l06-q2",
+        "conceptId": "failed-replication",
+        "prompt": "一次未再現最合理的解讀是？",
+        "options": ["原研究必然造假", "需要檢查方法與更多累積證據", "心理學不可能是科學", "新研究一定比較差"],
+        "correctIndex": 1,
+        "explanation": "再現結果本身也有不確定性，應比較設計並看整體證據。"
+      },
+      {
+        "id": "l06-q3",
+        "conceptId": "evidence-synthesis",
+        "prompt": "面對單篇很驚人的小型研究，較好的做法是？",
+        "options": ["立刻改變所有生活習慣", "尋找預先註冊再現與統合證據", "只看社群轉貼數", "忽略研究限制"],
+        "correctIndex": 1,
+        "explanation": "多項獨立證據比單篇研究更能判斷穩定性。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Estimating the reproducibility of psychological science",
+        "authors": ["Open Science Collaboration"],
+        "year": 2015,
+        "doi": "10.1126/science.aac4716",
+        "url": "https://doi.org/10.1126/science.aac4716",
+        "source": "Science"
+      },
+      {
+        "title": "Reproducibility and Replicability in Science",
+        "authors": ["National Academies of Sciences, Engineering, and Medicine"],
+        "year": 2019,
+        "doi": "10.17226/25303",
+        "url": "https://doi.org/10.17226/25303",
+        "source": "National Academies Press"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-07",
+    "slug": "how-attention-works",
+    "sequence": 7,
+    "title": "注意力如何運作",
+    "category": "認知心理學",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "注意力會選擇部分資訊優先處理，但容量有限，也會漏掉眼前明顯變化。",
+    "definition": "注意力（attention）是一組選擇與分配處理資源的歷程，使某些訊息暫時獲得優先。",
+    "explanation": "我們同時接收大量感官與內在訊息，不可能全部深度處理。目標、突發刺激、期待與練習都會影響注意焦點。多工往往不是同時做兩件需要思考的事，而是在任務間切換；切換會帶來時間與錯誤成本。",
+    "dailyExample": "你邊回訊息邊聽會議時，可能覺得兩邊都有跟上，但遇到需要理解的新資訊，注意力在任務間切換，容易漏掉細節。",
+    "commonMisconceptions": [
+      "只要睜著眼就會看到所有東西；不注意時可能出現非注意盲視。",
+      "擅長多工的人沒有切換成本；熟練可降低成本，但複雜任務仍會互相干擾。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "當注意集中在一項任務時，人可能沒察覺視野中意外而明顯的事件。",
+        "evidenceLevel": "established",
+        "limitations": "實驗任務與現實情境的注意負荷不同，個人表現也會變動。",
+        "sourceUrl": "https://doi.org/10.1068/p2952"
+      }
+    ],
+    "applications": [
+      "重要工作時關閉非必要通知，減少任務切換。",
+      "把「我沒看到」與「它不存在」分開，重要程序使用清單交叉確認。"
+    ],
+    "quiz": [
+      {
+        "id": "l07-q1",
+        "conceptId": "limited-attention",
+        "prompt": "注意力有限最可能造成什麼現象？",
+        "options": ["所有資訊都同樣深度處理", "專注一處時漏掉其他明顯訊息", "記憶容量無限", "多工完全沒有成本"],
+        "correctIndex": 1,
+        "explanation": "有限資源使未被選中的訊息可能只被淺層處理甚至未被察覺。"
+      },
+      {
+        "id": "l07-q2",
+        "conceptId": "task-switching",
+        "prompt": "一邊寫報告一邊回複雜訊息，通常發生什麼？",
+        "options": ["兩項任務真正零成本並行", "在任務間切換並付出成本", "智力永久提升", "注意力變成無限"],
+        "correctIndex": 1,
+        "explanation": "需要控制與思考的任務通常競爭相同資源。"
+      },
+      {
+        "id": "l07-q3",
+        "conceptId": "attention-design",
+        "prompt": "哪個做法最能保護深度專注？",
+        "options": ["開啟所有通知", "設定單一任務時段並移除干擾", "每分鐘換一個視窗", "同時播放多個語音"],
+        "correctIndex": 1,
+        "explanation": "降低外在打斷與切換次數能保留更多處理資源。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Gorillas in our midst: sustained inattentional blindness for dynamic events",
+        "authors": ["Daniel J. Simons", "Christopher F. Chabris"],
+        "year": 1999,
+        "doi": "10.1068/p2952",
+        "url": "https://doi.org/10.1068/p2952",
+        "source": "Perception"
+      },
+      {
+        "title": "Psychology 2e: Sensation versus Perception",
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/5-1-sensation-versus-perception",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-08",
+    "slug": "working-memory",
+    "sequence": 8,
+    "title": "工作記憶",
+    "category": "學習與記憶",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "工作記憶讓我們短暫維持並操作資訊，但容量有限且容易受干擾。",
+    "definition": "工作記憶（working memory）是短時間維持、更新與操作當前任務資訊的系統。",
+    "explanation": "它不只是把資訊暫放幾秒，也包含控制注意與操作內容，例如心算、理解長句或記住下一步。容量會依資訊熟悉度、組塊方式與干擾而變，不適合用一個固定數字描述每個人所有情境。把多項資訊組成有意義單位能減輕負荷。",
+    "dailyExample": "你讀食譜後轉身拿材料，需要暫時保留份量與步驟；若同時有人問問題，剛才的資訊可能被干擾而消失。",
+    "commonMisconceptions": [
+      "工作記憶就是短期儲存空間；它還涉及注意控制與資訊操作。",
+      "容量固定為七項；容量估計取決於材料、組塊與測量方式。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "工作記憶容量有限，組塊與先備知識會改變有效負荷。",
+        "evidenceLevel": "established",
+        "limitations": "不同理論對工作記憶結構與容量估計仍有差異。",
+        "sourceUrl": "https://doi.org/10.1017/S0140525X01003922"
+      }
+    ],
+    "applications": [
+      "把長指令分段並寫下來，避免全靠腦中暫存。",
+      "用熟悉分類建立組塊，一次處理少量新元素。"
+    ],
+    "quiz": [
+      {
+        "id": "l08-q1",
+        "conceptId": "working-memory",
+        "prompt": "哪個例子最需要工作記憶？",
+        "options": ["心算 27 加 48", "已學會的走路反射", "睡眠時沒有任務", "只辨認熟悉顏色"],
+        "correctIndex": 0,
+        "explanation": "心算需暫時保留數字並操作中間結果。"
+      },
+      {
+        "id": "l08-q2",
+        "conceptId": "chunking",
+        "prompt": "組塊為何可能有幫助？",
+        "options": ["把多個元素組成有意義單位", "讓容量無限", "消除所有干擾", "取代理解"],
+        "correctIndex": 0,
+        "explanation": "有意義的組織可降低同時需管理的單位數。"
+      },
+      {
+        "id": "l08-q3",
+        "conceptId": "cognitive-load",
+        "prompt": "複雜指令最合適的呈現方式是？",
+        "options": ["一次快速念完", "分段、列點並提供外部提示", "同時加入無關訊息", "只說記住就好"],
+        "correctIndex": 1,
+        "explanation": "分段與外部記錄能降低有限工作記憶的負荷。"
+      }
+    ],
+    "references": [
+      {
+        "title": "The magical number 4 in short-term memory: A reconsideration of mental storage capacity",
+        "authors": ["Nelson Cowan"],
+        "year": 2001,
+        "doi": "10.1017/S0140525X01003922",
+        "url": "https://doi.org/10.1017/S0140525X01003922",
+        "source": "Behavioral and Brain Sciences"
+      },
+      {
+        "title": "Psychology 2e: How Memory Functions",
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-09",
+    "slug": "long-term-memory",
+    "sequence": 9,
+    "title": "長期記憶",
+    "category": "學習與記憶",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "長期記憶包含事件、知識與技能等系統；記憶是重建，不是完美錄影。",
+    "definition": "長期記憶（long-term memory）是可跨越數分鐘到多年保存資訊的多組系統。",
+    "explanation": "陳述性記憶包含情節記憶與語意記憶，非陳述性記憶則包括技能與部分條件化學習。編碼時的注意、意義連結與之後的提取練習會影響能否記住。每次回想都可能把目前線索與原有痕跡重新組合，因此自信不等於完全準確。",
+    "dailyExample": "你知道台北是台灣首都屬於語意記憶；記得第一次到台北的情境屬於情節記憶；會騎腳踏車則主要是程序技能。",
+    "commonMisconceptions": [
+      "記憶像攝影機逐格儲存；回憶是由痕跡、線索與既有知識重建。",
+      "反覆重讀就一定最有效；能主動提取與間隔複習通常更有助於長期保留。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "提取練習能強化後續保留，而不只是當下測驗表現。",
+        "evidenceLevel": "supported",
+        "limitations": "效果受回饋、材料難度、學習程度與延宕時間影響。",
+        "sourceUrl": "https://doi.org/10.1016/j.jml.2006.09.004"
+      }
+    ],
+    "applications": [
+      "讀完一小段後闔上資料，用自己的話寫出重點再核對。",
+      "對重要記憶保留外部紀錄，避免把高自信當成唯一證據。"
+    ],
+    "quiz": [
+      {
+        "id": "l09-q1",
+        "conceptId": "memory-systems",
+        "prompt": "「會騎腳踏車」主要屬於哪類記憶？",
+        "options": ["程序性記憶", "語意記憶", "短暫感覺記憶", "未來預測"],
+        "correctIndex": 0,
+        "explanation": "技能表現主要屬於非陳述性的程序性記憶。"
+      },
+      {
+        "id": "l09-q2",
+        "conceptId": "reconstructive-memory",
+        "prompt": "說記憶具有重建性，意思是？",
+        "options": ["回想會結合痕跡、線索與知識", "所有記憶都是假的", "記憶永不改變", "自信可保證準確"],
+        "correctIndex": 0,
+        "explanation": "重建不代表全錯，而是回想並非讀取不變的完整錄影。"
+      },
+      {
+        "id": "l09-q3",
+        "conceptId": "retrieval-practice",
+        "prompt": "哪種做法較符合提取練習？",
+        "options": ["只重讀五遍", "不看筆記先回想重點，再檢查答案", "畫更多螢光筆", "睡前不斷滑過標題"],
+        "correctIndex": 1,
+        "explanation": "主動從記憶叫出資訊，之後再用回饋修正，就是提取練習。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Repeated retrieval during learning is the key to long-term retention",
+        "authors": ["Jeffrey D. Karpicke", "Henry L. Roediger III"],
+        "year": 2007,
+        "doi": "10.1016/j.jml.2006.09.004",
+        "url": "https://doi.org/10.1016/j.jml.2006.09.004",
+        "source": "Journal of Memory and Language"
+      },
+      {
+        "title": "Psychology 2e: How Memory Functions",
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/8-1-how-memory-functions",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-10",
+    "slug": "forgetting-and-retrieval",
+    "sequence": 10,
+    "title": "遺忘與提取",
+    "category": "學習與記憶",
+    "difficulty": 1,
+    "estimatedMinutes": 7,
+    "summary": "遺忘可能源於編碼不足、干擾或線索不合；間隔與提取練習可改善保留。",
+    "definition": "遺忘是已接觸資訊無法在需要時被正確提取的現象，原因可能發生在編碼、保存或提取階段。",
+    "explanation": "有時我們以為忘了，其實一開始沒有充分注意與編碼；有時新舊資訊互相干擾；也可能是當下缺少合適線索。記憶隨時間變弱通常不是線性過程。把學習分散到多天並穿插主動提取，通常比一次密集重讀更能抵抗遺忘。",
+    "dailyExample": "考試時想不起答案，走出教室後因聽到關鍵詞突然想起，顯示資訊可能仍在，但當時缺少有效提取線索。",
+    "commonMisconceptions": [
+      "想不起來表示記憶已完全消失；線索改變可能讓部分資訊再次可提取。",
+      "考前熬夜密集讀最有效；它可能提高短期熟悉感，卻不利長期保留與睡眠。"
+    ],
+    "currentEvidence": [
+      {
+        "claim": "間隔學習相較於同量的集中學習，通常帶來較佳延宕測驗表現。",
+        "evidenceLevel": "supported",
+        "limitations": "最佳間隔取決於預計保留多久、材料難度與學習目標。",
+        "sourceUrl": "https://doi.org/10.1037/0033-2909.132.3.354"
+      }
+    ],
+    "applications": [
+      "把複習排在數天與數週中，並在快忘時練習回想。",
+      "為難提取的內容建立多種線索，例如例子、分類、圖像與自問句。"
+    ],
+    "quiz": [
+      {
+        "id": "l10-q1",
+        "conceptId": "retrieval-failure",
+        "prompt": "考後聽到關鍵詞才想起答案，最符合哪個解釋？",
+        "options": ["提取線索不足", "記憶從未存在", "智力突然改變", "答案必然是假的"],
+        "correctIndex": 0,
+        "explanation": "合適線索出現後能回想，表示先前可能是提取失敗。"
+      },
+      {
+        "id": "l10-q2",
+        "conceptId": "spacing",
+        "prompt": "總學習時間相同，哪種安排通常較利於一個月後保留？",
+        "options": ["一天全部讀完", "分散在多天並練習提取", "只看答案不作答", "最後一晚不睡"],
+        "correctIndex": 1,
+        "explanation": "間隔與提取讓記憶在多次時間點被重建與強化。"
+      },
+      {
+        "id": "l10-q3",
+        "conceptId": "encoding-failure",
+        "prompt": "開會時一直回訊息，之後不記得內容，可能首先是哪個問題？",
+        "options": ["編碼時注意不足", "所有長期記憶損壞", "控制組不足", "人格改變"],
+        "correctIndex": 0,
+        "explanation": "若當下沒有充分處理，資訊可能從未形成穩定記憶。"
+      }
+    ],
+    "references": [
+      {
+        "title": "Distributed practice in verbal recall tasks: A review and quantitative synthesis",
+        "authors": ["Nicholas J. Cepeda", "Harold Pashler", "Edward Vul", "John T. Wixted", "Doug Rohrer"],
+        "year": 2006,
+        "doi": "10.1037/0033-2909.132.3.354",
+        "url": "https://doi.org/10.1037/0033-2909.132.3.354",
+        "source": "Psychological Bulletin"
+      },
+      {
+        "title": "Psychology 2e: Problems with Memory",
+        "year": 2020,
+        "url": "https://openstax.org/books/psychology-2e/pages/8-3-problems-with-memory",
+        "source": "OpenStax"
+      }
+    ],
+    "evidenceUpdatedAt": "2026-07-23",
+    "contentStatus": "reviewed"
+  }
+]

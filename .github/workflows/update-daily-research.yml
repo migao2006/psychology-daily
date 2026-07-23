@@ -1,0 +1,66 @@
+name: Update daily research
+on:
+  schedule:
+    - cron: "0 22 * * *"
+  workflow_dispatch:
+permissions:
+  contents: write
+concurrency:
+  group: daily-research-main
+  cancel-in-progress: false
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          ref: main
+          fetch-depth: 0
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 11.14.0
+          run_install: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - name: Check summarizer configuration
+        shell: bash
+        env:
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          test -n "$LLM_PROVIDER" || { echo "Missing repository variable: LLM_PROVIDER"; exit 1; }
+          test -n "$LLM_MODEL" || { echo "Missing repository variable: LLM_MODEL"; exit 1; }
+          if [ "$LLM_PROVIDER" = "openai" ]; then test -n "$OPENAI_API_KEY" || { echo "Missing Actions secret: OPENAI_API_KEY"; exit 1; }; fi
+          if [ "$LLM_PROVIDER" = "gemini" ]; then test -n "$GEMINI_API_KEY" || { echo "Missing Actions secret: GEMINI_API_KEY"; exit 1; }; fi
+      - run: pnpm install --frozen-lockfile
+      - name: Fetch, verify, and summarize research
+        env:
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: pnpm update:research
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm validate:content
+      - run: pnpm test
+      - run: pnpm build
+      - name: Commit verified content only when changed
+        shell: bash
+        run: |
+          if git diff --quiet -- content/research; then
+            echo "No content change; no commit created."
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/research
+          git commit -m "content: update daily psychology research"
+          git push origin main

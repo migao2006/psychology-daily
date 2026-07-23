@@ -1,0 +1,67 @@
+{
+  "id": "10.1177-03057356261457411",
+  "featuredDate": "2026-07-23",
+  "titleZh": "青少年心流經驗與音樂表演焦慮之間的關聯",
+  "titleOriginal": "The Connection Between Flow and Music Performance Anxiety Among Adolescents",
+  "authors": ["Xinyu Huang"],
+  "journalOrRepository": "Psychology of Music",
+  "publicationDate": "2026-07-16",
+  "language": "en",
+  "publicationStatus": "peer_reviewed",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "這項研究想了解中國13至15歲的在學音樂學習者，其心流經驗與音樂表演焦慮之間有什麼關聯。研究也特別關注音樂熟練程度是否與兩種經驗的關係不同。",
+  "backgroundZh": "過去相關研究較常聚焦專業音樂家，對年紀較輕、經驗較少的學生所知較少。作者因此把量化自陳量表與半結構式訪談結合，觀察學生在近期校內演出後的經驗。",
+  "methodsZh": "研究採混合方法，使用兩份經驗證的自陳量表及半結構式訪談。參與者是在中國就學、近期參加過學校音樂會的13至15歲學生，包含初階、中階與進階程度；Crossref摘要未提供樣本數。",
+  "sample": {
+    "size": null,
+    "populationZh": "近期參加學校音樂會、不同演奏熟練程度的13至15歲學生",
+    "locationZh": "中國"
+  },
+  "mainFindingsZh": [
+    "心流與音樂表演焦慮在青少年學生中都很常見。",
+    "心流與音樂表演焦慮呈負相關，這項關聯在熟練程度較高的學生中尤其明顯。",
+    "摘要指出，較高熟練度似乎與較多心流及較少表演焦慮同時出現；作者提出累積表演經驗可能是其中原因。"
+  ],
+  "limitationsZh": [
+    "Crossref摘要未提供樣本數，因此無法從摘要判斷估計精確度與樣本規模。",
+    "樣本限於中國13至15歲、近期參與校內音樂會的學生，不能直接推廣至所有年齡、文化或專業音樂家。",
+    "根據研究設計推論：量表關聯與訪談資料不能單獨證明熟練度、心流或焦慮之間的因果方向。"
+  ],
+  "practicalMeaningZh": "對音樂教育者而言，除了只要求「不要緊張」，也可關注學生的技能挑戰是否與能力相稱、是否累積足夠演出經驗，以及練習環境是否有利投入。但這篇研究不能證明單純提高熟練度就一定會降低個別學生的焦慮。",
+  "cautionZh": "本整理只依英文摘要製作。研究報告的是變項之間的關聯，不能直接推論因果；樣本侷限於特定年齡與文化情境，仍需更多研究驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "flow",
+      "translationZh": "心流",
+      "explanationZh": "高度投入活動、注意集中且行動流暢的主觀經驗。"
+    },
+    {
+      "original": "music performance anxiety",
+      "translationZh": "音樂表演焦慮",
+      "explanationZh": "在音樂演出前後或過程中出現、可能影響感受或表現的焦慮經驗。"
+    },
+    {
+      "original": "mixed-methods",
+      "translationZh": "混合方法",
+      "explanationZh": "在同一研究中結合量化資料與質性資料。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1177/03057356261457411",
+  "doi": "10.1177/03057356261457411",
+  "doiUrl": "https://doi.org/10.1177/03057356261457411",
+  "openAccessUrl": null,
+  "sourceApis": ["Crossref"],
+  "retrievedAt": "2026-07-23T12:00:00+08:00",
+  "summaryBasis": "abstract",
+  "aiGenerated": false,
+  "aiProvider": null,
+  "aiModel": null,
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

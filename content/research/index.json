@@ -1,0 +1,16 @@
+{
+  "schemaVersion": 1,
+  "lastUpdatedAt": "2026-07-23T12:00:00+08:00",
+  "updateStatus": "seed",
+  "items": [
+    {
+      "id": "10.1177-03057356261457411",
+      "featuredDate": "2026-07-23",
+      "path": "daily/2026-07-23.json",
+      "titleZh": "青少年心流經驗與音樂表演焦慮之間的關聯",
+      "publicationStatus": "peer_reviewed",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "心理健康"
+    }
+  ]
+}

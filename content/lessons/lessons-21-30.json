@@ -1,0 +1,175 @@
+[
+  {
+    "id": "lesson-21", "slug": "cognitive-dissonance", "sequence": 21, "title": "認知失調", "category": "社會心理學", "difficulty": 2, "estimatedMinutes": 7,
+    "summary": "想法、行為或自我形象互相衝突時，人可能改變態度、行為或解釋以降低不適。",
+    "definition": "認知失調（cognitive dissonance）是彼此不一致的認知或行為帶來的心理不適與調整動機。",
+    "explanation": "當「我重視健康」與「我每天抽菸」衝突，人可能改變行為、淡化風險或增加合理化。失調不是測謊器，也不是所有態度改變的唯一解釋。公開承諾、選擇感、付出與自我重要性會影響失調強度。",
+    "dailyExample": "買了昂貴卻不合用的產品後，只搜尋好評並放大優點，可能是在降低「我做了不佳選擇」的不適。",
+    "commonMisconceptions": ["矛盾就一定立刻改變行為；人也可能改變解釋或避免資訊。", "認知失調能證明某人說謊；它是理論歷程，不能從單一行為確定判定。"],
+    "currentEvidence": [{"claim": "自由選擇後的態度調整與努力合理化在多種研究中出現。", "evidenceLevel": "supported", "limitations": "效應依研究典範、文化與替代理論而異。", "sourceUrl": "https://openstax.org/books/psychology-2e/pages/12-2-self-presentation"}],
+    "applications": ["把不一致視為檢查價值與行動的訊號，而非急著合理化。", "重大購買前先寫判準，決定後仍保留反方資訊。"],
+    "quiz": [
+      {"id": "l21-q1", "conceptId": "dissonance", "prompt": "價值與行為衝突引發不適，稱為？", "options": ["認知失調", "工作記憶", "隨機誤差", "古典制約"], "correctIndex": 0, "explanation": "不一致可產生降低不適的動機。"},
+      {"id": "l21-q2", "conceptId": "dissonance-reduction", "prompt": "降低失調可能採取哪個方式？", "options": ["改變行為或合理化", "保證記憶準確", "增加樣本代表性", "自動建立因果"], "correctIndex": 0, "explanation": "人可能調整行動、態度或對情況的解釋。"},
+      {"id": "l21-q3", "conceptId": "limits", "prompt": "能否用一次矛盾行為確定某人說謊？", "options": ["不能", "一定能", "只要看眼神就能", "只要問三題就能"], "correctIndex": 0, "explanation": "行為有多種解釋，失調不是個人測謊工具。"}
+    ],
+    "references": [{"title": "Psychology 2e: Self-presentation", "year": 2020, "url": "https://openstax.org/books/psychology-2e/pages/12-2-self-presentation", "source": "OpenStax"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-22", "slug": "self-efficacy", "sequence": 22, "title": "自我效能", "category": "人格心理學", "difficulty": 1, "estimatedMinutes": 7,
+    "summary": "對自己能完成特定任務的信念，會影響投入、堅持與策略選擇。",
+    "definition": "自我效能（self-efficacy）是個人對自己能在特定情境組織並執行必要行動的信念。",
+    "explanation": "自我效能不是泛泛的自尊，也不是只要相信就會成功。成功經驗、相似他人的示範、可信回饋與對生理反應的解讀都可影響它。能力、資源與環境障礙仍是真實條件；校準良好的信心比空泛正能量有用。",
+    "dailyExample": "把「我要學會統計」拆成「今天能完成三題並核對錯誤」，小型成功經驗會讓下一步更可行。",
+    "commonMisconceptions": ["自我效能等於自尊；前者針對特定任務能力判斷。", "相信自己就能克服任何限制；技能、機會與支持同樣重要。"],
+    "currentEvidence": [{"claim": "自我效能與目標投入、堅持及表現相關，並可受經驗改變。", "evidenceLevel": "supported", "limitations": "自我效能與表現會彼此影響，關聯不代表只有單向因果。", "sourceUrl": "https://doi.org/10.1037/0033-295X.84.2.191"}],
+    "applications": ["設計可完成但有挑戰的下一步，累積真實成功經驗。", "回饋聚焦策略與進步證據，不用空泛稱讚。"],
+    "quiz": [
+      {"id": "l22-q1", "conceptId": "self-efficacy", "prompt": "自我效能主要是對什麼的判斷？", "options": ["特定任務的執行能力", "整體人格好壞", "他人喜歡程度", "疾病診斷"], "correctIndex": 0, "explanation": "自我效能具任務與情境特定性。"},
+      {"id": "l22-q2", "conceptId": "mastery", "prompt": "較能建立自我效能的是？", "options": ["逐步成功經驗", "保證永不失敗", "忽略技能缺口", "只喊口號"], "correctIndex": 0, "explanation": "可歸因於自己策略與努力的成功經驗最有校準價值。"},
+      {"id": "l22-q3", "conceptId": "calibration", "prompt": "健康的自我效能應如何？", "options": ["結合信心、技能與現實資源", "否認所有障礙", "永遠滿分信心", "只靠別人稱讚"], "correctIndex": 0, "explanation": "信念需與實際能力、策略及環境支援共同運作。"}
+    ],
+    "references": [{"title": "Self-efficacy: Toward a unifying theory of behavioral change", "authors": ["Albert Bandura"], "year": 1977, "doi": "10.1037/0033-295X.84.2.191", "url": "https://doi.org/10.1037/0033-295X.84.2.191", "source": "Psychological Review"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-23", "slug": "big-five-personality", "sequence": 23, "title": "大五人格模型", "category": "人格心理學", "difficulty": 1, "estimatedMinutes": 8,
+    "summary": "大五用五個連續向度描述人格差異，不是五種固定類型，也不是命運判決。",
+    "definition": "大五人格（Big Five）以開放性、盡責性、外向性、親和性與情緒穩定性的反向面向神經質，描述人格特質。",
+    "explanation": "每個向度都是連續分布，人可在不同向度有不同程度。特質能預測部分平均行為傾向，但情境、角色、文化與生命發展都會影響實際行為。量表品質、作答情境與常模重要，免費短測驗不等於正式評估。",
+    "dailyExample": "一個人可外向但不高親和，也可能在工作場合比陌生聚會更主動；單一標籤無法完整描述他。",
+    "commonMisconceptions": ["大五把人分成五種類型；它是五個連續向度。", "分數一生固定且決定行為；特質有穩定性，也會隨發展與情境呈現變化。"],
+    "currentEvidence": [{"claim": "五因素結構在多種語言與文化中獲得廣泛但非完全一致的支持。", "evidenceLevel": "supported", "limitations": "結構、測量等值與行為意義仍受文化、量表與樣本影響。", "sourceUrl": "https://openstax.org/books/psychology-2e/pages/11-7-trait-theorists"}],
+    "applications": ["用向度與具體行為談差異，不用類型替人定性。", "把測驗分數視為一項資料，必要時由合格專業人員整合評估。"],
+    "quiz": [
+      {"id": "l23-q1", "conceptId": "trait-dimensions", "prompt": "大五最正確的描述是？", "options": ["五個連續人格向度", "五種固定人格類型", "心理疾病診斷", "智力排名"], "correctIndex": 0, "explanation": "每個人都在五個向度上有程度差異。"},
+      {"id": "l23-q2", "conceptId": "person-situation", "prompt": "特質分數能否決定每一次行為？", "options": ["不能，情境與角色也重要", "能，完全決定", "只要分數高就能", "可預測所有未來"], "correctIndex": 0, "explanation": "特質描述傾向，不是單次行為的命運。"},
+      {"id": "l23-q3", "conceptId": "assessment", "prompt": "短版網路人格測驗最適合怎麼用？", "options": ["作為有限的自我反思資料", "正式診斷", "決定能否交往", "固定標籤他人"], "correctIndex": 0, "explanation": "量表有測量誤差與適用範圍，不能武斷判定個人。"}
+    ],
+    "references": [{"title": "Psychology 2e: Trait Theorists", "year": 2020, "url": "https://openstax.org/books/psychology-2e/pages/11-7-trait-theorists", "source": "OpenStax"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-24", "slug": "emotion-recognition", "sequence": 24, "title": "情緒辨識", "category": "情緒與壓力", "difficulty": 1, "estimatedMinutes": 7,
+    "summary": "臉、聲音、身體與情境共同提供情緒線索；不能只靠單一表情確定他人內心。",
+    "definition": "情緒辨識（emotion recognition）是整合臉部、語音、身體、情境與語言線索，推測自己或他人情緒狀態。",
+    "explanation": "部分表情模式具有跨文化相似性，但實際辨識高度依賴情境、文化規範、動作與個人差異。臉部動作不與單一情緒一對一對應；皺眉可能是生氣、專注、疼痛或迎光。較準確的理解需要保留不確定性並向當事人確認。",
+    "dailyExample": "同事沉默皺眉，你可以說「我注意到你比較安靜，現在需要什麼嗎？」而不是斷定「你一定在生我的氣」。",
+    "commonMisconceptions": ["一個表情可百分之百讀出情緒；同一動作有多種原因。", "情緒辨識等於判斷說謊；眼神或微表情不能單獨可靠判定欺騙。"],
+    "currentEvidence": [{"claim": "情緒推論同時使用臉部動作與情境資訊，表情並非固定指紋。", "evidenceLevel": "supported", "limitations": "研究者對普遍性、類別與情境作用的理論解釋仍有爭論。", "sourceUrl": "https://doi.org/10.1177/1529100619832930"}],
+    "applications": ["用暫時性語言描述觀察，邀請對方修正。", "辨識自己的身體感受、想法、衝動與情境，不只找情緒名稱。"],
+    "quiz": [
+      {"id": "l24-q1", "conceptId": "emotion-context", "prompt": "只看到皺眉能否確定對方生氣？", "options": ["不能，需結合情境並確認", "一定能", "看眼神就能", "只有熟人能百分之百"], "correctIndex": 0, "explanation": "同一臉部動作可出現在多種情境與狀態。"},
+      {"id": "l24-q2", "conceptId": "emotion-inference", "prompt": "較好的回應是？", "options": ["描述觀察並詢問需要", "直接宣告對方情緒", "用人格標籤", "判定對方說謊"], "correctIndex": 0, "explanation": "保持好奇與可修正性比武斷讀心更準確。"},
+      {"id": "l24-q3", "conceptId": "lie-detection", "prompt": "可否靠單一微表情可靠判斷所有謊言？", "options": ["不可以", "可以且零誤差", "只在三秒內可以", "只要受過一天訓練"], "correctIndex": 0, "explanation": "欺騙判斷沒有單一普遍可靠的非語言線索。"}
+    ],
+    "references": [{"title": "Emotional expressions reconsidered: Challenges to inferring emotion from human facial movements", "authors": ["Lisa Feldman Barrett", "Ralph Adolphs", "Stacy Marsella", "Aleix M. Martinez", "Seth D. Pollak"], "year": 2019, "doi": "10.1177/1529100619832930", "url": "https://doi.org/10.1177/1529100619832930", "source": "Psychological Science in the Public Interest"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-25", "slug": "emotion-regulation-and-reappraisal", "sequence": 25, "title": "情緒調節與認知重評", "category": "情緒與壓力", "difficulty": 1, "estimatedMinutes": 7,
+    "summary": "情緒調節是影響情緒歷程，而非消除情緒；重評透過改變情境意義調整反應。",
+    "definition": "認知重評（cognitive reappraisal）是在情緒反應前後重新解讀情境意義，以改變情緒強度或品質。",
+    "explanation": "情緒調節可發生在選擇情境、改變注意、重新解讀或調整反應。重評不是硬說一切都很好，而是尋找更完整且有證據的角度。沒有單一策略永遠最好；安全、目標、情緒強度與可控制性會影響選擇。",
+    "dailyExample": "簡報前心跳加快，你可把它從「我要失敗」重評為「身體正在準備我面對重要任務」，同時仍做實際準備。",
+    "commonMisconceptions": ["調節等於壓抑或不准有情緒；目標是有彈性地回應。", "重評是正向思考；有效重評需符合證據，不是否認問題。"],
+    "currentEvidence": [{"claim": "重評平均與較佳情緒結果相關，且可改變情緒反應。", "evidenceLevel": "supported", "limitations": "效果依時機、情境可控性、文化與個人差異而變。", "sourceUrl": "https://doi.org/10.1016/j.tics.2005.03.010"}],
+    "applications": ["先說出最初解讀，再列一個同樣符合證據的替代解讀。", "若情境可改變，重評之外也採取問題解決與求助。"],
+    "quiz": [
+      {"id": "l25-q1", "conceptId": "reappraisal", "prompt": "認知重評的核心是？", "options": ["改變對情境意義的解讀", "否認所有負面事件", "壓住所有表情", "診斷自己"], "correctIndex": 0, "explanation": "重評調整意義建構，不要求否認現實。"},
+      {"id": "l25-q2", "conceptId": "regulation-flexibility", "prompt": "哪個情緒策略永遠最好？", "options": ["沒有，需依情境與目標選擇", "壓抑永遠最好", "分心永遠最好", "重評永遠有效"], "correctIndex": 0, "explanation": "調節的適應性依情境與使用方式而異。"},
+      {"id": "l25-q3", "conceptId": "realistic-reappraisal", "prompt": "哪句較符合務實重評？", "options": ["這很難，但我能準備並尋求回饋", "什麼問題都不存在", "我一定完美", "有情緒就是失敗"], "correctIndex": 0, "explanation": "務實重評承認困難並擴充可行角度。"}
+    ],
+    "references": [{"title": "The cognitive control of emotion", "authors": ["Kevin N. Ochsner", "James J. Gross"], "year": 2005, "doi": "10.1016/j.tics.2005.03.010", "url": "https://doi.org/10.1016/j.tics.2005.03.010", "source": "Trends in Cognitive Sciences"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-26", "slug": "stress-response", "sequence": 26, "title": "壓力反應", "category": "情緒與壓力", "difficulty": 1, "estimatedMinutes": 8,
+    "summary": "壓力反應協助應對威脅與挑戰；長期、不可控且缺乏恢復的負荷才較可能造成傷害。",
+    "definition": "壓力反應（stress response）是面對要求或威脅時，生理、認知、情緒與行為的協調變化。",
+    "explanation": "短期壓力可提高警覺與動員能量，並非一律有害。壓力影響取決於強度、持續時間、可控制性、資源、睡眠與社會支持。長期反覆啟動而缺乏恢復會形成累積負荷，但一般壓力感受不等於精神疾病或正式診斷。",
+    "dailyExample": "期限前心跳加快與專注提升可能幫助完成任務；若數月無法休息、睡眠惡化且功能受影響，就需要調整負荷並考慮專業協助。",
+    "commonMisconceptions": ["所有壓力都必須消除；適度短期反應具有適應功能。", "感到壓力就代表有精神疾病；診斷需由合格專業人員依完整評估判斷。"],
+    "currentEvidence": [{"claim": "長期壓力相關生理系統反覆啟動與健康風險有關。", "evidenceLevel": "supported", "limitations": "個體差異大，許多研究為觀察性，不能把群體關聯直接當個人命運。", "sourceUrl": "https://doi.org/10.1056/NEJM199801153380307"}],
+    "applications": ["區分可改變的壓力源、可補充的資源與需要接受的不確定性。", "安排睡眠、活動、休息與社會支持；功能持續受影響時尋求專業評估。"],
+    "quiz": [
+      {"id": "l26-q1", "conceptId": "acute-stress", "prompt": "短期壓力反應是否一定有害？", "options": ["不一定，可協助動員與警覺", "一定有害", "等於正式診斷", "只影響情緒不影響身體"], "correctIndex": 0, "explanation": "短期反應具有適應功能，問題常在過強、過久與缺乏恢復。"},
+      {"id": "l26-q2", "conceptId": "allostatic-load", "prompt": "長期反覆壓力且缺乏恢復較接近？", "options": ["累積負荷", "隨機分派", "提取練習", "框架效應"], "correctIndex": 0, "explanation": "多系統長期調節的成本可逐步累積。"},
+      {"id": "l26-q3", "conceptId": "clinical-boundary", "prompt": "自覺壓力能否單獨構成疾病診斷？", "options": ["不能，需完整專業評估", "一定能", "線上三題即可", "由朋友決定"], "correctIndex": 0, "explanation": "一般反應、症狀與正式診斷必須清楚區分。"}
+    ],
+    "references": [{"title": "Protective and damaging effects of stress mediators", "authors": ["Bruce S. McEwen"], "year": 1998, "doi": "10.1056/NEJM199801153380307", "url": "https://doi.org/10.1056/NEJM199801153380307", "source": "The New England Journal of Medicine"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-27", "slug": "sleep-and-psychological-function", "sequence": 27, "title": "睡眠與心理功能", "category": "情緒與壓力", "difficulty": 1, "estimatedMinutes": 8,
+    "summary": "睡眠支持注意、記憶、情緒與身體調節；單晚與長期不足的影響不同。",
+    "definition": "睡眠是具階段與週期的主動生理狀態，參與記憶、情緒、代謝與免疫等功能。",
+    "explanation": "睡眠不足會影響警覺、反應與情緒調節；人常低估自己已受影響。睡眠需求有個體與年齡差異，品質也不只看時數。失眠症等正式診斷需要持續時間、日間功能與其他因素的專業評估，偶爾睡不好不等於疾病。",
+    "dailyExample": "連續熬夜後即使覺得「習慣了」，反應速度與錯誤監控仍可能下降；重要決策與駕駛需特別保守。",
+    "commonMisconceptions": ["週末補眠能完全消除長期不足的所有影響；恢復程度依負債與規律而異。", "躺床時間等於睡眠時間；入睡延遲與夜間醒來也影響。"],
+    "currentEvidence": [{"claim": "睡眠與記憶鞏固及多種認知功能有關。", "evidenceLevel": "supported", "limitations": "睡眠階段功能與因果機制仍持續研究，個人差異不可忽略。", "sourceUrl": "https://doi.org/10.1016/j.neuron.2017.02.004"}],
+    "applications": ["維持固定起床時間、睡前降光與減少刺激，白天接觸自然光並活動。", "若睡眠問題持續且影響功能，尋求醫師或合格睡眠專業人員評估，不自行停藥。"],
+    "quiz": [
+      {"id": "l27-q1", "conceptId": "sleep-function", "prompt": "睡眠較正確的描述是？", "options": ["參與記憶與身體調節的主動狀態", "大腦完全關機", "只影響疲勞", "每人需求完全相同"], "correctIndex": 0, "explanation": "睡眠具有組織化階段並支援多項功能。"},
+      {"id": "l27-q2", "conceptId": "sleep-deprivation", "prompt": "睡眠不足後覺得自己習慣了，表示表現完全恢復嗎？", "options": ["不一定", "一定恢復", "只要喝咖啡就零風險", "能直接診斷失眠"], "correctIndex": 0, "explanation": "主觀適應感可能與客觀表現下降不一致。"},
+      {"id": "l27-q3", "conceptId": "sleep-care", "prompt": "長期睡不好且日間功能受影響，較適當的是？", "options": ["尋求合格專業評估", "自行停所有藥", "用短測驗自我診斷", "完全忽略"], "correctIndex": 0, "explanation": "持續功能受影響需排除醫療、心理與生活因素。"}
+    ],
+    "references": [{"title": "Sleep and Human Aging", "authors": ["Bryce A. Mander", "Joseph R. Winer", "Matthew P. Walker"], "year": 2017, "doi": "10.1016/j.neuron.2017.02.004", "url": "https://doi.org/10.1016/j.neuron.2017.02.004", "source": "Neuron"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-28", "slug": "empathy-and-emotional-validation", "sequence": 28, "title": "同理心與情緒驗證", "category": "人際關係", "difficulty": 1, "estimatedMinutes": 7,
+    "summary": "同理是嘗試理解他人觀點與感受；驗證是承認其經驗可理解，不等於同意所有結論。",
+    "definition": "情緒驗證（emotional validation）是準確反映並承認對方的情緒在其情境中可以理解，同時保留界線與不同觀點。",
+    "explanation": "同理可包含觀點理解、情緒共鳴與關懷動機，三者不完全相同。驗證不是說「你做什麼都對」，而是先區分情緒、想法與行為；可以理解憤怒，同時不接受傷害行為。最可靠的同理是提出暫時理解並讓對方修正。",
+    "dailyExample": "朋友面試失利時，先說「你準備很久，現在很失望很合理」，通常比立刻說「別想太多」更能讓他感到被理解。",
+    "commonMisconceptions": ["驗證等於同意；可以認可感受但不同意解釋或行為。", "同理就是猜中對方；同理需要詢問、傾聽與可修正。"],
+    "currentEvidence": [{"claim": "以準確同理、接納與一致性為核心的治療關係因素與結果相關。", "evidenceLevel": "supported", "limitations": "臨床關係研究不能直接等同所有日常互動，且多因素共同作用。", "sourceUrl": "https://doi.org/10.1037/h0045357"}],
+    "applications": ["先反映內容與感受，再問「我理解得對嗎？」", "用「感受可以理解，傷害行為仍需停止」同時維持同理與界線。"],
+    "quiz": [
+      {"id": "l28-q1", "conceptId": "validation", "prompt": "情緒驗證最接近哪句？", "options": ["我能理解你為何失望", "你做什麼都對", "不要有感覺", "我已確定你的人格"], "correctIndex": 0, "explanation": "驗證承認經驗可理解，不替所有行為背書。"},
+      {"id": "l28-q2", "conceptId": "empathic-accuracy", "prompt": "提高同理準確度可怎麼做？", "options": ["提出暫時理解並請對方修正", "讀心後不再詢問", "只給建議", "改談自己"], "correctIndex": 0, "explanation": "確認能讓對方補充或修正你的推測。"},
+      {"id": "l28-q3", "conceptId": "boundaries", "prompt": "同理與界線能否並存？", "options": ["能", "不能", "只有專業人員能", "有界線就不算關心"], "correctIndex": 0, "explanation": "理解情緒與限制傷害行為是不同層次。"}
+    ],
+    "references": [{"title": "The necessary and sufficient conditions of therapeutic personality change", "authors": ["Carl R. Rogers"], "year": 1957, "doi": "10.1037/h0045357", "url": "https://doi.org/10.1037/h0045357", "source": "Journal of Consulting Psychology"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-29", "slug": "attachment-theory-and-limits", "sequence": 29, "title": "依附理論及其限制", "category": "發展心理學", "difficulty": 2, "estimatedMinutes": 8,
+    "summary": "依附研究描述照顧關係中的安全調節模式；它不是固定人格標籤，也不能靠短測驗決定感情命運。",
+    "definition": "依附理論（attachment theory）研究人在壓力與探索時如何使用重要關係作為安全基地，以及相關期待如何形成與改變。",
+    "explanation": "嬰幼兒研究的依附分類來自特定觀察程序；成人研究另有訪談與連續向度量表，不能把不同工具混為一談。依附表現受關係對象、生活經驗、文化與當下安全感影響，具有一定穩定性但並非不可改變。短版社群測驗不能作正式判定。",
+    "dailyExample": "某人在一段不安全關係中較焦慮，在另一段穩定關係中可能表現不同；這不表示前次感受是假，也不表示他被固定成一種類型。",
+    "commonMisconceptions": ["依附型態一生固定；關係經驗與發展會帶來延續與改變。", "短測驗能判定誰適合交往；工具限制與關係情境使這種結論過度。"],
+    "currentEvidence": [{"claim": "成人依附具有一定延續性，但早期依附並不會機械式決定成年後的關係模式。", "evidenceLevel": "supported", "limitations": "研究整合不同年齡、工具與追蹤間隔，穩定程度會隨研究設計與生活事件而異。", "sourceUrl": "https://doi.org/10.1207/S15327957PSPR0602_03"}],
+    "applications": ["描述具體互動需求與行為，不以「焦慮型」「逃避型」武斷定人。", "關係困擾持續時，可尋求合格心理專業人員共同評估。"],
+    "quiz": [
+      {"id": "l29-q1", "conceptId": "attachment-dimensions", "prompt": "成人依附較穩健的使用方式是？", "options": ["視為可變的連續向度與關係模式", "固定人格判決", "感情相容性診斷", "單一行為讀心"], "correctIndex": 0, "explanation": "焦慮與逃避向度會受對象、經驗與測量影響。"},
+      {"id": "l29-q2", "conceptId": "measurement", "prompt": "嬰幼兒觀察分類能否直接等同成人網路短測驗？", "options": ["不能", "完全相同", "只差題目顏色", "可互換診斷"], "correctIndex": 0, "explanation": "研究目的、工具與構念層次不同。"},
+      {"id": "l29-q3", "conceptId": "change", "prompt": "依附模式是否可能改變？", "options": ["可能，關係與發展經驗會影響", "絕不可能", "只能惡化", "由星座決定"], "correctIndex": 0, "explanation": "穩定性不是不可變性，應避免宿命標籤。"}
+    ],
+    "references": [{"title": "Attachment stability from infancy to adulthood: Meta-analysis and dynamic modeling of developmental mechanisms", "authors": ["R. Chris Fraley"], "year": 2002, "doi": "10.1207/S15327957PSPR0602_03", "url": "https://doi.org/10.1207/S15327957PSPR0602_03", "source": "Personality and Social Psychology Review"}],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  },
+  {
+    "id": "lesson-30", "slug": "when-to-seek-professional-help", "sequence": 30, "title": "何時應尋求心理專業協助", "category": "心理健康常識", "difficulty": 1, "estimatedMinutes": 8,
+    "summary": "困擾持續、加劇、影響日常功能或涉及安全時，尋求合格專業協助是合理的照顧選擇。",
+    "definition": "專業心理協助是由依法具資格的心理師、精神科醫師或其他合格醫療專業人員，依完整情況提供評估與適當服務。",
+    "explanation": "一般悲傷、焦慮與壓力是人類經驗，不會只因存在就等於疾病。當狀況持續、強烈、難以自行調整，明顯影響睡眠、工作、學業、關係或自我照顧，或出現傷害自己／他人的念頭時，應優先取得真人協助。正式診斷需整合時間、功能、病史、文化與身體狀況，不能由本網站測驗完成。",
+    "dailyExample": "連續數週幾乎無法工作、睡眠嚴重受影響並開始避免所有人，與偶爾壓力大不同；可以先聯絡可信任的人、醫療院所或合格心理專業人員。",
+    "commonMisconceptions": ["求助代表軟弱；求助是風險管理與照顧選擇。", "網路短測驗可正式診斷；量表最多提供篩檢線索，不能取代面談與專業評估。"],
+    "currentEvidence": [{"claim": "心理健康評估需要症狀、時間、功能、風險與其他原因的完整資訊。", "evidenceLevel": "established", "limitations": "服務可近性與適合方式依地區、個人需求與醫療制度而異。", "sourceUrl": "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health"}],
+    "applications": ["若困擾持續或影響功能，記錄變化並預約合格專業人員。", "若有立即危險，離開危險物、找可信任真人陪伴，並聯絡當地緊急服務或直接前往急診；不要只依賴網站內容。"],
+    "quiz": [
+      {"id": "l30-q1", "conceptId": "help-seeking", "prompt": "哪種情況較應考慮專業協助？", "options": ["困擾持續且明顯影響日常功能", "偶爾心情變化就一定有病", "只因網路測驗分數", "朋友替你正式診斷"], "correctIndex": 0, "explanation": "持續時間、強度、功能影響與安全風險是重要求助線索。"},
+      {"id": "l30-q2", "conceptId": "diagnosis", "prompt": "本網站課後測驗能做什麼？", "options": ["檢查課程理解，不能診斷疾病", "正式診斷", "決定藥物", "取代心理師"], "correctIndex": 0, "explanation": "教育測驗只回饋學習，不蒐集足以診斷的資料。"},
+      {"id": "l30-q3", "conceptId": "immediate-risk", "prompt": "出現立即自傷或傷人危險時，優先做什麼？", "options": ["找真人陪伴並聯絡當地緊急服務或急診", "只做網路測驗", "自行停藥", "獨自等待"], "correctIndex": 0, "explanation": "立即安全需要真人與緊急專業支援，網站不是危機服務。"}
+    ],
+    "references": [
+      {"title": "Caring for Your Mental Health", "url": "https://www.nimh.nih.gov/health/topics/caring-for-your-mental-health", "source": "National Institute of Mental Health"},
+      {"title": "心理諮商與心理治療", "url": "https://www.mohw.gov.tw/", "source": "衛生福利部"}
+    ],
+    "evidenceUpdatedAt": "2026-07-23", "contentStatus": "reviewed"
+  }
+]
