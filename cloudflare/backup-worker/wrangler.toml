@@ -1,0 +1,16 @@
+name = "psychology-daily-backup"
+main = "src/index.js"
+compatibility_date = "2026-07-23"
+workers_dev = true
+
+[[kv_namespaces]]
+binding = "BACKUPS"
+id = "d6ea43b628af4685a14eb0208f6af67f"
+
+[[ratelimits]]
+name = "BACKUP_RATE_LIMITER"
+namespace_id = "47821"
+
+  [ratelimits.simple]
+  limit = 20
+  period = 60

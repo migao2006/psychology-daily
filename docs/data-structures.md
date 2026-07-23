@@ -18,6 +18,16 @@
 - IndexedDB `lessonProgress`：完成時間、逐題作答、正確率、熟悉度與下次複習。
 - IndexedDB `activities`：Asia/Taipei 每日課程、研究與完成狀態。
 - IndexedDB `readResearch`：已讀研究。
-- IndexedDB `meta`：schema 版本相關 metadata 與最後備份時間。
+- IndexedDB `meta`：schema 版本相關 metadata、最後備份時間，以及通過 Zod 驗證的 `researchPreferences.v1`。研究偏好包含多選主題、研究類型、同儕審查／免費全文優先與是否參考閱讀紀錄。
 
 匯出檔固定為 `psychology-daily`、schemaVersion 2 的嚴格 JSON。匯入拒絕未知欄位、錯誤版本、超過 2 MB 或不符合型別的資料，內容永遠不會當成程式碼執行。
+
+## 個人化研究排序
+
+`lib/research/recommend.ts` 將研究內容、研究偏好與本機 `readResearch` 傳入純函式。明確偏好、具時間衰減的內容相似度、收錄新穎度與主題探索組成確定性分數；搜尋文字不會寫入資料庫。相同輸入會依分數、日期與研究 ID 產生相同順序。
+
+## 選用加密雲端備份
+
+`lib/db/cloud-backup.ts` 在瀏覽器產生 `PD1.<128-bit locator>.<256-bit key>` 復原碼，以 Web Crypto AES-GCM 加密上述 schemaVersion 2 JSON，並把 locator 當成 additional authenticated data。只有密文、隨機 IV 與更新時間會送到 Cloudflare Worker。
+
+Worker 原始碼位於 `cloudflare/backup-worker/`，Workers KV key 為 `backup:<locator>`。更新與刪除需要由解密金鑰 HMAC 衍生的寫入憑證；GET 不回傳憑證。還原時瀏覽器下載密文、以復原碼解密，再次通過 `backupSchema` 後才寫回 IndexedDB。復原碼不會由網站保存，也不應提交至版本庫或貼入支援紀錄。

@@ -1,16 +1,67 @@
 // @vitest-environment jsdom
-import { render, screen } from "@testing-library/react";
+import { cleanup, render, screen, waitFor } from "@testing-library/react";
 import userEvent from "@testing-library/user-event";
-import { describe, expect, it } from "vitest";
+import { afterEach, describe, expect, it } from "vitest";
 import { ResearchList } from "@/components/research/research-list";
-import seed from "@/content/research/daily/2026-07-23.json";
-import { dailyResearchSchema } from "@/lib/schemas/research";
+import { clearProgress } from "@/lib/db/backup";
+import { closeDatabase, getDatabase } from "@/lib/db/database";
+import { getResearchPreferences } from "@/lib/db/research-preferences";
+import { researchFixtures } from "@/tests/fixtures/research";
+
 describe("ResearchList", () => {
+  afterEach(async () => {
+    cleanup();
+    await clearProgress().catch(() => undefined);
+    await closeDatabase();
+  });
+
   it("filters without losing the verified card metadata", async () => {
-    render(<ResearchList research={[dailyResearchSchema.parse(seed)]} />);
-    expect(screen.getByText(seed.titleZh)).toBeInTheDocument();
+    render(<ResearchList research={researchFixtures} />);
+    expect(screen.getByText("工作記憶與學習策略")).toBeInTheDocument();
     await userEvent.click(screen.getByRole("button", { name: "預印本" }));
-    expect(screen.queryByText(seed.titleZh)).not.toBeInTheDocument();
+    expect(screen.queryByText("工作記憶與學習策略")).not.toBeInTheDocument();
     expect(screen.getByText("目前沒有符合的研究")).toBeInTheDocument();
+  });
+
+  it("searches the local library and clears an empty result", async () => {
+    render(<ResearchList research={researchFixtures} />);
+    const search = screen.getByRole("searchbox", {
+      name: "搜尋本站研究庫",
+    });
+    await userEvent.type(search, "Sleep brain");
+    expect(screen.getByText("睡眠與腦功能的系統性回顧")).toBeInTheDocument();
+    expect(screen.queryByText("工作記憶與學習策略")).not.toBeInTheDocument();
+    await userEvent.clear(search);
+    await userEvent.type(search, "不存在");
+    await userEvent.click(
+      screen.getByRole("button", { name: "清除搜尋與篩選" }),
+    );
+    expect(screen.getByText("工作記憶與學習策略")).toBeInTheDocument();
+  });
+
+  it("saves editable preferences in IndexedDB and reranks immediately", async () => {
+    render(<ResearchList research={researchFixtures} />);
+    await userEvent.click(
+      screen.getByRole("button", { name: "設定研究偏好" }),
+    );
+    await userEvent.click(
+      screen.getByRole("checkbox", { name: "神經科學" }),
+    );
+    await userEvent.click(
+      screen.getByRole("checkbox", { name: "系統性回顧" }),
+    );
+    await userEvent.click(screen.getByRole("button", { name: "儲存偏好" }));
+
+    await waitFor(async () => {
+      expect((await getResearchPreferences()).categories).toContain("神經科學");
+    });
+    const cards = screen.getAllByRole("article");
+    expect(cards[0]).toHaveAttribute("data-research-id", "fixture-neuroscience");
+    expect(screen.getByText("符合你偏好的神經科學")).toBeInTheDocument();
+
+    await getDatabase().readResearch.put({
+      researchId: "fixture-neuroscience",
+      readAt: "2026-07-23T10:00:00Z",
+    });
   });
 });
