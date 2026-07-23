@@ -16,7 +16,6 @@ TASK=NONE（Cloud-bound research exploration v2 已完成）
 
 ## Remaining
 
-- Push 功能分支並建立以 repository maintenance branch 為 base 的 Draft PR。
 - 下一個 work package：題目級複習中心。
 
 ## Decisions
@@ -40,4 +39,4 @@ TASK=NONE（Cloud-bound research exploration v2 已完成）
 ## Draft PR
 
 - Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
-- Work package PR: Pending.
+- Work package PR: https://github.com/migao2006/psychology-daily/pull/3
