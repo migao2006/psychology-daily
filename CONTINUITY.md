@@ -2,11 +2,11 @@
 
 ## Current Work Package
 
-TASK=NONE（Concept review center v2 已完成）
+Production polish and release（進行中）
 
 ## Current Branch
 
-`feature/concept-review-center-v2`
+`agent/production-polish-release`
 
 ## Completed
 
@@ -17,7 +17,9 @@ TASK=NONE（Concept review center v2 已完成）
 
 ## Remaining
 
-- None for the completed work packages.
+- 稽核並精修手機／桌面 UI、同步與主要路徑。
+- 修正 Worker v1/v2 正式切換相容性。
+- 完成全套驗證、提交與 `main`／Production 驗收。
 
 ## Decisions
 
@@ -25,12 +27,14 @@ TASK=NONE（Concept review center v2 已完成）
 - 裝置憑證不進入同步 payload 或 JSON 匯出。
 - 複習仍使用確定性間隔規則，不使用 AI。
 - 底部主要導覽維持四項；複習中心由今日與進度頁進入。
+- 正式發布必須避免 v1 前端與 v2 Worker 切換期間的服務中斷。
 
 ## Validation
 
 - `pnpm verify`：通過，45 tests、40 static pages。
 - `pnpm test:e2e`：1 passed，包含概念複習。
 - `git diff --check`：通過。
+- 本工作包尚待重新驗證。
 
 ## Known Issues
 
@@ -43,3 +47,4 @@ TASK=NONE（Concept review center v2 已完成）
 - Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
 - Work package PR: https://github.com/migao2006/psychology-daily/pull/3
 - Review center PR: https://github.com/migao2006/psychology-daily/pull/4
+- Release PR: https://github.com/migao2006/psychology-daily/pull/5

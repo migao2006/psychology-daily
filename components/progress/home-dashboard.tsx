@@ -30,7 +30,7 @@ export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]
   const streak = calculateStreak(activities.filter((item) => item.completedToday).map((item) => item.date));
   const dueReviews = reviewItems.filter((item) => taipeiDateKey(item.nextReviewAt) <= today).length;
   return <main id="main-content" className="page">
-    <div className="page-heading"><h1>今天，理解自己多一點。</h1><p className="lede">{formatTaipeiDate()}（Asia/Taipei），一堂微課加一篇研究，約 10 分鐘完成。</p></div>
+    <div className="page-heading"><h1 aria-label="今天，理解自己多一點。">今天，理解自己<span className="mobile-line-break">多一點。</span></h1><p className="lede">{formatTaipeiDate()}（Asia/Taipei），一堂微課加一篇研究，約 10 分鐘完成。</p></div>
     <section className="card card-hero" aria-labelledby="today-lesson-title">
       <div className="meta"><span>今日課程</span><span>第 {nextLesson.sequence} / 30 課</span></div>
       <h2 id="today-lesson-title" style={{ marginTop: ".65rem", fontSize: "1.75rem" }}>{nextLesson.title}</h2>

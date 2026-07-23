@@ -10,7 +10,9 @@ import { notifyDataChanged } from "./sync-events";
 
 const MAX_IMPORT_SIZE_BYTES = 2_000_000;
 
-export async function exportProgress(): Promise<ProgressBackup> {
+export async function exportProgress(options: {
+  recordLocalBackup?: boolean;
+} = {}): Promise<ProgressBackup> {
   const db = getDatabase();
   const [
     lessonProgress,
@@ -33,21 +35,30 @@ export async function exportProgress(): Promise<ProgressBackup> {
     db.reviewItems.toArray(),
     db.reviewAttempts.toArray(),
   ]);
+  const exportedAt = new Date().toISOString();
+  const backupMeta = options.recordLocalBackup
+    ? [
+        ...meta.filter((item) => item.key !== "lastBackupAt"),
+        { key: "lastBackupAt", value: exportedAt },
+      ]
+    : meta;
   const backup = backupSchema.parse({
     app: "psychology-daily",
     schemaVersion: DATABASE_VERSION,
-    exportedAt: new Date().toISOString(),
+    exportedAt,
     lessonProgress,
     activities,
     readResearch,
-    meta,
+    meta: backupMeta,
     researchInteractions,
     savedResearchFilters,
     settings: settings.length ? settings : [defaultUserSettings()],
     reviewItems,
     reviewAttempts,
   });
-  await db.meta.put({ key: "lastBackupAt", value: backup.exportedAt });
+  if (options.recordLocalBackup) {
+    await db.meta.put({ key: "lastBackupAt", value: backup.exportedAt });
+  }
   return backup;
 }
 
@@ -87,9 +98,15 @@ export function parseBackup(raw: string): ProgressBackup {
   });
 }
 
-export async function importProgress(raw: string): Promise<void> {
+export async function importProgress(
+  raw: string,
+  options: { preserveLocalBackupTimestamp?: boolean } = {},
+): Promise<void> {
   const backup = parseBackup(raw);
   const db = getDatabase();
+  const localBackupMeta = options.preserveLocalBackupTimestamp
+    ? await db.meta.get("lastBackupAt")
+    : null;
   const tables = [
     db.lessonProgress,
     db.activities,
@@ -106,10 +123,15 @@ export async function importProgress(raw: string): Promise<void> {
     await db.lessonProgress.bulkPut(backup.lessonProgress);
     await db.activities.bulkPut(backup.activities);
     await db.readResearch.bulkPut(backup.readResearch);
-    await db.meta.bulkPut([
-      ...backup.meta.filter((item) => item.key !== "lastBackupAt"),
-      { key: "lastBackupAt", value: backup.exportedAt },
-    ]);
+    const restoredMeta = backup.meta.filter(
+      (item) => item.key !== "lastBackupAt",
+    );
+    if (options.preserveLocalBackupTimestamp && localBackupMeta) {
+      restoredMeta.push(localBackupMeta);
+    } else if (!options.preserveLocalBackupTimestamp) {
+      restoredMeta.push({ key: "lastBackupAt", value: backup.exportedAt });
+    }
+    await db.meta.bulkPut(restoredMeta);
     await db.researchInteractions.bulkPut(backup.researchInteractions);
     await db.savedResearchFilters.bulkPut(backup.savedResearchFilters);
     await db.settings.bulkPut(

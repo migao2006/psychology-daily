@@ -59,6 +59,35 @@ describe("IndexedDB migration and backup", () => {
     await importProgress(JSON.stringify(backup)); expect(await db.activities.count()).toBe(1);
     expect((await getResearchPreferences()).categories).toEqual(["認知心理學"]);
   });
+  it("does not confuse cloud snapshots with a local backup", async () => {
+    const db = getDatabase();
+    await db.meta.put({
+      key: "lastBackupAt",
+      value: "2026-07-20T00:00:00.000Z",
+    });
+    await exportProgress();
+    expect((await db.meta.get("lastBackupAt"))?.value).toBe(
+      "2026-07-20T00:00:00.000Z",
+    );
+    const localBackup = await exportProgress({ recordLocalBackup: true });
+    expect((await db.meta.get("lastBackupAt"))?.value).toBe(
+      localBackup.exportedAt,
+    );
+  });
+  it("preserves this device's local backup time during cloud restore", async () => {
+    const db = getDatabase();
+    const remote = await exportProgress();
+    await db.meta.put({
+      key: "lastBackupAt",
+      value: "2026-07-19T00:00:00.000Z",
+    });
+    await importProgress(JSON.stringify(remote), {
+      preserveLocalBackupTimestamp: true,
+    });
+    expect((await db.meta.get("lastBackupAt"))?.value).toBe(
+      "2026-07-19T00:00:00.000Z",
+    );
+  });
   it("adds empty concept review tables when upgrading schema v3", async () => {
     const name = `migration-v3-${crypto.randomUUID()}`;
     const old = new Dexie(name);

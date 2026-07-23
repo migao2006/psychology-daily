@@ -32,7 +32,21 @@ const worker = {
 
     const url = new URL(request.url);
     if (url.pathname === "/health" && request.method === "GET") {
-      return json({ ok: true, service: "psychology-daily-backup", api: 2 }, 200, cors);
+      return json(
+        {
+          ok: true,
+          service: "psychology-daily-backup",
+          api: 2,
+          compatibility: ["v1", "v2"],
+        },
+        200,
+        cors,
+      );
+    }
+
+    const legacyMatch = /^\/v1\/backups\/([A-Za-z0-9_-]+)$/.exec(url.pathname);
+    if (legacyMatch && LOCATOR_PATTERN.test(legacyMatch[1])) {
+      return handleLegacyBackup(request, env, legacyMatch[1], cors);
     }
 
     const bindMatch = /^\/v2\/backups\/([A-Za-z0-9_-]+)\/bind$/.exec(url.pathname);
@@ -90,6 +104,59 @@ const worker = {
 };
 
 export default worker;
+
+async function handleLegacyBackup(request, env, locator, cors) {
+  const storageKey = `backup:${locator}`;
+  const stored = await env.BACKUPS.get(storageKey, "json");
+
+  if (request.method === "GET") {
+    if (!stored?.payload) return json({ error: "找不到備份" }, 404, cors);
+    return json(stored.payload, 200, cors);
+  }
+
+  if (request.method === "PUT") {
+    const writeToken = request.headers.get("X-Backup-Write-Token") || "";
+    if (!TOKEN_PATTERN.test(writeToken)) {
+      return json({ error: "缺少有效的寫入憑證" }, 401, cors);
+    }
+    if (stored && !timingSafeEqual(stored.writeToken, writeToken)) {
+      return json({ error: "這組復原碼無法覆寫此備份" }, 403, cors);
+    }
+    const payload = await parseEnvelopeRequest(request);
+    if (payload.error) {
+      return json({ error: payload.error }, payload.status, cors);
+    }
+    await env.BACKUPS.put(
+      storageKey,
+      JSON.stringify({
+        payload: payload.value,
+        writeToken,
+        createdAt: stored?.createdAt ?? new Date().toISOString(),
+        updatedAt: new Date().toISOString(),
+      }),
+    );
+    return json(
+      { ok: true, updatedAt: payload.value.updatedAt },
+      200,
+      cors,
+    );
+  }
+
+  if (request.method === "DELETE") {
+    const writeToken = request.headers.get("X-Backup-Write-Token") || "";
+    if (!stored) return json({ error: "找不到備份" }, 404, cors);
+    if (
+      !TOKEN_PATTERN.test(writeToken) ||
+      !timingSafeEqual(stored.writeToken, writeToken)
+    ) {
+      return json({ error: "復原碼無權刪除此備份" }, 403, cors);
+    }
+    await env.BACKUPS.delete(storageKey);
+    return json({ ok: true }, 200, cors);
+  }
+
+  return json({ error: "不支援的操作" }, 405, cors);
+}
 
 async function bindDevice(request, env, locator, cors) {
   if (!LOCATOR_PATTERN.test(locator)) {
