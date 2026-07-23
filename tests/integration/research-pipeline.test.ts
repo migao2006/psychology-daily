@@ -7,7 +7,10 @@ import { fetchJson } from "@/lib/research/http";
 import { fetchBackfillCandidates, fetchCrossref, fetchOpenAlex, fetchPapers, fetchSemanticScholar } from "@/lib/research/fetch";
 import { verifyMetadata } from "@/lib/research/verify";
 import { findOpenAccess } from "@/lib/research/open-access";
-import { createSummarizer } from "@/lib/research/summarizer";
+import {
+  createSummarizer,
+  researchSummaryAuditPrompt,
+} from "@/lib/research/summarizer";
 import { updateDailyResearch } from "@/lib/research/update";
 import type { ResearchSource } from "@/lib/research/types";
 const originalEnv = { ...process.env };
@@ -115,6 +118,25 @@ describe("mocked research APIs", () => {
     process.env.LLM_PROVIDER = "openai"; process.env.LLM_MODEL = "configured-model"; process.env.OPENAI_API_KEY = "test-key";
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({ choices: [{ message: { content: "not-json" } }] })));
     await expect(createSummarizer().summarize(candidate)).rejects.toThrow();
+  });
+  it("grounds the second audit in verified metadata and permits safety caveats", () => {
+    const prompt = researchSummaryAuditPrompt(candidate, {
+      titleZh: "注意力與青少年學習",
+      researchQuestionZh: "研究在問什麼？",
+      backgroundZh: "研究背景。",
+      methodsZh: "摘要描述的調查。",
+      sample: { size: 120, populationZh: "青少年", locationZh: null },
+      mainFindingsZh: ["摘要發現一。", "摘要發現二。"],
+      limitationsZh: [],
+      practicalMeaningZh: "仍需更多研究。",
+      cautionZh: "本研究不能直接確立因果，且不構成診斷建議。",
+      keyTerms: [],
+    });
+
+    expect(prompt).toContain('"publicationStatus":"peer_reviewed"');
+    expect(prompt).toContain('"studyType":"cross_sectional"');
+    expect(prompt).toContain("教育內容不構成醫療／治療／診斷建議");
+    expect(prompt).toContain(candidate.abstract);
   });
   it("does not invent an open access URL", async () => {
     process.env.UNPAYWALL_EMAIL = "test@example.com";

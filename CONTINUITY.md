@@ -6,7 +6,7 @@ Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`agent/automated-research-backfill`
+`fix/backfill-summary-audit`
 
 ## Completed
 
@@ -16,10 +16,11 @@ Automated research backfill to 100（進行中）
 - 已建立持久化 campaign 狀態、永久候選拒絕紀錄、分類定向搜尋、預印本上限與暫時性錯誤整批中止。
 - 已將回補改為每日排程，與每日精選共用寫入鎖及 main freshness guard；完整驗證後只提交研究內容。
 - 已建立精簡研究 catalog、12 筆漸進顯示及狀態機／API／元件測試。
+- PR #7 已合併；main CI 與 Vercel Production 部署成功。
 
 ## Remaining
 
-- 完成 PR、main／Production 驗證並啟動第一批回補。
+- 修正第二次摘要查核缺少 verified metadata 導致的安全提醒誤判，再啟動第一批回補。
 - 由排程持續累積至 100 篇；若狀態變成 `stalled`，依 Actions Summary 人工檢查後決定是否 `force_retry`。
 
 ## Decisions
@@ -45,4 +46,4 @@ Automated research backfill to 100（進行中）
 
 ## Draft PR
 
-https://github.com/migao2006/psychology-daily/pull/7
+https://github.com/migao2006/psychology-daily/pull/8

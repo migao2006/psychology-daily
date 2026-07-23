@@ -75,12 +75,27 @@ function assemble(summary: SummaryFields, source: ResearchSource, provider: stri
   }
   return parsed.data;
 }
-function auditPrompt(source: ResearchSource, summary: SummaryFields): string {
+export function researchSummaryAuditPrompt(
+  source: ResearchSource,
+  summary: SummaryFields,
+): string {
+  const verifiedSource = {
+    title: source.title,
+    authors: source.authors,
+    publicationDate: source.publicationDate,
+    journalOrRepository: source.journalOrRepository,
+    doi: source.doi,
+    publicationStatus: source.publicationStatus,
+    studyType: source.studyType,
+    psychologyCategory: source.psychologyCategory,
+    abstract: source.abstract,
+  };
   return [
-    "你是研究摘要的第二道獨立查核。只能比較下列英文摘要與繁中整理。",
+    "你是研究摘要的第二道獨立查核。只能比較下列已核對來源資料與繁中整理。",
     "若繁中整理加入來源沒有的樣本、族群、地點、方法、數值、因果、發現或作者限制，valid 必須為 false。",
+    "以下安全提醒不算捏造：依 publicationStatus 標示同儕審查狀態、依 studyType 提醒因果推論界線、說明僅依摘要整理，以及教育內容不構成醫療／治療／診斷建議。",
     "不可因文字精簡或合理翻譯而判錯。只輸出符合 schema 的 JSON。",
-    `英文摘要：${source.abstract}`,
+    `已核對來源資料：${JSON.stringify(verifiedSource)}`,
     `繁中整理：${JSON.stringify(summary)}`,
   ].join("\n\n");
 }
@@ -101,7 +116,7 @@ class OpenAiSummarizer implements ResearchSummarizer {
               },
               body: JSON.stringify({
                 model: this.model,
-                messages: [{ role: "user", content: auditPrompt(source, summary) }],
+                messages: [{ role: "user", content: researchSummaryAuditPrompt(source, summary) }],
                 temperature: 0,
                 response_format: {
                   type: "json_schema",
@@ -144,7 +159,7 @@ class GeminiSummarizer implements ResearchSummarizer {
                 "x-goog-api-key": this.key,
               },
               body: JSON.stringify({
-                contents: [{ role: "user", parts: [{ text: auditPrompt(source, summary) }] }],
+                contents: [{ role: "user", parts: [{ text: researchSummaryAuditPrompt(source, summary) }] }],
                 generationConfig: {
                   temperature: 0,
                   responseMimeType: "application/json",
