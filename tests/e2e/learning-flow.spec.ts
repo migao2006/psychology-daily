@@ -21,10 +21,34 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await expect(originalTitle).toBeVisible();
   const originalTitleText = await originalTitle.textContent();
   expect(originalTitleText).toMatch(/[A-Za-z]{4}/);
-  await page.getByRole("link", { name: "閱讀全文整理" }).click();
+  const searchTerm = originalTitleText!.match(/[A-Za-z]{4,}/)?.[0] ?? "";
+  await page.getByRole("searchbox", { name: "搜尋本站研究庫" }).fill(searchTerm);
+  await expect(page.getByText(originalTitleText!, { exact: true })).toBeVisible();
+  await page.getByRole("searchbox", { name: "搜尋本站研究庫" }).clear();
+  await page.getByRole("button", { name: "設定研究偏好" }).click();
+  await page.getByRole("checkbox", { name: "神經科學" }).check();
+  await page.getByRole("checkbox", { name: "系統性回顧" }).check();
+  await page.getByRole("button", { name: "儲存偏好" }).click();
+  await expect(page.getByLabel("推薦原因").first()).toBeVisible();
+  await page.reload();
+  await page.getByRole("button", { name: /設定研究偏好/ }).click();
+  await expect(
+    page.getByRole("checkbox", { name: "神經科學" }),
+  ).toBeChecked();
+  await page.getByRole("button", { name: "取消" }).click();
+
+  const selectedCard = page.locator("article[data-research-id]").first();
+  const selectedOriginalTitleText = await selectedCard
+    .locator(".original-title")
+    .textContent();
+  await selectedCard
+    .getByRole("link", { name: /閱讀〈.*〉全文整理/ })
+    .click();
   await expect(page.getByRole("heading", { name: "這篇研究在問什麼？" })).toBeVisible();
-  await expect(page.locator('.page-heading .lede[lang="en"]')).toHaveText(originalTitleText!);
-  const original = page.getByRole("link", { name: "查看原始論文 ↗" });
+  await expect(page.locator('.page-heading .lede[lang="en"]')).toHaveText(
+    selectedOriginalTitleText!,
+  );
+  const original = page.getByRole("link", { name: /查看原始論文/ });
   await expect(original).toHaveAttribute("href", /^https:\/\/doi\.org\//);
   await page.getByRole("button", { name: "標記為已閱讀" }).click();
 
