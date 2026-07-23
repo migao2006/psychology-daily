@@ -6,7 +6,7 @@ Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`fix/backfill-cjs-entrypoint`
+`fix/backfill-source-throttling`
 
 ## Completed
 
@@ -18,10 +18,11 @@ Automated research backfill to 100（進行中）
 - 已建立精簡研究 catalog、12 筆漸進顯示及狀態機／API／元件測試。
 - PR #7 已合併；main CI 與 Vercel Production 部署成功。
 - PR #8 已合併，第二次摘要查核現在可讀取 verified metadata。
+- PR #9 已合併，Actions 的 CommonJS `tsx` 入口已修正。
 
 ## Remaining
 
-- 修正 Actions 上 `tsx` CommonJS 模式不支援 top-level await 的入口問題，再重跑第一批。
+- 將分類查詢群組依序執行，避免同時向 Semantic Scholar 發出三筆請求後重跑第一批。
 - 由排程持續累積至 100 篇；若狀態變成 `stalled`，依 Actions Summary 人工檢查後決定是否 `force_retry`。
 
 ## Decisions
@@ -43,6 +44,7 @@ Automated research backfill to 100（進行中）
 
 - 目前正式研究庫仍只有 1 篇，須等首批 workflow 成功後才有足夠內容供推薦發揮。
 - 首次正式回補 run `30053995494` 在內容寫入前因 CommonJS top-level await 失敗；main 未產生內容變更。
+- 第二次正式回補 run `30054244748` 因 Semantic Scholar 429 在內容寫入前中止；並行分類查詢需節流。
 - `main` 尚未啟用 branch protection；排程依既有受控自動寫入規則更新研究內容。
 - GitHub Actions 的第三方 actions 目前仍顯示 Node.js runtime 平台棄用警告，但 runner 以 Node.js 24 執行。
 

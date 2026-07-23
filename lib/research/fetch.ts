@@ -79,11 +79,13 @@ export async function fetchBackfillCandidates(
     "psychology",
     ...focusCategories.map((category) => BACKFILL_CATEGORY_QUERIES[category]),
   ];
-  const batches = await Promise.all(
-    queries.flatMap((query) =>
+  const batches: ResearchSource[][] = [];
+  for (const query of queries) {
+    const queryBatches = await Promise.all(
       sources.map((fetchSource) => fetchSource(now, days, query)),
-    ),
-  );
+    );
+    batches.push(...queryBatches);
+  }
   return batches.flatMap((items) => items.filter(isEligibleCandidate));
 }
 export async function fetchOpenAlex(now: Date, days: number, search = "psychology"): Promise<ResearchSource[]> {
