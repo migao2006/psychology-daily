@@ -28,7 +28,7 @@
 
 每批必須通過 lint、typecheck、內容 schema、Vitest、安全稽核與 production build；workflow 重新確認 `main` 沒有在執行期間改變後，才只提交 `content/research/` 並推送 `main`。回補與每日更新共用 concurrency group，避免同時寫入；沒有內容差異、驗證失敗或來源暫時錯誤都不會 commit，也不 force push。
 
-手動執行：GitHub → **Actions** → **Backfill research library** → **Run workflow** → 選擇 `batch_size`；`dry_run` 可驗證但不提交，`force_retry` 可在人工檢查後重新啟動 `stalled` campaign。每篇摘要會做第二次獨立結構化查核，因此正常使用兩次 LLM 請求。狀態、日期窗與已永久拒絕的候選保存在 `content/research/backfill-state.json`。
+手動執行：GitHub → **Actions** → **Backfill research library** → **Run workflow** → 選擇 `batch_size`；`dry_run` 可驗證但不提交，`force_retry` 可在人工檢查後重新啟動 `stalled` campaign。每篇摘要會做第二次獨立結構化查核，因此正常使用兩次 LLM 請求；Gemini 呼叫會節流到每次至少間隔 6.5 秒，以配合常見免費額度的每分鐘限制。狀態、日期窗與已永久拒絕的候選保存在 `content/research/backfill-state.json`。
 
 ### Link check
 

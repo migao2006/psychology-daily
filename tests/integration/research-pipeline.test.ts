@@ -9,6 +9,7 @@ import { verifyMetadata } from "@/lib/research/verify";
 import { findOpenAccess } from "@/lib/research/open-access";
 import {
   createSummarizer,
+  nextProviderRequestDelay,
   researchSummaryAuditPrompt,
 } from "@/lib/research/summarizer";
 import { updateDailyResearch } from "@/lib/research/update";
@@ -187,6 +188,11 @@ describe("mocked research APIs", () => {
     expect(prompt).toContain('"studyType":"cross_sectional"');
     expect(prompt).toContain("教育內容不構成醫療／治療／診斷建議");
     expect(prompt).toContain(candidate.abstract);
+  });
+  it("paces repeated provider requests without delaying the first request", () => {
+    expect(nextProviderRequestDelay(null, 10_000, 6_500)).toBe(0);
+    expect(nextProviderRequestDelay(10_000, 12_000, 6_500)).toBe(4_500);
+    expect(nextProviderRequestDelay(10_000, 17_000, 6_500)).toBe(0);
   });
   it("does not invent an open access URL", async () => {
     process.env.UNPAYWALL_EMAIL = "test@example.com";
