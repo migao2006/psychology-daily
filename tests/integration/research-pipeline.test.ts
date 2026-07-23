@@ -74,6 +74,35 @@ describe("mocked research APIs", () => {
     await rejection;
     vi.useRealTimers();
   });
+  it("serializes category query groups to avoid self-inflicted source limits", async () => {
+    let semanticRequests = 0;
+    let concurrentSemanticRequests = 0;
+    let maxConcurrentSemanticRequests = 0;
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      if (url.includes("openalex")) return response({ results: [] });
+      if (url.includes("europepmc")) return response({ resultList: { result: [] } });
+      if (url.includes("crossref")) return response({ message: { items: [] } });
+      semanticRequests += 1;
+      concurrentSemanticRequests += 1;
+      maxConcurrentSemanticRequests = Math.max(
+        maxConcurrentSemanticRequests,
+        concurrentSemanticRequests,
+      );
+      await new Promise((resolve) => setTimeout(resolve, 5));
+      concurrentSemanticRequests -= 1;
+      return response({ data: [] });
+    }));
+
+    await fetchBackfillCandidates(
+      new Date("2026-07-23T12:00:00Z"),
+      180,
+      ["人格與個別差異", "心理健康"],
+    );
+
+    expect(semanticRequests).toBe(3);
+    expect(maxConcurrentSemanticRequests).toBe(1);
+  });
   it("conservatively classifies repository records and Crossref metadata", async () => {
     const repositoryResponse = response({ results: [{ id: "https://openalex.org/W2", doi: "https://doi.org/10.1000/repository", display_name: "Psychology preprint about memory", publication_date: "2026-07-22", abstract_inverted_index: { Psychology: [0], memory: [1] }, authorships: [], primary_location: { landing_page_url: "https://repository.example.org/item/2", source: { display_name: "Example Repository", type: "repository" } }, open_access: { oa_url: null }, language: "en" }] });
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(repositoryResponse));
