@@ -10,7 +10,7 @@ import { backupSchema, defaultUserSettings } from "@/lib/schemas/progress";
 const backupJson = JSON.stringify(
   backupSchema.parse({
     app: "psychology-daily",
-    schemaVersion: 3,
+    schemaVersion: 4,
     exportedAt: "2026-07-23T12:00:00Z",
     lessonProgress: [],
     activities: [],
@@ -19,6 +19,8 @@ const backupJson = JSON.stringify(
     researchInteractions: [],
     savedResearchFilters: [],
     settings: [defaultUserSettings(new Date("2026-07-23T12:00:00Z"))],
+    reviewItems: [],
+    reviewAttempts: [],
   }),
 );
 

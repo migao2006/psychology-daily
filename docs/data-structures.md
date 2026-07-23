@@ -20,9 +20,17 @@
 - IndexedDB `readResearch`：已讀研究。
 - IndexedDB `meta`：schema 版本相關 metadata、最後匯出時間，以及通過 Zod 驗證的 `researchPreferences.v1`。
 - IndexedDB `researchInteractions`、`savedResearchFilters`、`settings`：主動回饋／收藏／稍後閱讀、常用篩選與介面設定，全部納入同步 payload。
+- IndexedDB `reviewItems`：以全域唯一 `conceptId` 保存課程／題目、下次複習、連續答對、錯誤次數與最後確定程度。
+- IndexedDB `reviewAttempts`：每次複習作答的不可變紀錄，用於今日完成量與後續統計。
 - IndexedDB `cloudBindings`：目前裝置 ID、復原碼與同步 revision；此 table 嚴格排除在同步與 JSON 匯出之外。
 
-同步與匯出固定為 `psychology-daily`、schemaVersion 3 的嚴格 JSON。匯入可將合法 v2 轉成 v3，拒絕未知欄位、其他版本、超過 2 MB 或不符合型別的資料，內容永遠不會當成程式碼執行。
+同步與匯出固定為 `psychology-daily`、schemaVersion 4 的嚴格 JSON。匯入可將合法 v2／v3 轉成 v4，拒絕未知欄位、其他版本、超過 2 MB 或不符合型別的資料，內容永遠不會當成程式碼執行。
+
+## 概念級複習
+
+完成課程時，每題依自身正誤建立 `reviewItem`；既有 schema v2／v3 進度首次開啟複習相關頁面時，會由已完成課程和最後作答安全補建。複習仍使用 `lib/review/scheduler.ts` 的固定規則：答錯 1 天、連續答對 3／7／14／30 天，再由「不知道／不太確定／確定」及歷史錯誤縮短間隔。
+
+`lib/review/queue.ts` 是不讀寫資料庫的純函式，依 Asia/Taipei 分出今日、逾期、容易答錯及未來七天負荷；UI 可按分類或只看曾答錯概念，不使用 AI。
 
 ## 個人化研究排序
 
@@ -30,6 +38,6 @@
 
 ## 強制加密同步
 
-`lib/db/cloud-backup.ts` 在瀏覽器產生 `PD1.<128-bit locator>.<256-bit key>` 復原碼，以 Web Crypto AES-GCM 加密 schemaVersion 3 JSON，並把 locator 當成 additional authenticated data。首次使用必須建立或復原綁定；Worker 以 active device 與 revision 執行單一裝置寫入及樂觀鎖定。
+`lib/db/cloud-backup.ts` 在瀏覽器產生 `PD1.<128-bit locator>.<256-bit key>` 復原碼，以 Web Crypto AES-GCM 加密 schemaVersion 4 JSON，並把 locator 當成 additional authenticated data。首次使用必須建立或復原綁定；Worker 以 active device 與 revision 執行單一裝置寫入及樂觀鎖定。
 
 Worker 原始碼位於 `cloudflare/backup-worker/`，v2 Workers KV key 為 `backup:v2:<locator>`。更新與刪除需要由解密金鑰 HMAC 衍生的寫入憑證、active device ID 與正確 revision；GET 不回傳任何憑證。復原碼只保存於隔離的 `cloudBindings` table，絕不進入密文內容、匯出、日誌、版本庫或支援紀錄。

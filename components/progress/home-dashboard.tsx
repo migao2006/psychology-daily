@@ -3,28 +3,32 @@ import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { Lesson } from "@/lib/schemas/lesson";
 import type { ResearchArticle } from "@/lib/schemas/research";
-import type { DailyActivity, LessonProgress } from "@/lib/schemas/progress";
+import type { DailyActivity, LessonProgress, ReviewItem } from "@/lib/schemas/progress";
 import { formatTaipeiDate, taipeiDateKey } from "@/lib/dates/taipei";
 import { calculateStreak } from "@/lib/progress/streak";
 import { getDatabase } from "@/lib/db/database";
+import { hydrateLegacyReviewItems } from "@/lib/db/reviews";
 
 export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]; featuredResearch: ResearchArticle }) {
   const [progress, setProgress] = useState<LessonProgress[]>([]);
   const [activities, setActivities] = useState<DailyActivity[]>([]);
+  const [reviewItems, setReviewItems] = useState<ReviewItem[]>([]);
   const [ready, setReady] = useState(false);
   useEffect(() => {
     let active = true;
-    Promise.all([getDatabase().lessonProgress.toArray(), getDatabase().activities.toArray()]).then(([lessonRows, activityRows]) => {
-      if (active) { setProgress(lessonRows); setActivities(activityRows); setReady(true); }
-    });
+    void hydrateLegacyReviewItems(lessons).then(() =>
+      Promise.all([getDatabase().lessonProgress.toArray(), getDatabase().activities.toArray(), getDatabase().reviewItems.toArray()]).then(([lessonRows, activityRows, storedReviewItems]) => {
+        if (active) { setProgress(lessonRows); setActivities(activityRows); setReviewItems(storedReviewItems); setReady(true); }
+      }),
+    );
     return () => { active = false; };
-  }, []);
+  }, [lessons]);
   const completedIds = useMemo(() => new Set(progress.filter((item) => item.completedAt).map((item) => item.lessonId)), [progress]);
   const nextLesson = lessons.find((lesson) => !completedIds.has(lesson.id)) ?? lessons.at(-1)!;
   const today = taipeiDateKey();
   const todayActivity = activities.find((item) => item.date === today);
   const streak = calculateStreak(activities.filter((item) => item.completedToday).map((item) => item.date));
-  const dueReviews = progress.filter((item) => item.nextReviewAt && taipeiDateKey(item.nextReviewAt) <= today).length;
+  const dueReviews = reviewItems.filter((item) => taipeiDateKey(item.nextReviewAt) <= today).length;
   return <main id="main-content" className="page">
     <div className="page-heading"><h1>今天，理解自己多一點。</h1><p className="lede">{formatTaipeiDate()}（Asia/Taipei），一堂微課加一篇研究，約 10 分鐘完成。</p></div>
     <section className="card card-hero" aria-labelledby="today-lesson-title">
@@ -34,11 +38,18 @@ export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]
       <div className="meta" style={{ marginBottom: "1rem" }}><span>{nextLesson.category}</span><span>約 {nextLesson.estimatedMinutes} 分鐘</span><span>{nextLesson.quiz.length} 題測驗</span></div>
       <Link className="button" href={`/learn/${nextLesson.slug}`} style={{ background: "#fff", color: "#164f42" }}>{completedIds.size === 0 ? "開始第一堂課" : "繼續今日課程"} →</Link>
     </section>
-    <div className="section-title"><h2>今天的步調</h2><span className="muted">{ready ? "只存在這個瀏覽器" : "讀取本機進度…"}</span></div>
+    <div className="section-title"><h2>今天的步調</h2><span className="muted">{ready ? "已載入綁定進度" : "讀取同步快取…"}</span></div>
     <section className="metric-grid" aria-label="學習摘要">
       <div className="card metric"><strong>{streak.current}</strong><span>連續天數</span></div>
       <div className="card metric"><strong>{completedIds.size}</strong><span>完成課程</span></div>
       <div className="card metric"><strong>{dueReviews}</strong><span>待複習</span></div>
+    </section>
+    <section className="card review-entry-card">
+      <div>
+        <h2>今日待複習</h2>
+        <p className="muted">{dueReviews ? `${dueReviews} 個概念已到期或逾期。` : "今天沒有到期概念。"}</p>
+      </div>
+      <Link className="button button-secondary" href="/review">前往複習中心</Link>
     </section>
     <div className="section-title"><h2>今日心理學研究</h2><Link href="/research">研究列表 →</Link></div>
     <article className="card research-card">

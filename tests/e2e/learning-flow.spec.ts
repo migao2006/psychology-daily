@@ -46,6 +46,47 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await expect(page.getByRole("heading", { name: "心理學如何進行科學研究" })).toBeVisible();
   await page.reload();
   await expect(page.getByRole("heading", { name: "心理學如何進行科學研究" })).toBeVisible();
+  await page.evaluate(
+    () =>
+      new Promise<void>((resolve, reject) => {
+        const request = indexedDB.open("psychology-daily");
+        request.onerror = () => reject(request.error);
+        request.onsuccess = () => {
+          const database = request.result;
+          const transaction = database.transaction("reviewItems", "readwrite");
+          const store = transaction.objectStore("reviewItems");
+          const getAll = store.getAll();
+          getAll.onerror = () => reject(getAll.error);
+          getAll.onsuccess = () => {
+            for (const item of getAll.result) {
+              store.put({
+                ...item,
+                nextReviewAt:
+                  item.questionId === "l01-q1"
+                    ? "2019-01-01T00:00:00Z"
+                    : "2020-01-01T00:00:00Z",
+              });
+            }
+          };
+          transaction.oncomplete = () => {
+            database.close();
+            resolve();
+          };
+          transaction.onerror = () => reject(transaction.error);
+        };
+      }),
+  );
+  await page.goto("/review");
+  await expect(page.getByRole("heading", { name: "複習中心" })).toBeVisible();
+  await page
+    .getByRole("button", { name: "以科學方法研究行為與心智歷程" })
+    .click();
+  await page.getByRole("combobox", { name: "你有多確定？" }).selectOption("certain");
+  await page.getByRole("button", { name: "送出複習答案" }).click();
+  await expect(page.getByText(/已更新下次複習日期/)).toBeVisible();
+  await page.getByRole("button", { name: "下一題" }).click();
+  await page.reload();
+  await expect(page.locator(".review-metrics .metric").nth(2).getByText("1")).toBeVisible();
 
   await page.getByRole("link", { name: "研究", exact: true }).click();
   const originalTitle = page.locator(".research-card .original-title").first();

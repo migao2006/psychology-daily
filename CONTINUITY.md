@@ -2,32 +2,34 @@
 
 ## Current Work Package
 
-TASK=NONE（Cloud-bound research exploration v2 已完成）
+TASK=NONE（Concept review center v2 已完成）
 
 ## Current Branch
 
-`feature/cloud-research-v2`
+`feature/concept-review-center-v2`
 
 ## Completed
 
 - 完成 Cloudflare 必綁、單一 active device、IndexedDB v3 快取與加密自動同步。
 - 完成研究內容 v2、180 天／100 篇回補 workflow、推薦、搜尋、收藏與研究 UI。
 - 完成 unit、component、production build、mobile E2E 與瀏覽器驗收。
+- 完成概念級 IndexedDB／sync payload v4、複習中心、統計及 legacy migration。
 
 ## Remaining
 
-- 下一個 work package：題目級複習中心。
+- Push 功能分支並建立以 WP1 分支為 base 的 Draft PR。
 
 ## Decisions
 
 - IndexedDB 保留為同步快取；完全移除 Local Storage。
 - 裝置憑證不進入同步 payload 或 JSON 匯出。
-- Work Package 2 才加入題目級複習 schema。
+- 複習仍使用確定性間隔規則，不使用 AI。
+- 底部主要導覽維持四項；複習中心由今日與進度頁進入。
 
 ## Validation
 
-- `pnpm verify`：通過。
-- `pnpm test:e2e`：1 passed。
+- `pnpm verify`：通過，45 tests、40 static pages。
+- `pnpm test:e2e`：1 passed，包含概念複習。
 - `git diff --check`：通過。
 
 ## Known Issues
@@ -40,3 +42,4 @@ TASK=NONE（Cloud-bound research exploration v2 已完成）
 
 - Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
 - Work package PR: https://github.com/migao2006/psychology-daily/pull/3
+- Review center PR: Pending.

@@ -1,17 +1,20 @@
 "use client";
 import { useCallback, useEffect, useMemo, useState } from "react";
 import type { Lesson } from "@/lib/schemas/lesson";
-import type { DailyActivity, LessonProgress, ReadResearch } from "@/lib/schemas/progress";
+import type { DailyActivity, LessonProgress, ReadResearch, ReviewItem } from "@/lib/schemas/progress";
 import { clearProgress, exportProgress, importProgress } from "@/lib/db/backup";
 import { getDatabase } from "@/lib/db/database";
 import { calculateStreak } from "@/lib/progress/streak";
 import { taipeiDateKey } from "@/lib/dates/taipei";
 import { CloudBackup } from "./cloud-backup";
 import { applyUserSettings, getUserSettings, saveUserSettings } from "@/lib/db/settings";
+import { hydrateLegacyReviewItems } from "@/lib/db/reviews";
+import Link from "next/link";
 export function ProgressDashboard({ lessons, categories }: { lessons: Lesson[]; categories: string[] }) {
   const [rows, setRows] = useState<LessonProgress[]>([]);
   const [activities, setActivities] = useState<DailyActivity[]>([]);
   const [reads, setReads] = useState<ReadResearch[]>([]);
+  const [reviewItems, setReviewItems] = useState<ReviewItem[]>([]);
   const [lastBackupAt, setLastBackupAt] = useState<string | null>(null);
   const [message, setMessage] = useState("");
   const [clearStep, setClearStep] = useState<0 | 1 | 2>(0);
@@ -19,10 +22,12 @@ export function ProgressDashboard({ lessons, categories }: { lessons: Lesson[]; 
   const [fontSize, setFontSize] = useState("normal");
   const load = useCallback(async () => {
     const db = getDatabase();
-    const [progressRows, activityRows, readRows, backupMeta, settings] = await Promise.all([db.lessonProgress.toArray(), db.activities.toArray(), db.readResearch.toArray(), db.meta.get("lastBackupAt"), getUserSettings()]);
+    await hydrateLegacyReviewItems(lessons);
+    const [progressRows, activityRows, readRows, backupMeta, settings, storedReviewItems] = await Promise.all([db.lessonProgress.toArray(), db.activities.toArray(), db.readResearch.toArray(), db.meta.get("lastBackupAt"), getUserSettings(), db.reviewItems.toArray()]);
     setRows(progressRows); setActivities(activityRows); setReads(readRows); setLastBackupAt(typeof backupMeta?.value === "string" ? backupMeta.value : null);
+    setReviewItems(storedReviewItems);
     setTheme(settings.theme); setFontSize(settings.fontSize);
-  }, []);
+  }, [lessons]);
   useEffect(() => {
     const timer = window.setTimeout(() => {
       void load();
@@ -33,7 +38,7 @@ export function ProgressDashboard({ lessons, categories }: { lessons: Lesson[]; 
   const correct = rows.reduce((sum, row) => sum + row.correctCount, 0);
   const total = rows.reduce((sum, row) => sum + row.totalCount, 0);
   const streak = calculateStreak(activities.filter((item) => item.completedToday).map((item) => item.date));
-  const due = rows.filter((row) => row.nextReviewAt && taipeiDateKey(row.nextReviewAt) <= taipeiDateKey());
+  const due = reviewItems.filter((row) => taipeiDateKey(row.nextReviewAt) <= taipeiDateKey());
   const rowMap = useMemo(() => new Map(rows.map((row) => [row.lessonId, row])), [rows]);
   async function downloadBackup() {
     const backup = await exportProgress();
@@ -56,7 +61,7 @@ export function ProgressDashboard({ lessons, categories }: { lessons: Lesson[]; 
   }
   return <div className="stack">
     <section className="metric-grid" aria-label="整體進度"><div className="card metric"><strong>{complete.length}</strong><span>完成課程</span></div><div className="card metric"><strong>{total ? Math.round(correct / total * 100) : 0}%</strong><span>測驗正確率</span></div><div className="card metric"><strong>{reads.length}</strong><span>已讀研究</span></div></section>
-    <section className="grid-2"><div className="card"><h2>{streak.current} 天連續學習</h2><p className="muted">最長連續 {streak.longest} 天</p></div><div className="card"><h2>{due.length} 個概念待複習</h2><p className="muted">{due.slice(0, 3).map((row) => lessons.find((lesson) => lesson.id === row.lessonId)?.title).filter(Boolean).join("、") || "今天沒有到期項目"}</p></div></section>
+    <section className="grid-2"><div className="card"><h2>{streak.current} 天連續學習</h2><p className="muted">最長連續 {streak.longest} 天</p></div><div className="card"><h2>{due.length} 個概念待複習</h2><p className="muted">{due.slice(0, 3).map((row) => lessons.find((lesson) => lesson.id === row.lessonId)?.quiz.find((question) => question.id === row.questionId)?.prompt).filter(Boolean).join("、") || "今天沒有到期項目"}</p><Link className="button button-secondary" href="/review">開啟複習中心</Link></div></section>
     <section className="card"><h2>分類完成比例</h2><div className="stack" style={{ marginTop: "1rem" }}>{categories.map((category) => { const group = lessons.filter((lesson) => lesson.category === category); const done = group.filter((lesson) => rowMap.get(lesson.id)?.completedAt).length; const percent = Math.round(done / group.length * 100); return <div key={category}><div className="meta" style={{ justifyContent: "space-between" }}><span>{category}</span><span>{done}/{group.length} · {percent}%</span></div><div className="progress-track"><div className="progress-fill" style={{ width: `${percent}%` }} /></div></div>; })}</div></section>
     <section className="card"><h2>顯示設定</h2><div className="grid-2" style={{ marginTop: "1rem" }}><label className="form-field"><span>色彩模式</span><select value={theme} onChange={(event) => void applyPreference("theme", event.target.value)}><option value="system">跟隨系統</option><option value="light">淺色</option><option value="dark">深色</option></select></label><label className="form-field"><span>字體大小</span><select value={fontSize} onChange={(event) => void applyPreference("font-size", event.target.value)}><option value="normal">標準</option><option value="large">大</option><option value="xlarge">特大</option></select></label></div></section>
     <CloudBackup />
