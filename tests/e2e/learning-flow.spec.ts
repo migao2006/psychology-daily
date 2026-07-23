@@ -17,10 +17,13 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await expect(page.getByRole("heading", { name: "心理學如何進行科學研究" })).toBeVisible();
 
   await page.getByRole("link", { name: "研究", exact: true }).click();
-  await expect(page.getByText("The Connection Between Flow and Music Performance Anxiety Among Adolescents")).toBeVisible();
+  const originalTitle = page.locator(".research-card .original-title").first();
+  await expect(originalTitle).toBeVisible();
+  const originalTitleText = await originalTitle.textContent();
+  expect(originalTitleText).toMatch(/[A-Za-z]{4}/);
   await page.getByRole("link", { name: "閱讀全文整理" }).click();
   await expect(page.getByRole("heading", { name: "這篇研究在問什麼？" })).toBeVisible();
-  await expect(page.getByText("The Connection Between Flow and Music Performance Anxiety Among Adolescents")).toBeVisible();
+  await expect(page.locator('.page-heading .lede[lang="en"]')).toHaveText(originalTitleText!);
   const original = page.getByRole("link", { name: "查看原始論文 ↗" });
   await expect(original).toHaveAttribute("href", /^https:\/\/doi\.org\//);
   await page.getByRole("button", { name: "標記為已閱讀" }).click();

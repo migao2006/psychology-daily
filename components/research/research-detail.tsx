@@ -2,7 +2,8 @@ import type { DailyResearch } from "@/lib/schemas/research";
 import { MarkResearchRead } from "./mark-research-read";
 export function ResearchDetail({ research }: { research: DailyResearch }) {
   const preprint = research.publicationStatus === "preprint";
-  return <article className="lesson-article"><header className="page-heading"><div className="meta"><span className="badge">{preprint ? "預印本・尚未同儕審查" : "已同儕審查"}</span><span>{research.publicationDate}</span></div><h1 style={{ marginTop: ".65rem" }}>{research.titleZh}</h1><p className="lede" lang="en">{research.titleOriginal}</p><div className="meta" style={{ marginTop: ".8rem" }}><span>{research.authors.join(", ")}</span><span>{research.journalOrRepository}</span></div></header>
+  const publicationStatusLabel = research.publicationStatus === "peer_reviewed" ? "已同儕審查" : preprint ? "預印本・尚未同儕審查" : "審查狀態未知";
+  return <article className="lesson-article"><header className="page-heading"><div className="meta"><span className="badge">{publicationStatusLabel}</span><span>{research.publicationDate}</span></div><h1 style={{ marginTop: ".65rem" }}>{research.titleZh}</h1><p className="lede" lang="en">{research.titleOriginal}</p><div className="meta" style={{ marginTop: ".8rem" }}><span>{research.authors.join(", ")}</span><span>{research.journalOrRepository}</span></div></header>
     {preprint && <section className="card callout"><strong>預印本提醒</strong><p>尚未完成正式同儕審查，研究內容及結論可能修改。</p></section>}
     <ResearchSection title="這篇研究在問什麼？"><p>{research.researchQuestionZh}</p><p className="muted" style={{ marginTop: ".7rem" }}>{research.backgroundZh}</p></ResearchSection>
     <ResearchSection title="研究怎麼做？"><p>{research.methodsZh}</p><div className="meta" style={{ marginTop: ".8rem" }}><span>樣本數：{research.sample.size ?? "摘要未提供"}</span><span>{research.sample.populationZh ?? "族群未提供"}</span><span>{research.sample.locationZh ?? "地點未提供"}</span></div></ResearchSection>
