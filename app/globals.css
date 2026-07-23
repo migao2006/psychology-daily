@@ -167,6 +167,16 @@ h1, h2, h3 { letter-spacing: -.035em; line-height: 1.2; } h1 { margin: 0; font-s
 .related-research-list { display: grid; gap: .65rem; }
 .related-research-list a { display: grid; gap: .35rem; border: 1px solid var(--line); border-radius: 1rem; padding: .85rem; }
 .related-research-list a:hover { border-color: var(--primary); }
+.review-entry-card { display: grid; gap: .85rem; margin-top: 1rem; }
+.review-entry-card p { margin: .35rem 0 0; }
+.review-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.review-controls { display: grid; gap: .75rem; }
+.review-question { display: grid; gap: 1rem; }
+.review-question h2 { margin: 0; }
+.review-forecast { display: grid; grid-template-columns: repeat(7, minmax(0, 1fr)); gap: .35rem; margin-top: 1rem; }
+.review-forecast div { display: grid; min-width: 0; gap: .25rem; place-items: center; border-radius: .75rem; padding: .55rem .15rem; background: var(--primary-soft); text-align: center; }
+.review-forecast span { color: var(--muted); font-size: .66rem; }
+.review-forecast strong { color: var(--primary-strong); font-size: 1.15rem; }
 .bottom-nav { position: fixed; z-index: 40; left: 50%; bottom: .65rem; display: grid; grid-template-columns: repeat(4, 1fr); width: min(calc(100% - 1rem), 34rem); transform: translateX(-50%); border: 1px solid var(--line); border-radius: 1.3rem; padding: .35rem; background: color-mix(in srgb, var(--surface-strong) 92%, transparent); box-shadow: 0 12px 40px rgb(20 38 31 / .18); backdrop-filter: blur(20px); }
 .nav-item { display: grid; min-height: 3.5rem; place-items: center; align-content: center; border-radius: .95rem; color: var(--muted); font-size: .7rem; font-weight: 750; }
 .nav-item svg { width: 1.25rem; height: 1.25rem; } .nav-item[aria-current="page"] { background: var(--primary-soft); color: var(--primary-strong); }
@@ -188,5 +198,8 @@ h1, h2, h3 { letter-spacing: -.035em; line-height: 1.2; } h1 { margin: 0; font-s
   .cloud-backup-actions { grid-template-columns: repeat(3, minmax(0, 1fr)); }
   .bibliography-list { grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .source-actions { grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); }
+  .review-entry-card { grid-template-columns: minmax(0, 1fr) auto; align-items: center; }
+  .review-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  .review-controls { grid-template-columns: minmax(12rem, .7fr) minmax(0, 1fr); align-items: end; }
 }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; } }

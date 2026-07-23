@@ -2,6 +2,7 @@ import {
   backupSchema,
   defaultUserSettings,
   legacyBackupSchema,
+  legacyBackupV3Schema,
   type ProgressBackup,
 } from "@/lib/schemas/progress";
 import { DATABASE_VERSION, getDatabase } from "./database";
@@ -19,6 +20,8 @@ export async function exportProgress(): Promise<ProgressBackup> {
     researchInteractions,
     savedResearchFilters,
     settings,
+    reviewItems,
+    reviewAttempts,
   ] = await Promise.all([
     db.lessonProgress.toArray(),
     db.activities.toArray(),
@@ -27,6 +30,8 @@ export async function exportProgress(): Promise<ProgressBackup> {
     db.researchInteractions.toArray(),
     db.savedResearchFilters.toArray(),
     db.settings.toArray(),
+    db.reviewItems.toArray(),
+    db.reviewAttempts.toArray(),
   ]);
   const backup = backupSchema.parse({
     app: "psychology-daily",
@@ -39,6 +44,8 @@ export async function exportProgress(): Promise<ProgressBackup> {
     researchInteractions,
     savedResearchFilters,
     settings: settings.length ? settings : [defaultUserSettings()],
+    reviewItems,
+    reviewAttempts,
   });
   await db.meta.put({ key: "lastBackupAt", value: backup.exportedAt });
   return backup;
@@ -57,15 +64,26 @@ export function parseBackup(raw: string): ProgressBackup {
   const current = backupSchema.safeParse(parsed);
   if (current.success) return current.data;
   const legacy = legacyBackupSchema.safeParse(parsed);
-  if (!legacy.success) {
+  if (legacy.success) {
+    return backupSchema.parse({
+      ...legacy.data,
+      schemaVersion: 4,
+      researchInteractions: [],
+      savedResearchFilters: [],
+      settings: [defaultUserSettings(new Date(legacy.data.exportedAt))],
+      reviewItems: [],
+      reviewAttempts: [],
+    });
+  }
+  const legacyV3 = legacyBackupV3Schema.safeParse(parsed);
+  if (!legacyV3.success) {
     throw new Error("備份格式或資料庫版本不相容");
   }
   return backupSchema.parse({
-    ...legacy.data,
-    schemaVersion: 3,
-    researchInteractions: [],
-    savedResearchFilters: [],
-    settings: [defaultUserSettings(new Date(legacy.data.exportedAt))],
+    ...legacyV3.data,
+    schemaVersion: 4,
+    reviewItems: [],
+    reviewAttempts: [],
   });
 }
 
@@ -80,6 +98,8 @@ export async function importProgress(raw: string): Promise<void> {
     db.researchInteractions,
     db.savedResearchFilters,
     db.settings,
+    db.reviewItems,
+    db.reviewAttempts,
   ] as const;
   await db.transaction("rw", [...tables], async () => {
     await Promise.all(tables.map((table) => table.clear()));
@@ -95,6 +115,8 @@ export async function importProgress(raw: string): Promise<void> {
     await db.settings.bulkPut(
       backup.settings.length ? backup.settings : [defaultUserSettings()],
     );
+    await db.reviewItems.bulkPut(backup.reviewItems);
+    await db.reviewAttempts.bulkPut(backup.reviewAttempts);
   });
   notifyDataChanged();
 }
@@ -109,6 +131,8 @@ export async function clearProgress(): Promise<void> {
     db.researchInteractions,
     db.savedResearchFilters,
     db.settings,
+    db.reviewItems,
+    db.reviewAttempts,
   ] as const;
   await db.transaction("rw", [...tables], async () => {
     await Promise.all(tables.map((table) => table.clear()));

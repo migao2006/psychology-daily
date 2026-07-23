@@ -7,12 +7,14 @@ import {
   type LessonProgress,
   type ReadResearch,
   type ResearchInteraction,
+  type ReviewAttempt,
+  type ReviewItem,
   type SavedResearchFilter,
   type UserSettings,
 } from "@/lib/schemas/progress";
 
 export const DATABASE_NAME = "psychology-daily";
-export const DATABASE_VERSION = 3;
+export const DATABASE_VERSION = 4;
 
 export type PsychologyDailyDb = Dexie & {
   lessonProgress: EntityTable<LessonProgress, "lessonId">;
@@ -23,6 +25,8 @@ export type PsychologyDailyDb = Dexie & {
   savedResearchFilters: EntityTable<SavedResearchFilter, "id">;
   settings: EntityTable<UserSettings, "key">;
   cloudBindings: EntityTable<CloudBinding, "id">;
+  reviewItems: EntityTable<ReviewItem, "conceptId">;
+  reviewAttempts: EntityTable<ReviewAttempt, "id">;
 };
 
 let database: PsychologyDailyDb | null = null;
@@ -70,6 +74,19 @@ export function createDatabase(name = DATABASE_NAME): PsychologyDailyDb {
         defaultUserSettings(),
       );
     });
+
+  db.version(4).stores({
+    lessonProgress: "&lessonId,completedAt,nextReviewAt,updatedAt",
+    activities: "&date,completedToday",
+    readResearch: "&researchId,readAt",
+    meta: "&key",
+    researchInteractions: "&researchId,updatedAt,feedback,favorite,readLater",
+    savedResearchFilters: "&id,updatedAt",
+    settings: "&key,updatedAt",
+    cloudBindings: "&id,status,updatedAt",
+    reviewItems: "&conceptId,lessonId,questionId,nextReviewAt,errorCount,updatedAt",
+    reviewAttempts: "&id,conceptId,lessonId,questionId,answeredAt",
+  });
 
   return db;
 }

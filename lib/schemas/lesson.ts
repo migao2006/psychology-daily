@@ -69,6 +69,7 @@ export const lessonsSchema = z
     const ids = new Set<string>();
     const slugs = new Set<string>();
     const sequences = new Set<number>();
+    const conceptIds = new Set<string>();
     for (const lesson of lessons) {
       if (ids.has(lesson.id) || slugs.has(lesson.slug) || sequences.has(lesson.sequence)) {
         context.addIssue({
@@ -79,6 +80,16 @@ export const lessonsSchema = z
       ids.add(lesson.id);
       slugs.add(lesson.slug);
       sequences.add(lesson.sequence);
+      for (const question of lesson.quiz) {
+        if (conceptIds.has(question.conceptId)) {
+          context.addIssue({
+            code: "custom",
+            path: [lesson.sequence - 1, "quiz"],
+            message: `複習 conceptId 必須全站唯一：${question.conceptId}`,
+          });
+        }
+        conceptIds.add(question.conceptId);
+      }
     }
   });
 
@@ -86,4 +97,3 @@ export type EvidenceItem = z.infer<typeof evidenceItemSchema>;
 export type QuizQuestion = z.infer<typeof quizQuestionSchema>;
 export type ReferenceItem = z.infer<typeof referenceItemSchema>;
 export type Lesson = z.infer<typeof lessonSchema>;
-

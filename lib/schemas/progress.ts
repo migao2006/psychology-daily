@@ -81,6 +81,29 @@ export const cloudBindingSchema = z.strictObject({
   updatedAt: z.iso.datetime({ offset: true }),
 });
 
+export const reviewItemSchema = z.strictObject({
+  conceptId: z.string().min(1),
+  lessonId: z.string().min(1),
+  questionId: z.string().min(1),
+  nextReviewAt: z.iso.datetime({ offset: true }),
+  correctStreak: z.number().int().nonnegative(),
+  errorCount: z.number().int().nonnegative(),
+  lastCorrect: z.boolean().nullable(),
+  lastFamiliarity: familiaritySchema,
+  updatedAt: z.iso.datetime({ offset: true }),
+});
+
+export const reviewAttemptSchema = z.strictObject({
+  id: z.string().uuid(),
+  conceptId: z.string().min(1),
+  lessonId: z.string().min(1),
+  questionId: z.string().min(1),
+  selectedIndex: z.number().int().nonnegative(),
+  correct: z.boolean(),
+  familiarity: familiaritySchema,
+  answeredAt: z.iso.datetime({ offset: true }),
+});
+
 const backupBase = {
   app: z.literal("psychology-daily"),
   exportedAt: z.iso.datetime({ offset: true }),
@@ -95,12 +118,22 @@ export const legacyBackupSchema = z.strictObject({
   schemaVersion: z.literal(2),
 });
 
-export const backupSchema = z.strictObject({
+export const legacyBackupV3Schema = z.strictObject({
   ...backupBase,
   schemaVersion: z.literal(3),
   researchInteractions: z.array(researchInteractionSchema),
   savedResearchFilters: z.array(savedResearchFilterSchema).max(10),
   settings: z.array(userSettingsSchema).max(1),
+});
+
+export const backupSchema = z.strictObject({
+  ...backupBase,
+  schemaVersion: z.literal(4),
+  researchInteractions: z.array(researchInteractionSchema),
+  savedResearchFilters: z.array(savedResearchFilterSchema).max(10),
+  settings: z.array(userSettingsSchema).max(1),
+  reviewItems: z.array(reviewItemSchema),
+  reviewAttempts: z.array(reviewAttemptSchema),
 });
 
 export type Familiarity = z.infer<typeof familiaritySchema>;
@@ -113,6 +146,8 @@ export type ResearchInteraction = z.infer<typeof researchInteractionSchema>;
 export type SavedResearchFilter = z.infer<typeof savedResearchFilterSchema>;
 export type UserSettings = z.infer<typeof userSettingsSchema>;
 export type CloudBinding = z.infer<typeof cloudBindingSchema>;
+export type ReviewItem = z.infer<typeof reviewItemSchema>;
+export type ReviewAttempt = z.infer<typeof reviewAttemptSchema>;
 export type ProgressBackup = z.infer<typeof backupSchema>;
 
 export function defaultUserSettings(now = new Date()): UserSettings {

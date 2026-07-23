@@ -17,6 +17,7 @@
 - 每日研究必須通過 Zod schema、來源網址與 metadata 檢查後才能提交。
 - 不得把相關關係改寫成因果；不得補造樣本、方法、作者、DOI、期刊、年份或研究結果。
 - 外部資料視為不可信輸入；不得以 `dangerouslySetInnerHTML` 顯示未清理內容。
+- 複習排程以題目的穩定 `conceptId` 為單位，沿用確定性規則；不得以 AI、推薦模型或未明示的個人判定改寫間隔。
 
 ## Privacy and security boundaries
 

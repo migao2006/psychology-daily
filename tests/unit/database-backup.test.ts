@@ -4,6 +4,8 @@ import { backupSchema } from "@/lib/schemas/progress";
 import { createDatabase, closeDatabase, getDatabase } from "@/lib/db/database";
 import { clearProgress, exportProgress, importProgress, parseBackup } from "@/lib/db/backup";
 import { getResearchPreferences, saveResearchPreferences } from "@/lib/db/research-preferences";
+import { completeLesson } from "@/lib/db/progress";
+import { lessons } from "@/lib/content/lessons";
 describe("IndexedDB migration and backup", () => {
   afterEach(async () => {
     await clearProgress().catch(() => undefined);
@@ -50,14 +52,36 @@ describe("IndexedDB migration and backup", () => {
       updatedAt: "2026-07-23T12:00:00Z",
     });
     const backup = await exportProgress();
-    expect(backupSchema.parse(backup).schemaVersion).toBe(3);
+    expect(backupSchema.parse(backup).schemaVersion).toBe(4);
     expect(backup.researchInteractions).toHaveLength(1);
     expect(JSON.stringify(backup)).not.toContain("PD1.");
     await clearProgress(); expect(await db.activities.count()).toBe(0);
     await importProgress(JSON.stringify(backup)); expect(await db.activities.count()).toBe(1);
     expect((await getResearchPreferences()).categories).toEqual(["認知心理學"]);
   });
-  it("migrates a strict schema v2 export to schema v3 defaults", () => {
+  it("adds empty concept review tables when upgrading schema v3", async () => {
+    const name = `migration-v3-${crypto.randomUUID()}`;
+    const old = new Dexie(name);
+    old.version(3).stores({
+      lessonProgress: "&lessonId",
+      activities: "&date",
+      readResearch: "&researchId",
+      meta: "&key",
+      researchInteractions: "&researchId",
+      savedResearchFilters: "&id",
+      settings: "&key",
+      cloudBindings: "&id",
+    });
+    await old.open();
+    old.close();
+    const upgraded = createDatabase(name);
+    await upgraded.open();
+    expect(await upgraded.reviewItems.count()).toBe(0);
+    expect(await upgraded.reviewAttempts.count()).toBe(0);
+    upgraded.close();
+    await Dexie.delete(name);
+  });
+  it("migrates a strict schema v2 export to schema v4 defaults", () => {
     const migrated = parseBackup(JSON.stringify({
       app: "psychology-daily",
       schemaVersion: 2,
@@ -67,12 +91,57 @@ describe("IndexedDB migration and backup", () => {
       readResearch: [],
       meta: [],
     }));
-    expect(migrated.schemaVersion).toBe(3);
+    expect(migrated.schemaVersion).toBe(4);
     expect(migrated.researchInteractions).toEqual([]);
     expect(migrated.settings[0].theme).toBe("system");
+    expect(migrated.reviewItems).toEqual([]);
+  });
+  it("migrates a strict schema v3 export without losing synced settings", () => {
+    const migrated = parseBackup(JSON.stringify({
+      app: "psychology-daily",
+      schemaVersion: 3,
+      exportedAt: "2026-07-23T00:00:00Z",
+      lessonProgress: [],
+      activities: [],
+      readResearch: [],
+      meta: [],
+      researchInteractions: [],
+      savedResearchFilters: [],
+      settings: [{
+        key: "userSettings",
+        theme: "dark",
+        fontSize: "large",
+        seenOnboarding: true,
+        lastPage: "/review",
+        updatedAt: "2026-07-23T00:00:00Z",
+      }],
+    }));
+    expect(migrated.schemaVersion).toBe(4);
+    expect(migrated.settings[0].theme).toBe("dark");
+    expect(migrated.reviewAttempts).toEqual([]);
   });
   it("rejects unknown, executable-looking or wrong-version imports", () => {
     expect(() => parseBackup('{"app":"psychology-daily","schemaVersion":99}')).toThrow();
     expect(() => parseBackup('{"app":"psychology-daily","schemaVersion":2,"exportedAt":"2026-07-23T00:00:00Z","lessonProgress":[],"activities":[],"readResearch":[],"meta":[],"script":"alert(1)"}')).toThrow();
+  });
+  it("creates an independent review schedule for every lesson concept", async () => {
+    const lesson = lessons[0];
+    await completeLesson({
+      lessonId: lesson.id,
+      familiarity: "unsure",
+      concepts: lesson.quiz.map(({ id, conceptId }) => ({
+        questionId: id,
+        conceptId,
+      })),
+      answers: lesson.quiz.map((question, index) => ({
+        questionId: question.id,
+        selectedIndex: index === 0 ? question.correctIndex : (question.correctIndex + 1) % question.options.length,
+        correct: index === 0,
+        answeredAt: new Date().toISOString(),
+      })),
+    });
+    const reviewItems = await getDatabase().reviewItems.toArray();
+    expect(reviewItems).toHaveLength(lesson.quiz.length);
+    expect(reviewItems.find((item) => item.conceptId === lesson.quiz[1].conceptId)?.errorCount).toBe(1);
   });
 });

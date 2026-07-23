@@ -17,6 +17,7 @@
 | `lib/research/` | 擷取、正規化、去重、排名、核對、推薦與更新 | 不依賴 UI |
 | `lib/dates/`, `lib/progress/`, `lib/review/` | 可測試的純日期／學習規則 | 不依賴 UI 或網路 |
 | `lib/schemas/` | 所有內容與本機資料的 runtime contract | 位於資料邊界中央 |
+| `lib/review/` | 確定性間隔排程與概念佇列純函式 | 不直接存取 IndexedDB |
 | `prompts/` | 可執行 LLM Prompt 與變更契約 | 由研究 summarizer 使用 |
 | `scripts/` | 可直接執行的維運入口 | 只協調 `lib/`，不複製實作 |
 | `content/lessons/` | 人工審查課程 | 不得由自動工作流程改寫 |
@@ -43,6 +44,8 @@ GitHub Actions → source APIs → normalize／filter／deduplicate → determin
 ## Browser data flow
 
 Client components → `lib/db/` → IndexedDB 快取課程、活動、已讀研究、偏好、互動、設定與 metadata；Repository 不使用 Local Storage 或 Session Storage。
+
+課程測驗 → 每題 `conceptId` → `reviewItems` 獨立排程 → `/review` 今日／逾期佇列 → `reviewAttempts` 保存作答。既有 lesson-level 進度保留供課程完成率與向下相容，不再作為複習中心的排程單位。
 
 研究推薦由 `lib/research/recommend.ts` 在瀏覽器以內容、明確偏好、主動回饋及已讀資料計算，沒有跨使用者資料。搜尋只過濾已載入內容；除非使用者主動儲存，否則不寫入偏好。
 

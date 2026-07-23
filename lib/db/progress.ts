@@ -1,4 +1,5 @@
 import type { Familiarity, QuizAnswer } from "@/lib/schemas/progress";
+import { reviewItemSchema } from "@/lib/schemas/progress";
 import { taipeiDateKey } from "@/lib/dates/taipei";
 import { scheduleReview } from "@/lib/review/scheduler";
 import { getDatabase } from "./database";
@@ -8,6 +9,7 @@ export async function completeLesson(input: {
   lessonId: string;
   answers: QuizAnswer[];
   familiarity: Familiarity;
+  concepts: Array<{ questionId: string; conceptId: string }>;
 }): Promise<void> {
   const db = getDatabase();
   const previous = await db.lessonProgress.get(input.lessonId);
@@ -21,7 +23,7 @@ export async function completeLesson(input: {
   });
   const now = new Date().toISOString();
 
-  await db.transaction("rw", [db.lessonProgress, db.activities], async () => {
+  await db.transaction("rw", [db.lessonProgress, db.activities, db.reviewItems], async () => {
     await db.lessonProgress.put({
       lessonId: input.lessonId,
       completedAt: previous?.completedAt ?? now,
@@ -43,6 +45,34 @@ export async function completeLesson(input: {
       readResearch: activity?.readResearch ?? false,
       completedToday: activity?.readResearch ?? false,
     });
+    for (const concept of input.concepts) {
+      const answer = input.answers.find(
+        (candidate) => candidate.questionId === concept.questionId,
+      );
+      if (!answer) continue;
+      const previousItem = await db.reviewItems.get(concept.conceptId);
+      const conceptSchedule = scheduleReview({
+        correct: answer.correct,
+        familiarity: input.familiarity,
+        previousCorrectStreak: previousItem?.correctStreak ?? 0,
+        previousErrorCount: previousItem?.errorCount ?? 0,
+      });
+      await db.reviewItems.put(
+        reviewItemSchema.parse({
+          conceptId: concept.conceptId,
+          lessonId: input.lessonId,
+          questionId: concept.questionId,
+          nextReviewAt: new Date(
+            `${conceptSchedule.nextReviewDate}T00:00:00+08:00`,
+          ).toISOString(),
+          correctStreak: conceptSchedule.correctStreak,
+          errorCount: conceptSchedule.errorCount,
+          lastCorrect: answer.correct,
+          lastFamiliarity: input.familiarity,
+          updatedAt: now,
+        }),
+      );
+    }
   });
   notifyDataChanged();
 }
