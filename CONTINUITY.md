@@ -17,7 +17,7 @@ TASK=NONE（Concept review center v2 已完成）
 
 ## Remaining
 
-- Push 功能分支並建立以 WP1 分支為 base 的 Draft PR。
+- None for the completed work packages.
 
 ## Decisions
 
@@ -42,4 +42,4 @@ TASK=NONE（Concept review center v2 已完成）
 
 - Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
 - Work package PR: https://github.com/migao2006/psychology-daily/pull/3
-- Review center PR: Pending.
+- Review center PR: https://github.com/migao2006/psychology-daily/pull/4
