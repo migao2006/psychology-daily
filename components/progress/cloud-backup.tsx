@@ -16,8 +16,12 @@ export function CloudBackup() {
 
   async function copyRecoveryCode() {
     if (!binding) return;
-    await navigator.clipboard.writeText(binding.recoveryCode);
-    setMessage("復原碼已複製。請保存到密碼管理器，不要傳給其他人。");
+    try {
+      await navigator.clipboard.writeText(binding.recoveryCode);
+      setMessage("復原碼已複製。請保存到密碼管理器，不要傳給其他人。");
+    } catch {
+      setMessage("瀏覽器無法存取剪貼簿，請從綁定畫面手動保存復原碼。");
+    }
   }
 
   return (

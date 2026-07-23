@@ -1,5 +1,6 @@
-import { expect, test } from "@playwright/test";
+import { expect, test, type Page } from "@playwright/test";
 test("first visit, learning, research, persistence and backup flow", async ({ page }) => {
+  await page.setViewportSize({ width: 320, height: 700 });
   let payload: unknown;
   let revision = 0;
   await page.route("https://psychology-daily-backup.a0912647176.workers.dev/**", async (route) => {
@@ -34,6 +35,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await page.getByRole("button", { name: "完成綁定" }).click();
   await expect(page.getByRole("heading", { name: "今天，理解自己多一點。" })).toBeVisible();
   await expect(page.getByRole("navigation", { name: "主要導覽" })).toBeVisible();
+  await expectNoHorizontalOverflow(page);
   await page.getByRole("link", { name: "開始第一堂課 →" }).click();
   await expect(page.getByRole("heading", { name: "心理學是什麼", exact: true })).toBeVisible();
   await page.getByRole("button", { name: "以科學方法研究行為與心智歷程" }).click();
@@ -78,6 +80,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   );
   await page.goto("/review");
   await expect(page.getByRole("heading", { name: "複習中心" })).toBeVisible();
+  await expectNoHorizontalOverflow(page);
   await page
     .getByRole("button", { name: "以科學方法研究行為與心智歷程" })
     .click();
@@ -89,6 +92,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await expect(page.locator(".review-metrics .metric").nth(2).getByText("1")).toBeVisible();
 
   await page.getByRole("link", { name: "研究", exact: true }).click();
+  await expectNoHorizontalOverflow(page);
   const originalTitle = page.locator(".research-card .original-title").first();
   await expect(originalTitle).toBeVisible();
   const originalTitleText = await originalTitle.textContent();
@@ -117,6 +121,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
     .getByRole("link", { name: /閱讀〈.*〉全文整理/ })
     .click();
   await expect(page.getByRole("heading", { name: "這篇研究在問什麼？" })).toBeVisible();
+  await expectNoHorizontalOverflow(page);
   await expect(page.locator('.page-heading .lede[lang="en"]')).toHaveText(
     selectedOriginalTitleText!,
   );
@@ -125,6 +130,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await page.getByRole("button", { name: "標記為已閱讀" }).click();
 
   await page.getByRole("link", { name: "進度", exact: true }).click();
+  await expectNoHorizontalOverflow(page);
   const downloadPromise = page.waitForEvent("download");
   await page.getByRole("button", { name: "匯出 JSON" }).focus();
   await page.keyboard.press("Enter");
@@ -145,3 +151,11 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await page.goto("/this-page-does-not-exist");
   await expect(page.getByRole("heading", { name: "這一頁找不到" })).toBeVisible();
 });
+
+async function expectNoHorizontalOverflow(page: Page): Promise<void> {
+  expect(
+    await page.evaluate(
+      () => document.documentElement.scrollWidth <= window.innerWidth,
+    ),
+  ).toBe(true);
+}
