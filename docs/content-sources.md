@@ -8,13 +8,13 @@
 
 ## 每日研究
 
-每日研究候選依序向 OpenAlex、Europe PMC、Crossref 取回；OpenAlex 可涵蓋 PsyArXiv 等可信預印本。資料不足時才擴大日期範圍，且保留既有內容。Crossref 核對 DOI、標題、作者與期刊；Unpaywall 只在找到合法公開版本時提供免費全文。
+每日研究候選依序向 OpenAlex、Europe PMC、Crossref 取回；前三者沒有合格候選時才使用 Semantic Scholar fallback。OpenAlex 可涵蓋 PsyArXiv 等可信預印本。資料不足時才擴大日期範圍，且保留既有內容。Crossref 核對 DOI、標題、作者與期刊；Unpaywall 只在找到合法公開版本時提供免費全文。
 
 LLM 只收到來源 API 回傳的標題、作者、出版資訊、DOI、研究類型與英文摘要。輸出以 JSON Schema 與 Zod 驗證；程式保留來源 metadata，不允許模型覆寫。樣本數若未出現在摘要，更新會失敗。
 
 候選缺少英文標題、英文摘要、作者、日期或可驗證永久網址時會被排除。先搜尋最近 14 天，再擴至 30 天；兩輪都沒有合格資料時回傳 `no_suitable_paper`，不覆寫既有研究。
 
-初始種子資料 DOI `10.1177/03057356261457411` 已於 2026-07-23 以 Crossref 核對題名、作者、期刊、日期與 DOI。其中文內容只依來源摘要人工整理，樣本數未見於摘要，因此保留 `null`；未確認合法公開版本，因此 `openAccessUrl` 保留 `null`。
+目前研究內容與來源追蹤以 `content/research/index.json` 及對應 `daily/*.json` 為唯一來源，不在文件複製容易過時的 DOI、題名或公開全文狀態。每筆內容都必須保存 `sourceApis`、`retrievedAt`、`summaryBasis` 與 `metadataVerification`。
 
 ## 外部連結
 
