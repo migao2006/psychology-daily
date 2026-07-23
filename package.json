@@ -17,6 +17,7 @@
     "test:e2e": "playwright test",
     "validate:content": "tsx scripts/validate-content.ts",
     "update:research": "tsx scripts/update-daily-research.ts",
+    "backfill:research": "tsx scripts/backfill-research.ts",
     "verify": "pnpm lint && pnpm typecheck && pnpm validate:content && pnpm test && pnpm build"
   },
   "dependencies": {

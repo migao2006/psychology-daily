@@ -1,21 +1,39 @@
-import { readFileSync, readdirSync } from "node:fs";
+import { readFileSync } from "node:fs";
 import path from "node:path";
 import researchIndexJson from "@/content/research/index.json";
 import {
-  dailyResearchSchema,
+  researchArticleSchema,
   researchIndexSchema,
-  type DailyResearch,
+  type ResearchArticle,
 } from "@/lib/schemas/research";
 
 export const researchIndex = researchIndexSchema.parse(researchIndexJson);
-const dailyDirectory = path.join(process.cwd(), "content", "research", "daily");
-export const allResearch: DailyResearch[] = readdirSync(dailyDirectory)
-  .filter((filename) => filename.endsWith(".json"))
-  .map((filename) => dailyResearchSchema.parse(JSON.parse(readFileSync(path.join(dailyDirectory, filename), "utf8"))))
-  .sort((left, right) => right.featuredDate.localeCompare(left.featuredDate));
 
-export const featuredResearch = allResearch[0];
+export const allResearch: ResearchArticle[] = researchIndex.items
+  .map((item) =>
+    researchArticleSchema.parse(
+      JSON.parse(
+        readFileSync(
+          path.join(process.cwd(), "content", "research", item.path),
+          "utf8",
+        ),
+      ),
+    ),
+  )
+  .sort(
+    (left, right) =>
+      right.publicationDate.localeCompare(left.publicationDate) ||
+      left.id.localeCompare(right.id),
+  );
 
-export function getResearchById(id: string): DailyResearch | undefined {
+const latestFeature = researchIndex.features.toSorted((left, right) =>
+  right.date.localeCompare(left.date),
+)[0];
+
+export const featuredResearch =
+  allResearch.find((item) => item.id === latestFeature?.researchId) ??
+  allResearch[0];
+
+export function getResearchById(id: string): ResearchArticle | undefined {
   return allResearch.find((research) => research.id === id);
 }

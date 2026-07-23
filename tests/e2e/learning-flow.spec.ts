@@ -1,6 +1,37 @@
 import { expect, test } from "@playwright/test";
 test("first visit, learning, research, persistence and backup flow", async ({ page }) => {
+  let payload: unknown;
+  let revision = 0;
+  await page.route("https://psychology-daily-backup.a0912647176.workers.dev/**", async (route) => {
+    const request = route.request();
+    const url = request.url();
+    if (url.endsWith("/bind") && request.method() === "POST") {
+      await route.fulfill({ json: { revision } });
+      return;
+    }
+    if (request.method() === "PUT") {
+      payload = request.postDataJSON();
+      revision += 1;
+      await route.fulfill({
+        json: {
+          revision,
+          updatedAt: (payload as { updatedAt: string }).updatedAt,
+        },
+      });
+      return;
+    }
+    if (request.method() === "GET" && payload) {
+      await route.fulfill({ json: { payload, revision } });
+      return;
+    }
+    await route.fulfill({ status: 404, json: { error: "找不到備份" } });
+  });
   await page.goto("/");
+  await expect(page.getByRole("heading", { name: "先綁定你的學習資料" })).toBeVisible();
+  await page.getByRole("button", { name: "保留目前進度並建立綁定" }).click();
+  const recoveryCode = await page.locator("output.recovery-code").textContent();
+  await page.getByLabel("貼回復原碼以確認已保存").fill(recoveryCode!);
+  await page.getByRole("button", { name: "完成綁定" }).click();
   await expect(page.getByRole("heading", { name: "今天，理解自己多一點。" })).toBeVisible();
   await expect(page.getByRole("navigation", { name: "主要導覽" })).toBeVisible();
   await page.getByRole("link", { name: "開始第一堂課 →" }).click();
@@ -22,16 +53,16 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   const originalTitleText = await originalTitle.textContent();
   expect(originalTitleText).toMatch(/[A-Za-z]{4}/);
   const searchTerm = originalTitleText!.match(/[A-Za-z]{4,}/)?.[0] ?? "";
-  await page.getByRole("searchbox", { name: "搜尋本站研究庫" }).fill(searchTerm);
+  await page.getByRole("combobox", { name: "搜尋研究庫" }).fill(searchTerm);
   await expect(page.getByText(originalTitleText!, { exact: true })).toBeVisible();
-  await page.getByRole("searchbox", { name: "搜尋本站研究庫" }).clear();
-  await page.getByRole("button", { name: "設定研究偏好" }).click();
+  await page.getByRole("combobox", { name: "搜尋研究庫" }).clear();
+  await page.getByRole("button", { name: "研究偏好" }).click();
   await page.getByRole("checkbox", { name: "神經科學" }).check();
   await page.getByRole("checkbox", { name: "系統性回顧" }).check();
   await page.getByRole("button", { name: "儲存偏好" }).click();
   await expect(page.getByLabel("推薦原因").first()).toBeVisible();
   await page.reload();
-  await page.getByRole("button", { name: /設定研究偏好/ }).click();
+  await page.getByRole("button", { name: "研究偏好" }).click();
   await expect(
     page.getByRole("checkbox", { name: "神經科學" }),
   ).toBeChecked();
@@ -63,9 +94,9 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
   await page.keyboard.press("Enter");
   await page.getByRole("button", { name: "我了解，繼續" }).focus();
   await page.keyboard.press("Enter");
-  await page.getByRole("button", { name: "永久清除本機資料" }).focus();
+  await page.getByRole("button", { name: "永久清除全部資料" }).focus();
   await page.keyboard.press("Enter");
-  await expect(page.getByText("全部本機資料已清除。")).toBeVisible();
+  await expect(page.getByText("全部學習資料已清除並排入同步。")).toBeVisible();
   await page.locator('input[type="file"]').setInputFiles(backupPath!);
   await expect(page.getByText("匯入完成，進度已恢復。")).toBeVisible();
   await expect(page.getByText("1", { exact: true }).first()).toBeVisible();

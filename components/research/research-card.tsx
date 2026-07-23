@@ -1,5 +1,6 @@
 import Link from "next/link";
 import type { RankedResearch } from "@/lib/research/recommend";
+import type { ResearchInteraction } from "@/lib/schemas/progress";
 
 const statusLabel = {
   peer_reviewed: "已同儕審查",
@@ -22,9 +23,16 @@ const typeLabel = {
 export function ResearchCard({
   ranked,
   showReasons,
+  interaction,
+  onInteraction,
 }: {
   ranked: RankedResearch;
   showReasons: boolean;
+  interaction?: ResearchInteraction;
+  onInteraction?: (
+    researchId: string,
+    changes: Partial<Pick<ResearchInteraction, "favorite" | "readLater" | "feedback">>,
+  ) => void;
 }) {
   const item = ranked.research;
   const titleId = `research-title-${safeDomId(item.id)}`;
@@ -72,6 +80,54 @@ export function ResearchCard({
             {ranked.reasons.map((reason) => (
               <span key={reason}>{reason}</span>
             ))}
+          </div>
+        ) : null}
+        {onInteraction ? (
+          <div className="research-card-actions" aria-label="研究偏好操作">
+            <button
+              type="button"
+              className="button button-secondary"
+              aria-pressed={interaction?.favorite ?? false}
+              onClick={() =>
+                onInteraction(item.id, { favorite: !(interaction?.favorite ?? false) })
+              }
+            >
+              {interaction?.favorite ? "已收藏" : "收藏"}
+            </button>
+            <button
+              type="button"
+              className="button button-secondary"
+              aria-pressed={interaction?.readLater ?? false}
+              onClick={() =>
+                onInteraction(item.id, { readLater: !(interaction?.readLater ?? false) })
+              }
+            >
+              {interaction?.readLater ? "已加入稍後閱讀" : "稍後閱讀"}
+            </button>
+            <button
+              type="button"
+              className="button button-text"
+              aria-pressed={interaction?.feedback === "more"}
+              onClick={() =>
+                onInteraction(item.id, {
+                  feedback: interaction?.feedback === "more" ? null : "more",
+                })
+              }
+            >
+              想看更多這類
+            </button>
+            <button
+              type="button"
+              className="button button-text"
+              aria-pressed={interaction?.feedback === "less"}
+              onClick={() =>
+                onInteraction(item.id, {
+                  feedback: interaction?.feedback === "less" ? null : "less",
+                })
+              }
+            >
+              對此主題沒興趣
+            </button>
           </div>
         ) : null}
         <Link

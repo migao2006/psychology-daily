@@ -1,15 +1,14 @@
 import {
-  dailyResearchSchema,
-  type DailyResearch,
+  researchArticleSchema,
+  type ResearchArticle,
 } from "@/lib/schemas/research";
 
 export function makeResearch(
-  overrides: Partial<DailyResearch> = {},
-): DailyResearch {
+  overrides: Partial<ResearchArticle> = {},
+): ResearchArticle {
   const id = overrides.id ?? "fixture-cognitive";
-  return dailyResearchSchema.parse({
+  return researchArticleSchema.parse({
     id,
-    featuredDate: "2026-07-23",
     titleZh: "工作記憶與學習策略",
     titleOriginal: "Working memory and learning strategies",
     authors: ["Test Author"],
@@ -63,7 +62,6 @@ export const researchFixtures = [
   makeResearch(),
   makeResearch({
     id: "fixture-social",
-    featuredDate: "2026-07-22",
     publicationDate: "2026-07-21",
     titleZh: "社會規範與合作行為",
     titleOriginal: "Social norms and cooperative behavior",
@@ -79,7 +77,6 @@ export const researchFixtures = [
   }),
   makeResearch({
     id: "fixture-social-followup",
-    featuredDate: "2026-07-21",
     publicationDate: "2026-07-20",
     titleZh: "合作決策的跨文化觀察",
     titleOriginal: "A cross-cultural view of cooperative decisions",
@@ -95,7 +92,6 @@ export const researchFixtures = [
   }),
   makeResearch({
     id: "fixture-neuroscience",
-    featuredDate: "2026-07-20",
     publicationDate: "2026-07-19",
     titleZh: "睡眠與腦功能的系統性回顧",
     titleOriginal: "Sleep and brain function: a systematic review",

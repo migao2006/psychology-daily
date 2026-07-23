@@ -59,6 +59,26 @@ describe("research personalization", () => {
     expect(reverse).toEqual(forward);
   });
 
+  it("uses active feedback without permanently blocking a category", () => {
+    const ranked = rankResearchForUser(
+      researchFixtures,
+      defaultResearchPreferences(NOW),
+      [],
+      { now: NOW },
+      [
+        {
+          researchId: "fixture-social",
+          favorite: false,
+          readLater: false,
+          feedback: "less",
+          updatedAt: NOW.toISOString(),
+        },
+      ],
+    );
+    expect(ranked).toHaveLength(researchFixtures.length);
+    expect(ranked.find((item) => item.research.id === "fixture-social")).toBeDefined();
+  });
+
   it("searches Chinese, English, authors and keywords after NFKC normalization", () => {
     expect(normalizeResearchText(" ＷＯＲＫＩＮＧ   Memory ")).toBe(
       "working memory",

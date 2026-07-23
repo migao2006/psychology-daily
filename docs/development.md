@@ -10,16 +10,17 @@ pnpm install --frozen-lockfile
 pnpm dev
 ```
 
-一般開發、內容閱讀與測試不需要環境變數。只有手動執行每日研究更新時才依 `.env.example` 提供安全環境變數；不得提交 `.env`。
+一般內容建置不需要環境變數；完整瀏覽器流程需可用的 Cloudflare sync API，E2E 以網路攔截提供測試替身。只有手動執行每日研究更新或回補時才依 `.env.example` 提供安全環境變數；不得提交 `.env`。
 
 ## Executable scripts
 
 `scripts/` 只保留直接入口：
 
 - `fetch-papers.ts`：診斷來源候選；不寫入內容。
-- `validate-content.ts`：驗證課程、研究索引與每日研究。
+- `validate-content.ts`：驗證課程、研究索引與研究項目。
 - `validate-research.ts`：只驗證研究內容。
 - `update-daily-research.ts`：執行完整每日研究更新。
+- `backfill-research.ts`：執行最多 10 篇的獨立研究回補批次。
 
 正規化、去重、排名、metadata 核對、合法公開版本與 summarizer 都由 `lib/research/` 提供。不要為每個函式建立一行式 script 轉接檔。
 

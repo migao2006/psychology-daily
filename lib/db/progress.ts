@@ -2,6 +2,7 @@ import type { Familiarity, QuizAnswer } from "@/lib/schemas/progress";
 import { taipeiDateKey } from "@/lib/dates/taipei";
 import { scheduleReview } from "@/lib/review/scheduler";
 import { getDatabase } from "./database";
+import { notifyDataChanged } from "./sync-events";
 
 export async function completeLesson(input: {
   lessonId: string;
@@ -43,6 +44,7 @@ export async function completeLesson(input: {
       completedToday: activity?.readResearch ?? false,
     });
   });
+  notifyDataChanged();
 }
 
 export async function markResearchRead(researchId: string): Promise<void> {
@@ -59,5 +61,5 @@ export async function markResearchRead(researchId: string): Promise<void> {
       completedToday: activity?.completedLesson ?? false,
     });
   });
+  notifyDataChanged();
 }
-

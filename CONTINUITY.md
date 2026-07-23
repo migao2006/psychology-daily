@@ -2,45 +2,42 @@
 
 ## Current Work Package
 
-NONE
+TASK=NONE（Cloud-bound research exploration v2 已完成）
 
 ## Current Branch
 
-`agent/repository-maintenance-foundation`
+`feature/cloud-research-v2`
 
 ## Completed
 
-- 完成 Repository 結構、引用、generated files、內容、測試、設定與 workflow 盤點。
-- 建立長期 Repository guide、文件責任索引、work package lifecycle 與 Prompt registry。
-- 保留既有產品模組分層；移除無引用樣板資產與一行式 script 轉接檔。
-- 將工作包封存至 `tasks/completed/2026-07-23-repository-maintenance-foundation.md`。
+- 完成 Cloudflare 必綁、單一 active device、IndexedDB v3 快取與加密自動同步。
+- 完成研究內容 v2、180 天／100 篇回補 workflow、推薦、搜尋、收藏與研究 UI。
+- 完成 unit、component、production build、mobile E2E 與瀏覽器驗收。
 
 ## Remaining
 
-- 人工 review Draft PR。
-- Review 與 required checks 通過後，由有權限的人決定是否合併；本工作包不更新 `main`。
+- Push 功能分支並建立以 repository maintenance branch 為 base 的 Draft PR。
+- 下一個 work package：題目級複習中心。
 
 ## Decisions
 
-- 不為目錄外觀搬動既有產品程式。
-- `scripts/` 只保留可執行入口；共用實作以 `lib/` 為唯一來源。
-- 可執行研究摘要 Prompt 以 `prompts/` 為唯一來源。
+- IndexedDB 保留為同步快取；完全移除 Local Storage。
+- 裝置憑證不進入同步 payload 或 JSON 匯出。
+- Work Package 2 才加入題目級複習 schema。
 
 ## Validation
 
-- `pnpm install --frozen-lockfile`：通過。
-- `pnpm lint`、`pnpm typecheck`、`pnpm validate:content`：通過。
-- `pnpm test`：7 files、35 tests 通過。
-- `pnpm build`：通過，產生 39 個靜態路由。
-- `pnpm test:e2e`：1 個完整流程通過。
-- `pnpm audit --audit-level high`：無已知漏洞。
-- `actionlint`、相對 Markdown 引用、`@/` import 與 `git diff --check`：通過。
+- `pnpm verify`：通過。
+- `pnpm test:e2e`：1 passed。
+- `git diff --check`：通過。
 
 ## Known Issues
 
-- 研究歷史目前只有一筆，推薦差異會隨每日內容累積後才更明顯。
+- Repository 目前只有一筆種子研究；需在合併後手動分批執行 backfill workflow。
+- Worker v2 尚未部署至 Production，正式網站不能啟用強制綁定前端。
 - `main` 目前未啟用 branch protection；若未來啟用 required PR，須同步設計每日研究 workflow 的受控寫入方式。
 
 ## Draft PR
 
-- https://github.com/migao2006/psychology-daily/pull/2
+- Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
+- Work package PR: Pending.

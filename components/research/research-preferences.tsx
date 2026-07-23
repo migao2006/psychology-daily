@@ -75,10 +75,9 @@ export function ResearchPreferencesPanel({
       onSubmit={handleSubmit}
     >
       <div>
-        <p className="eyebrow">Personalize locally</p>
         <h2>調整你的研究偏好</h2>
         <p className="muted preference-intro">
-          選擇想多看一點的主題。偏好與閱讀紀錄只保存在目前瀏覽器。
+          選擇想多看一點的主題。偏好與閱讀紀錄會納入加密綁定資料。
         </p>
       </div>
 

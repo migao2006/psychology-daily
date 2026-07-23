@@ -19,9 +19,8 @@ export const studyTypeSchema = z.enum([
   "other",
 ]);
 
-export const dailyResearchSchema = z.strictObject({
+export const researchArticleSchema = z.strictObject({
   id: z.string().min(1),
-  featuredDate: z.iso.date(),
   titleZh: z.string().min(1),
   titleOriginal: z.string().min(1),
   authors: z.array(z.string().min(1)).min(1),
@@ -71,22 +70,28 @@ export const dailyResearchSchema = z.strictObject({
 
 export const researchIndexItemSchema = z.strictObject({
   id: z.string().min(1),
-  featuredDate: z.iso.date(),
-  path: z.string().regex(/^daily\/[a-zA-Z0-9._-]+\.json$/),
+  path: z.string().regex(/^items\/[a-zA-Z0-9._-]+\.json$/),
   titleZh: z.string().min(1),
+  publicationDate: z.iso.date(),
   publicationStatus: publicationStatusSchema,
   studyType: studyTypeSchema,
   psychologyCategory: z.string().min(1),
 });
 
+export const researchFeatureSchema = z.strictObject({
+  date: z.iso.date(),
+  researchId: z.string().min(1),
+});
+
 export const researchIndexSchema = z.strictObject({
-  schemaVersion: z.literal(1),
+  schemaVersion: z.literal(2),
   lastUpdatedAt: z.iso.datetime({ offset: true }),
-  updateStatus: z.enum(["updated", "no_suitable_paper", "seed"]),
+  updateStatus: z.enum(["updated", "no_suitable_paper", "seed", "backfilled"]),
+  features: z.array(researchFeatureSchema),
   items: z.array(researchIndexItemSchema),
 });
 
-export type DailyResearch = z.infer<typeof dailyResearchSchema>;
+export type ResearchArticle = z.infer<typeof researchArticleSchema>;
+export type ResearchIndex = z.infer<typeof researchIndexSchema>;
 export type StudyType = z.infer<typeof studyTypeSchema>;
 export type PublicationStatus = z.infer<typeof publicationStatusSchema>;
-

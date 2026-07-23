@@ -54,6 +54,26 @@ export async function fetchPapers(now = new Date()): Promise<ResearchSource[]> {
   }
   return [];
 }
+
+export async function fetchBackfillCandidates(
+  now = new Date(),
+  days = 180,
+): Promise<ResearchSource[]> {
+  const sources = [
+    fetchOpenAlex,
+    fetchEuropePmc,
+    fetchCrossref,
+    fetchSemanticScholar,
+  ] as const;
+  const settled = await Promise.allSettled(
+    sources.map((fetchSource) => fetchSource(now, days)),
+  );
+  return settled.flatMap((result) =>
+    result.status === "fulfilled"
+      ? result.value.filter(isEligibleCandidate)
+      : [],
+  );
+}
 export async function fetchOpenAlex(now: Date, days: number): Promise<ResearchSource[]> {
   const key = process.env.OPENALEX_API_KEY;
   const query = new URLSearchParams({ filter: `from_publication_date:${fromDaysAgo(now, days)},to_publication_date:${dateKey(now)},has_abstract:true`, search: "psychology", sort: "publication_date:desc", "per-page": "100", mailto: process.env.UNPAYWALL_EMAIL || "noreply@example.com" });

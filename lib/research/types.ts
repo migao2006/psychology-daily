@@ -1,4 +1,4 @@
-import type { DailyResearch, PublicationStatus, StudyType } from "@/lib/schemas/research";
+import type { PublicationStatus, ResearchArticle, StudyType } from "@/lib/schemas/research";
 export type ResearchSource = {
   id: string;
   title: string;
@@ -17,5 +17,4 @@ export type ResearchSource = {
   retrievedAt: string;
 };
 export type RankedCandidate = ResearchSource & { score: number; scoreBreakdown: Record<string, number> };
-export interface ResearchSummarizer { summarize(input: ResearchSource, featuredDate: string): Promise<DailyResearch>; }
-
+export interface ResearchSummarizer { summarize(input: ResearchSource): Promise<ResearchArticle>; }

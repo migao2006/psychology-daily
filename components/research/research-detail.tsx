@@ -1,7 +1,15 @@
-import type { DailyResearch } from "@/lib/schemas/research";
+import type { ResearchArticle } from "@/lib/schemas/research";
 import { MarkResearchRead } from "./mark-research-read";
+import Link from "next/link";
+import { CitationCopy } from "./citation-copy";
 
-export function ResearchDetail({ research }: { research: DailyResearch }) {
+export function ResearchDetail({
+  research,
+  related = [],
+}: {
+  research: ResearchArticle;
+  related?: ResearchArticle[];
+}) {
   const preprint = research.publicationStatus === "preprint";
   const publicationStatusLabel =
     research.publicationStatus === "peer_reviewed"
@@ -33,6 +41,14 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
           </div>
         </dl>
       </header>
+      <nav className="card detail-toc" aria-label="本頁目錄">
+        <strong>本頁內容</strong>
+        <a href="#research-question">研究問題</a>
+        <a href="#research-methods">方法與樣本</a>
+        <a href="#research-findings">主要發現</a>
+        <a href="#research-limitations">限制與提醒</a>
+        <a href="#research-sources">來源與核對</a>
+      </nav>
 
       {preprint ? (
         <section className="card callout">
@@ -41,12 +57,12 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
         </section>
       ) : null}
 
-      <ResearchSection title="這篇研究在問什麼？">
+      <ResearchSection id="research-question" title="這篇研究在問什麼？">
         <p>{research.researchQuestionZh}</p>
         <p className="muted section-followup">{research.backgroundZh}</p>
       </ResearchSection>
 
-      <ResearchSection title="研究怎麼做？">
+      <ResearchSection id="research-methods" title="研究怎麼做？">
         <p>{research.methodsZh}</p>
         <dl className="bibliography-list compact-bibliography">
           <div>
@@ -64,7 +80,7 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
         </dl>
       </ResearchSection>
 
-      <ResearchSection title="主要發現">
+      <ResearchSection id="research-findings" title="主要發現">
         <ul className="list-clean">
           {research.mainFindingsZh.map((item) => (
             <li key={item}>{item}</li>
@@ -78,7 +94,7 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
         <p>{research.practicalMeaningZh}</p>
       </section>
 
-      <ResearchSection title="研究限制">
+      <ResearchSection id="research-limitations" title="研究限制">
         {research.limitationsZh.length > 0 ? (
           <ul className="list-clean">
             {research.limitationsZh.map((item) => (
@@ -95,7 +111,7 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
         <p>{research.cautionZh}</p>
       </section>
 
-      <ResearchSection title="關鍵詞">
+      <ResearchSection id="research-keywords" title="關鍵詞中英文對照">
         <div className="stack">
           {research.keyTerms.map((term) => (
             <div key={term.original}>
@@ -111,7 +127,7 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
         </div>
       </ResearchSection>
 
-      <ResearchSection title="來源與書目">
+      <ResearchSection id="research-sources" title="來源、書目與核對狀態">
         <dl className="bibliography-list">
           <div>
             <dt>DOI</dt>
@@ -135,6 +151,16 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
               {research.summaryBasis === "abstract"
                 ? "僅摘要"
                 : "摘要與合法公開全文"}
+            </dd>
+          </div>
+          <div>
+            <dt>Metadata 核對</dt>
+            <dd>
+              標題 {verified(research.metadataVerification.titleVerified)}、
+              作者 {verified(research.metadataVerification.authorsVerified)}、
+              日期 {verified(research.metadataVerification.dateVerified)}、
+              DOI {verified(research.metadataVerification.doiVerified)}、
+              網址 {verified(research.metadataVerification.urlVerified)}
             </dd>
           </div>
         </dl>
@@ -167,8 +193,28 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
               免費全文 <span className="sr-only">（在新分頁開啟）</span>↗
             </a>
           ) : null}
+          <CitationCopy
+            citation={`${research.authors.join(", ")} (${research.publicationDate.slice(0, 4)}). ${research.titleOriginal}. ${research.journalOrRepository}.${research.doi ? ` https://doi.org/${research.doi}` : ` ${research.originalUrl}`}`}
+          />
         </div>
       </ResearchSection>
+
+      {related.length ? (
+        <ResearchSection id="related-research" title="相關研究">
+          <div className="related-research-list">
+            {related.map((item) => (
+              <Link key={item.id} href={`/research/${encodeURIComponent(item.id)}`}>
+                <span className="badge">{item.psychologyCategory}</span>
+                <strong>{item.titleZh}</strong>
+                <span className="muted" lang="en">{item.titleOriginal}</span>
+              </Link>
+            ))}
+          </div>
+          <p className="field-hint">
+            相關內容只依分類、研究類型與關鍵詞計算，不以引用次數排序。
+          </p>
+        </ResearchSection>
+      ) : null}
 
       <MarkResearchRead researchId={research.id} />
       <p className="notice">
@@ -179,16 +225,22 @@ export function ResearchDetail({ research }: { research: DailyResearch }) {
 }
 
 function ResearchSection({
+  id,
   title,
   children,
 }: {
+  id: string;
   title: string;
   children: React.ReactNode;
 }) {
   return (
-    <section className="card">
+    <section id={id} className="card">
       <h2>{title}</h2>
       {children}
     </section>
   );
+}
+
+function verified(value: boolean): string {
+  return value ? "已核對" : "未確認";
 }

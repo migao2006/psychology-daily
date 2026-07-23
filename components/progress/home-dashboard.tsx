@@ -2,13 +2,13 @@
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import type { Lesson } from "@/lib/schemas/lesson";
-import type { DailyResearch } from "@/lib/schemas/research";
+import type { ResearchArticle } from "@/lib/schemas/research";
 import type { DailyActivity, LessonProgress } from "@/lib/schemas/progress";
 import { formatTaipeiDate, taipeiDateKey } from "@/lib/dates/taipei";
 import { calculateStreak } from "@/lib/progress/streak";
 import { getDatabase } from "@/lib/db/database";
 
-export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]; featuredResearch: DailyResearch }) {
+export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]; featuredResearch: ResearchArticle }) {
   const [progress, setProgress] = useState<LessonProgress[]>([]);
   const [activities, setActivities] = useState<DailyActivity[]>([]);
   const [ready, setReady] = useState(false);
@@ -26,7 +26,7 @@ export function HomeDashboard({ lessons, featuredResearch }: { lessons: Lesson[]
   const streak = calculateStreak(activities.filter((item) => item.completedToday).map((item) => item.date));
   const dueReviews = progress.filter((item) => item.nextReviewAt && taipeiDateKey(item.nextReviewAt) <= today).length;
   return <main id="main-content" className="page">
-    <div className="page-heading"><p className="eyebrow">Today · Asia/Taipei</p><h1>今天，理解自己多一點。</h1><p className="lede">{formatTaipeiDate()}，一堂微課加一篇研究，約 10 分鐘完成。</p></div>
+    <div className="page-heading"><h1>今天，理解自己多一點。</h1><p className="lede">{formatTaipeiDate()}（Asia/Taipei），一堂微課加一篇研究，約 10 分鐘完成。</p></div>
     <section className="card card-hero" aria-labelledby="today-lesson-title">
       <div className="meta"><span>今日課程</span><span>第 {nextLesson.sequence} / 30 課</span></div>
       <h2 id="today-lesson-title" style={{ marginTop: ".65rem", fontSize: "1.75rem" }}>{nextLesson.title}</h2>
