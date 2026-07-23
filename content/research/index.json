@@ -1,13 +1,19 @@
 {
-  "schemaVersion": 1,
+  "schemaVersion": 2,
   "lastUpdatedAt": "2026-07-23T14:36:14.990Z",
   "updateStatus": "updated",
+  "features": [
+    {
+      "date": "2026-07-23",
+      "researchId": "10-1007-s40489-026-00579-5"
+    }
+  ],
   "items": [
     {
       "id": "10-1007-s40489-026-00579-5",
-      "featuredDate": "2026-07-23",
-      "path": "daily/2026-07-23.json",
+      "path": "items/10-1007-s40489-026-00579-5.json",
       "titleZh": "自閉症超掃描的 PRISMA 系統性文獻回顧",
+      "publicationDate": "2026-07-21",
       "publicationStatus": "unknown",
       "studyType": "systematic_review",
       "psychologyCategory": "神經科學"

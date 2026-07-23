@@ -4,7 +4,7 @@ import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
 import { fetchJson } from "@/lib/research/http";
-import { fetchCrossref, fetchOpenAlex, fetchPapers, fetchSemanticScholar } from "@/lib/research/fetch";
+import { fetchBackfillCandidates, fetchCrossref, fetchOpenAlex, fetchPapers, fetchSemanticScholar } from "@/lib/research/fetch";
 import { verifyMetadata } from "@/lib/research/verify";
 import { findOpenAccess } from "@/lib/research/open-access";
 import { createSummarizer } from "@/lib/research/summarizer";
@@ -38,6 +38,19 @@ describe("mocked research APIs", () => {
     const items = await fetchPapers(new Date("2026-07-23T12:00:00Z"));
     expect(requested.map((url) => url.includes("openalex") ? "OpenAlex" : url.includes("europepmc") ? "Europe PMC" : url.includes("crossref") ? "Crossref" : "Semantic Scholar")).toEqual(["OpenAlex", "Europe PMC", "Crossref", "Semantic Scholar"]);
     expect(items).toEqual([expect.objectContaining({ sourceApis: ["Semantic Scholar"], publicationStatus: "preprint" })]);
+  });
+  it("aggregates all available sources for the independent backfill", async () => {
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      if (url.includes("openalex")) return response({ results: [{ id: "https://openalex.org/W1", display_name: "Psychology of attention", publication_date: "2026-07-20", abstract_inverted_index: { Psychology: [0], attention: [1] }, authorships: [{ author: { display_name: "A" } }], primary_location: { landing_page_url: "https://example.org/openalex", source: { display_name: "Journal", type: "journal" } }, language: "en" }] });
+      if (url.includes("europepmc")) return response({ resultList: { result: [{ id: "2", title: "Cognitive psychology and memory", abstractText: "Psychology memory study.", firstPublicationDate: "2026-07-19", authorString: "B", journalTitle: "Journal" }] } });
+      if (url.includes("crossref")) return response({ message: { items: [{ DOI: "10.1000/crossref-backfill", title: ["Social psychology experiment"], author: [{ family: "C" }], published: { "date-parts": [[2026, 7, 18]] }, "container-title": ["Journal"], URL: "https://doi.org/10.1000/crossref-backfill", abstract: "Psychology social behavior experiment." }] } });
+      return response({ data: [{ paperId: "S3", title: "Developmental psychology research", authors: [{ name: "D" }], publicationDate: "2026-07-17", abstract: "Psychology research about development.", url: "https://example.org/semantic", externalIds: {}, venue: "Journal", publicationTypes: ["JournalArticle"] }] });
+    }));
+    const items = await fetchBackfillCandidates(new Date("2026-07-23T12:00:00Z"), 180);
+    expect(new Set(items.flatMap((item) => item.sourceApis))).toEqual(
+      new Set(["OpenAlex", "Europe PMC", "Crossref", "Semantic Scholar"]),
+    );
   });
   it("conservatively classifies repository records and Crossref metadata", async () => {
     const repositoryResponse = response({ results: [{ id: "https://openalex.org/W2", doi: "https://doi.org/10.1000/repository", display_name: "Psychology preprint about memory", publication_date: "2026-07-22", abstract_inverted_index: { Psychology: [0], memory: [1] }, authorships: [], primary_location: { landing_page_url: "https://repository.example.org/item/2", source: { display_name: "Example Repository", type: "repository" } }, open_access: { oa_url: null }, language: "en" }] });
@@ -76,7 +89,7 @@ describe("mocked research APIs", () => {
   it("rejects non-JSON AI output", async () => {
     process.env.LLM_PROVIDER = "openai"; process.env.LLM_MODEL = "configured-model"; process.env.OPENAI_API_KEY = "test-key";
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({ choices: [{ message: { content: "not-json" } }] })));
-    await expect(createSummarizer().summarize(candidate, "2026-07-23")).rejects.toThrow();
+    await expect(createSummarizer().summarize(candidate)).rejects.toThrow();
   });
   it("does not invent an open access URL", async () => {
     process.env.UNPAYWALL_EMAIL = "test@example.com";

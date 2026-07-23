@@ -10,5 +10,29 @@ export async function generateMetadata({ params }: { params: Promise<{ id: strin
 export default async function ResearchDetailPage({ params }: { params: Promise<{ id: string }> }) {
   const item = getResearchById(decodeURIComponent((await params).id));
   if (!item) notFound();
-  return <main id="main-content" className="page"><ResearchDetail research={item} /></main>;
+  const related = allResearch
+    .filter((candidate) => candidate.id !== item.id)
+    .map((candidate) => ({
+      candidate,
+      score:
+        Number(candidate.psychologyCategory === item.psychologyCategory) * 3 +
+        Number(candidate.studyType === item.studyType) * 2 +
+        candidate.keyTerms.filter((term) =>
+          item.keyTerms.some(
+            (itemTerm) =>
+              itemTerm.original.toLowerCase() === term.original.toLowerCase(),
+          ),
+        ).length,
+    }))
+    .filter((entry) => entry.score > 0)
+    .toSorted(
+      (left, right) =>
+        right.score - left.score ||
+        right.candidate.publicationDate.localeCompare(
+          left.candidate.publicationDate,
+        ),
+    )
+    .slice(0, 3)
+    .map((entry) => entry.candidate);
+  return <main id="main-content" className="page"><ResearchDetail research={item} related={related} /></main>;
 }

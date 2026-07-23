@@ -2,7 +2,7 @@
 
 ## Product boundary
 
-每日心理學是靜態內容為主的 Next.js 微學習網站。一般瀏覽不需要應用程式後端；只有 GitHub Actions 在建置前產生研究內容，以及使用者主動操作時才呼叫獨立的 Cloudflare 加密備份 API。
+每日心理學是靜態內容為主的 Next.js 微學習網站。GitHub Actions 在建置前產生研究內容；瀏覽器必須透過獨立 Cloudflare API 綁定並同步端對端加密的個人資料。
 
 不在產品邊界內的能力包括帳號、診斷、AI 聊天、伺服器端個人化、追蹤分析與未加密的雲端進度。
 
@@ -42,16 +42,16 @@ GitHub Actions → source APIs → normalize／filter／deduplicate → determin
 
 ## Browser data flow
 
-Client components → `lib/db/` → IndexedDB 保存課程、活動、已讀研究、偏好與 metadata。Local Storage 只保存介面選項。
+Client components → `lib/db/` → IndexedDB 快取課程、活動、已讀研究、偏好、互動、設定與 metadata；Repository 不使用 Local Storage 或 Session Storage。
 
-研究推薦由 `lib/research/recommend.ts` 在瀏覽器以內容、明確偏好及本機已讀資料計算，沒有跨使用者資料。搜尋只過濾已載入內容，不寫入偏好。
+研究推薦由 `lib/research/recommend.ts` 在瀏覽器以內容、明確偏好、主動回饋及已讀資料計算，沒有跨使用者資料。搜尋只過濾已載入內容；除非使用者主動儲存，否則不寫入偏好。
 
-選用備份流程為：Zod 驗證匯出 → 瀏覽器產生復原碼 → AES-GCM 加密 → Worker 儲存密文。還原時順序相反，明文再次通過 schema 後才寫入 IndexedDB。
+綁定同步流程為：Zod 驗證 payload → 瀏覽器產生或解析復原碼 → AES-GCM 加密／解密 → Worker 以 active device 與 revision 儲存密文。未綁定時產品閘門不允許進入；新裝置復原會取代舊裝置。
 
 ## Deployment boundary
 
 - Vercel：Next.js 前端；Production Branch 是 `main`。
 - GitHub Actions：CI、每日研究產生及 link check；LLM key 只存在 Actions。
-- Cloudflare：選用備份 API；部署與 secrets 權限獨立於前端。
+- Cloudflare：強制加密同步 API；Production 部署與 secrets 權限獨立於前端。
 
 平台操作、環境變數與故障流程見 `docs/operations.md`。

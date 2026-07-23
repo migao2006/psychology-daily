@@ -10,7 +10,7 @@
 
 1. 先確認來源欄位沒有擴大到任意網路內容或未核對 metadata。
 2. Prompt 只描述編輯任務與科學／倫理限制，不放 provider key、模型名稱或環境資訊。
-3. 同步檢查 `summarySchema`、provider `outputJsonSchema`、`ensureGrounded` 與 `DailyResearch` schema。
+3. 同步檢查 `summarySchema`、provider `outputJsonSchema`、`ensureGrounded` 與 `ResearchArticle` schema。
 4. 更新 Prompt 契約測試及受影響的整合測試。
 5. 執行 `pnpm lint && pnpm typecheck && pnpm test && pnpm build`。
 

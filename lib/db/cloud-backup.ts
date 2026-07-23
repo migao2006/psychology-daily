@@ -2,6 +2,7 @@ import { z } from "zod";
 import { parseBackup } from "./backup";
 
 export const CLOUD_BACKUP_API_URL =
+  process.env.NEXT_PUBLIC_CLOUD_SYNC_API_URL ??
   "https://psychology-daily-backup.a0912647176.workers.dev";
 
 const recoveryCodePattern =
@@ -14,78 +15,162 @@ const encryptedEnvelopeSchema = z.strictObject({
   updatedAt: z.iso.datetime({ offset: true }),
 });
 
+const remoteSnapshotSchema = z.strictObject({
+  payload: encryptedEnvelopeSchema,
+  revision: z.number().int().nonnegative(),
+});
+
 type EncryptedEnvelope = z.infer<typeof encryptedEnvelopeSchema>;
 
-export type CloudBackupResult = {
+export type BoundCloudBackup = {
   recoveryCode: string;
+  deviceId: string;
+  revision: number;
   updatedAt: string;
 };
 
-export async function createCloudBackup(
+export type DownloadedCloudBackup = {
+  raw: string;
+  revision: number;
+  updatedAt: string;
+};
+
+export class CloudSyncConflictError extends Error {
+  constructor(
+    message: string,
+    readonly reason: "device_replaced" | "revision_conflict",
+  ) {
+    super(message);
+  }
+}
+
+export async function bindNewCloudBackup(
   backupJson: string,
-  existingRecoveryCode?: string,
-): Promise<CloudBackupResult> {
+): Promise<BoundCloudBackup> {
   parseBackup(backupJson);
-  const recoveryCode = existingRecoveryCode?.trim() || generateRecoveryCode();
-  const { locator, keyBytes } = parseRecoveryCode(recoveryCode);
+  const recoveryCode = generateRecoveryCode();
+  const deviceId = generateDeviceId();
+  const revision = await bindDevice(recoveryCode, deviceId);
+  const uploaded = await uploadCloudBackup(
+    backupJson,
+    recoveryCode,
+    deviceId,
+    revision,
+  );
+  return { recoveryCode, deviceId, ...uploaded };
+}
+
+export async function restoreAndBindCloudBackup(
+  recoveryCode: string,
+): Promise<BoundCloudBackup & { raw: string }> {
+  const downloaded = await downloadCloudBackup(recoveryCode);
+  const deviceId = generateDeviceId();
+  const revision = await bindDevice(recoveryCode.trim(), deviceId);
+  return {
+    recoveryCode: recoveryCode.trim(),
+    deviceId,
+    revision,
+    updatedAt: downloaded.updatedAt,
+    raw: downloaded.raw,
+  };
+}
+
+export async function uploadCloudBackup(
+  backupJson: string,
+  recoveryCode: string,
+  deviceId: string,
+  revision: number,
+): Promise<{ revision: number; updatedAt: string }> {
+  parseBackup(backupJson);
+  const { locator, keyBytes } = parseRecoveryCode(recoveryCode.trim());
   const envelope = await encryptBackup(backupJson, locator, keyBytes);
-  const writeToken = await deriveWriteToken(keyBytes);
   const response = await fetch(
-    `${CLOUD_BACKUP_API_URL}/v1/backups/${encodeURIComponent(locator)}`,
+    `${CLOUD_BACKUP_API_URL}/v2/backups/${encodeURIComponent(locator)}`,
     {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
-        "X-Backup-Write-Token": writeToken,
+        "X-Backup-Write-Token": await deriveWriteToken(keyBytes),
+        "X-Device-Id": deviceId,
+        "If-Match": String(revision),
       },
       body: JSON.stringify(envelope),
     },
   );
-
-  if (!response.ok) {
-    throw new Error(await cloudErrorMessage(response, "雲端備份失敗"));
-  }
-
-  return { recoveryCode, updatedAt: envelope.updatedAt };
+  if (!response.ok) await throwCloudError(response, "雲端同步失敗");
+  const body = z
+    .strictObject({
+      revision: z.number().int().nonnegative(),
+      updatedAt: z.iso.datetime({ offset: true }),
+    })
+    .parse(await response.json());
+  return body;
 }
 
 export async function downloadCloudBackup(
   recoveryCode: string,
-): Promise<string> {
+): Promise<DownloadedCloudBackup> {
   const { locator, keyBytes } = parseRecoveryCode(recoveryCode.trim());
   const response = await fetch(
-    `${CLOUD_BACKUP_API_URL}/v1/backups/${encodeURIComponent(locator)}`,
+    `${CLOUD_BACKUP_API_URL}/v2/backups/${encodeURIComponent(locator)}`,
     { headers: { Accept: "application/json" } },
   );
-  if (!response.ok) {
-    throw new Error(await cloudErrorMessage(response, "找不到這組復原碼的備份"));
-  }
-  const envelope = encryptedEnvelopeSchema.parse(await response.json());
-  const raw = await decryptBackup(envelope, locator, keyBytes);
+  if (!response.ok) await throwCloudError(response, "找不到這組復原碼的資料");
+  const snapshot = remoteSnapshotSchema.parse(await response.json());
+  const raw = await decryptBackup(snapshot.payload, locator, keyBytes);
   parseBackup(raw);
-  return raw;
+  return {
+    raw,
+    revision: snapshot.revision,
+    updatedAt: snapshot.payload.updatedAt,
+  };
 }
 
-export async function deleteCloudBackup(recoveryCode: string): Promise<void> {
+export async function deleteCloudBackup(
+  recoveryCode: string,
+  deviceId: string,
+): Promise<void> {
   const { locator, keyBytes } = parseRecoveryCode(recoveryCode.trim());
   const response = await fetch(
-    `${CLOUD_BACKUP_API_URL}/v1/backups/${encodeURIComponent(locator)}`,
+    `${CLOUD_BACKUP_API_URL}/v2/backups/${encodeURIComponent(locator)}`,
     {
       method: "DELETE",
       headers: {
         "X-Backup-Write-Token": await deriveWriteToken(keyBytes),
+        "X-Device-Id": deviceId,
       },
     },
   );
-  if (!response.ok) {
-    throw new Error(await cloudErrorMessage(response, "無法刪除雲端備份"));
-  }
+  if (!response.ok) await throwCloudError(response, "無法刪除雲端資料");
+}
+
+async function bindDevice(
+  recoveryCode: string,
+  deviceId: string,
+): Promise<number> {
+  const { locator, keyBytes } = parseRecoveryCode(recoveryCode);
+  const response = await fetch(
+    `${CLOUD_BACKUP_API_URL}/v2/backups/${encodeURIComponent(locator)}/bind`,
+    {
+      method: "POST",
+      headers: {
+        "X-Backup-Write-Token": await deriveWriteToken(keyBytes),
+        "X-Device-Id": deviceId,
+      },
+    },
+  );
+  if (!response.ok) await throwCloudError(response, "無法綁定這台裝置");
+  return z
+    .strictObject({ revision: z.number().int().nonnegative() })
+    .parse(await response.json()).revision;
 }
 
 export function generateRecoveryCode(): string {
-  const locator = randomBytes(16);
-  const key = randomBytes(32);
-  return `PD1.${toBase64Url(locator)}.${toBase64Url(key)}`;
+  return `PD1.${toBase64Url(randomBytes(16))}.${toBase64Url(randomBytes(32))}`;
+}
+
+export function generateDeviceId(): string {
+  return toBase64Url(randomBytes(16));
 }
 
 export function parseRecoveryCode(code: string): {
@@ -96,10 +181,7 @@ export function parseRecoveryCode(code: string): {
   if (!match) {
     throw new Error("復原碼格式不正確，請貼上完整的 PD1 復原碼");
   }
-  return {
-    locator: match[1],
-    keyBytes: fromBase64Url(match[2]),
-  };
+  return { locator: match[1], keyBytes: fromBase64Url(match[2]) };
 }
 
 async function encryptBackup(
@@ -108,13 +190,9 @@ async function encryptBackup(
   keyBytes: Uint8Array<ArrayBuffer>,
 ): Promise<EncryptedEnvelope> {
   const iv = randomBytes(12);
-  const key = await crypto.subtle.importKey(
-    "raw",
-    keyBytes,
-    "AES-GCM",
-    false,
-    ["encrypt"],
-  );
+  const key = await crypto.subtle.importKey("raw", keyBytes, "AES-GCM", false, [
+    "encrypt",
+  ]);
   const ciphertext = await crypto.subtle.encrypt(
     {
       name: "AES-GCM",
@@ -138,13 +216,9 @@ async function decryptBackup(
   keyBytes: Uint8Array<ArrayBuffer>,
 ): Promise<string> {
   try {
-    const key = await crypto.subtle.importKey(
-      "raw",
-      keyBytes,
-      "AES-GCM",
-      false,
-      ["decrypt"],
-    );
+    const key = await crypto.subtle.importKey("raw", keyBytes, "AES-GCM", false, [
+      "decrypt",
+    ]);
     const plaintext = await crypto.subtle.decrypt(
       {
         name: "AES-GCM",
@@ -156,7 +230,7 @@ async function decryptBackup(
     );
     return new TextDecoder().decode(plaintext);
   } catch {
-    throw new Error("復原碼不正確，或雲端備份已損毀");
+    throw new Error("復原碼不正確，或雲端資料已損毀");
   }
 }
 
@@ -194,24 +268,38 @@ function toBase64Url(bytes: Uint8Array): string {
 }
 
 function fromBase64Url(value: string): Uint8Array<ArrayBuffer> {
-  const padded = value.replace(/-/g, "+").replace(/_/g, "/").padEnd(
-    Math.ceil(value.length / 4) * 4,
-    "=",
-  );
+  const padded = value
+    .replace(/-/g, "+")
+    .replace(/_/g, "/")
+    .padEnd(Math.ceil(value.length / 4) * 4, "=");
   const binary = atob(padded);
   return Uint8Array.from(binary, (character) => character.charCodeAt(0));
 }
 
-async function cloudErrorMessage(
+async function throwCloudError(
   response: Response,
   fallback: string,
-): Promise<string> {
-  if (response.status === 404) return "找不到這組復原碼的備份";
-  if (response.status === 429) return "操作太頻繁，請稍後再試";
+): Promise<never> {
+  let reason: string | undefined;
   try {
-    const body = (await response.json()) as { error?: unknown };
-    return typeof body.error === "string" ? body.error : fallback;
-  } catch {
-    return fallback;
+    const body = (await response.json()) as { error?: unknown; code?: unknown };
+    reason = typeof body.error === "string" ? body.error : undefined;
+    if (response.status === 409 && body.code === "device_replaced") {
+      throw new CloudSyncConflictError(
+        "這台裝置已被新的裝置取代，請重新綁定。",
+        "device_replaced",
+      );
+    }
+    if (response.status === 409 && body.code === "revision_conflict") {
+      throw new CloudSyncConflictError(
+        "雲端資料已更新，請先重新載入。",
+        "revision_conflict",
+      );
+    }
+  } catch (error) {
+    if (error instanceof CloudSyncConflictError) throw error;
   }
+  if (response.status === 404) throw new Error("找不到這組復原碼的資料");
+  if (response.status === 429) throw new Error("操作太頻繁，請稍後再試");
+  throw new Error(reason ?? fallback);
 }

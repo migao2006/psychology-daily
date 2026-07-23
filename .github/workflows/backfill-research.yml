@@ -1,0 +1,88 @@
+name: Backfill research library
+
+on:
+  workflow_dispatch:
+    inputs:
+      batch_size:
+        description: "本次最多新增篇數（1-10）"
+        required: true
+        default: "10"
+        type: choice
+        options: ["1", "5", "10"]
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: research-backfill-180d
+  cancel-in-progress: false
+
+jobs:
+  backfill:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
+        with:
+          fetch-depth: 0
+      - name: Create or continue persistent backfill branch
+        shell: bash
+        run: |
+          if git ls-remote --exit-code --heads origin content/research-backfill-180d >/dev/null 2>&1; then
+            git fetch origin content/research-backfill-180d
+            git switch --track -C content/research-backfill-180d origin/content/research-backfill-180d
+          else
+            git switch -c content/research-backfill-180d
+          fi
+      - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        with:
+          version: 11.14.0
+          run_install: false
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        with:
+          node-version: 24
+          cache: pnpm
+      - run: pnpm install --frozen-lockfile
+      - name: Backfill one validated batch
+        env:
+          BACKFILL_BATCH_SIZE: ${{ inputs.batch_size }}
+          OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
+          UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: pnpm backfill:research
+      - run: pnpm lint
+      - run: pnpm typecheck
+      - run: pnpm validate:content
+      - run: pnpm test
+      - run: pnpm build
+      - name: Commit verified research only when changed
+        id: commit
+        shell: bash
+        run: |
+          if git diff --quiet -- content/research; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add content/research
+          git commit -m "content: backfill verified psychology research"
+          git push --set-upstream origin content/research-backfill-180d
+          echo "changed=true" >> "$GITHUB_OUTPUT"
+      - name: Open draft pull request
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          gh pr view content/research-backfill-180d >/dev/null 2>&1 ||
+            gh pr create \
+              --draft \
+              --base main \
+              --head content/research-backfill-180d \
+              --title "content: backfill verified psychology research" \
+              --body "以獨立批次回補最近 180 天研究；每篇均經 metadata、URL、Zod 與第二次摘要查核。"

@@ -22,6 +22,12 @@
 
 手動執行：GitHub → **Actions** → **Update daily research** → **Run workflow** → Branch `main` → **Run workflow**。
 
+### Research library backfill
+
+`.github/workflows/backfill-research.yml` 只支援 `workflow_dispatch`，每批最多新增 10 篇最近 180 天的研究。內容在 `content/research-backfill-180d` 持續分支累積並建立 Draft PR；完整驗證失敗、沒有內容差異或達到 100 篇時不提交。
+
+手動執行：GitHub → **Actions** → **Backfill research library** → **Run workflow** → 選擇 `batch_size` → **Run workflow**。每批會對摘要再做一次獨立結構化查核，因此會使用兩次 LLM 請求／篇。
+
 ### Link check
 
 `.github/workflows/link-check.yml` 每週、手動及相關 Pull Request 檢查 README、Repository guides、docs、Prompt 文件、TASK／CONTINUITY 與內容 JSON 的網址。
@@ -45,14 +51,16 @@ Repository secrets：
 
 沒有 provider、model 或對應 LLM key 時，更新會明確失敗且不提交。Secrets 只提供給設定檢查及研究更新步驟，不提供給 Vercel、瀏覽器、套件安裝、lint、測試或 build。
 
-## Cloudflare encrypted backup
+## Cloudflare encrypted sync
 
 - Worker：`psychology-daily-backup`
 - Workers KV：`psychology-daily-encrypted-backups`
 - Endpoint：`https://psychology-daily-backup.a0912647176.workers.dev`
 - Source：`cloudflare/backup-worker/`
 
-Worker 綁定 `BACKUPS` KV 與 `BACKUP_RATE_LIMITER`。正式 API 只允許 `https://psychology-daily.vercel.app`，另保留設定中列出的本機 origin；修改正式網域時必須同步更新 allowlist。
+Worker 綁定 `BACKUPS` KV 與 `BACKUP_RATE_LIMITER`。v2 API 提供 bind、帶 revision 的 PUT、GET 與 DELETE；每組復原碼只允許一個 active device。正式 API 只允許 `https://psychology-daily.vercel.app`，另保留設定中列出的本機 origin；修改正式網域時必須同步更新 allowlist。
+
+Staging Worker 可用純文字 binding `STAGING_ORIGIN` 額外允許一個 Vercel Preview branch alias；正式環境不得設定此 binding。Staging 必須使用獨立 KV，不能讀寫正式密文。
 
 部署設定不含 API token、復原碼或解密金鑰。只有在工作包明確授權部署時，才使用已授權 Cloudflare 帳號執行 `wrangler deploy`。
 
@@ -62,6 +70,7 @@ Worker 綁定 `BACKUPS` KV 與 `BACKUP_RATE_LIMITER`。正式 API 只允許 `htt
 
 ```bash
 pnpm update:research
+BACKFILL_BATCH_SIZE=5 pnpm backfill:research
 pnpm verify
 ```
 
@@ -74,4 +83,4 @@ pnpm verify
 - `no_suitable_paper`：代表 14／30 天候選沒有通過門檻，不是資料遺失；最後正常內容仍保留。
 - Vercel 找不到專案：確認 repository root、Next.js preset 與 `main` Production Branch。
 - 匯入被拒：確認檔案由本網站目前 schema 匯出且沒有修改或未知欄位。
-- Cloudflare 403：先確認 origin allowlist，再確認寫入／刪除使用同一完整復原碼衍生的憑證。
+- Cloudflare 403：先確認 origin allowlist 與完整復原碼；409 `device_replaced` 表示這台裝置已被新裝置取代，409 `revision_conflict` 表示須先重新載入雲端版本。

@@ -4,6 +4,7 @@ import {
   type ResearchPreferences,
 } from "@/lib/research/preferences";
 import { getDatabase } from "./database";
+import { notifyDataChanged } from "./sync-events";
 
 const PREFERENCES_META_KEY = "researchPreferences.v1";
 
@@ -34,10 +35,12 @@ export async function saveResearchPreferences(
     key: PREFERENCES_META_KEY,
     value: JSON.stringify(preferences),
   });
+  notifyDataChanged();
   return preferences;
 }
 
 export async function resetResearchPreferences(): Promise<ResearchPreferences> {
   await getDatabase().meta.delete(PREFERENCES_META_KEY);
+  notifyDataChanged();
   return defaultResearchPreferences();
 }

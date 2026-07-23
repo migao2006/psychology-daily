@@ -1,19 +1,28 @@
 import Dexie, { type EntityTable } from "dexie";
-import type {
-  AppMeta,
-  DailyActivity,
-  LessonProgress,
-  ReadResearch,
+import {
+  defaultUserSettings,
+  type AppMeta,
+  type CloudBinding,
+  type DailyActivity,
+  type LessonProgress,
+  type ReadResearch,
+  type ResearchInteraction,
+  type SavedResearchFilter,
+  type UserSettings,
 } from "@/lib/schemas/progress";
 
 export const DATABASE_NAME = "psychology-daily";
-export const DATABASE_VERSION = 2;
+export const DATABASE_VERSION = 3;
 
 export type PsychologyDailyDb = Dexie & {
   lessonProgress: EntityTable<LessonProgress, "lessonId">;
   activities: EntityTable<DailyActivity, "date">;
   readResearch: EntityTable<ReadResearch, "researchId">;
   meta: EntityTable<AppMeta, "key">;
+  researchInteractions: EntityTable<ResearchInteraction, "researchId">;
+  savedResearchFilters: EntityTable<SavedResearchFilter, "id">;
+  settings: EntityTable<UserSettings, "key">;
+  cloudBindings: EntityTable<CloudBinding, "id">;
 };
 
 let database: PsychologyDailyDb | null = null;
@@ -43,6 +52,23 @@ export function createDatabase(name = DATABASE_NAME): PsychologyDailyDb {
           entry.errorCount ??= 0;
           entry.familiarity ??= "unsure";
         });
+    });
+
+  db.version(3)
+    .stores({
+      lessonProgress: "&lessonId,completedAt,nextReviewAt,updatedAt",
+      activities: "&date,completedToday",
+      readResearch: "&researchId,readAt",
+      meta: "&key",
+      researchInteractions: "&researchId,updatedAt,feedback,favorite,readLater",
+      savedResearchFilters: "&id,updatedAt",
+      settings: "&key,updatedAt",
+      cloudBindings: "&id,status,updatedAt",
+    })
+    .upgrade(async (transaction) => {
+      await transaction.table<UserSettings, string>("settings").put(
+        defaultUserSettings(),
+      );
     });
 
   return db;

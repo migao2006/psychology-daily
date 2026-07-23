@@ -5,7 +5,11 @@ import { createDatabase, closeDatabase, getDatabase } from "@/lib/db/database";
 import { clearProgress, exportProgress, importProgress, parseBackup } from "@/lib/db/backup";
 import { getResearchPreferences, saveResearchPreferences } from "@/lib/db/research-preferences";
 describe("IndexedDB migration and backup", () => {
-  afterEach(async () => { await clearProgress().catch(() => undefined); await closeDatabase(); });
+  afterEach(async () => {
+    await clearProgress().catch(() => undefined);
+    await getDatabase().cloudBindings.clear().catch(() => undefined);
+    await closeDatabase();
+  });
   it("migrates version 1 lesson rows to version 2 fields", async () => {
     const name = `migration-${crypto.randomUUID()}`;
     const old = new Dexie(name);
@@ -18,7 +22,7 @@ describe("IndexedDB migration and backup", () => {
     expect(row?.familiarity).toBe("unsure"); expect(row?.correctReviewStreak).toBe(0); expect(row?.errorCount).toBe(0);
     upgraded.close(); await Dexie.delete(name);
   });
-  it("exports, clears and restores strict schema v2 data", async () => {
+  it("exports, clears and restores strict schema v3 data", async () => {
     const db = getDatabase();
     await db.activities.put({ date: "2026-07-23", completedLesson: true, readResearch: true, completedToday: true });
     await saveResearchPreferences({
@@ -28,11 +32,44 @@ describe("IndexedDB migration and backup", () => {
       preferOpenAccess: true,
       learnFromReading: true,
     });
+    await db.researchInteractions.put({
+      researchId: "research-1",
+      favorite: true,
+      readLater: false,
+      feedback: "more",
+      updatedAt: "2026-07-23T12:00:00Z",
+    });
+    await db.cloudBindings.put({
+      id: "primary",
+      recoveryCode: `PD1.${"a".repeat(22)}.${"b".repeat(43)}`,
+      deviceId: "c".repeat(22),
+      status: "active",
+      revision: 1,
+      boundAt: "2026-07-23T12:00:00Z",
+      lastSyncedAt: "2026-07-23T12:00:00Z",
+      updatedAt: "2026-07-23T12:00:00Z",
+    });
     const backup = await exportProgress();
-    expect(backupSchema.parse(backup).schemaVersion).toBe(2);
+    expect(backupSchema.parse(backup).schemaVersion).toBe(3);
+    expect(backup.researchInteractions).toHaveLength(1);
+    expect(JSON.stringify(backup)).not.toContain("PD1.");
     await clearProgress(); expect(await db.activities.count()).toBe(0);
     await importProgress(JSON.stringify(backup)); expect(await db.activities.count()).toBe(1);
     expect((await getResearchPreferences()).categories).toEqual(["認知心理學"]);
+  });
+  it("migrates a strict schema v2 export to schema v3 defaults", () => {
+    const migrated = parseBackup(JSON.stringify({
+      app: "psychology-daily",
+      schemaVersion: 2,
+      exportedAt: "2026-07-23T00:00:00Z",
+      lessonProgress: [],
+      activities: [],
+      readResearch: [],
+      meta: [],
+    }));
+    expect(migrated.schemaVersion).toBe(3);
+    expect(migrated.researchInteractions).toEqual([]);
+    expect(migrated.settings[0].theme).toBe("system");
   });
   it("rejects unknown, executable-looking or wrong-version imports", () => {
     expect(() => parseBackup('{"app":"psychology-daily","schemaVersion":99}')).toThrow();

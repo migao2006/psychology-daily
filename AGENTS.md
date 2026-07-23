@@ -4,7 +4,7 @@
 
 ## Repository boundary
 
-- 產品是免登入、手機優先的繁體中文心理學微學習網站；不是醫療、心理治療、危機處理或診斷服務。
+- 產品是以復原碼強制綁定、手機優先的繁體中文心理學微學習網站；不是醫療、心理治療、危機處理或診斷服務。
 - Next.js 路由位於 `app/`，介面元件位於 `components/`，領域邏輯與 I/O 邊界位於 `lib/`，人工／產生內容位於 `content/`。
 - `scripts/` 只放可直接執行的維運入口；可重用邏輯留在 `lib/`。
 - `tests/` 依 `unit/`、`integration/`、`components/`、`e2e/` 分層。文件責任與模組圖以 `docs/README.md` 為索引。
@@ -20,8 +20,9 @@
 
 ## Privacy and security boundaries
 
-- 個人學習進度、研究偏好及閱讀紀錄保存在 IndexedDB；Local Storage 只保存介面偏好與導覽狀態。
-- 選用雲端備份只能傳送瀏覽器端加密後的密文。復原碼、明文進度與解密金鑰不得送往 Worker、日誌或版本庫。
+- 所有個人進度、設定與研究互動都必須納入端對端加密同步；IndexedDB 只能作為目前裝置的同步快取，Repository 不得使用 Local Storage 或 Session Storage。
+- 首次使用必須完成資料綁定；同一復原碼同時只允許一台 active device。裝置憑證與復原碼保存在隔離的 IndexedDB table，禁止放入同步 payload、JSON 匯出、日誌或版本庫。
+- Worker 只能接收瀏覽器端加密後的密文。明文進度與解密金鑰不得送往 Worker、Vercel、Actions 或任何分析服務。
 - 不得提交 API key、token、`.env`、完整授權標頭、真實復原碼或平台憑證。
 - LLM 金鑰只供 GitHub Actions 的研究更新步驟使用，不得加入前端或 Vercel 公開環境變數。
 
@@ -35,7 +36,7 @@
 
 - 從最新 `main` 建立用途單一的功能分支；不得直接在 `main` 開發、force push 或改寫既有歷史。
 - Commit 應可獨立理解且只納入本工作包檔案。大型變更使用 Pull Request，通過驗證後才由有權限的人員合併。
-- 未取得明確授權時，不得合併 Pull Request、更新受保護分支、部署 Worker 或修改平台 Secrets。
+- 未取得明確授權時，不得合併 Pull Request、更新受保護分支、部署 Production Worker 或修改平台 Secrets。
 - 排程工作流程是例外的自動寫入者，但只能在完整驗證後提交 `content/research/`，不得修改人工課程或程式碼。
 
 ## Validation rules

@@ -1,5 +1,5 @@
 import { z } from "zod";
-import { dailyResearchSchema, type DailyResearch } from "@/lib/schemas/research";
+import { researchArticleSchema, type ResearchArticle } from "@/lib/schemas/research";
 import { buildResearchSummaryPrompt } from "@/prompts/research-summary";
 import { fetchJson } from "./http";
 import { validHttpsUrl } from "./normalize";
@@ -18,6 +18,19 @@ const summarySchema = z.strictObject({
   keyTerms: z.array(z.strictObject({ original: z.string().min(1), translationZh: z.string().min(1), explanationZh: z.string().min(1) })).max(8),
 });
 type SummaryFields = z.infer<typeof summarySchema>;
+const auditSchema = z.strictObject({
+  valid: z.boolean(),
+  issues: z.array(z.string().min(1)).max(20),
+});
+const auditJsonSchema = {
+  type: "object",
+  additionalProperties: false,
+  required: ["valid", "issues"],
+  properties: {
+    valid: { type: "boolean" },
+    issues: { type: "array", maxItems: 20, items: { type: "string" } },
+  },
+};
 const outputJsonSchema = {
   type: "object", additionalProperties: false,
   required: ["titleZh", "researchQuestionZh", "backgroundZh", "methodsZh", "sample", "mainFindingsZh", "limitationsZh", "practicalMeaningZh", "cautionZh", "keyTerms"],
@@ -36,12 +49,12 @@ function ensureGrounded(summary: SummaryFields, source: ResearchSource): void {
     if (!source.abstract.includes(digits) && !source.abstract.includes(commaDigits)) throw new Error("AI 輸出的樣本數未出現在來源摘要，拒絕寫入");
   }
 }
-function assemble(summary: SummaryFields, source: ResearchSource, featuredDate: string, provider: string, model: string): DailyResearch {
+function assemble(summary: SummaryFields, source: ResearchSource, provider: string, model: string): ResearchArticle {
   ensureGrounded(summary, source);
   const doiUrl = source.doi ? `https://doi.org/${source.doi}` : null;
-  return dailyResearchSchema.parse({
+  return researchArticleSchema.parse({
     id: source.doi ? source.doi.replace(/[^a-z0-9]+/gi, "-") : source.id.replace(/[^a-z0-9]+/gi, "-"),
-    featuredDate, ...summary, titleOriginal: source.title, authors: source.authors, journalOrRepository: source.journalOrRepository,
+    ...summary, titleOriginal: source.title, authors: source.authors, journalOrRepository: source.journalOrRepository,
     publicationDate: source.publicationDate, language: source.language, publicationStatus: source.publicationStatus, studyType: source.studyType,
     psychologyCategory: source.psychologyCategory, originalUrl: source.originalUrl, doi: source.doi, doiUrl,
     openAccessUrl: source.openAccessUrl, sourceApis: source.sourceApis, retrievedAt: source.retrievedAt, summaryBasis: "abstract",
@@ -49,20 +62,85 @@ function assemble(summary: SummaryFields, source: ResearchSource, featuredDate: 
     metadataVerification: { titleVerified: true, authorsVerified: source.authors.length > 0, dateVerified: true, doiVerified: source.doi !== null, urlVerified: validHttpsUrl(source.originalUrl) },
   });
 }
+function auditPrompt(source: ResearchSource, summary: SummaryFields): string {
+  return [
+    "你是研究摘要的第二道獨立查核。只能比較下列英文摘要與繁中整理。",
+    "若繁中整理加入來源沒有的樣本、族群、地點、方法、數值、因果、發現或作者限制，valid 必須為 false。",
+    "不可因文字精簡或合理翻譯而判錯。只輸出符合 schema 的 JSON。",
+    `英文摘要：${source.abstract}`,
+    `繁中整理：${JSON.stringify(summary)}`,
+  ].join("\n\n");
+}
 class OpenAiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
-  async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
+  async summarize(source: ResearchSource): Promise<ResearchArticle> {
     const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: buildResearchSummaryPrompt(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) }, 3, 45_000);
     const summary = summarySchema.parse(JSON.parse(data.choices[0]?.message.content ?? ""));
-    return assemble(summary, source, featuredDate, "openai", this.model);
+    const audit = auditSchema.parse(
+      JSON.parse(
+        (
+          await fetchJson<{ choices: Array<{ message: { content: string } }> }>(
+            "https://api.openai.com/v1/chat/completions",
+            {
+              method: "POST",
+              headers: {
+                Authorization: `Bearer ${this.key}`,
+                "Content-Type": "application/json",
+              },
+              body: JSON.stringify({
+                model: this.model,
+                messages: [{ role: "user", content: auditPrompt(source, summary) }],
+                temperature: 0,
+                response_format: {
+                  type: "json_schema",
+                  json_schema: {
+                    name: "research_grounding_audit",
+                    strict: true,
+                    schema: auditJsonSchema,
+                  },
+                },
+              }),
+            },
+            3,
+            45_000,
+          )
+        ).choices[0]?.message.content ?? "",
+      ),
+    );
+    if (!audit.valid) throw new Error(`AI 摘要查核未通過：${audit.issues.join("；")}`);
+    return assemble(summary, source, "openai", this.model);
   }
 }
 class GeminiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
-  async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
+  async summarize(source: ResearchSource): Promise<ResearchArticle> {
     const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: buildResearchSummaryPrompt(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) }, 3, 45_000);
     const summary = summarySchema.parse(JSON.parse(data.candidates[0]?.content.parts[0]?.text ?? ""));
-    return assemble(summary, source, featuredDate, "gemini", this.model);
+    const audit = auditSchema.parse(
+      JSON.parse(
+        (
+          await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(
+            `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`,
+            {
+              method: "POST",
+              headers: { "Content-Type": "application/json" },
+              body: JSON.stringify({
+                contents: [{ role: "user", parts: [{ text: auditPrompt(source, summary) }] }],
+                generationConfig: {
+                  temperature: 0,
+                  responseMimeType: "application/json",
+                  responseJsonSchema: auditJsonSchema,
+                },
+              }),
+            },
+            3,
+            45_000,
+          )
+        ).candidates[0]?.content.parts[0]?.text ?? "",
+      ),
+    );
+    if (!audit.valid) throw new Error(`AI 摘要查核未通過：${audit.issues.join("；")}`);
+    return assemble(summary, source, "gemini", this.model);
   }
 }
 export function createSummarizer(): ResearchSummarizer {
