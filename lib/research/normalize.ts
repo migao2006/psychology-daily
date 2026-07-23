@@ -1,5 +1,5 @@
 import type { ResearchSource } from "./types";
-import type { StudyType } from "@/lib/schemas/research";
+import type { ResearchCategory, StudyType } from "@/lib/schemas/research";
 export function normalizeDoi(value: string | null | undefined): string | null {
   if (!value) return null;
   const normalized = decodeURIComponent(value.trim()).replace(/^https?:\/\/(?:dx\.)?doi\.org\//i, "").replace(/^doi:\s*/i, "").trim().toLowerCase();
@@ -38,7 +38,10 @@ export function inferStudyType(title: string, abstract: string): StudyType {
   if (/cross-sectional|cross sectional|survey/.test(text)) return "cross_sectional";
   return "other";
 }
-export function inferCategory(title: string, abstract: string): string {
+export function inferCategory(
+  title: string,
+  abstract: string,
+): ResearchCategory {
   const text = `${title} ${abstract}`.toLowerCase();
   if (/neuro|brain|eeg|fmri/.test(text)) return "神經科學";
   if (/child|adolesc|development|infant/.test(text)) return "發展心理學";

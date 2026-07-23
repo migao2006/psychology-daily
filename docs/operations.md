@@ -24,9 +24,11 @@
 
 ### Research library backfill
 
-`.github/workflows/backfill-research.yml` 只支援 `workflow_dispatch`，每批最多新增 10 篇最近 180 天的研究。內容在 `content/research-backfill-180d` 持續分支累積並建立 Draft PR；完整驗證失敗、沒有內容差異或達到 100 篇時不提交。
+`.github/workflows/backfill-research.yml` 每日 `18:00 UTC`（Asia/Taipei 約 02:00）執行，也支援 `workflow_dispatch`。每批最多新增 10 篇，從最近 180 天開始搜尋；連續三批無進展後改查最近 365 天，再連續三批無進展則將 campaign 標示為 `stalled`。達到 100 篇後狀態改為 `completed`，後續排程會略過。
 
-手動執行：GitHub → **Actions** → **Backfill research library** → **Run workflow** → 選擇 `batch_size` → **Run workflow**。每批會對摘要再做一次獨立結構化查核，因此會使用兩次 LLM 請求／篇。
+每批必須通過 lint、typecheck、內容 schema、Vitest、安全稽核與 production build；workflow 重新確認 `main` 沒有在執行期間改變後，才只提交 `content/research/` 並推送 `main`。回補與每日更新共用 concurrency group，避免同時寫入；沒有內容差異、驗證失敗或來源暫時錯誤都不會 commit，也不 force push。
+
+手動執行：GitHub → **Actions** → **Backfill research library** → **Run workflow** → 選擇 `batch_size`；`dry_run` 可驗證但不提交，`force_retry` 可在人工檢查後重新啟動 `stalled` campaign。每篇摘要會做第二次獨立結構化查核，因此正常使用兩次 LLM 請求。狀態、日期窗與已永久拒絕的候選保存在 `content/research/backfill-state.json`。
 
 ### Link check
 
@@ -83,6 +85,7 @@ pnpm verify
 - `ERR_PNPM_OUTDATED_LOCKFILE`：執行 `pnpm install`，檢查並提交預期的 lockfile 變更。
 - 缺少 provider：設定 `LLM_PROVIDER`、`LLM_MODEL` 與一個對應的 Actions secret。
 - `no_suitable_paper`：代表 14／30 天候選沒有通過門檻，不是資料遺失；最後正常內容仍保留。
+- `backfill-state.json` 為 `stalled`：查看 Actions summary 與拒絕原因；確認來源／模型設定後，以 `force_retry` 手動重啟。不要刪除拒絕清單以反覆處理同一筆永久無效候選。
 - Vercel 找不到專案：確認 repository root、Next.js preset 與 `main` Production Branch。
 - 匯入被拒：確認檔案由本網站目前 schema 匯出且沒有修改或未知欄位。
 - Cloudflare 403：先確認 origin allowlist 與完整復原碼；409 `device_replaced` 表示這台裝置已被新裝置取代，409 `revision_conflict` 表示須先重新載入雲端版本。

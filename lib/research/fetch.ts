@@ -1,5 +1,6 @@
 import { fetchJson } from "./http";
 import { hasPsychologyRelevance, inferCategory, inferStudyType, isPrimarilyEnglish, normalizeDoi, stripMarkup, validHttpsUrl } from "./normalize";
+import type { ResearchCategory } from "@/lib/schemas/research";
 import type { ResearchSource } from "./types";
 type OpenAlexWork = {
   id: string; doi?: string | null; display_name?: string; title?: string; publication_date: string;
@@ -33,6 +34,14 @@ type SemanticScholarPaper = {
 type SemanticScholarResponse = { data?: SemanticScholarPaper[] };
 const dateKey = (date: Date) => date.toISOString().slice(0, 10);
 const fromDaysAgo = (now: Date, days: number) => dateKey(new Date(now.getTime() - days * 86_400_000));
+export const BACKFILL_CATEGORY_QUERIES: Record<ResearchCategory, string> = {
+  認知心理學: "cognitive psychology attention memory",
+  社會心理學: "social psychology interpersonal group",
+  發展心理學: "developmental psychology child adolescent",
+  心理健康: "mental health stress anxiety depression",
+  神經科學: "cognitive neuroscience brain EEG fMRI",
+  人格與個別差異: "personality psychology individual differences",
+};
 function abstractFromInverted(index: Record<string, number[]> | null): string {
   if (!index) return "";
   return Object.entries(index).flatMap(([word, positions]) => positions.map((position) => [position, word] as const)).sort((a, b) => a[0] - b[0]).map((entry) => entry[1]).join(" ");
@@ -58,6 +67,7 @@ export async function fetchPapers(now = new Date()): Promise<ResearchSource[]> {
 export async function fetchBackfillCandidates(
   now = new Date(),
   days = 180,
+  focusCategories: ResearchCategory[] = [],
 ): Promise<ResearchSource[]> {
   const sources = [
     fetchOpenAlex,
@@ -65,18 +75,20 @@ export async function fetchBackfillCandidates(
     fetchCrossref,
     fetchSemanticScholar,
   ] as const;
-  const settled = await Promise.allSettled(
-    sources.map((fetchSource) => fetchSource(now, days)),
+  const queries = [
+    "psychology",
+    ...focusCategories.map((category) => BACKFILL_CATEGORY_QUERIES[category]),
+  ];
+  const batches = await Promise.all(
+    queries.flatMap((query) =>
+      sources.map((fetchSource) => fetchSource(now, days, query)),
+    ),
   );
-  return settled.flatMap((result) =>
-    result.status === "fulfilled"
-      ? result.value.filter(isEligibleCandidate)
-      : [],
-  );
+  return batches.flatMap((items) => items.filter(isEligibleCandidate));
 }
-export async function fetchOpenAlex(now: Date, days: number): Promise<ResearchSource[]> {
+export async function fetchOpenAlex(now: Date, days: number, search = "psychology"): Promise<ResearchSource[]> {
   const key = process.env.OPENALEX_API_KEY;
-  const query = new URLSearchParams({ filter: `from_publication_date:${fromDaysAgo(now, days)},to_publication_date:${dateKey(now)},has_abstract:true`, search: "psychology", sort: "publication_date:desc", "per-page": "100", mailto: process.env.UNPAYWALL_EMAIL || "noreply@example.com" });
+  const query = new URLSearchParams({ filter: `from_publication_date:${fromDaysAgo(now, days)},to_publication_date:${dateKey(now)},has_abstract:true`, search, sort: "publication_date:desc", "per-page": "100", mailto: process.env.UNPAYWALL_EMAIL || "noreply@example.com" });
   if (key) query.set("api_key", key);
   const data = await fetchJson<OpenAlexResponse>(`https://api.openalex.org/works?${query}`);
   return data.results.map((item) => {
@@ -87,8 +99,8 @@ export async function fetchOpenAlex(now: Date, days: number): Promise<ResearchSo
     return { id: item.id, title, authors: (item.authorships ?? []).map((entry) => entry.author?.display_name).filter((name): name is string => Boolean(name)), publicationDate: item.publication_date, abstract, originalUrl: validHttpsUrl(item.primary_location?.landing_page_url) ? item.primary_location.landing_page_url : doi ? `https://doi.org/${doi}` : item.id, doi, journalOrRepository: journal, language: item.language ?? "unknown", publicationStatus: item.primary_location?.source?.type === "repository" ? "preprint" : "unknown", studyType: inferStudyType(title, abstract), psychologyCategory: inferCategory(title, abstract), openAccessUrl: validHttpsUrl(item.open_access?.oa_url) ? item.open_access.oa_url : null, sourceApis: ["OpenAlex"], retrievedAt: now.toISOString() } satisfies ResearchSource;
   });
 }
-export async function fetchEuropePmc(now: Date, days: number): Promise<ResearchSource[]> {
-  const query = `FIRST_PDATE:[${fromDaysAgo(now, days)} TO ${dateKey(now)}] AND (psychology OR cognition OR emotion OR behavior) AND HAS_ABSTRACT:Y`;
+export async function fetchEuropePmc(now: Date, days: number, search = "psychology cognition emotion behavior"): Promise<ResearchSource[]> {
+  const query = `FIRST_PDATE:[${fromDaysAgo(now, days)} TO ${dateKey(now)}] AND (${search}) AND HAS_ABSTRACT:Y`;
   const data = await fetchJson<EuropePmcResponse>(`https://www.ebi.ac.uk/europepmc/webservices/rest/search?query=${encodeURIComponent(query)}&format=json&pageSize=100`);
   return (data.resultList?.result ?? []).flatMap((item): ResearchSource[] => {
     const title = stripMarkup(item.title ?? ""); const abstract = stripMarkup(item.abstractText ?? ""); const doi = normalizeDoi(item.doi);
@@ -98,8 +110,8 @@ export async function fetchEuropePmc(now: Date, days: number): Promise<ResearchS
     return [{ id: `europe-pmc:${id}`, title, authors: String(item.authorString ?? "").split(",").map((name) => name.trim()).filter(Boolean), publicationDate, abstract, originalUrl: doi ? `https://doi.org/${doi}` : `https://europepmc.org/article/${item.source ?? "MED"}/${id}`, doi, journalOrRepository: item.journalTitle ?? "Europe PMC", language: "en", publicationStatus: item.source === "PPR" ? "preprint" : "unknown", studyType: inferStudyType(title, abstract), psychologyCategory: inferCategory(title, abstract), openAccessUrl: item.inEPMC === "Y" && item.pmcid ? `https://europepmc.org/articles/${item.pmcid}` : null, sourceApis: ["Europe PMC"], retrievedAt: now.toISOString() }];
   });
 }
-export async function fetchCrossref(now: Date, days: number): Promise<ResearchSource[]> {
-  const params = new URLSearchParams({ filter: `from-pub-date:${fromDaysAgo(now, days)},until-pub-date:${dateKey(now)},type:journal-article`, "query.bibliographic": "psychology", select: "DOI,title,author,published,container-title,URL,abstract,type", rows: "100", mailto: process.env.UNPAYWALL_EMAIL || "noreply@example.com" });
+export async function fetchCrossref(now: Date, days: number, search = "psychology"): Promise<ResearchSource[]> {
+  const params = new URLSearchParams({ filter: `from-pub-date:${fromDaysAgo(now, days)},until-pub-date:${dateKey(now)},type:journal-article`, "query.bibliographic": search, select: "DOI,title,author,published,container-title,URL,abstract,type", rows: "100", mailto: process.env.UNPAYWALL_EMAIL || "noreply@example.com" });
   const data = await fetchJson<CrossrefResponse>(`https://api.crossref.org/works?${params}`);
   return data.message.items.map((item) => {
     const title = stripMarkup(item.title?.[0] ?? ""); const abstract = stripMarkup(item.abstract ?? ""); const doi = normalizeDoi(item.DOI);
@@ -108,9 +120,9 @@ export async function fetchCrossref(now: Date, days: number): Promise<ResearchSo
     return { id: `crossref:${doi ?? item.URL ?? title}`, title, authors: (item.author ?? []).map((author) => `${author.given ?? ""} ${author.family ?? ""}`.trim()).filter(Boolean), publicationDate, abstract, originalUrl: validHttpsUrl(item.URL) ? item.URL : doi ? `https://doi.org/${doi}` : "", doi, journalOrRepository: item["container-title"]?.[0] ?? "Crossref", language: "en", publicationStatus: "unknown", studyType: inferStudyType(title, abstract), psychologyCategory: inferCategory(title, abstract), openAccessUrl: null, sourceApis: ["Crossref"], retrievedAt: now.toISOString() } satisfies ResearchSource;
   });
 }
-export async function fetchSemanticScholar(now: Date, days: number): Promise<ResearchSource[]> {
+export async function fetchSemanticScholar(now: Date, days: number, search = "psychology"): Promise<ResearchSource[]> {
   const params = new URLSearchParams({
-    query: "psychology",
+    query: search,
     publicationDateOrYear: `${fromDaysAgo(now, days)}:${dateKey(now)}`,
     fields: "paperId,title,authors,publicationDate,year,abstract,url,externalIds,venue,publicationTypes,openAccessPdf",
     limit: "100",

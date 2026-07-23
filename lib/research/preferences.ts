@@ -1,14 +1,11 @@
 import { z } from "zod";
-import { studyTypeSchema, type StudyType } from "@/lib/schemas/research";
+import {
+  RESEARCH_CATEGORIES,
+  studyTypeSchema,
+  type StudyType,
+} from "@/lib/schemas/research";
 
-export const RESEARCH_CATEGORIES = [
-  "認知心理學",
-  "社會心理學",
-  "發展心理學",
-  "心理健康",
-  "神經科學",
-  "人格與個別差異",
-] as const;
+export { RESEARCH_CATEGORIES };
 
 export const STUDY_TYPE_OPTIONS: ReadonlyArray<{
   value: StudyType;

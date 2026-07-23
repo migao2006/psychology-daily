@@ -6,6 +6,7 @@ import {
   researchIndexSchema,
   type ResearchArticle,
 } from "@/lib/schemas/research";
+import { toResearchCatalogItem } from "@/lib/research/catalog";
 
 export const researchIndex = researchIndexSchema.parse(researchIndexJson);
 
@@ -33,6 +34,8 @@ const latestFeature = researchIndex.features.toSorted((left, right) =>
 export const featuredResearch =
   allResearch.find((item) => item.id === latestFeature?.researchId) ??
   allResearch[0];
+
+export const researchCatalog = allResearch.map(toResearchCatalogItem);
 
 export function getResearchById(id: string): ResearchArticle | undefined {
   return allResearch.find((research) => research.id === id);

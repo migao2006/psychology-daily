@@ -6,7 +6,7 @@ on:
 permissions:
   contents: write
 concurrency:
-  group: daily-research-main
+  group: research-content-main
   cancel-in-progress: false
 jobs:
   update:
@@ -52,6 +52,14 @@ jobs:
       - run: pnpm validate:content
       - run: pnpm test
       - run: pnpm build
+      - name: Refuse a stale main update
+        shell: bash
+        run: |
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || {
+            echo "main changed during this run; retry the daily update later."
+            exit 1
+          }
       - name: Commit verified content only when changed
         shell: bash
         run: |

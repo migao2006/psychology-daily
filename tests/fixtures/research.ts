@@ -2,6 +2,7 @@ import {
   researchArticleSchema,
   type ResearchArticle,
 } from "@/lib/schemas/research";
+import { toResearchCatalogItem } from "@/lib/research/catalog";
 
 export function makeResearch(
   overrides: Partial<ResearchArticle> = {},
@@ -106,3 +107,7 @@ export const researchFixtures = [
     ],
   }),
 ];
+
+export const researchCatalogFixtures = researchFixtures.map(
+  toResearchCatalogItem,
+);

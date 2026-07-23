@@ -1,0 +1,10 @@
+{
+  "schemaVersion": 1,
+  "target": 100,
+  "status": "running",
+  "activeWindowDays": 180,
+  "noProgressRuns": 0,
+  "lastRunAt": null,
+  "completedAt": null,
+  "rejectedCandidates": []
+}

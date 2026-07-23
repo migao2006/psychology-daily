@@ -52,6 +52,25 @@ describe("mocked research APIs", () => {
       new Set(["OpenAlex", "Europe PMC", "Crossref", "Semantic Scholar"]),
     );
   });
+  it("aborts the backfill candidate batch when an API stays rate limited", async () => {
+    vi.useFakeTimers();
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      if (url.includes("openalex")) return response({}, 429);
+      if (url.includes("europepmc")) return response({ resultList: { result: [] } });
+      if (url.includes("crossref")) return response({ message: { items: [] } });
+      return response({ data: [] });
+    }));
+
+    const request = fetchBackfillCandidates(
+      new Date("2026-07-23T12:00:00Z"),
+      180,
+    );
+    const rejection = expect(request).rejects.toThrow(/HTTP 429/);
+    await vi.runAllTimersAsync();
+    await rejection;
+    vi.useRealTimers();
+  });
   it("conservatively classifies repository records and Crossref metadata", async () => {
     const repositoryResponse = response({ results: [{ id: "https://openalex.org/W2", doi: "https://doi.org/10.1000/repository", display_name: "Psychology preprint about memory", publication_date: "2026-07-22", abstract_inverted_index: { Psychology: [0], memory: [1] }, authorships: [], primary_location: { landing_page_url: "https://repository.example.org/item/2", source: { display_name: "Example Repository", type: "repository" } }, open_access: { oa_url: null }, language: "en" }] });
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(repositoryResponse));
@@ -86,6 +105,12 @@ describe("mocked research APIs", () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({ message: { DOI: "10.1000/test", title: ["Completely unrelated chemistry"], author: [], "container-title": ["Other"] } })));
     await expect(verifyMetadata(candidate)).rejects.toThrow(/標題.*不一致/);
   });
+  it("records an unresolvable DOI as a permanent metadata rejection", async () => {
+    vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({}, 404)));
+    await expect(verifyMetadata(candidate)).rejects.toMatchObject({
+      code: "metadata_mismatch",
+    });
+  });
   it("rejects non-JSON AI output", async () => {
     process.env.LLM_PROVIDER = "openai"; process.env.LLM_MODEL = "configured-model"; process.env.OPENAI_API_KEY = "test-key";
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({ choices: [{ message: { content: "not-json" } }] })));
@@ -97,9 +122,12 @@ describe("mocked research APIs", () => {
     await expect(findOpenAccess(candidate)).resolves.toEqual(expect.objectContaining({ openAccessUrl: null }));
   });
   it("uses workflow concurrency to prevent duplicate daily runs", () => {
-    const workflow = readFileSync(path.join(process.cwd(), ".github/workflows/update-daily-research.yml"), "utf8");
-    expect(workflow).toContain("group: daily-research-main");
-    expect(workflow).toContain("cancel-in-progress: false");
+    const dailyWorkflow = readFileSync(path.join(process.cwd(), ".github/workflows/update-daily-research.yml"), "utf8");
+    const backfillWorkflow = readFileSync(path.join(process.cwd(), ".github/workflows/backfill-research.yml"), "utf8");
+    expect(dailyWorkflow).toContain("group: research-content-main");
+    expect(backfillWorkflow).toContain("group: research-content-main");
+    expect(dailyWorkflow).toContain("cancel-in-progress: false");
+    expect(backfillWorkflow).toContain("cancel-in-progress: false");
   });
   it("retains the last good research file when configuration is missing", async () => {
     delete process.env.LLM_PROVIDER; delete process.env.LLM_MODEL; delete process.env.OPENAI_API_KEY; delete process.env.GEMINI_API_KEY;

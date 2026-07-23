@@ -30,7 +30,7 @@ import type {
   ResearchInteraction,
   SavedResearchFilter,
 } from "@/lib/schemas/progress";
-import type { ResearchArticle } from "@/lib/schemas/research";
+import type { ResearchCatalogItem } from "@/lib/schemas/research";
 import { ResearchCard } from "./research-card";
 import { ResearchPreferencesPanel } from "./research-preferences";
 
@@ -56,12 +56,13 @@ const emptyFilters: ResearchSearchFilters = {
   dateFrom: null,
   dateTo: null,
 };
+const PAGE_SIZE = 12;
 
 export function ResearchList({
   research,
   featuredResearchId,
 }: {
-  research: ResearchArticle[];
+  research: ResearchCatalogItem[];
   featuredResearchId?: string;
 }) {
   const [shelf, setShelf] = useState<Shelf>("today");
@@ -75,6 +76,10 @@ export function ResearchList({
   const [showAdvanced, setShowAdvanced] = useState(false);
   const [filterName, setFilterName] = useState("");
   const [storageMessage, setStorageMessage] = useState("");
+  const [pagination, setPagination] = useState({
+    key: "",
+    count: PAGE_SIZE,
+  });
 
   useEffect(() => {
     let active = true;
@@ -179,6 +184,10 @@ export function ResearchList({
     shelf,
     sortMode,
   ]);
+  const resultKey = JSON.stringify([shelf, sortMode, filters]);
+  const visibleCount =
+    pagination.key === resultKey ? pagination.count : PAGE_SIZE;
+  const visible = shown.slice(0, visibleCount);
 
   async function handleInteraction(
     researchId: string,
@@ -234,9 +243,9 @@ export function ResearchList({
     setFilters({
       query: saved.query,
       categories: saved.categories,
-      studyTypes: saved.studyTypes as ResearchArticle["studyType"][],
+      studyTypes: saved.studyTypes as ResearchCatalogItem["studyType"][],
       publicationStatuses:
-        saved.publicationStatuses as ResearchArticle["publicationStatus"][],
+        saved.publicationStatuses as ResearchCatalogItem["publicationStatus"][],
       openAccessOnly: saved.openAccessOnly,
       dateFrom: saved.dateFrom,
       dateTo: saved.dateTo,
@@ -502,7 +511,7 @@ export function ResearchList({
             </button>
           </div>
         ) : (
-          shown.map((item) => (
+          visible.map((item) => (
             <ResearchCard
               key={item.research.id}
               ranked={item}
@@ -515,6 +524,20 @@ export function ResearchList({
           ))
         )}
       </section>
+      {visible.length < shown.length ? (
+        <button
+          className="button button-secondary button-full"
+          type="button"
+          onClick={() =>
+            setPagination({
+              key: resultKey,
+              count: visibleCount + PAGE_SIZE,
+            })
+          }
+        >
+          載入更多研究（尚有 {shown.length - visible.length} 篇）
+        </button>
+      ) : null}
       {readIds.size > 0 && shelf === "unread" ? (
         <p className="field-hint">已隱藏 {readIds.size} 篇已讀研究。</p>
       ) : null}
