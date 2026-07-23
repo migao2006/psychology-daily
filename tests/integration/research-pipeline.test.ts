@@ -151,6 +151,15 @@ describe("mocked research APIs", () => {
     expect(dailyWorkflow).toContain("cancel-in-progress: false");
     expect(backfillWorkflow).toContain("cancel-in-progress: false");
   });
+  it("uses a CommonJS-compatible async backfill entrypoint in Actions", () => {
+    const script = readFileSync(
+      path.join(process.cwd(), "scripts/backfill-research.ts"),
+      "utf8",
+    );
+    expect(script).toContain("async function main()");
+    expect(script).toContain("main().catch");
+    expect(script).not.toMatch(/^const result = await /m);
+  });
   it("retains the last good research file when configuration is missing", async () => {
     delete process.env.LLM_PROVIDER; delete process.env.LLM_MODEL; delete process.env.OPENAI_API_KEY; delete process.env.GEMINI_API_KEY;
     const root = await mkdtemp(path.join(os.tmpdir(), "psychology-daily-"));

@@ -6,7 +6,7 @@ Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`fix/backfill-summary-audit`
+`fix/backfill-cjs-entrypoint`
 
 ## Completed
 
@@ -17,10 +17,11 @@ Automated research backfill to 100（進行中）
 - 已將回補改為每日排程，與每日精選共用寫入鎖及 main freshness guard；完整驗證後只提交研究內容。
 - 已建立精簡研究 catalog、12 筆漸進顯示及狀態機／API／元件測試。
 - PR #7 已合併；main CI 與 Vercel Production 部署成功。
+- PR #8 已合併，第二次摘要查核現在可讀取 verified metadata。
 
 ## Remaining
 
-- 修正第二次摘要查核缺少 verified metadata 導致的安全提醒誤判，再啟動第一批回補。
+- 修正 Actions 上 `tsx` CommonJS 模式不支援 top-level await 的入口問題，再重跑第一批。
 - 由排程持續累積至 100 篇；若狀態變成 `stalled`，依 Actions Summary 人工檢查後決定是否 `force_retry`。
 
 ## Decisions
@@ -41,9 +42,10 @@ Automated research backfill to 100（進行中）
 ## Known Issues
 
 - 目前正式研究庫仍只有 1 篇，須等首批 workflow 成功後才有足夠內容供推薦發揮。
+- 首次正式回補 run `30053995494` 在內容寫入前因 CommonJS top-level await 失敗；main 未產生內容變更。
 - `main` 尚未啟用 branch protection；排程依既有受控自動寫入規則更新研究內容。
 - GitHub Actions 的第三方 actions 目前仍顯示 Node.js runtime 平台棄用警告，但 runner 以 Node.js 24 執行。
 
 ## Draft PR
 
-https://github.com/migao2006/psychology-daily/pull/8
+https://github.com/migao2006/psychology-daily/pull/9
