@@ -42,18 +42,39 @@ describe("mocked research APIs", () => {
     expect(requested.map((url) => url.includes("openalex") ? "OpenAlex" : url.includes("europepmc") ? "Europe PMC" : url.includes("crossref") ? "Crossref" : "Semantic Scholar")).toEqual(["OpenAlex", "Europe PMC", "Crossref", "Semantic Scholar"]);
     expect(items).toEqual([expect.objectContaining({ sourceApis: ["Semantic Scholar"], publicationStatus: "preprint" })]);
   });
-  it("aggregates all available sources for the independent backfill", async () => {
+  it("aggregates the three primary sources for the independent backfill", async () => {
     vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
       const url = String(input);
       if (url.includes("openalex")) return response({ results: [{ id: "https://openalex.org/W1", display_name: "Psychology of attention", publication_date: "2026-07-20", abstract_inverted_index: { Psychology: [0], attention: [1] }, authorships: [{ author: { display_name: "A" } }], primary_location: { landing_page_url: "https://example.org/openalex", source: { display_name: "Journal", type: "journal" } }, language: "en" }] });
       if (url.includes("europepmc")) return response({ resultList: { result: [{ id: "2", title: "Cognitive psychology and memory", abstractText: "Psychology memory study.", firstPublicationDate: "2026-07-19", authorString: "B", journalTitle: "Journal" }] } });
       if (url.includes("crossref")) return response({ message: { items: [{ DOI: "10.1000/crossref-backfill", title: ["Social psychology experiment"], author: [{ family: "C" }], published: { "date-parts": [[2026, 7, 18]] }, "container-title": ["Journal"], URL: "https://doi.org/10.1000/crossref-backfill", abstract: "Psychology social behavior experiment." }] } });
-      return response({ data: [{ paperId: "S3", title: "Developmental psychology research", authors: [{ name: "D" }], publicationDate: "2026-07-17", abstract: "Psychology research about development.", url: "https://example.org/semantic", externalIds: {}, venue: "Journal", publicationTypes: ["JournalArticle"] }] });
+      throw new Error("Semantic Scholar should remain a fallback");
     }));
     const items = await fetchBackfillCandidates(new Date("2026-07-23T12:00:00Z"), 180);
     expect(new Set(items.flatMap((item) => item.sourceApis))).toEqual(
-      new Set(["OpenAlex", "Europe PMC", "Crossref", "Semantic Scholar"]),
+      new Set(["OpenAlex", "Europe PMC", "Crossref"]),
     );
+  });
+  it("uses Semantic Scholar for backfill only when primary sources are empty", async () => {
+    const requested: string[] = [];
+    vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      requested.push(url);
+      if (url.includes("openalex")) return response({ results: [] });
+      if (url.includes("europepmc")) return response({ resultList: { result: [] } });
+      if (url.includes("crossref")) return response({ message: { items: [] } });
+      return response({ data: [{ paperId: "S3", title: "Developmental psychology research", authors: [{ name: "D" }], publicationDate: "2026-07-17", abstract: "Psychology research about development.", url: "https://example.org/semantic", externalIds: {}, venue: "Journal", publicationTypes: ["JournalArticle"] }] });
+    }));
+
+    const items = await fetchBackfillCandidates(
+      new Date("2026-07-23T12:00:00Z"),
+      180,
+    );
+
+    expect(items).toEqual([
+      expect.objectContaining({ sourceApis: ["Semantic Scholar"] }),
+    ]);
+    expect(requested.some((url) => url.includes("semanticscholar"))).toBe(true);
   });
   it("aborts the backfill candidate batch when an API stays rate limited", async () => {
     vi.useFakeTimers();
@@ -74,7 +95,7 @@ describe("mocked research APIs", () => {
     await rejection;
     vi.useRealTimers();
   });
-  it("serializes category query groups to avoid self-inflicted source limits", async () => {
+  it("serializes category fallback groups to avoid self-inflicted source limits", async () => {
     let semanticRequests = 0;
     let concurrentSemanticRequests = 0;
     let maxConcurrentSemanticRequests = 0;
