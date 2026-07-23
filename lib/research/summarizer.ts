@@ -54,7 +54,7 @@ function assemble(summary: SummaryFields, source: ResearchSource, featuredDate: 
 class OpenAiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
   async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
-    const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: promptFor(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) }, 2);
+    const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: promptFor(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) });
     const summary = summarySchema.parse(JSON.parse(data.choices[0]?.message.content ?? ""));
     return assemble(summary, source, featuredDate, "openai", this.model);
   }
@@ -62,7 +62,7 @@ class OpenAiSummarizer implements ResearchSummarizer {
 class GeminiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
   async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
-    const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: promptFor(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) }, 2);
+    const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: promptFor(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) });
     const summary = summarySchema.parse(JSON.parse(data.candidates[0]?.content.parts[0]?.text ?? ""));
     return assemble(summary, source, featuredDate, "gemini", this.model);
   }
