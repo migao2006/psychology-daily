@@ -1,10 +1,10 @@
-import type { ResearchArticle } from "@/lib/schemas/research";
+import type { ResearchCatalogItem } from "@/lib/schemas/research";
 
 export type ResearchSearchFilters = {
   query: string;
   categories: string[];
-  studyTypes: ResearchArticle["studyType"][];
-  publicationStatuses: ResearchArticle["publicationStatus"][];
+  studyTypes: ResearchCatalogItem["studyType"][];
+  publicationStatuses: ResearchCatalogItem["publicationStatus"][];
   openAccessOnly: boolean;
   dateFrom: string | null;
   dateTo: string | null;
@@ -20,39 +20,19 @@ export function normalizeResearchText(value: string): string {
 }
 
 export function matchesResearchSearch(
-  research: ResearchArticle,
+  research: ResearchCatalogItem,
   query: string,
 ): boolean {
   const normalizedQuery = normalizeResearchText(query);
   if (!normalizedQuery) return true;
 
-  const searchable = normalizeResearchText(
-    [
-      research.titleZh,
-      research.titleOriginal,
-      ...research.authors,
-      research.journalOrRepository,
-      research.doi ?? "",
-      research.psychologyCategory,
-      research.researchQuestionZh,
-      research.backgroundZh,
-      research.methodsZh,
-      ...research.mainFindingsZh,
-      ...research.keyTerms.flatMap((term) => [
-        term.original,
-        term.translationZh,
-        term.explanationZh,
-      ]),
-    ].join(" "),
-  );
-
   return normalizedQuery
     .split(" ")
-    .every((term) => searchable.includes(term));
+    .every((term) => research.searchText.includes(term));
 }
 
 export function matchesResearchFilters(
-  research: ResearchArticle,
+  research: ResearchCatalogItem,
   filters: ResearchSearchFilters,
 ): boolean {
   const normalizedQuery = normalizeResearchText(filters.query);
@@ -79,7 +59,7 @@ export function matchesResearchFilters(
 }
 
 export function researchSearchSuggestions(
-  research: ResearchArticle[],
+  research: ResearchCatalogItem[],
   limit = 40,
 ): string[] {
   return [
@@ -99,8 +79,8 @@ export function researchSearchSuggestions(
 }
 
 export function searchResearch(
-  research: ResearchArticle[],
+  research: ResearchCatalogItem[],
   query: string,
-): ResearchArticle[] {
+): ResearchCatalogItem[] {
   return research.filter((item) => matchesResearchSearch(item, query));
 }

@@ -9,7 +9,7 @@ import {
   normalizeResearchText,
   searchResearch,
 } from "@/lib/research/search";
-import { researchFixtures } from "@/tests/fixtures/research";
+import { researchCatalogFixtures } from "@/tests/fixtures/research";
 
 const NOW = new Date("2026-07-23T12:00:00Z");
 
@@ -20,7 +20,7 @@ describe("research personalization", () => {
       categories: ["神經科學"],
       studyTypes: ["systematic_review"],
     };
-    const ranked = rankResearchForUser(researchFixtures, preferences, [], {
+    const ranked = rankResearchForUser(researchCatalogFixtures, preferences, [], {
       now: NOW,
     });
     expect(ranked[0].research.id).toBe("fixture-neuroscience");
@@ -29,7 +29,7 @@ describe("research personalization", () => {
 
   it("learns from reading while down-ranking the item already read", () => {
     const ranked = rankResearchForUser(
-      researchFixtures,
+      researchCatalogFixtures,
       defaultResearchPreferences(NOW),
       [
         {
@@ -47,11 +47,11 @@ describe("research personalization", () => {
 
   it("is deterministic regardless of input order", () => {
     const preferences = defaultResearchPreferences(NOW);
-    const forward = rankResearchForUser(researchFixtures, preferences, [], {
+    const forward = rankResearchForUser(researchCatalogFixtures, preferences, [], {
       now: NOW,
     }).map((item) => item.research.id);
     const reverse = rankResearchForUser(
-      [...researchFixtures].reverse(),
+      [...researchCatalogFixtures].reverse(),
       preferences,
       [],
       { now: NOW },
@@ -61,7 +61,7 @@ describe("research personalization", () => {
 
   it("uses active feedback without permanently blocking a category", () => {
     const ranked = rankResearchForUser(
-      researchFixtures,
+      researchCatalogFixtures,
       defaultResearchPreferences(NOW),
       [],
       { now: NOW },
@@ -75,7 +75,7 @@ describe("research personalization", () => {
         },
       ],
     );
-    expect(ranked).toHaveLength(researchFixtures.length);
+    expect(ranked).toHaveLength(researchCatalogFixtures.length);
     expect(ranked.find((item) => item.research.id === "fixture-social")).toBeDefined();
   });
 
@@ -83,9 +83,9 @@ describe("research personalization", () => {
     expect(normalizeResearchText(" ＷＯＲＫＩＮＧ   Memory ")).toBe(
       "working memory",
     );
-    expect(searchResearch(researchFixtures, "BRAIN systematic")).toHaveLength(1);
-    expect(searchResearch(researchFixtures, "社會規範")).toHaveLength(2);
-    expect(matchesResearchSearch(researchFixtures[0], "test author")).toBe(true);
-    expect(searchResearch(researchFixtures, "不存在的主題")).toHaveLength(0);
+    expect(searchResearch(researchCatalogFixtures, "BRAIN systematic")).toHaveLength(1);
+    expect(searchResearch(researchCatalogFixtures, "社會規範")).toHaveLength(2);
+    expect(matchesResearchSearch(researchCatalogFixtures[0], "test author")).toBe(true);
+    expect(searchResearch(researchCatalogFixtures, "不存在的主題")).toHaveLength(0);
   });
 });

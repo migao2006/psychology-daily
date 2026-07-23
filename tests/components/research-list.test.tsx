@@ -6,7 +6,7 @@ import { ResearchList } from "@/components/research/research-list";
 import { clearProgress } from "@/lib/db/backup";
 import { closeDatabase, getDatabase } from "@/lib/db/database";
 import { getResearchPreferences } from "@/lib/db/research-preferences";
-import { researchFixtures } from "@/tests/fixtures/research";
+import { researchCatalogFixtures } from "@/tests/fixtures/research";
 
 describe("ResearchList", () => {
   afterEach(async () => {
@@ -16,7 +16,7 @@ describe("ResearchList", () => {
   });
 
   it("filters without losing the verified card metadata", async () => {
-    render(<ResearchList research={researchFixtures} />);
+    render(<ResearchList research={researchCatalogFixtures} />);
     expect(screen.getByText("工作記憶與學習策略")).toBeInTheDocument();
     await userEvent.click(screen.getByRole("button", { name: "進階篩選" }));
     await userEvent.click(screen.getByRole("checkbox", { name: "預印本" }));
@@ -25,7 +25,7 @@ describe("ResearchList", () => {
   });
 
   it("searches the local library and clears an empty result", async () => {
-    render(<ResearchList research={researchFixtures} />);
+    render(<ResearchList research={researchCatalogFixtures} />);
     await userEvent.click(screen.getByRole("button", { name: "全部研究" }));
     const search = screen.getByRole("combobox", {
       name: "搜尋研究庫",
@@ -42,7 +42,7 @@ describe("ResearchList", () => {
   });
 
   it("saves editable preferences in IndexedDB and reranks immediately", async () => {
-    render(<ResearchList research={researchFixtures} />);
+    render(<ResearchList research={researchCatalogFixtures} />);
     await userEvent.click(
       screen.getByRole("button", { name: "研究偏好" }),
     );
@@ -65,5 +65,23 @@ describe("ResearchList", () => {
       researchId: "fixture-neuroscience",
       readAt: "2026-07-23T10:00:00Z",
     });
+  });
+
+  it("renders a compact first page and loads the catalog progressively", async () => {
+    const catalog = Array.from({ length: 25 }, (_, index) => ({
+      ...researchCatalogFixtures[index % researchCatalogFixtures.length],
+      id: `catalog-${index}`,
+      titleZh: `目錄研究 ${index + 1}`,
+      searchText: `目錄研究 ${index + 1}`,
+    }));
+
+    render(<ResearchList research={catalog} />);
+    await userEvent.click(screen.getByRole("button", { name: "全部研究" }));
+
+    expect(screen.getAllByRole("article")).toHaveLength(12);
+    await userEvent.click(
+      screen.getByRole("button", { name: /載入更多研究/ }),
+    );
+    expect(screen.getAllByRole("article")).toHaveLength(24);
   });
 });

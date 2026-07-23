@@ -1,10 +1,10 @@
 import type { ReadResearch, ResearchInteraction } from "@/lib/schemas/progress";
-import type { ResearchArticle } from "@/lib/schemas/research";
+import type { ResearchCatalogItem } from "@/lib/schemas/research";
 import type { ResearchPreferences } from "./preferences";
 import { normalizeResearchText } from "./search";
 
 export type RankedResearch = {
-  research: ResearchArticle;
+  research: ResearchCatalogItem;
   score: number;
   reasons: string[];
   isRead: boolean;
@@ -15,7 +15,7 @@ type RankOptions = {
 };
 
 export function rankResearchForUser(
-  research: ResearchArticle[],
+  research: ResearchCatalogItem[],
   preferences: ResearchPreferences,
   readHistory: ReadResearch[],
   options: RankOptions = {},
@@ -29,7 +29,7 @@ export function rankResearchForUser(
       (
         entry,
       ): entry is ReadResearch & {
-        research: ResearchArticle;
+        research: ResearchCatalogItem;
       } => Boolean(entry.research),
     );
   const readIds = new Set(knownHistory.map((entry) => entry.researchId));
@@ -121,9 +121,9 @@ export function rankResearchForUser(
 }
 
 function calculateFeedbackScore(
-  candidate: ResearchArticle,
+  candidate: ResearchCatalogItem,
   interactions: ResearchInteraction[],
-  researchById: Map<string, ResearchArticle>,
+  researchById: Map<string, ResearchCatalogItem>,
 ): number {
   let weighted = 0;
   let weightTotal = 0;
@@ -143,8 +143,8 @@ function calculateFeedbackScore(
 }
 
 function calculateHistorySimilarity(
-  candidate: ResearchArticle,
-  history: Array<ReadResearch & { research: ResearchArticle }>,
+  candidate: ResearchCatalogItem,
+  history: Array<ReadResearch & { research: ResearchCatalogItem }>,
   now: Date,
 ): number {
   let weightedSimilarity = 0;
@@ -172,8 +172,8 @@ function calculateHistorySimilarity(
 }
 
 function keywordSimilarity(
-  left: ResearchArticle,
-  right: ResearchArticle,
+  left: ResearchCatalogItem,
+  right: ResearchCatalogItem,
 ): number {
   const leftTerms = keywordSet(left);
   const rightTerms = keywordSet(right);
@@ -183,7 +183,7 @@ function keywordSimilarity(
   return intersection.length / union.size;
 }
 
-function keywordSet(research: ResearchArticle): Set<string> {
+function keywordSet(research: ResearchCatalogItem): Set<string> {
   return new Set(
     research.keyTerms.flatMap((term) =>
       [term.original, term.translationZh]
@@ -194,11 +194,11 @@ function keywordSet(research: ResearchArticle): Set<string> {
 }
 
 function buildReasons(input: {
-  item: ResearchArticle;
+  item: ResearchCatalogItem;
   preferences: ResearchPreferences;
   categoryMatch: boolean;
   typeMatch: boolean;
-  knownHistory: Array<ReadResearch & { research: ResearchArticle }>;
+  knownHistory: Array<ReadResearch & { research: ResearchCatalogItem }>;
   recentCategories: string[];
   interaction?: ResearchInteraction;
 }): string[] {

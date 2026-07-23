@@ -1,4 +1,9 @@
-import type { PublicationStatus, ResearchArticle, StudyType } from "@/lib/schemas/research";
+import type {
+  PublicationStatus,
+  ResearchArticle,
+  ResearchCategory,
+  StudyType,
+} from "@/lib/schemas/research";
 export type ResearchSource = {
   id: string;
   title: string;
@@ -11,7 +16,7 @@ export type ResearchSource = {
   language: string;
   publicationStatus: PublicationStatus;
   studyType: StudyType;
-  psychologyCategory: string;
+  psychologyCategory: ResearchCategory;
   openAccessUrl: string | null;
   sourceApis: string[];
   retrievedAt: string;

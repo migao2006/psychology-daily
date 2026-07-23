@@ -2,46 +2,47 @@
 
 ## Current Work Package
 
-TASK=NONE
+Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`main`
+`agent/automated-research-backfill`
 
 ## Completed
 
-- Repository 長期維護與 AI 協作架構已建立。
-- Cloudflare 必綁、單一 active device、IndexedDB 快取與端對端加密同步已發布。
-- 研究內容 v2、研究偏好／推薦／搜尋／收藏、回補 workflow 與研究 UI 已發布。
-- 概念級複習中心、統計、legacy migration 與確定性間隔複習已發布。
-- 手機／桌面 UI、同步可靠性與 Worker v1／v2 切換保護已完成正式驗收。
-- `main`、GitHub CI、Vercel Production 與 Cloudflare Worker 均已更新。
+- Repository 長期維護、加密綁定同步、研究探索 v2、概念複習中心與 Production UI 精修已發布。
+- 確認目前研究庫 1 篇；180 天唯讀候選盤點取得 174 篇去重研究，其中 111 篇有公開全文。
+- 已鎖定總數 100、每日 10 篇、自動提交 main、180 天無進展後擴大至 365 天。
+- 已建立持久化 campaign 狀態、永久候選拒絕紀錄、分類定向搜尋、預印本上限與暫時性錯誤整批中止。
+- 已將回補改為每日排程，與每日精選共用寫入鎖及 main freshness guard；完整驗證後只提交研究內容。
+- 已建立精簡研究 catalog、12 筆漸進顯示及狀態機／API／元件測試。
 
 ## Remaining
 
-- 下一個獨立 work package 可手動分批執行研究 backfill workflow，累積至少 50–100 篇已驗證研究。
+- 完成 PR、main／Production 驗證並啟動第一批回補。
+- 由排程持續累積至 100 篇；若狀態變成 `stalled`，依 Actions Summary 人工檢查後決定是否 `force_retry`。
 
 ## Decisions
 
-- IndexedDB 只作為已綁定裝置的同步快取；Repository 不使用 Local Storage 或 Session Storage。
-- 同一復原碼只允許一台 active device；裝置憑證不進入同步 payload 或 JSON 匯出。
-- 複習維持確定性間隔規則，不使用 AI。
-- 研究搜尋紀錄不自動形成偏好；推薦依明確偏好、主動回饋、已讀相似度、新穎度與探索計算。
-- Worker v1／v2 使用不同 KV key 前綴並行，正式切換不中斷舊版備份。
+- 每日排程在 `18:00 UTC` 執行，與 `22:00 UTC` 每日研究更新錯開。
+- 回補與每日更新使用同一個 `research-content-main` concurrency group。
+- 暫時性外部服務錯誤整批失敗且不寫入；候選本身不合格則記錄固定錯誤代碼並繼續。
+- IndexedDB、推薦權重與使用者同步 payload 不在本工作包修改範圍。
 
 ## Validation
 
-- 本機：`pnpm verify`、`pnpm test:e2e`、`pnpm audit --audit-level high`、`git diff --check` 全部通過。
-- GitHub CI：https://github.com/migao2006/psychology-daily/actions/runs/30029076205
-- Vercel Production：https://psychology-daily.vercel.app
-- Cloudflare Worker v1／v2 health 與正式跨裝置復原驗收通過。
+- `pnpm verify`：通過（30 lessons、1 research item、55 Vitest tests、production build）。
+- `pnpm test:e2e`：通過（1 Playwright flow）。
+- `pnpm audit --audit-level high`：通過（無已知弱點）。
+- `actionlint`：全部 workflow 通過。
+- `git diff --check`：通過；Windows 僅顯示 LF／CRLF 轉換提醒。
 
 ## Known Issues
 
-- Repository 目前只有一筆種子研究；推薦品質需以獨立 backfill work package 擴充資料量。
-- `main` 尚未啟用 branch protection；未來若啟用 required PR，需同步設計每日研究 workflow 的受控寫入方式。
-- GitHub Actions 顯示 actions Node.js 20 runtime 的平台棄用警告，但目前由 runner 強制使用 Node.js 24，工作流程成功。
+- 目前正式研究庫仍只有 1 篇，須等首批 workflow 成功後才有足夠內容供推薦發揮。
+- `main` 尚未啟用 branch protection；排程依既有受控自動寫入規則更新研究內容。
+- GitHub Actions 的第三方 actions 目前仍顯示 Node.js runtime 平台棄用警告，但 runner 以 Node.js 24 執行。
 
 ## Draft PR
 
-NONE
+https://github.com/migao2006/psychology-daily/pull/7

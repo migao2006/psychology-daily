@@ -3,6 +3,7 @@ import path from "node:path";
 import {
   researchIndexSchema,
   type ResearchArticle,
+  type ResearchCategory,
   type ResearchIndex,
 } from "@/lib/schemas/research";
 import { taipeiDateKey } from "@/lib/dates/taipei";
@@ -48,7 +49,7 @@ export async function updateDailyResearch(
         index.items.find((item) => item.id === feature.researchId)
           ?.psychologyCategory,
     )
-    .filter((category): category is string => Boolean(category));
+    .filter((category): category is ResearchCategory => Boolean(category));
   const selected = rankPapers(candidates, now, recentCategories)[0];
   const verified = await findOpenAccess(await verifyMetadata(selected));
   const research = await summarizer.summarize(verified);

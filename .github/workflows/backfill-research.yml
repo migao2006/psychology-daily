@@ -1,6 +1,8 @@
 name: Backfill research library
 
 on:
+  schedule:
+    - cron: "0 18 * * *"
   workflow_dispatch:
     inputs:
       batch_size:
@@ -9,13 +11,22 @@ on:
         default: "10"
         type: choice
         options: ["1", "5", "10"]
+      dry_run:
+        description: "只產生與驗證，不提交 main"
+        required: true
+        default: false
+        type: boolean
+      force_retry:
+        description: "重新啟動 stalled 狀態"
+        required: true
+        default: false
+        type: boolean
 
 permissions:
   contents: write
-  pull-requests: write
 
 concurrency:
-  group: research-backfill-180d
+  group: research-content-main
   cancel-in-progress: false
 
 jobs:
@@ -25,28 +36,65 @@ jobs:
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
+          ref: main
           fetch-depth: 0
-      - name: Create or continue persistent backfill branch
+      - name: Check whether work is required
+        id: preflight
         shell: bash
+        env:
+          FORCE_RETRY: ${{ inputs.force_retry || false }}
         run: |
-          if git ls-remote --exit-code --heads origin content/research-backfill-180d >/dev/null 2>&1; then
-            git fetch origin content/research-backfill-180d
-            git switch --track -C content/research-backfill-180d origin/content/research-backfill-180d
-          else
-            git switch -c content/research-backfill-180d
-          fi
+          node - <<'NODE'
+          const { appendFileSync, readFileSync } = require("node:fs");
+          const index = JSON.parse(readFileSync("content/research/index.json", "utf8"));
+          const state = JSON.parse(readFileSync("content/research/backfill-state.json", "utf8"));
+          const forceRetry = process.env.FORCE_RETRY === "true";
+          const shouldRun =
+            index.items.length >= state.target
+              ? state.status !== "completed"
+              : state.status !== "stalled" || forceRetry;
+          appendFileSync(process.env.GITHUB_OUTPUT, `run=${shouldRun}\n`);
+          appendFileSync(process.env.GITHUB_STEP_SUMMARY, [
+            "## 回補排程預檢",
+            "",
+            `- 目前總數：${index.items.length}`,
+            `- 目標：${state.target}`,
+            `- 狀態：${state.status}`,
+            `- 執行本批：${shouldRun ? "是" : "否"}`,
+            "",
+          ].join("\n"));
+          NODE
       - uses: pnpm/action-setup@f40ffcd9367d9f12939873eb1018b921a783ffaa # v4
+        if: steps.preflight.outputs.run == 'true'
         with:
           version: 11.14.0
           run_install: false
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
+        if: steps.preflight.outputs.run == 'true'
         with:
           node-version: 24
           cache: pnpm
-      - run: pnpm install --frozen-lockfile
-      - name: Backfill one validated batch
+      - name: Check summarizer configuration
+        if: steps.preflight.outputs.run == 'true'
+        shell: bash
         env:
-          BACKFILL_BATCH_SIZE: ${{ inputs.batch_size }}
+          LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
+          LLM_MODEL: ${{ vars.LLM_MODEL }}
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+          OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+        run: |
+          test -n "$LLM_PROVIDER" || { echo "Missing repository variable: LLM_PROVIDER"; exit 1; }
+          test -n "$LLM_MODEL" || { echo "Missing repository variable: LLM_MODEL"; exit 1; }
+          if [ "$LLM_PROVIDER" = "openai" ]; then test -n "$OPENAI_API_KEY" || { echo "Missing Actions secret: OPENAI_API_KEY"; exit 1; }; fi
+          if [ "$LLM_PROVIDER" = "gemini" ]; then test -n "$GEMINI_API_KEY" || { echo "Missing Actions secret: GEMINI_API_KEY"; exit 1; }; fi
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm install --frozen-lockfile
+      - name: Backfill one validated batch
+        id: backfill
+        if: steps.preflight.outputs.run == 'true'
+        env:
+          BACKFILL_BATCH_SIZE: ${{ inputs.batch_size || '10' }}
+          BACKFILL_FORCE_RETRY: ${{ inputs.force_retry || false }}
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
           LLM_PROVIDER: ${{ vars.LLM_PROVIDER }}
@@ -54,35 +102,42 @@ jobs:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
         run: pnpm backfill:research
-      - run: pnpm lint
-      - run: pnpm typecheck
-      - run: pnpm validate:content
-      - run: pnpm test
-      - run: pnpm build
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm lint
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm typecheck
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm validate:content
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm test
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm audit --audit-level high
+      - if: steps.preflight.outputs.run == 'true'
+        run: pnpm build
+      - name: Refuse a stale main update
+        if: steps.preflight.outputs.run == 'true' && inputs.dry_run != true
+        shell: bash
+        run: |
+          git fetch origin main
+          test "$(git rev-parse HEAD)" = "$(git rev-parse origin/main)" || {
+            echo "main changed during this run; discard this batch and retry later."
+            exit 1
+          }
       - name: Commit verified research only when changed
-        id: commit
+        if: steps.preflight.outputs.run == 'true' && inputs.dry_run != true
         shell: bash
         run: |
           if git diff --quiet -- content/research; then
-            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No content change; no commit created."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git add content/research
           git commit -m "content: backfill verified psychology research"
-          git push --set-upstream origin content/research-backfill-180d
-          echo "changed=true" >> "$GITHUB_OUTPUT"
-      - name: Open draft pull request
-        if: steps.commit.outputs.changed == 'true'
-        env:
-          GH_TOKEN: ${{ github.token }}
-        shell: bash
+          git push origin HEAD:main
+      - name: Report a stalled campaign
+        if: steps.backfill.outputs.status == 'stalled' && inputs.dry_run != true
         run: |
-          gh pr view content/research-backfill-180d >/dev/null 2>&1 ||
-            gh pr create \
-              --draft \
-              --base main \
-              --head content/research-backfill-180d \
-              --title "content: backfill verified psychology research" \
-              --body "以獨立批次回補最近 180 天研究；每篇均經 metadata、URL、Zod 與第二次摘要查核。"
+          echo "No suitable research remained after the 365-day fallback."
+          exit 1
