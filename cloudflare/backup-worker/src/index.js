@@ -13,7 +13,10 @@ const MAX_BODY_BYTES = 2_900_000;
 const worker = {
   async fetch(request, env) {
     const origin = request.headers.get("Origin");
-    if (!origin || !ALLOWED_ORIGINS.has(origin)) {
+    if (
+      !origin ||
+      (!ALLOWED_ORIGINS.has(origin) && origin !== env.STAGING_ORIGIN)
+    ) {
       return json({ error: "不允許的來源" }, 403);
     }
     const cors = corsHeaders(origin);

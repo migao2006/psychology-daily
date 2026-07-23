@@ -60,6 +60,8 @@ Repository secrets：
 
 Worker 綁定 `BACKUPS` KV 與 `BACKUP_RATE_LIMITER`。v2 API 提供 bind、帶 revision 的 PUT、GET 與 DELETE；每組復原碼只允許一個 active device。正式 API 只允許 `https://psychology-daily.vercel.app`，另保留設定中列出的本機 origin；修改正式網域時必須同步更新 allowlist。
 
+Staging Worker 可用純文字 binding `STAGING_ORIGIN` 額外允許一個 Vercel Preview branch alias；正式環境不得設定此 binding。Staging 必須使用獨立 KV，不能讀寫正式密文。
+
 部署設定不含 API token、復原碼或解密金鑰。只有在工作包明確授權部署時，才使用已授權 Cloudflare 帳號執行 `wrangler deploy`。
 
 ## Manual local research update
