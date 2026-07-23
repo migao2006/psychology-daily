@@ -47,4 +47,4 @@ Production polish and release（進行中）
 - Base prerequisite: https://github.com/migao2006/psychology-daily/pull/2
 - Work package PR: https://github.com/migao2006/psychology-daily/pull/3
 - Review center PR: https://github.com/migao2006/psychology-daily/pull/4
-- Release PR: not created yet.
+- Release PR: https://github.com/migao2006/psychology-daily/pull/5
