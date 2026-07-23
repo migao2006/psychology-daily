@@ -282,7 +282,7 @@ export function BindingGate({ children }: { children: React.ReactNode }) {
       >
         <span className="brand-mark" aria-hidden="true">心</span>
         <h1 id="binding-title">
-          {state === "replaced" ? "這台裝置已停用" : "先綁定你的學習資料"}
+          {state === "replaced" ? "這台裝置已停用" : "綁定你的學習資料"}
         </h1>
         {state === "loading" ? <p>正在檢查資料綁定…</p> : null}
         {state === "setup" || state === "replaced" ? (

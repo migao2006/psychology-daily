@@ -28,7 +28,7 @@ test("first visit, learning, research, persistence and backup flow", async ({ pa
     await route.fulfill({ status: 404, json: { error: "找不到備份" } });
   });
   await page.goto("/");
-  await expect(page.getByRole("heading", { name: "先綁定你的學習資料" })).toBeVisible();
+  await expect(page.getByRole("heading", { name: "綁定你的學習資料" })).toBeVisible();
   await page.getByRole("button", { name: "保留目前進度並建立綁定" }).click();
   const recoveryCode = await page.locator("output.recovery-code").textContent();
   await page.getByLabel("貼回復原碼以確認已保存").fill(recoveryCode!);
