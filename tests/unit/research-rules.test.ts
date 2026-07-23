@@ -5,6 +5,7 @@ import { inferStudyType, isPrimarilyEnglish, isWithinPublicationWindow, normaliz
 import { rankPapers } from "@/lib/research/rank";
 import { ensureGrounded } from "@/lib/research/summarizer";
 import type { ResearchSource } from "@/lib/research/types";
+import { buildResearchSummaryPrompt } from "@/prompts/research-summary";
 import seedResearch from "@/content/research/daily/2026-07-23.json";
 const source = (overrides: Partial<ResearchSource> = {}): ResearchSource => ({ id: "w1", title: "Memory and attention in daily learning", authors: ["A. Author"], publicationDate: "2026-07-20", abstract: "We surveyed 120 adolescents about memory and attention.", originalUrl: "https://doi.org/10.1000/test", doi: "10.1000/test", journalOrRepository: "Test Journal", language: "en", publicationStatus: "peer_reviewed", studyType: "cross_sectional", psychologyCategory: "認知心理學", openAccessUrl: null, sourceApis: ["OpenAlex"], retrievedAt: "2026-07-23T00:00:00Z", ...overrides });
 describe("research selection rules", () => {
@@ -40,5 +41,14 @@ describe("research selection rules", () => {
   it("rejects an AI-fabricated sample size", () => {
     const summary = { titleZh: "測試", researchQuestionZh: "問題", backgroundZh: "背景", methodsZh: "方法", sample: { size: 999, populationZh: null, locationZh: null }, mainFindingsZh: ["發現一", "發現二"], limitationsZh: [], practicalMeaningZh: "意義", cautionZh: "提醒", keyTerms: [] };
     expect(() => ensureGrounded(summary, source())).toThrow(/樣本數未出現在來源摘要/);
+  });
+  it("builds the summary prompt only from the verified source contract", () => {
+    const researchSource = source();
+    const prompt = buildResearchSummaryPrompt(researchSource);
+    expect(prompt).toContain(researchSource.title);
+    expect(prompt).toContain(researchSource.abstract);
+    expect(prompt).toContain("不得自行搜尋或補充");
+    expect(prompt).toContain("不得把相關改寫成因果");
+    expect(prompt).not.toContain(researchSource.originalUrl);
   });
 });

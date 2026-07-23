@@ -1,5 +1,6 @@
 import { z } from "zod";
 import { dailyResearchSchema, type DailyResearch } from "@/lib/schemas/research";
+import { buildResearchSummaryPrompt } from "@/prompts/research-summary";
 import { fetchJson } from "./http";
 import { validHttpsUrl } from "./normalize";
 import type { ResearchSource, ResearchSummarizer } from "./types";
@@ -28,9 +29,6 @@ const outputJsonSchema = {
     keyTerms: { type: "array", maxItems: 8, items: { type: "object", additionalProperties: false, required: ["original", "translationZh", "explanationZh"], properties: { original: { type: "string" }, translationZh: { type: "string" }, explanationZh: { type: "string" } } } },
   },
 };
-function promptFor(source: ResearchSource): string {
-  return `你是心理科學研究摘要編輯。只能依下方資料，以台灣繁體中文輸出符合 schema 的 JSON。不得自行搜尋或補充；原文沒有的樣本數、族群、地點必須填 null。不得把相關改寫成因果。推論限制須以「根據研究設計推論」開頭。cautionZh 必須說明同儕審查狀態、是否僅依摘要、因果限制、樣本限制與仍需更多研究，並含「本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。」\n\n原始標題：${source.title}\n作者：${source.authors.join(", ")}\n出版日期：${source.publicationDate}\n期刊或平台：${source.journalOrRepository}\nDOI：${source.doi ?? "null"}\n研究類型（來源正規化）：${source.studyType}\n同儕審查狀態（來源正規化）：${source.publicationStatus}\n英文摘要：${source.abstract}`;
-}
 function ensureGrounded(summary: SummaryFields, source: ResearchSource): void {
   if (summary.sample.size !== null) {
     const digits = String(summary.sample.size);
@@ -54,7 +52,7 @@ function assemble(summary: SummaryFields, source: ResearchSource, featuredDate: 
 class OpenAiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
   async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
-    const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: promptFor(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) }, 3, 45_000);
+    const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: buildResearchSummaryPrompt(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) }, 3, 45_000);
     const summary = summarySchema.parse(JSON.parse(data.choices[0]?.message.content ?? ""));
     return assemble(summary, source, featuredDate, "openai", this.model);
   }
@@ -62,7 +60,7 @@ class OpenAiSummarizer implements ResearchSummarizer {
 class GeminiSummarizer implements ResearchSummarizer {
   constructor(private key: string, private model: string) {}
   async summarize(source: ResearchSource, featuredDate: string): Promise<DailyResearch> {
-    const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: promptFor(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) }, 3, 45_000);
+    const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(`https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent?key=${encodeURIComponent(this.key)}`, { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: buildResearchSummaryPrompt(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) }, 3, 45_000);
     const summary = summarySchema.parse(JSON.parse(data.candidates[0]?.content.parts[0]?.text ?? ""));
     return assemble(summary, source, featuredDate, "gemini", this.model);
   }

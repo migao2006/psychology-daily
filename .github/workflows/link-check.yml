@@ -7,6 +7,11 @@ on:
     paths:
       - "content/**"
       - "README.md"
+      - "AGENTS.md"
+      - "CONTINUITY.md"
+      - "docs/**"
+      - "prompts/**/*.md"
+      - "tasks/**/*.md"
 permissions:
   contents: read
 concurrency:
@@ -28,5 +33,7 @@ jobs:
             --retry-wait-time 2
             --timeout 20
             --accept 200,204,206,301,302,303,307,308,403,429
-            README.md docs/**/*.md content/**/*.json
+            README.md AGENTS.md CONTINUITY.md
+            docs/**/*.md prompts/**/*.md tasks/**/*.md
+            content/**/*.json
           fail: true

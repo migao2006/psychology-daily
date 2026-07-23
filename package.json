@@ -4,7 +4,7 @@
   "private": true,
   "packageManager": "pnpm@11.14.0",
   "engines": {
-    "node": ">=20.9.0"
+    "node": "24.x"
   },
   "scripts": {
     "dev": "next dev",
@@ -16,7 +16,8 @@
     "test:coverage": "vitest run --coverage",
     "test:e2e": "playwright test",
     "validate:content": "tsx scripts/validate-content.ts",
-    "update:research": "tsx scripts/update-daily-research.ts"
+    "update:research": "tsx scripts/update-daily-research.ts",
+    "verify": "pnpm lint && pnpm typecheck && pnpm validate:content && pnpm test && pnpm build"
   },
   "dependencies": {
     "dexie": "^4.4.4",
