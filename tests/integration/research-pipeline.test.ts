@@ -3,16 +3,22 @@ import { readFileSync } from "node:fs";
 import os from "node:os";
 import path from "node:path";
 import { afterEach, describe, expect, it, vi } from "vitest";
-import { fetchJson } from "@/lib/research/http";
+import {
+  fetchJson,
+  parseRetryAfterMs,
+  ResearchHttpError,
+} from "@/lib/research/http";
 import { fetchBackfillCandidates, fetchCrossref, fetchOpenAlex, fetchPapers, fetchSemanticScholar } from "@/lib/research/fetch";
 import { verifyMetadata } from "@/lib/research/verify";
 import { findOpenAccess } from "@/lib/research/open-access";
 import {
   createSummarizer,
+  FailoverSummarizer,
   nextProviderRequestDelay,
   researchSummaryAuditPrompt,
 } from "@/lib/research/summarizer";
 import { updateDailyResearch } from "@/lib/research/update";
+import type { ResearchArticle } from "@/lib/schemas/research";
 import type { ResearchSource } from "@/lib/research/types";
 const originalEnv = { ...process.env };
 const response = (body: unknown, status = 200) => new Response(JSON.stringify(body), { status, headers: { "Content-Type": "application/json" } });
@@ -145,6 +151,30 @@ describe("mocked research APIs", () => {
     vi.stubGlobal("fetch", mocked);
     await expect(fetchJson<{ ok: boolean }>("https://example.org", {}, 2)).resolves.toEqual({ ok: true });
     expect(mocked).toHaveBeenCalledTimes(2);
+  });
+  it("respects numeric and HTTP-date retry-after values", () => {
+    expect(parseRetryAfterMs("2.5", 0)).toBe(2_500);
+    expect(
+      parseRetryAfterMs("Thu, 01 Jan 1970 00:00:10 GMT", 1_000),
+    ).toBe(9_000);
+    expect(parseRetryAfterMs("invalid", 0)).toBe(0);
+  });
+  it("disables a rate-limited primary provider for the rest of the run", async () => {
+    const primary = {
+      summarize: vi
+        .fn()
+        .mockRejectedValue(new ResearchHttpError(429, true, "https://example.org")),
+    };
+    const expected = {
+      id: "fallback",
+    } as ResearchArticle;
+    const fallback = { summarize: vi.fn().mockResolvedValue(expected) };
+    const summarizer = new FailoverSummarizer(primary, fallback);
+
+    await expect(summarizer.summarize(candidate)).resolves.toBe(expected);
+    await expect(summarizer.summarize(candidate)).resolves.toBe(expected);
+    expect(primary.summarize).toHaveBeenCalledTimes(1);
+    expect(fallback.summarize).toHaveBeenCalledTimes(2);
   });
   it("returns no candidate for empty APIs or missing abstracts", async () => {
     vi.stubGlobal("fetch", vi.fn(async (input: string | URL | Request) => {

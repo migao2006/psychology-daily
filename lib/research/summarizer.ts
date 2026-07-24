@@ -1,7 +1,7 @@
 import { z } from "zod";
 import { researchArticleSchema, type ResearchArticle } from "@/lib/schemas/research";
 import { buildResearchSummaryPrompt } from "@/prompts/research-summary";
-import { fetchJson } from "./http";
+import { fetchJson, ResearchHttpError } from "./http";
 import { CandidateRejectionError } from "./errors";
 import { validHttpsUrl } from "./normalize";
 import type { ResearchSource, ResearchSummarizer } from "./types";
@@ -44,7 +44,7 @@ const outputJsonSchema = {
   },
 };
 export const GEMINI_REQUEST_INTERVAL_MS = 6_500;
-export const GROQ_REQUEST_INTERVAL_MS = 15_000;
+export const GROQ_REQUEST_INTERVAL_MS = 30_000;
 
 export function nextProviderRequestDelay(
   lastStartedAt: number | null,
@@ -162,6 +162,13 @@ class OpenAiCompatibleSummarizer implements ResearchSummarizer {
           model: this.model,
           messages: [{ role: "user", content: prompt }],
           temperature: 0,
+          ...(this.provider === "groq"
+            ? {
+                include_reasoning: false,
+                reasoning_effort: "low",
+                max_completion_tokens: 2_000,
+              }
+            : {}),
           response_format: {
             type: "json_schema",
             json_schema: { name, strict: true, schema },
@@ -198,6 +205,28 @@ class OpenAiCompatibleSummarizer implements ResearchSummarizer {
     return assemble(summary, source, this.provider, this.model);
   }
 }
+
+export class FailoverSummarizer implements ResearchSummarizer {
+  private primaryUnavailable = false;
+
+  constructor(
+    private readonly primary: ResearchSummarizer,
+    private readonly fallback: ResearchSummarizer,
+  ) {}
+
+  async summarize(source: ResearchSource): Promise<ResearchArticle> {
+    if (this.primaryUnavailable) return this.fallback.summarize(source);
+    try {
+      return await this.primary.summarize(source);
+    } catch (error) {
+      if (error instanceof ResearchHttpError && error.retryable) {
+        this.primaryUnavailable = true;
+      }
+      return this.fallback.summarize(source);
+    }
+  }
+}
+
 class GeminiSummarizer implements ResearchSummarizer {
   private readonly pacer = new ProviderRequestPacer(
     GEMINI_REQUEST_INTERVAL_MS,
@@ -283,13 +312,21 @@ export function createSummarizer(): ResearchSummarizer {
     );
   }
   if (provider === "groq" && process.env.GROQ_API_KEY) {
-    return new OpenAiCompatibleSummarizer(
+    const groq = new OpenAiCompatibleSummarizer(
       process.env.GROQ_API_KEY,
       model,
       "groq",
       "https://api.groq.com/openai/v1/chat/completions",
       GROQ_REQUEST_INTERVAL_MS,
     );
+    const fallbackModel = process.env.GEMINI_FALLBACK_MODEL;
+    if (process.env.GEMINI_API_KEY && fallbackModel) {
+      return new FailoverSummarizer(
+        groq,
+        new GeminiSummarizer(process.env.GEMINI_API_KEY, fallbackModel),
+      );
+    }
+    return groq;
   }
   if (provider === "gemini" && process.env.GEMINI_API_KEY) return new GeminiSummarizer(process.env.GEMINI_API_KEY, model);
   throw new Error(`LLM Provider「${provider}」缺少對應 API Key；請設定 GROQ_API_KEY、OPENAI_API_KEY 或 GEMINI_API_KEY`);
