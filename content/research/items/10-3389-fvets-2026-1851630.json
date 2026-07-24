@@ -1,0 +1,78 @@
+{
+  "id": "10-3389-fvets-2026-1851630",
+  "titleZh": "我們如何改變行為以強化生物安全？範圍文獻回顧與建議",
+  "titleOriginal": "How can we change behavior to bolster biosecurity? A scoping review and recommendations",
+  "authors": [
+    "Julia M. Smith",
+    "Jake Fountain",
+    "Jennifer Manyweathers",
+    "Jenny-Ann Toribio",
+    "Suman Das Gupta",
+    "Victoria J. Brookes",
+    "Marta Hernandez-Jover"
+  ],
+  "journalOrRepository": "Frontiers in Veterinary Science",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "本研究旨在識別並評估旨在促進農場層級生物安全措施採納的干預研究。",
+  "backgroundZh": "農民對生物安全和動物健康措施的認知、促進因素與障礙已被廣泛研究，但很少有研究評估旨在推廣生物安全措施採納的干預措施。",
+  "methodsZh": "遵循PRISMA-ScR指南進行結構化文獻搜尋與參考文獻篩選，並將干預措施對應至行為改變輪等框架。",
+  "sample": {
+    "size": 41,
+    "populationZh": "農場層級的干預研究，涵蓋家禽、豬、牛與綿羊等主要農業物種",
+    "locationZh": "包含美國、英國及其他地區"
+  },
+  "mainFindingsZh": [
+    "在檢索到的文獻中，共有33篇文獻符合納入標準，代表41項於2008年至2024年間進行或發表的獨立研究。",
+    "多數研究是在商業生產系統中進行，而非小規模或後院飼養環境。",
+    "主要介入組件包含培訓、調查、行動計畫與稽核。",
+    "僅有五項研究報告了控制研究設計，且不到一半的研究參考了理論框架。"
+  ],
+  "limitationsZh": [
+    "僅有少數研究報告控制研究設計。",
+    "不到一半的研究參考了理論框架。"
+  ],
+  "practicalMeaningZh": "明確報告干預措施的作法與原因、應用干預對繪製工具以及整合行為改變框架，有助於強化未來生物安全倡議的證據基礎。",
+  "cautionZh": "根據研究設計推論，本研究為範圍文獻回顧。同儕審查狀態為未知，且本內容僅依摘要進行分析，無法推斷因果關係。樣本受限於已發表的特定文獻，仍需更多研究來進一步證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "biosecurity",
+      "translationZh": "生物安全",
+      "explanationZh": "保護動物免受傳染病威脅的相關防護與管理措施。"
+    },
+    {
+      "original": "scoping review",
+      "translationZh": "範圍文獻回顧",
+      "explanationZh": "系統性地繪製與評估特定領域研究文獻的研究方法。"
+    },
+    {
+      "original": "behavior change wheel",
+      "translationZh": "行為改變輪",
+      "explanationZh": "用於設計與分析行為改變干預措施的理論框架。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fvets.2026.1851630",
+  "doi": "10.3389/fvets.2026.1851630",
+  "doiUrl": "https://doi.org/10.3389/fvets.2026.1851630",
+  "openAccessUrl": "https://www.frontiersin.org/journals/veterinary-science/articles/10.3389/fvets.2026.1851630/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "10-3389-fpsyg-2026-1809017",
+  "titleZh": "中外合作辦學大學生之英語能力與全球勝任力：跨文化敏感度的中介作用與英語學習動機的調節作用",
+  "titleOriginal": "English proficiency and global competence among undergraduates in Sino-Foreign Cooperation Programmes: the mediating role of intercultural sensitivity and moderating role of English learning motivation",
+  "authors": [
+    "Huizhen Wang",
+    "Sijia Cheng",
+    "Michael T. C. Hwang",
+    "Ruilan Cao"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "英語能力與大學生全球勝任力之間的關聯為何？跨文化敏感度與英語學習動機在其中扮演什麼樣的中介與調節角色？",
+  "backgroundZh": "英語能力與學生的全球勝任力呈正向關聯，但其背後的潛在機制仍不清楚。本研究運用社會認知理論、跨文化敏感度理論與自我決定理論進行探討。",
+  "methodsZh": "採用橫斷面調查法，透過特定中外合作辦學機構之大學生進行施測，並使用偏最小二乘結構方程模型進行資料分析。",
+  "sample": {
+    "size": 420,
+    "populationZh": "中外合作辦學機構之大學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "根據研究設計推論，英語能力與全球勝任力呈正向關聯。",
+    "根據研究設計推論，跨文化敏感度在此關係中具有部分中介作用。",
+    "根據研究設計推論，英語學習動機調節了英語能力與全球勝任力之間的關係，以及英語能力與跨文化敏感度之間的關係。"
+  ],
+  "limitationsZh": [
+    "本研究採用橫斷面設計。",
+    "取樣範圍有限。"
+  ],
+  "practicalMeaningZh": "研究結果顯示，在中外合作辦學中整合語言發展、跨文化訓練與動機支持可能有助於學生發展。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依摘要撰寫，基於橫斷面設計無法確立因果關係，樣本範圍亦有限，且仍需更多縱向研究以檢驗推論。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "English proficiency",
+      "translationZh": "英語能力",
+      "explanationZh": "指學生對英語的掌握與運用程度。"
+    },
+    {
+      "original": "global competence",
+      "translationZh": "全球勝任力",
+      "explanationZh": "指學生在全球化環境中應對與理解不同文化的能力。"
+    },
+    {
+      "original": "intercultural sensitivity",
+      "translationZh": "跨文化敏感度",
+      "explanationZh": "對不同文化差異的察覺與敏感程度。"
+    },
+    {
+      "original": "English learning motivation",
+      "translationZh": "英語學習動機",
+      "explanationZh": "學生學習英語的驅動力與意願。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1809017",
+  "doi": "10.3389/fpsyg.2026.1809017",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1809017",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1809017/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

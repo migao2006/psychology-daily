@@ -1,0 +1,78 @@
+{
+  "id": "10-3389-fpsyg-2026-1833715",
+  "titleZh": "中國大學生的手機成癮、情緒應對策略與心理健康症狀：基於性別的分析",
+  "titleOriginal": "Smartphone addiction, emotional coping strategies, and mental health symptoms in Chinese university students: a gender-based analysis",
+  "authors": [
+    "Xu Liu",
+    "Zhenggui Gu",
+    "Lulu Shi"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "探討中國大學生中高度成癮樣智慧型手機使用、情緒應對策略、心理健康症狀與性別之間的橫斷面關聯。",
+  "backgroundZh": "智慧型手機成癮是大學生日益受關注的心理健康問題，然而與此關聯相關的情緒應對相關性仍未得到充分理解，這在面臨學業、發展和心理社會壓力的中國高等教育中具有重要策略意義。",
+  "methodsZh": "採用壓力應對理論，使用便利抽樣與條件式篩選。透過智慧型手機成癮量表短版（SAS-SV）篩選出符合門檻的學生，利用凱斯勒心理困擾量表（K10）評估心理健康症狀，並使用情緒調節問卷（ERQ）評估重評策略與壓抑策略。使用偏最小二乘結構方程模型（PLS-SEM）進行直接與間接統計關聯檢定，並在性別多群組分析前評估測量不變性。",
+  "sample": {
+    "size": 1276,
+    "populationZh": "符合SAS-SV篩選門檻的中國大學生",
+    "locationZh": "中國兩所公立大學"
+  },
+  "mainFindingsZh": [
+    "智慧型手機成癮與心理健康症狀、壓抑策略及重評策略呈正向關聯。",
+    "壓抑策略在智慧型手機成癮與心理健康症狀之間表現出正向間接關聯，而重評策略則表現出負向間接關聯。",
+    "性別並未顯著調節直接路徑，但透過重評策略的間接路徑僅在男性學生中顯著。"
+  ],
+  "limitationsZh": [
+    "資料在單一時間點收集，無法支持因果推論",
+    "依賴便利抽樣"
+  ],
+  "practicalMeaningZh": "情緒應對策略可能是未來縱向與介入研究的相關標的。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本研究僅依摘要進行分析，資料為單一時間點收集故無法支持因果推論，樣本受限於便利抽樣與特定族群，且仍需更多縱向與介入研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Smartphone addiction",
+      "translationZh": "智慧型手機成癮",
+      "explanationZh": "指過度或失控使用智慧型手機的行為傾向"
+    },
+    {
+      "original": "Emotional coping strategies",
+      "translationZh": "情緒應對策略",
+      "explanationZh": "個人在面對壓力時調節情緒反應的方法"
+    },
+    {
+      "original": "Suppression strategy",
+      "translationZh": "壓抑策略",
+      "explanationZh": "抑制情緒表現的一種情緒調節方式"
+    },
+    {
+      "original": "Reinterpretation strategy",
+      "translationZh": "重評策略",
+      "explanationZh": "改變對情境的認知以改變其情緒影響的方式"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1833715",
+  "doi": "10.3389/fpsyg.2026.1833715",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1833715",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1833715/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

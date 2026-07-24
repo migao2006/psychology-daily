@@ -1,0 +1,69 @@
+{
+  "id": "10-64449-9781997499121-04",
+  "titleZh": "和解與統一",
+  "titleOriginal": "Conciliation and Unification",
+  "authors": [
+    "Kobus du Pisani"
+  ],
+  "journalOrRepository": "Smuts, Empire and Beyond",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "人格與個別差異",
+  "researchQuestionZh": "揚·史末津斯（Jan Smuts）的人格特質中存在哪些矛盾元素？",
+  "backgroundZh": "人類的人格是一個複雜的現象，這項複雜性非常適用於揚·史末津斯，他的內在人格包含著矛盾的元素。",
+  "methodsZh": "採用歷史或文獻分析等其他研究方法探討人物人格特質。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "史末津斯一方面是個具有理想主義觀念的哲學思想家，認為宇宙具有本質上的完整性、良善與和諧。",
+    "史末津斯另一方面是個政治家、國務家與軍人，以現實主義、實用主義和樂觀主義來面對不完美且不斷變化的世界的各種挑戰。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究未提供具體樣本數據與量化分析。"
+  ],
+  "practicalMeaningZh": "有助於理解歷史人物複雜人格特質中的矛盾與調和。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態未知，本內容僅依摘要，基於非實驗性質研究不得做因果推論，缺乏明確樣本限制，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "personality",
+      "translationZh": "人格",
+      "explanationZh": "指人類複雜的精神與行為現象。"
+    },
+    {
+      "original": "idealistic notions",
+      "translationZh": "理想主義觀念",
+      "explanationZh": "指對宇宙本質上的完整性、良善與和諧的看法。"
+    },
+    {
+      "original": "realism",
+      "translationZh": "現實主義",
+      "explanationZh": "面對不完美與不斷變化的世界所採取的實際態度。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.64449/9781997499121-04",
+  "doi": "10.64449/9781997499121-04",
+  "doiUrl": "https://doi.org/10.64449/9781997499121-04",
+  "openAccessUrl": "https://doi.org/10.64449/9781997499121-04",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

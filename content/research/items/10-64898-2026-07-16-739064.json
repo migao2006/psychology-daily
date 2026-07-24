@@ -1,0 +1,75 @@
+{
+  "id": "10-64898-2026-07-16-739064",
+  "titleZh": "愛情鳥會遺忘嗎？桃面愛情鳥的長期記憶保留與適應性遺忘",
+  "titleOriginal": "Do lovebirds ever forget? Long-term memory retention and adaptive forgetting in rosy-faced lovebirds",
+  "authors": [
+    "Shengyu Wang",
+    "Jackson Wen Jie Li",
+    "Chen Ma",
+    "Emily Shui Kei Poon",
+    "Simon Yung Wa Sin"
+  ],
+  "journalOrRepository": "bioRxiv (Cold Spring Harbor Laboratory)",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "preprint",
+  "studyType": "experimental",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "探討桃面愛情鳥初始關聯學習的長期記憶保留、反轉學習表現，以及反轉學習後的記憶保留情況。",
+  "backgroundZh": "許多動物在各種生態情境下的長期記憶已被廣泛記錄，但對於主動修改後記憶能持續多久，或衝突記憶如何被適應性調控以實現靈活行為，所知甚少。鸚鵡以高智商和認知能力聞名，但記憶研究大多集中於少數大型鸚鵡物種。",
+  "methodsZh": "使用二元選擇符號系統，對桃面愛情鳥進行了三項實驗，以研究（1）間隔兩週、半年和一年的初始關聯學習記憶保留；（2）獎勵與未獎勵符號對調的反轉學習；（3）反轉學習後兩週和半年間隔的記憶保留。",
+  "sample": {
+    "size": 28,
+    "populationZh": "桃面愛情鳥",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "初始關聯學習記憶具有驚人的持久性，在將近600天後仍然可以被檢測到。",
+    "反轉學習表現與大型鸚鵡物種相當。",
+    "反轉學習後的遺忘曲線雖反映出與初始學習相同的模式，但展現出較短的保留持續時間與較低的保留高原期。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究樣本僅限於桃面愛情鳥，結果未必能直接推論至所有鳥類或大型鸚鵡。",
+    "根據研究設計推論，實驗室環境下的二元選擇符號系統可能無法完全反映自然生態中的複雜記憶與行為。"
+  ],
+  "practicalMeaningZh": "研究結果顯示遺忘可能是一種適應性機制，用以調控衝突資訊的可檢索性，而非簡單清除記憶痕跡，這有助於在多變環境中促進更大的行為靈活性。",
+  "cautionZh": "本研究為預印本（preprint），尚未經過正式同儕審查。本內容僅依摘要進行分析，根據研究設計推論，無法完全確立因果關係。樣本數與物種範圍有限，仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "long-term memory",
+      "translationZh": "長期記憶",
+      "explanationZh": "指資訊在腦中經過長時間儲存與保留的能力。"
+    },
+    {
+      "original": "adaptive forgetting",
+      "translationZh": "適應性遺忘",
+      "explanationZh": "指遺忘作為一種機制，調節衝突資訊的可檢索性以促進行為靈活性。"
+    },
+    {
+      "original": "reversal learning",
+      "translationZh": "反轉學習",
+      "explanationZh": "將原本的獎勵與未獎勵條件對調，以觀察個體學習與適應新規則的能力。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.64898/2026.07.16.739064",
+  "doi": "10.64898/2026.07.16.739064",
+  "doiUrl": "https://doi.org/10.64898/2026.07.16.739064",
+  "openAccessUrl": "https://www.biorxiv.org/content/biorxiv/early/2026/07/21/2026.07.16.739064.full.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

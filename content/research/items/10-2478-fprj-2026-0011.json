@@ -1,0 +1,68 @@
+{
+  "id": "10-2478-fprj-2026-0011",
+  "titleZh": "金錢大腦：心理健康對債務管理的潛在影響",
+  "titleOriginal": "Mind Over Money: The Hidden Influence of Mental Health on Debt Management",
+  "authors": [
+    "Shen Yu",
+    "Wei-Huei Hsu",
+    "Jiali Fang"
+  ],
+  "journalOrRepository": "Financial Planning Research Journal",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "心理健康如何影響債務行為？",
+  "backgroundZh": "本研究探討心理健康對債務行為的影響，並考量金融可及性及父母早期財務指導的角色。",
+  "methodsZh": "使用probit迴歸、Oaxaca分解法，並分析來自ANZ New Zealand Financial Wellbeing Survey 2021的資料。",
+  "sample": {
+    "size": null,
+    "populationZh": "ANZ紐西蘭財務福祉調查2021的受訪者",
+    "locationZh": "紐西蘭"
+  },
+  "mainFindingsZh": [
+    "心理健康對短期債務的使用沒有顯著影響",
+    "心理健康與較少參與長期債務有關",
+    "金融可及性是一個關鍵的解釋因素",
+    "早期的父母財務指導有助於抵消不良心理健康帶來的負面影響"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷面研究，無法確立因果關係"
+  ],
+  "practicalMeaningZh": "研究結果強調需要包容性的金融政策，以加強取得信用的管道，並將金融教育與心理健康支持相結合，特別是針對脆弱族群。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本分析僅依據摘要內容，根據研究設計推論，無法證實因果關係；樣本限制與仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "probit regression",
+      "translationZh": "普羅比迴歸",
+      "explanationZh": "一種用於分析二元結果變項的統計迴歸模型"
+    },
+    {
+      "original": "Oaxaca decomposition",
+      "translationZh": "瓦哈卡分解",
+      "explanationZh": "一種用於分析群體間平均差異來源的統計方法"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.2478/fprj-2026-0011",
+  "doi": "10.2478/fprj-2026-0011",
+  "doiUrl": "https://doi.org/10.2478/fprj-2026-0011",
+  "openAccessUrl": "https://reference-global.com/download/article/10.2478/fprj-2026-0011.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

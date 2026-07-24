@@ -1,0 +1,75 @@
+{
+  "id": "10-51143-jksi-v11i1-1165",
+  "titleZh": "精神分裂症之雇主端介入措施：系統性文獻回顧與精神科護理觀點",
+  "titleOriginal": "Employer-Based Interventions for Schizophrenia: A Systematic Literature Review and Psychiatric Nursing Perspective",
+  "authors": [
+    "Siti khadijah",
+    "Endang Caturini Sulistiyowati",
+    "Dwi Ariani Sulistyowati",
+    "Abdul Ghofur",
+    "Sarka Ade Susana"
+  ],
+  "journalOrRepository": "JURNAL KEPERAWATAN SUAKA INSAN (JKSI)",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "雇主端介入措施在改善精神分裂症及其他嚴重精神疾病族群之就業成效如何？",
+  "backgroundZh": "就業對於精神分裂症及其他嚴重精神疾病患者的康復與社會融入至關重要，但競爭性就業仍存在顯著障礙。雖然已開發各種雇主端職業介入措施，但其效能在不同情境下仍然變異。",
+  "methodsZh": "本研究遵循PRISMA框架進行系統性文獻回顧，於Scopus、Web of Science與PubMed檢索2020年至2026年間發表的文獻，經篩選後選出19篇研究進行質性綜合分析。",
+  "sample": {
+    "size": 19,
+    "populationZh": "精神分裂症及其他嚴重精神疾病患者",
+    "locationZh": "來自九個國家"
+  },
+  "mainFindingsZh": [
+    "個人化安置與支援以及支持性就業在提升競爭性就業率、求職成功率與工作留任率方面，持續提供最強的證據支持。",
+    "一項研究指出，實施支持性就業後，職缺可用性增加了7.5%。",
+    "僅依賴雇主導向溝通的介入措施顯示出有限的效能。"
+  ],
+  "limitationsZh": [
+    "未提供全面詳細的量化統合分析數據。",
+    "包含的研究在不同情境下的介入效能具有變異性。"
+  ],
+  "practicalMeaningZh": "個人化安置與支援及支持性就業是提升此族群就業成效最有效的策略，且將職業支援與全面的心理健康服務相結合，對於促進永續就業與長期康復至關重要。",
+  "cautionZh": "根據研究設計推論。本同儕審查狀態為未知，本內容僅依據摘要編寫，無法建立絕對因果關係，且樣本數與納入研究範圍有限，仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Schizophrenia",
+      "translationZh": "精神分裂症",
+      "explanationZh": "一種影響思考、情緒與行為的嚴重精神疾病。"
+    },
+    {
+      "original": "Individual Placement and Support (IPS)",
+      "translationZh": "個人化安置與支援",
+      "explanationZh": "一種幫助嚴重精神疾病患者獲得競爭性就業的循證實務模式。"
+    },
+    {
+      "original": "Supported Employment (SE)",
+      "translationZh": "支持性就業",
+      "explanationZh": "為身心障礙者提供持續性支援以維持工作的就業模式。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.51143/jksi.v11i1.1165",
+  "doi": "10.51143/jksi.v11i1.1165",
+  "doiUrl": "https://doi.org/10.51143/jksi.v11i1.1165",
+  "openAccessUrl": "https://journal.stikessuakainsan.ac.id/index.php/jksi/article/download/1165/398",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "10-3389-fresc-2026-1747066",
+  "titleZh": "幻肢縮短現象的複雜性：一項質性研究的見解",
+  "titleOriginal": "The lived complexity of phantom limb telescoping: insights from a qualitative study",
+  "authors": [
+    "Andrea Aternali",
+    "Heather Lumsden-Ruegg",
+    "Nicole Dimitrova",
+    "Lora Appel",
+    "Sander L. Hitzig",
+    "Amanda L. Mayo",
+    "Joel Katz"
+  ],
+  "journalOrRepository": "Frontiers in Rehabilitation Sciences",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "qualitative",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "探討經歷肢體截肢者的幻肢縮短現象之親身經驗，包含他們對縮短現象的解釋、引發的情緒反應，以及對截肢後適應的影響。",
+  "backgroundZh": "幻肢縮短（即感覺失去的肢體變短）雖然在截肢後相對常見，但仍是一個探索不足的現象。現有文獻多聚焦於量化或神經生理學方法，對親身經驗的關注有限。",
+  "methodsZh": "使用半結構化訪談，並在建構主義框架內進行歸納式主題分析。",
+  "sample": {
+    "size": 12,
+    "populationZh": "11名男性與1名女性的截肢者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "識別出四個主題：縮短經驗的異質性、縮短現象雖不尋常但不會令人感到痛苦、與生活在縮短現象中相關的社會與情緒後果、以及對改變的幻肢之適應。",
+    "參與者表示對截肢後調整相關因素或幻肢痛的關心，大於對擁有較短幻肢感覺的關心，且極少與社會支持或醫療提供者討論縮短現象。",
+    "縮短現象的經驗在發作與表現上有所差異，並受到心理與社會因素的形塑。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究僅能探討參與者的親身經驗，無法推論出因果關係。"
+  ],
+  "practicalMeaningZh": "患者可能受益於在截肢後不久接受關於縮短現象的衛教，並與醫療提供者進行公開討論，以將縮短現象正常化並減少對此感覺的不確定感。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要進行分析，受限於橫斷或質性研究設計無法建立因果關係，樣本數較小，仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Phantom limb telescoping",
+      "translationZh": "幻肢縮短",
+      "explanationZh": "指失去的肢體在感知上出現縮短的現象。"
+    },
+    {
+      "original": "Qualitative study",
+      "translationZh": "質性研究",
+      "explanationZh": "透過訪談等方法探索親身經驗的研究方法。"
+    },
+    {
+      "original": "Inductive thematic analysis",
+      "translationZh": "歸納式主題分析",
+      "explanationZh": "從資料中歸納出核心主題的分析方式。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fresc.2026.1747066",
+  "doi": "10.3389/fresc.2026.1747066",
+  "doiUrl": "https://doi.org/10.3389/fresc.2026.1747066",
+  "openAccessUrl": "https://www.frontiersin.org/journals/rehabilitation-sciences/articles/10.3389/fresc.2026.1747066/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

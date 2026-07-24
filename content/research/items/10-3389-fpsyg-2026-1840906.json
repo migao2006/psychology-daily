@@ -1,0 +1,77 @@
+{
+  "id": "10-3389-fpsyg-2026-1840906",
+  "titleZh": "思覺失調症光譜疾患之妄想主題與法醫狀態：基於機器學習的辨別研究",
+  "titleOriginal": "Delusional themes and forensic status in schizophrenia spectrum disorders: a machine learning based discriminative study",
+  "authors": [
+    "Amr A. N. Eleryan",
+    "Friederike Boudriot",
+    "Marc Dörner",
+    "Andreas B. Hofmann",
+    "Lena Machetanz",
+    "Johannes Kirchebner"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "qualitative",
+  "psychologyCategory": "人格與個別差異",
+  "researchQuestionZh": "特定的精神病理症狀與妄想主題能否辨別具備法醫精神病患與一般精神病患身分的思覺失調症光譜疾患患者？",
+  "backgroundZh": "思覺失調症光譜疾患與暴力及犯罪行為風險升高有關，但妄想內容的具體貢獻仍不夠清楚。先前研究對於特定心理病理症狀、妄想主題與犯罪行為之間的關係產生了不一致的發現。更好地理解法醫精神病患與一般精神病患之間症狀特定的現象學差異，可能有助於法醫環境中的臨床評估。",
+  "methodsZh": "本回顧性研究分析了來自瑞士大學醫院治療的 740 名思覺失調症光譜疾患患者的資料。從包含超過 500 個變項的初始資料集中，選出 103 個專注於症狀的變項以隔離精神病理特徵。經過前處理後，資料集被分割為訓練與驗證子集。在應用維度縮減技術後，應用了多種受監督的機器學習演算法並使用巢狀交叉驗證進行比較。模型效能使用曲線下面積、平衡準確度、敏感度與特異度來評估。事後分析進一步檢驗了共病物質使用與人格障礙的影響。",
+  "sample": {
+    "size": 740,
+    "populationZh": "思覺失調症光譜疾患患者（包含法醫精神病患與一般精神病患）",
+    "locationZh": "瑞士大學醫院"
+  },
+  "mainFindingsZh": [
+    "貝氏分類器達到了最佳效能，且在驗證樣本中具有穩定結果。",
+    "怪異妄想與具攻擊性的妄想內容為兩個關鍵的辨別變項。",
+    "整體症狀嚴重程度量測並未對模型做出貢獻。"
+  ],
+  "limitationsZh": [
+    "為回顧性研究設計",
+    "依賴特定大學醫院的患者資料",
+    "未完全排除其他潛在共病或干擾因素的影響"
+  ],
+  "practicalMeaningZh": "妄想的質性內容（特別是怪異與攻擊性主題）對於思覺失調症光譜疾患的法醫狀態具有實質的辨別價值，超越了整體症狀嚴重程度與已建立的共病風險因子。這些發現凸顯了症狀特定之認知情感機轉在法醫評估中的相關性。納入對妄想內容的結構化評估，可能有助於補充現有的法醫精神醫學心理計量方法。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，且本分析僅依據摘要。根據研究設計推論，本研究僅能指出相關性而無法確立因果關係。樣本受限於單一國家之特定大學醫院，且仍需更多研究來證實。",
+  "keyTerms": [
+    {
+      "original": "Schizophrenia spectrum disorders",
+      "translationZh": "思覺失調症光譜疾患",
+      "explanationZh": "包含思覺失調症及相關精神病理特徵的一組心理疾患"
+    },
+    {
+      "original": "Forensic psychiatric patients",
+      "translationZh": "法醫精神病患",
+      "explanationZh": "指涉及司法案件或處於法醫精神醫學環境中的精神病患者"
+    },
+    {
+      "original": "Machine learning",
+      "translationZh": "機器學習",
+      "explanationZh": "利用演算法讓電腦從資料中學習並做出預測或辨別的方法"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1840906",
+  "doi": "10.3389/fpsyg.2026.1840906",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1840906",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1840906/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

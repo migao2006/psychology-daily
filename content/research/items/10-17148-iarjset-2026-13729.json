@@ -1,0 +1,71 @@
+{
+  "id": "10-17148-iarjset-2026-13729",
+  "titleZh": "二十一世紀的教育政策與系統性改革：引領學校邁向未來",
+  "titleOriginal": "Education Policies and Systemic Reforms for the 21st Century: Leading Schools into the Future",
+  "authors": [
+    "Dr. Layal Abou Mrad",
+    "Fatima Itani"
+  ],
+  "journalOrRepository": "IARJSET",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "如何重新構想現行學校領導政策的典範限制，並將其視為推動系統性轉型的動態工具？",
+  "backgroundZh": "在一個以認識論變動與本體論重新校準為標誌的時代，教育領導的角色正處於轉折點，面臨人工智慧、全球相互依存以及日益加深的教育不平等。現行的學校領導政策受到官僚技術統治正統的侷限，需要轉向生態化、具回應性且根植於倫理的學習環境。",
+  "methodsZh": "透過汲取全球文獻、批判性政策框架以及後人文主義感性，進行論述分析與政策架構探討。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "學校領導者應從機構守護者轉變為生態化、具回應性且根植於倫理的學習環境的建築師。",
+    "中層領導者被概念化為知識能量的細胞內引擎，負責培養分散式領導並大規模孕育教師自主性。",
+    "政策架構應超越管理主義，轉而賦予教學想像力、系統性同理心以及學校作為公民與認知共同體地位的特權。"
+  ],
+  "limitationsZh": [
+    "本研究基於文獻回顧與理論探討，缺乏實證數據支持。"
+  ],
+  "practicalMeaningZh": "本研究提供了一種領導力的重構願景，超越了將領導力視為單純功能的狹隘視角，將其轉化為一種對正義、可能性與集體未來的本體論承諾。",
+  "cautionZh": "根據研究設計推論，本研究所述內容基於文獻探討與理論推演，不具備因果推論能力。同時，本研究的同儕審查狀態未知，且本內容僅依據摘要編寫，樣本限制為缺乏具體實證樣本，仍需更多研究進行驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Educational leadership",
+      "translationZh": "教育領導",
+      "explanationZh": "引導與管理學校教育系統發展的實踐與角色。"
+    },
+    {
+      "original": "Systemic transformation",
+      "translationZh": "系統性轉型",
+      "explanationZh": "對整體教育體系進行根本性變革與重構的過程。"
+    },
+    {
+      "original": "Distributed leadership",
+      "translationZh": "分散式領導",
+      "explanationZh": "將領導權力與責任分攤給組織內不同成員的模式。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.17148/iarjset.2026.13729",
+  "doi": "10.17148/iarjset.2026.13729",
+  "doiUrl": "https://doi.org/10.17148/iarjset.2026.13729",
+  "openAccessUrl": "https://doi.org/10.17148/iarjset.2026.13729",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "id": "https-openalex-org-W7170115906",
+  "titleZh": "探討赫茲伯格激勵－保健雙因子理論與美國聯邦政府機構中離職意圖影響因素的關聯：事後量化研究方法",
+  "titleOriginal": "Associating Herzberg’s Motivation-Hygiene Two-Factor Theory and Influential Factors on Turnover Intentions Within the U.S. Federal Government Agencies: An Ex Post Facto Quantitative Method Approach",
+  "authors": [
+    "Beatrice Nadine Sibug Fant"
+  ],
+  "journalOrRepository": "Scholars Crossing (Liberty University)",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "preprint",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "本研究探討員工滿意度、參與度、工作與生活平衡以及表現如何影響離職意圖，並考量性別、主管身分、軍旅服務與聯邦政府年資等人口統計與職業變項。",
+  "backgroundZh": "本研究探討美國聯邦政府機構中的員工離職關鍵議題，以及在面臨提供多重福利之私部門企業競爭下留住高度合格人才的挑戰，並遵循赫茲伯格的激勵－保健雙因子理論。",
+  "methodsZh": "本研究使用2022年聯邦員工觀點調查（FEVS）的資料，採用摘要統計（平均值與標準差）、頻率分配、共線性診斷與二元邏輯斯迴歸分析。",
+  "sample": {
+    "size": 557778,
+    "populationZh": "美國聯邦政府機構員工",
+    "locationZh": "美國"
+  },
+  "mainFindingsZh": [
+    "研究結果指出被檢視的因素會影響離職意圖，進而拒絕了初始假設。",
+    "突顯了激勵因子與保健因子在形塑聯邦機構留任策略中的角色。"
+  ],
+  "limitationsZh": [
+    "本研究採用事後量化研究方法與橫斷面資料，根據研究設計推論無法確立因果關係。"
+  ],
+  "practicalMeaningZh": "本研究將員工滿意度、參與度、工作與生活平衡、表現以及人口統計控制變項整合至單一分析模型中，延伸了雙因子理論在聯邦公共部門情境的實證應用，並有助於公共行政研究中員工離職行為的知識體系。",
+  "cautionZh": "本同儕審查狀態為預印本（preprint），本內容僅依摘要進行編寫，根據研究設計推論無法確立因果關係，樣本侷限於美國聯邦政府機構員工，且仍需更多研究來進一步確認。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Herzberg's Motivation-Hygiene Two-Factor Theory",
+      "translationZh": "赫茲伯格激勵－保健雙因子理論",
+      "explanationZh": "用以衡量員工滿意度、參與度、工作與生活平衡以及表現如何影響離職意圖的理論框架。"
+    },
+    {
+      "original": "Turnover Intentions",
+      "translationZh": "離職意圖",
+      "explanationZh": "員工考慮離開目前工作或組織的意向。"
+    },
+    {
+      "original": "Federal Employee Viewpoint Survey (FEVS)",
+      "translationZh": "聯邦員工觀點調查",
+      "explanationZh": "本研究所使用的大規模資料來源，收集了聯邦員工的意見與回饋。"
+    }
+  ],
+  "originalUrl": "https://digitalcommons.liberty.edu/doctoral/8683",
+  "doi": null,
+  "doiUrl": null,
+  "openAccessUrl": "https://digitalcommons.liberty.edu/context/doctoral/article/9742/viewcontent/51_Fant_2C_20Beatrice_20Nadine_20_28L32182398_29.pdf",
+  "sourceApis": [
+    "OpenAlex"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": false,
+    "urlVerified": true
+  }
+}

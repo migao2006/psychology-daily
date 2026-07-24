@@ -1,0 +1,81 @@
+{
+  "id": "10-3389-fpubh-2026-1816959",
+  "titleZh": "武裝衝突期間蘇丹醫學生問題性智慧型手機使用、睡眠品質與晝夜節律型態之關聯：一項橫斷面研究",
+  "titleOriginal": "Association between problematic smartphone use, sleep quality, and chronotype among Sudanese medical students during armed conflict: a cross-sectional study",
+  "authors": [
+    "Maria Badraldin Ali Saga",
+    "Mohammed Hammad Jaber Amin",
+    "Mohamedelmustafa Yahya Mohamed Eldouma",
+    "Mariam Salem Othman",
+    "Al-Romaysa M. Osman Khalafalla El-Haj",
+    "Hafiz Elhadi Bashar Hadi",
+    "Marafi Jammaa Ahmed",
+    "Aya Ahmed Shima",
+    "Ayat Yousif Mohammed Mohammed Saeed",
+    "Mohemed Elmahdi"
+  ],
+  "journalOrRepository": "Frontiers in Public Health",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "本研究旨在評估衝突期間蘇丹大學醫學生問題性智慧型手機使用與睡眠品質、睡眠模式、晝夜節律型態及生活滿意度之間的關聯。",
+  "backgroundZh": "行動電話在年輕成人與醫學生生活中扮演關鍵角色，但問題性使用可能負面影響日常功能。蘇丹持續的武裝衝突大幅干擾了大學生的日常作息、學術活動、心理福祉與睡眠行為。",
+  "methodsZh": "採用分析性橫斷面研究設計，於衝突期間的2025年9月至2025年11月進行。使用自填式線上問卷與已驗證量表（包括PUMP量表、SAS-SV、PSQI、MEQ、SWLS與人口統計變項）。以Spearman相關分析檢視關聯，並以多元邏輯斯迴歸分析探討不良睡眠品質的相關因素。",
+  "sample": {
+    "size": 387,
+    "populationZh": "大學醫學生",
+    "locationZh": "蘇丹"
+  },
+  "mainFindingsZh": [
+    "71%的參與者觀察到有不良睡眠品質（PSQI > 5）。",
+    "智慧型手機成癮與較差的睡眠品質呈現微弱但具統計顯著性的相關（ρ = 0.22, p < 0.001）。",
+    "較高的智慧型手機成癮分數與不良睡眠品質的勝算增加相關（OR = 1.04），而較高的早鳥傾向則與不良睡眠品質的勝算降低相關（OR = 0.94）。",
+    "就業狀態與不良睡眠品質獨立相關（OR = 2.34）。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷面研究，無法確立變項間的因果關係。",
+    "樣本僅涵蓋特定地區的醫學生，推論至其他族群可能受限。"
+  ],
+  "practicalMeaningZh": "研究結果突顯了衝突影響之學術環境中，智慧型手機使用行為、晝夜節律型態與睡眠品質之間的重要關聯，並支持未來需進行更多縱向研究的必要性。",
+  "cautionZh": "根據研究設計推論，本研究未確立因果關係。本摘要基於現有資料編寫，同儕審查狀態為未知，樣本受限於特定醫學生群體，仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "problematic smartphone use",
+      "translationZh": "問題性智慧型手機使用",
+      "explanationZh": "指過度或不當使用智慧型手機並對日常生活造成負面影響的行為。"
+    },
+    {
+      "original": "chronotype",
+      "translationZh": "晝夜節律型態",
+      "explanationZh": "個體在生理時鐘上偏好早起（早鳥型）或晚睡（夜貓子型）的傾向。"
+    },
+    {
+      "original": "cross-sectional study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在特定時間點對族群進行資料收集的研究設計，適用於探討相關性而非因果關係。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpubh.2026.1816959",
+  "doi": "10.3389/fpubh.2026.1816959",
+  "doiUrl": "https://doi.org/10.3389/fpubh.2026.1816959",
+  "openAccessUrl": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1816959/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

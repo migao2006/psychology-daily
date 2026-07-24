@@ -1,0 +1,67 @@
+{
+  "id": "10-3390-rel17070869",
+  "titleZh": "「一個敬虔的人，一個顧家的男人」：黑人男子氣概與為父之道的宗教性、實現型福祉與正面結果",
+  "titleOriginal": "“A Godly Man, a Family Man”: Religiosity, Eudaimonic Well-Being, and Positive Outcomes in Black Masculinity and Fatherhood",
+  "authors": [
+    "T. J. Moore",
+    "Sam Richardson",
+    "Loren Marks"
+  ],
+  "journalOrRepository": "Religions",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "qualitative",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "宗教與靈性能量之框架如何影響大眾對黑人男性與顧家好男人身分的認知？",
+  "backgroundZh": "本研究探討宗教性與靈性之增長如何影響黑人男子氣概與為父之道，並透過瑞夫的六因素實現型福祉模型進行詮釋，連結至韌性、意義建構與家庭角色神聖化等正向心理學建構。",
+  "methodsZh": "採用質性訪談與分析方法，檢視宗教信仰與實踐如何促成從以獨立為中心的男子氣概觀點轉向以家庭為導向、以靈性為根基的理想。",
+  "sample": {
+    "size": 66,
+    "populationZh": "33對黑人基督徒夫妻",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "參與者描述加深的宗教性與靈性能夠協助提升婚姻忠誠度、父親參與度與關係承諾，且不受教派歸屬、社會經濟地位或教育程度影響。",
+    "關鍵機制包含個人危機與信仰社群參與、神聖介入、經文研讀，以及恢復傳統宗教男子氣概角色。",
+    "研究結果顯示宗教與靈性可能為黑人男子氣概提供替代框架，強調關係性、道德誠信與家庭領導力。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為質性訪談，無法建立因果關係。"
+  ],
+  "practicalMeaningZh": "本研究指出宗教與靈性框架有助於促進黑人男性的家庭領導力與婚姻承諾。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要撰寫，存在因果限制與樣本限制，仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Religiosity",
+      "translationZh": "宗教性",
+      "explanationZh": "指個人對宗教信仰的投入程度與實踐。"
+    },
+    {
+      "original": "Eudaimonic Well-Being",
+      "translationZh": "實現型福祉",
+      "explanationZh": "基於自我實現與潛能發揮的福祉概念。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/rel17070869",
+  "doi": "10.3390/rel17070869",
+  "doiUrl": "https://doi.org/10.3390/rel17070869",
+  "openAccessUrl": "https://doi.org/10.3390/rel17070869",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

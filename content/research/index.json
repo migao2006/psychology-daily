@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "lastUpdatedAt": "2026-07-24T00:02:22.079Z",
+  "lastUpdatedAt": "2026-07-24T03:57:57.811Z",
   "updateStatus": "backfilled",
   "features": [
     {
@@ -10,6 +10,51 @@
   ],
   "items": [
     {
+      "id": "10-1017-s0029665126104753",
+      "path": "items/10-1017-s0029665126104753.json",
+      "titleZh": "乳脂肪球膜對壓力、焦慮與憂鬱之治療潛力：一項統合分析",
+      "publicationDate": "2026-07-23",
+      "publicationStatus": "unknown",
+      "studyType": "meta_analysis",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-1002-mar-70233",
+      "path": "items/10-1002-mar-70233.json",
+      "titleZh": "數位時代的懷舊製造：永恆主義視角",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-1007-s10461-026-05254-8",
+      "path": "items/10-1007-s10461-026-05254-8.json",
+      "titleZh": "酒精中毒對男男性行為者性風險行為之影響：考量 PrEP、HIV 病毒量與抑制衝突",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "experimental",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-1007-s10462-026-11649-9",
+      "path": "items/10-1007-s10462-026-11649-9.json",
+      "titleZh": "用於心理健康的大型語言模型與多模態AI：早期診斷與監測的系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-1007-s12671-026-02917-4",
+      "path": "items/10-1007-s12671-026-02917-4.json",
+      "titleZh": "正念本位方案針對周產期憂鬱、焦慮、壓力與心理福祉之系統性統合回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "發展心理學"
+    },
+    {
       "id": "10-1017-gmh-2026-10272",
       "path": "items/10-1017-gmh-2026-10272.json",
       "titleZh": "脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施：一項系統性文獻回顧",
@@ -17,6 +62,69 @@
       "publicationStatus": "unknown",
       "studyType": "systematic_review",
       "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-1038-s41398-026-04272-3",
+      "path": "items/10-1038-s41398-026-04272-3.json",
+      "titleZh": "身體活動次數持續時間與碎片化與未來失智症、憂鬱及焦慮之關聯：英國生物樣本庫多模態研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-1108-meq-03-2025-0179",
+      "path": "items/10-1108-meq-03-2025-0179.json",
+      "titleZh": "基於顧客永續產品設計：數據驅動的方法",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-15388-amed-2026-33-1-5",
+      "path": "items/10-15388-amed-2026-33-1-5.json",
+      "titleZh": "心理介入對腫瘤患者憂鬱症狀影響之系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-17148-iarjset-2026-13729",
+      "path": "items/10-17148-iarjset-2026-13729.json",
+      "titleZh": "二十一世紀的教育政策與系統性改革：引領學校邁向未來",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-17517-ksutfd-1967876",
+      "path": "items/10-17517-ksutfd-1967876.json",
+      "titleZh": "學校暴力對兒童與青少年心理健康的影響及全面性方法的必要性：卡赫拉曼马拉什案例",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-21956-hrbopenres-15939-r56447",
+      "path": "items/10-21956-hrbopenres-15939-r56447.json",
+      "titleZh": "同儕審查報告：異基因造血幹細胞移植患者身體功能的縱向研究：REACT研究計畫",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fdpys-2026-1811938",
+      "path": "items/10-3389-fdpys-2026-1811938.json",
+      "titleZh": "社群媒體情感支持與內化症狀之間的關聯：針對美國青少年與新興成年人全國樣本的縱貫性研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "發展心理學"
     },
     {
       "id": "10-3389-fmed-2026-1838637",
@@ -28,6 +136,15 @@
       "psychologyCategory": "發展心理學"
     },
     {
+      "id": "10-3389-fnut-2026-1870412",
+      "path": "items/10-3389-fnut-2026-1870412.json",
+      "titleZh": "難治型憂鬱症的六週生酮飲食：前瞻性單臂可行性先導試驗",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "心理健康"
+    },
+    {
       "id": "10-3389-fpos-2026-1721738",
       "path": "items/10-3389-fpos-2026-1721738.json",
       "titleZh": "面對法拉奇：運用情緒成份處理模型理解跨國對奈傑爾·法拉奇遭竄改影片的反應",
@@ -37,6 +154,24 @@
       "psychologyCategory": "認知心理學"
     },
     {
+      "id": "10-3389-fpsyg-2026-1809017",
+      "path": "items/10-3389-fpsyg-2026-1809017.json",
+      "titleZh": "中外合作辦學大學生之英語能力與全球勝任力：跨文化敏感度的中介作用與英語學習動機的調節作用",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1830668",
+      "path": "items/10-3389-fpsyg-2026-1830668.json",
+      "titleZh": "人格的聲音：人格特質如何形塑協同問題解決中的言語過程",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "人格與個別差異"
+    },
+    {
       "id": "10-3389-fpsyg-2026-1832200",
       "path": "items/10-3389-fpsyg-2026-1832200.json",
       "titleZh": "常見心理健康疾患患者的顏色偏好：範圍性文獻回顧",
@@ -44,6 +179,24 @@
       "publicationStatus": "unknown",
       "studyType": "systematic_review",
       "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1833715",
+      "path": "items/10-3389-fpsyg-2026-1833715.json",
+      "titleZh": "中國大學生的手機成癮、情緒應對策略與心理健康症狀：基於性別的分析",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1840906",
+      "path": "items/10-3389-fpsyg-2026-1840906.json",
+      "titleZh": "思覺失調症光譜疾患之妄想主題與法醫狀態：基於機器學習的辨別研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "qualitative",
+      "psychologyCategory": "人格與個別差異"
     },
     {
       "id": "10-3389-fpsyg-2026-1842585",
@@ -91,6 +244,78 @@
       "psychologyCategory": "神經科學"
     },
     {
+      "id": "10-3389-fpsyg-2026-1894573",
+      "path": "items/10-3389-fpsyg-2026-1894573.json",
+      "titleZh": "運動作為社交焦慮症的輔助介入：一項迷你文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "randomized_trial",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1894992",
+      "path": "items/10-3389-fpsyg-2026-1894992.json",
+      "titleZh": "壓力下的使命感：使命感、恢復、情緒調節與心流如何形塑菁英運動表現",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1907776",
+      "path": "items/10-3389-fpsyg-2026-1907776.json",
+      "titleZh": "社論：球拍運動的多學科層面與表現——第三卷",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fpsyt-2026-1854701",
+      "path": "items/10-3389-fpsyt-2026-1854701.json",
+      "titleZh": "針對衝突後阿拉伯語族群心理健康分流的概念性多智能體架構：理論命題與階段性驗證論證",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpubh-2026-1816959",
+      "path": "items/10-3389-fpubh-2026-1816959.json",
+      "titleZh": "武裝衝突期間蘇丹醫學生問題性智慧型手機使用、睡眠品質與晝夜節律型態之關聯：一項橫斷面研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpubh-2026-1884440",
+      "path": "items/10-3389-fpubh-2026-1884440.json",
+      "titleZh": "創傷知情音樂介入對兒童創傷暴露兒童情緒調節與社會適應影響之研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "randomized_trial",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fresc-2026-1885510",
+      "path": "items/10-3389-fresc-2026-1885510.json",
+      "titleZh": "重症成年病人的早期復健：統合性文獻回顧通訊協定",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-frsus-2026-1911043",
+      "path": "items/10-3389-frsus-2026-1911043.json",
+      "titleZh": "獲得消費許可：永續品牌溝通如何引發道德許可效應以及品牌能做什麼",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "認知心理學"
+    },
+    {
       "id": "10-3389-frvir-2026-1864150",
       "path": "items/10-3389-frvir-2026-1864150.json",
       "titleZh": "從規則式到生成式AI：VR面試訓練系統中演算法演進與多模態融合之系統性文獻回顧",
@@ -100,6 +325,96 @@
       "psychologyCategory": "發展心理學"
     },
     {
+      "id": "10-3389-fvets-2026-1851630",
+      "path": "items/10-3389-fvets-2026-1851630.json",
+      "titleZh": "我們如何改變行為以強化生物安全？範圍文獻回顧與建議",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-3390-ejihpe16070107",
+      "path": "items/10-3390-ejihpe16070107.json",
+      "titleZh": "已撤回：推動大學生非醫療使用興奮劑的因素是什麼？自我效能與態度的角色：一項針對以色列大學生的橫斷面研究",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-3390-rel17070869",
+      "path": "items/10-3390-rel17070869.json",
+      "titleZh": "「一個敬虔的人，一個顧家的男人」：黑人男子氣概與為父之道的宗教性、實現型福祉與正面結果",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "qualitative",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-51143-jksi-v11i1-1165",
+      "path": "items/10-51143-jksi-v11i1-1165.json",
+      "titleZh": "精神分裂症之雇主端介入措施：系統性文獻回顧與精神科護理觀點",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-52783-jchr-v16-i4-15791",
+      "path": "items/10-52783-jchr-v16-i4-15791.json",
+      "titleZh": "慢性軀體疾病患者認知障礙發展中血管與代謝因素的臨床與診斷意義",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-54536-ijsscs-v2i2-7964",
+      "path": "items/10-54536-ijsscs-v2i2-7964.json",
+      "titleZh": "影響菲律賓另類學習系統學習者註冊的因素：結構化文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-61132-menawan-v4i4-2453",
+      "path": "items/10-61132-menawan-v4i4-2453.json",
+      "titleZh": "數位生態系統理解與人格特質對大學生數位創業意願之影響",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-62951-ijamc-v3i3-403",
+      "path": "items/10-62951-ijamc-v3i3-403.json",
+      "titleZh": "初中學生解決數學素養問題之行為分析",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "qualitative",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-1007-s00127-026-03175-4",
+      "path": "items/10-1007-s00127-026-03175-4.json",
+      "titleZh": "探討青少年與年輕成人社群媒體使用與孤獨感之間的關係：系統性文獻回顧與統合分析",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "meta_analysis",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-1007-s10803-026-07444-8",
+      "path": "items/10-1007-s10803-026-07444-8.json",
+      "titleZh": "自閉症幼兒社交溝通問卷（Q-SoCiAL）口語版本的開發與心理計量驗證",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "qualitative",
+      "psychologyCategory": "神經科學"
+    },
+    {
       "id": "10-1007-s40489-026-00579-5",
       "path": "items/10-1007-s40489-026-00579-5.json",
       "titleZh": "自閉症超掃描的 PRISMA 系統性文獻回顧",
@@ -107,6 +422,141 @@
       "publicationStatus": "unknown",
       "studyType": "systematic_review",
       "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-1017-s1475676526101613",
+      "path": "items/10-1017-s1475676526101613.json",
+      "titleZh": "壓力下的民主理想：在挑戰時期公民對民主權利與程序的承諾",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "experimental",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-1017-s1740355326101077",
+      "path": "items/10-1017-s1740355326101077.json",
+      "titleZh": "誰在乎？英格蘭教會神職人員與信徒的環境主義",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-1057-s41599-026-08169-w",
+      "path": "items/10-1057-s41599-026-08169-w.json",
+      "titleZh": "個體人格特質是否會影響作為公共衛生介入措施的運動依從性？一項使用英國縱向調查數據的因果孟德爾隨機化研究",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-1192-bji-2026-10111",
+      "path": "items/10-1192-bji-2026-10111.json",
+      "titleZh": "門診心理健康照護中數位病人自填結果指標（PROMs）與臨床結果的關聯：多中心橫斷研究",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-1371-journal-pone-0324305",
+      "path": "items/10-1371-journal-pone-0324305.json",
+      "titleZh": "COVID-19與社會經濟不平等對精神疾病急診就醫的影響",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-1371-journal-pone-0353689",
+      "path": "items/10-1371-journal-pone-0353689.json",
+      "titleZh": "以身體活動作為中介變項探討英國社區老年人認知功能與憂鬱症狀之間的雙向關聯",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "longitudinal",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-2478-fprj-2026-0011",
+      "path": "items/10-2478-fprj-2026-0011.json",
+      "titleZh": "金錢大腦：心理健康對債務管理的潛在影響",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fresc-2026-1747066",
+      "path": "items/10-3389-fresc-2026-1747066.json",
+      "titleZh": "幻肢縮短現象的複雜性：一項質性研究的見解",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "qualitative",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-3390-pathophysiology33030054",
+      "path": "items/10-3390-pathophysiology33030054.json",
+      "titleZh": "慢性口顏面痛動物模型中神經膠質細胞的病理生理機制：系統性文獻回顧",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-47368-ejhc-2026-104",
+      "path": "items/10-47368-ejhc-2026-104.json",
+      "titleZh": "當女性提醒我們時，我們會改變行為嗎？！",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "experimental",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-54536-ajhp-v4i2-6005",
+      "path": "items/10-54536-ajhp-v4i2-6005.json",
+      "titleZh": "鞋履的心理學",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "人格與個別差異"
+    },
+    {
+      "id": "10-64449-9781997499121-04",
+      "path": "items/10-64449-9781997499121-04.json",
+      "titleZh": "和解與統一",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "other",
+      "psychologyCategory": "人格與個別差異"
+    },
+    {
+      "id": "10-64898-2026-07-16-739064",
+      "path": "items/10-64898-2026-07-16-739064.json",
+      "titleZh": "愛情鳥會遺忘嗎？桃面愛情鳥的長期記憶保留與適應性遺忘",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "preprint",
+      "studyType": "experimental",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-70382-caijlser-v12i8-061",
+      "path": "items/10-70382-caijlser-v12i8-061.json",
+      "titleZh": "即興與標準化教材對奈及利亞亞博地方政府基礎教育低年級學童數學保留與成就之影響",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "unknown",
+      "studyType": "randomized_trial",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "https-openalex-org-W7170115906",
+      "path": "items/https-openalex-org-W7170115906.json",
+      "titleZh": "探討赫茲伯格激勵－保健雙因子理論與美國聯邦政府機構中離職意圖影響因素的關聯：事後量化研究方法",
+      "publicationDate": "2026-07-21",
+      "publicationStatus": "preprint",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "認知心理學"
     }
   ]
 }

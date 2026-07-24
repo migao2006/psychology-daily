@@ -1,0 +1,73 @@
+{
+  "id": "10-3389-fpsyg-2026-1830668",
+  "titleZh": "人格的聲音：人格特質如何形塑協同問題解決中的言語過程",
+  "titleOriginal": "Personality’s voice: how personality traits shape verbal processes in collaborative problem-solving",
+  "authors": [
+    "Siem Buseyne",
+    "Fien Depaepe",
+    "Annelies Raes"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "人格與個別差異",
+  "researchQuestionZh": "人格特質與成人職場團隊在協同問題解決過程中的言語互動之間有何關聯？",
+  "backgroundZh": "這是一項探索性研究，旨在探討人格特質、面向與複合指標與協同問題解決特異性言語行為及語言指標之間的關聯。",
+  "methodsZh": "使用商業態度問卷檢查人格領域、面向與複合指標。從九個專業團隊的36名參與者收集數據，進行包含多個問題解決區間的協同問題解決培訓練習。言語互動透過定量內容分析進行分析，將話語層級的協同問題解決行為編碼並轉換為相對頻率，並輔以使用語言詢問與字數統計的詞典式語言分析。分析被視為探索性，並使用考慮個體內重複觀察的多層次模型。",
+  "sample": {
+    "size": 36,
+    "populationZh": "成人職場團隊參與者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "根據研究設計推論，開放性（特別是變革導向面向）與更多的知識分享及認知過程詞彙使用有關聯。",
+    "根據研究設計推論，具企圖心的個人傾向於對共享知識貢獻更多，但對協調和協商貢獻較少。",
+    "根據研究設計推論，結果導向的個人傾向於顯示出更高的字數，而策略性個人傾向於使用更多分析性語言。"
+  ],
+  "limitationsZh": [
+    "本研究為探索性研究，樣本數較小（36名參與者、9個團隊）。",
+    "僅依據摘要提供的資訊有限。"
+  ],
+  "practicalMeaningZh": "本研究作為人格與言語協同問題解決過程之間理論導向連結的初步實證對應，並為未來的確證性研究指明方向。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。同儕審查狀態為未知，本內容僅依摘要撰寫。根據研究設計推論，本研究僅呈現關聯而非因果關係。樣本數與範圍有限，且仍需更多研究來確認這些發現。",
+  "keyTerms": [
+    {
+      "original": "collaborative problem solving",
+      "translationZh": "協同問題解決",
+      "explanationZh": "指多個個體共同合作以解決問題的過程。"
+    },
+    {
+      "original": "personality traits",
+      "translationZh": "人格特質",
+      "explanationZh": "個體在長期互動中表現出的穩定行為、情緒與思考模式。"
+    },
+    {
+      "original": "linguistic analysis",
+      "translationZh": "語言分析",
+      "explanationZh": "對言語和文本中的語言特徵及詞彙使用進行系統性分析的方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1830668",
+  "doi": "10.3389/fpsyg.2026.1830668",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1830668",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1830668/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

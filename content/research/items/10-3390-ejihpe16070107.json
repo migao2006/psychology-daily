@@ -1,0 +1,72 @@
+{
+  "id": "10-3390-ejihpe16070107",
+  "titleZh": "已撤回：推動大學生非醫療使用興奮劑的因素是什麼？自我效能與態度的角色：一項針對以色列大學生的橫斷面研究",
+  "titleOriginal": "RETRACTED: Dopelt et al. (2025). What Drives the Non-Medical Use of Stimulants Among College Students? The Role of Self-Efficacy and Attitudes: A Cross-Sectional Study of Israeli Undergraduates. European Journal of Investigation in Health, Psychology and Education, 15(7), 141",
+  "authors": [
+    "Keren Dopelt",
+    "Shiran Bord",
+    "Nourit Houminer-Klepar"
+  ],
+  "journalOrRepository": "European Journal of Investigation in Health, Psychology and Education",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "推動大學生非醫療使用興奮劑的因素是什麼？自我效能與態度扮演什麼角色？",
+  "backgroundZh": "本研究旨在探討大學生非醫療使用興奮劑的驅動因素，特別關注自我效能與態度的角色。",
+  "methodsZh": "採用橫斷面研究設計。",
+  "sample": {
+    "size": null,
+    "populationZh": "以色列大學生",
+    "locationZh": "以色列"
+  },
+  "mainFindingsZh": [
+    "本篇論文已被期刊撤回。",
+    "原始研究探討了自我效能與態度對大學生非醫療使用興奮劑的關聯。"
+  ],
+  "limitationsZh": [
+    "本研究為橫斷面設計，無法建立因果關係。",
+    "本篇論文已被撤回。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，本研究探討了大學生非醫療使用興奮劑的相關因素，有助於理解相關心理與態度變項。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依摘要進行分析，根據研究設計推論無法確立因果關係，樣本限制為以色列大學生，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Non-Medical Use of Stimulants",
+      "translationZh": "非醫療使用興奮劑",
+      "explanationZh": "指在沒有醫療處方的情況下使用興奮劑。"
+    },
+    {
+      "original": "Self-Efficacy",
+      "translationZh": "自我效能",
+      "explanationZh": "個人對自己組織並執行行動以達到特定成就的能力的信念。"
+    },
+    {
+      "original": "Cross-Sectional Study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在單一時間點收集資料的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/ejihpe16070107",
+  "doi": "10.3390/ejihpe16070107",
+  "doiUrl": "https://doi.org/10.3390/ejihpe16070107",
+  "openAccessUrl": "https://doi.org/10.3390/ejihpe16070107",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "id": "10-1038-s41398-026-04272-3",
+  "titleZh": "身體活動次數持續時間與碎片化與未來失智症、憂鬱及焦慮之關聯：英國生物樣本庫多模態研究",
+  "titleOriginal": "Associations of physical activity bout duration and fragmentation with future dementia, depression, and anxiety: a multi-modal UK Biobank study",
+  "authors": [
+    "Collin Sakal",
+    "Wenxin Xu",
+    "Wei Zhang",
+    "Xinyue Li"
+  ],
+  "journalOrRepository": "Translational Psychiatry",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "長時間的身體活動是否比零星活動對未來的失智症、憂鬱和焦慮風險帶來更大的好處，目前尚不清楚。",
+  "backgroundZh": "過去對於身體活動持續時間與碎片化是否會影響未來失智症、憂鬱和焦慮風險的探討仍不夠明確。",
+  "methodsZh": "本研究使用英國生物樣本庫的多模態研究資料，分析中高強度身體活動（MVPA）的持續時間與活動碎片化與未來失智症、憂鬱及焦慮之關聯。",
+  "sample": {
+    "size": 66483,
+    "populationZh": "英國生物樣本庫參與者",
+    "locationZh": "英國"
+  },
+  "mainFindingsZh": [
+    "每日持續較久的中高強度身體活動與較低的活動碎片化，與未來失智症、憂鬱及焦慮風險顯著降低相關。",
+    "在中高強度身體活動持續時間方面，失智症、憂鬱及焦慮的最低風險分別出現在持續 13 分鐘、36 分鐘與 36 分鐘。",
+    "在活動碎片化方面，最低的活動碎片化與失智症、憂鬱及焦慮風險降低相關。",
+    "持續較久的中高強度身體活動與較低的碎片化，與較大的左側海馬迴體積及較低的白質高信號體積相關。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為相關性研究，無法確立因果關係。"
+  ],
+  "practicalMeaningZh": "研究結果建議應鼓勵持續較久的身體活動，以降低失智症、憂鬱和焦慮的風險。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態未知，本內容僅依摘要，不得直接推論因果關係，樣本受限於特定資料庫，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "moderate-to-vigorous physical activity",
+      "translationZh": "中高強度身體活動",
+      "explanationZh": "指強度達到中等至劇烈程度的身體活動。"
+    },
+    {
+      "original": "activity fragmentation",
+      "translationZh": "活動碎片化",
+      "explanationZh": "指身體活動被頻繁打斷或呈零星狀態的程度。"
+    },
+    {
+      "original": "dementia",
+      "translationZh": "失智症",
+      "explanationZh": "一種影響記憶與認知功能的臨床症候群。"
+    },
+    {
+      "original": "depression",
+      "translationZh": "憂鬱",
+      "explanationZh": "一種常伴隨情緒低落的心理健康狀態。"
+    },
+    {
+      "original": "anxiety",
+      "translationZh": "焦慮",
+      "explanationZh": "一種伴隨過度擔憂與緊張的心理狀態。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1038/s41398-026-04272-3",
+  "doi": "10.1038/s41398-026-04272-3",
+  "doiUrl": "https://doi.org/10.1038/s41398-026-04272-3",
+  "openAccessUrl": "https://www.nature.com/articles/s41398-026-04272-3_reference.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

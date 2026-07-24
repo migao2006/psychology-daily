@@ -1,0 +1,73 @@
+{
+  "id": "10-15388-amed-2026-33-1-5",
+  "titleZh": "心理介入對腫瘤患者憂鬱症狀影響之系統性文獻回顧",
+  "titleOriginal": "Effects of Psychological Interventions on Depression Symptoms in Oncology Patients: A Systematic Review",
+  "authors": [
+    "Ignas Lapeikis",
+    "Ieva Armonaitė",
+    "Vakarė Baranauskytė",
+    "Irina Banienė"
+  ],
+  "journalOrRepository": "Acta medica Lituanica",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "心理介入在減少癌症患者憂鬱症狀方面的有效性為何？",
+  "backgroundZh": "憂鬱是癌症患者中最常見的心理共病之一，會大幅降低生活品質並損害治療順依性。針對腫瘤學中的憂鬱症狀已提出多種心理社會介入措施，但各類型介入的證據仍具異質性。",
+  "methodsZh": "對 PubMed、ScienceDirect、Web of Science 和 Clinical Key 資料庫進行系統性搜尋，納入 2016 年至 2026 年間發表的研究。納入評估成年癌症患者憂鬱症狀之心理介入的隨機對照試驗與對照介入研究。由於介入措施與結果測量具有異質性，因此採用敘述性綜合分析結果。",
+  "sample": {
+    "size": 20,
+    "populationZh": "成年癌症患者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "有二十項研究符合納入標準，介入措施包含認知行為治療、正念介入、正念減壓、正念認知治療以及正陽心理學取徑。",
+    "多數研究透過 PHQ-9、HADS、BDI 與 SDS 等已驗證量表測量，指出憂鬱症狀顯著減少。",
+    "認知行為治療與正念取徑展現出最一致的改善，儘管數項試驗顯示與對照組相比無顯著差異。"
+  ],
+  "limitationsZh": [
+    "介入設計與結果報告存在實質異質性，限制了跨研究的直接比較。"
+  ],
+  "practicalMeaningZh": "本研究顯示心理介入與癌症患者憂鬱症狀減少有關，可作為腫瘤心理照護之參考。",
+  "cautionZh": "根據研究設計推論，心理介入與憂鬱症狀減少呈相關，而非絕對因果。本同儕審查狀態為未知，且本內容僅依據摘要，受限於文獻樣本與設計之異質性，仍需更多大規模隨機試驗使用標準化結果測量來確立最佳策略。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "psychological interventions",
+      "translationZh": "心理介入",
+      "explanationZh": "旨在改善心理與情緒健康的各類心理社會治療方法。"
+    },
+    {
+      "original": "cognitive behavioural therapy",
+      "translationZh": "認知行為治療",
+      "explanationZh": "透過改變負面認知與行為模式以改善心理症狀的心理治療方法。"
+    },
+    {
+      "original": "mindfulness-based interventions",
+      "translationZh": "正念介入",
+      "explanationZh": "以正念覺察為核心以減輕壓力與改善情緒的介入措施。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.15388/amed.2026.33.1.5",
+  "doi": "10.15388/amed.2026.33.1.5",
+  "doiUrl": "https://doi.org/10.15388/amed.2026.33.1.5",
+  "openAccessUrl": "https://www.zurnalai.vu.lt/AML/article/download/43779/42899",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

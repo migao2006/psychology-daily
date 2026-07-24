@@ -1,0 +1,68 @@
+{
+  "id": "10-1017-s1475676526101613",
+  "titleZh": "壓力下的民主理想：在挑戰時期公民對民主權利與程序的承諾",
+  "titleOriginal": "The democratic ideal under stress: Citizen commitment to democratic rights and procedures in challenging times",
+  "authors": [
+    "Christian Rauh",
+    "Heiko Giebler",
+    "Jan Paul Heisig",
+    "Johannes Gerschewski",
+    "Jianghong Li"
+  ],
+  "journalOrRepository": "European Journal of Political Research",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "在面對重大社會挑戰時，公民在多大程度上支持民主權利與程序？",
+  "backgroundZh": "借鑒達爾式的民主理想，本研究利用新冠肺炎疫情的背景來探討公民對民主權利與程序的支持程度。",
+  "methodsZh": "採用兩項預先註冊的調查實驗，包含聯合實驗與採用最佳最差量表的框架實驗。",
+  "sample": {
+    "size": 9000,
+    "populationZh": "公民與受訪者",
+    "locationZh": "德國、匈牙利、日本、波蘭、南韓與西班牙六個國家"
+  },
+  "mainFindingsZh": [
+    "公民強烈反對干涉其私人生活的限制，但對核心民主權利（如選舉、集會、新聞自由）的限制大致保持冷漠。",
+    "無論涉及新冠肺炎、氣候變遷或一般性社會挑戰，專家與企業的意見始終高於議會投票或黨派共識。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究基於特定實驗情境，可能無法完全反映真實世界的長期動態。"
+  ],
+  "practicalMeaningZh": "研究結果指出，當公民面臨具體的危機相關取捨時，對民主的承諾似乎並非特別穩固，並反映出潛在的技術官僚偏好與漸進式民主侵蝕風險。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要進行分析，不得將相關性推論為因果關係，樣本侷限於特定六國且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "conjoint experiment",
+      "translationZh": "聯合實驗",
+      "explanationZh": "一種評估受訪者對多屬性選項偏好的實驗方法。"
+    },
+    {
+      "original": "framing experiment",
+      "translationZh": "框架實驗",
+      "explanationZh": "透過不同情境設定來評估受訪者程序偏好的實驗。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1017/s1475676526101613",
+  "doi": "10.1017/s1475676526101613",
+  "doiUrl": "https://doi.org/10.1017/s1475676526101613",
+  "openAccessUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3D773CC734D6CC4DB180922E20ABFD53/S1475676526101613a.pdf/div-class-title-the-democratic-ideal-under-stress-citizen-commitment-to-democratic-rights-and-procedures-in-challenging-times-div.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

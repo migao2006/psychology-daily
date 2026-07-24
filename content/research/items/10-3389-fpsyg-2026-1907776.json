@@ -1,0 +1,75 @@
+{
+  "id": "10-3389-fpsyg-2026-1907776",
+  "titleZh": "社論：球拍運動的多學科層面與表現——第三卷",
+  "titleOriginal": "Editorial: Multidisciplinary aspects and performance in racket sports-volume III",
+  "authors": [
+    "Jesus Ramón-Llin",
+    "Bernardino J. Sánchez-Alcaraz",
+    "Goran Vuckovic",
+    "Rafael Martínez-Gallego"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "探討球拍運動在多學科層面（如心理學、表現分析、技術戰術、運動員發展與心理社會價值）的表現與相關影響。",
+  "backgroundZh": "球拍運動科學呈現日益跨學科的性質，表現不再被視為單一生理能力的產物，而是認知功能、心理福祉、戰術行為、發展過程、社會參與和情境因素交互作用的結果。",
+  "methodsZh": "本研究為系統性文獻回顧，綜合分析多項探討球拍運動之心理學、技術戰術及運動員發展的文獻。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "匹克球參與和生活滿意度、幸福感、社會整合增加及憂鬱症狀減少有關，特別是在老年人中。",
+    "急性心理疲勞顯著損害注意力表現與網球擊球目標精準度。",
+    "專研球員在空間工作記憶、視覺搜尋策略與戰術預期任務中表現出更優異的表現。",
+    "16週的桌球介入顯著降低中國大學生的短影片成癮，認知偏差減少和自我控制提升調節了此關係。"
+  ],
+  "limitationsZh": [
+    "文獻中樣本與研究對象涵蓋不同族群與年齡層，存在 interindividual variability。",
+    "部分研究指出女性運動員、休閒參與者及未充分代表年齡層的相關資料仍需更多擴展。"
+  ],
+  "practicalMeaningZh": "教練和運動心理學家應將認知負荷管理視為訓練設計與競賽準備不可或缺的一部分，並針對不同成熟度與特性採取個人化訓練方案。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本摘要僅依據所提供之資料。因果關係受限於研究設計。樣本限制與仍需更多研究。",
+  "keyTerms": [
+    {
+      "original": "mental fatigue",
+      "translationZh": "心理疲勞",
+      "explanationZh": "指長時間從事認知要求高的活動所導致的精神耗竭狀態。"
+    },
+    {
+      "original": "spatial working memory",
+      "translationZh": "空間工作記憶",
+      "explanationZh": "處理與短期儲存空間相關訊息的認知能力。"
+    },
+    {
+      "original": "systematic review",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "針對特定研究問題進行全面文獻檢索與綜合評估的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1907776",
+  "doi": "10.3389/fpsyg.2026.1907776",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1907776",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1907776/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

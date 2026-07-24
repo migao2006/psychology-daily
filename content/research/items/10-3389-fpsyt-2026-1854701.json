@@ -1,0 +1,73 @@
+{
+  "id": "10-3389-fpsyt-2026-1854701",
+  "titleZh": "針對衝突後阿拉伯語族群心理健康分流的概念性多智能體架構：理論命題與階段性驗證論證",
+  "titleOriginal": "A conceptual multi-agent architecture for mental health triage in post-conflict Arabic-speaking populations: a theoretical proposition and staged validation argument",
+  "authors": [
+    "Anas Shahin",
+    "Bahaa Masry"
+  ],
+  "journalOrRepository": "Frontiers in Psychiatry",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "在衝突後阿拉伯語族群中，如何透過整合多智能體分流、任務轉移與文化適應來建構概念性架構，並探討其滿足特定條件的理論可行性？",
+  "backgroundZh": "敘利亞長期衝突造成大規模的心理健康危機，創傷後壓力、憂鬱與焦慮估計為全球基準的好幾倍，但每十萬人中卻不到 0.37 名精神科醫師。現有的 AI 心理健康工具主要針對英語系、非人道救援族群開發與評估，直接轉移至此情境會受到極端臨床資源稀缺、阿拉伯語自然語言處理對方言表現不佳，以及與敘利亞痛苦俗諺文化不對齊等三重缺陷的限制。",
+  "methodsZh": "採用假設與理論文類的概念性貢獻，提出一個理論命題與階段性驗證論證，並描述一個與世界衛生組織 mhGAP 任務轉移模型一致的概念性多智能體架構（包含篩檢、風險分層、路由與追蹤的四階段管線，並由跨領域文化適應層約束、具備明確棄權機制的候選驗證機制，以及由執業臨床醫師承擔臨床責任的人工監督）。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "提出 AI 輔助心理健康分流在該情境下必須同時滿足三個條件：當地方言的語言充分性、當地痛苦與求助俗諺的文化有效性，以及透過人工監督的有限臨床責任。",
+    "這些條件彼此互動，若系統滿足的條件少於全部三個，預期將以臨床上具實質影響而非隨機的方式失敗。",
+    "由於目前尚不存在敘利亞阿拉伯語臨床語料庫，設計中的對話組件目前無法進行評估，因此本文提出未來工作的階段性排序論證，其中建構敘利亞阿拉伯語心理健康評估語料庫為首要且速率限制的條件。",
+    "本研究未呈現任何原型、語料庫或臨床、文化、安全評估，亦未聲稱具備臨床有效性、安全性或部署就緒性。"
+  ],
+  "limitationsZh": [
+    "本文為概念性與理論性貢獻，未呈現任何原型、語料庫或實證評估。",
+    "目前尚無敘利亞阿拉伯語臨床語料庫，導致對話組件無法進行評估。"
+  ],
+  "practicalMeaningZh": "本研究整合了多智能體分流、任務轉移與文化適應，為未來在資源稀缺及衝突後阿拉伯語族群中推動安全且具文化適應性的 AI 輔助心理健康分流提供了理論框架與階段性驗證方向。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知。本摘要僅依據原始文獻摘要進行編寫，未涉及因果推論。本研究樣本數、族群與地點均為未知且受限。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。未來仍需更多實證研究來驗證該理論架構。",
+  "keyTerms": [
+    {
+      "original": "Triple Gap",
+      "translationZh": "三重缺陷",
+      "explanationZh": "指極端臨床資源稀缺、阿拉伯語自然語言處理對方言表現不佳，以及與敘利亞痛苦俗諺文化不對齊等三個同時存在的結構性缺陷。"
+    },
+    {
+      "original": "mhGAP",
+      "translationZh": "世界衛生組織心理健康差距行動計畫",
+      "explanationZh": "世界衛生組織所提出的任務轉移模型，旨在擴大心理健康服務。"
+    },
+    {
+      "original": "SAMHEC",
+      "translationZh": "敘利亞阿拉伯語心理健康評估語料庫",
+      "explanationZh": "未來工作中作為第一且速率限制條件而需建構的語料庫。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyt.2026.1854701",
+  "doi": "10.3389/fpsyt.2026.1854701",
+  "doiUrl": "https://doi.org/10.3389/fpsyt.2026.1854701",
+  "openAccessUrl": "https://doi.org/10.3389/fpsyt.2026.1854701",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

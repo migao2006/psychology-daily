@@ -1,0 +1,75 @@
+{
+  "id": "10-1007-s12671-026-02917-4",
+  "titleZh": "正念本位方案針對周產期憂鬱、焦慮、壓力與心理福祉之系統性統合回顧",
+  "titleOriginal": "Mindfulness-Based Programs for Perinatal Depression, Anxiety, Stress, and Psychological Well-Being: A Systematic Meta-Review",
+  "authors": [
+    "Kate Gliske",
+    "Gretchen J. R. Buchanan",
+    "Delaina Carlson",
+    "Qiyue Cai",
+    "Molly E. Waring",
+    "Na Zhang"
+  ],
+  "journalOrRepository": "Mindfulness",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "正念本位方案（MBPs）對於減少周產期人群的心理困擾與促進心理福祉的有效性為何？",
+  "backgroundZh": "懷孕與產後期間的母親心理健康對後代的福祉至關重要。正念本位方案（MBPs）是基於實證的方法，可減少憂鬱、焦慮和壓力等心理困擾，同時促進福祉。鑑於對孕期及產後使用精神藥物的擔憂以及正念強調加強身心連結，MBPs 可能特別適合周產期。",
+  "methodsZh": "本研究進行了一項統合回顧。搜尋了四個電子資料庫至 2024 年 10 月。符合條件的研究為評估懷孕期至產後 12 個月內實證 MBPs 的英文系統性回顧（含或不含統合分析）。",
+  "sample": {
+    "size": 17,
+    "populationZh": "周產期人群（懷孕至產後 12 個月）的系統性回顧",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "根據研究設計推論，MBPs 在周產期族群中普遍對減少憂鬱、焦慮和分娩恐懼顯示出有利的效果。",
+    "根據研究設計推論，MBPs 能改善正念與分娩自我效能。",
+    "根據研究設計推論，MBPs 對壓力的有效性呈變異性，且沒有證據顯示對「正面心態」有效。"
+  ],
+  "limitationsZh": [
+    "現有文獻的品質評等主要為低至中等，存在重大限制與變異，無法得出強烈的結論。"
+  ],
+  "practicalMeaningZh": "本統合回顧提供了一些跡象，表明正念本位方案是周產期人群在多個心理困擾與福祉領域中的一項有效介入措施，有助於臨床應用與未來研究設計的參考。",
+  "cautionZh": "同儕審查狀態為未知，本內容僅依摘要，基於統合回顧的研究設計推論，現有文獻存在樣本與品質等限制，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Mindfulness-Based Programs",
+      "translationZh": "正念本位方案",
+      "explanationZh": "強調身心連結、旨在減少心理困擾並促進福祉的基於實證之介入方法。"
+    },
+    {
+      "original": "Perinatal Depression",
+      "translationZh": "周產期憂鬱",
+      "explanationZh": "發生在懷孕期間或產後一段時間內的憂鬱症狀。"
+    },
+    {
+      "original": "Systematic Meta-Review",
+      "translationZh": "系統性統合回顧",
+      "explanationZh": "針對現有系統性回顧與統合分析文獻進行總結的回顧研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s12671-026-02917-4",
+  "doi": "10.1007/s12671-026-02917-4",
+  "doiUrl": "https://doi.org/10.1007/s12671-026-02917-4",
+  "openAccessUrl": "https://doi.org/10.1007/s12671-026-02917-4",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

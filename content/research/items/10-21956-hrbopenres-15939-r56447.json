@@ -1,0 +1,85 @@
+{
+  "id": "10-21956-hrbopenres-15939-r56447",
+  "titleZh": "同儕審查報告：異基因造血幹細胞移植患者身體功能的縱向研究：REACT研究計畫",
+  "titleOriginal": "Peer Review Report For: A longitudinal study of physical function in patients undergoing allogeneic stem cell transplant: The REACT Study Protocol [version 1; peer review: 1 approved]",
+  "authors": [
+    "Grainne Sheill",
+    "Nina Orfali",
+    "Sophie Grehan",
+    "Mairead Ni Chonghaile",
+    "Carmel-Ann Galligan",
+    "Kristin L. Campbell",
+    "Cathal Walsh",
+    "James F O’Mahony",
+    "Katie Robinson",
+    "Ruth Clifford",
+    "Sonya Collier",
+    "Elaine Toomey",
+    "Orla McCourt",
+    "Louise Mullen",
+    "Rose Galvin",
+    "Emer Guinan"
+  ],
+  "journalOrRepository": "OpenAlex",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在調查異基因造血幹細胞移植對主觀與客觀身體表現測量的影響。",
+  "backgroundZh": "血液癌症的當前治療改善了存活率，但伴隨顯著毒性與長期住院，可能負面影響生活品質與身體表現。異基因造血幹細胞移植（HSCT）具潛在治癒性，但毒性高且有嚴重併發症風險，目前尚不清楚接受HSCT的患者需要何種復健。",
+  "methodsZh": "REACT是一項前瞻性縱向世代研究。參與者將進行五次評估，包含移植前的兩個時間點以及移植後的三個時間點（3個月、6個月與12個月）。評估包含客觀的身體功能測量（簡短身體表現量表）與主觀測量（WHODAS 2.0）。其他收集的資料包含患者報告的結果、人體測量、醫療利用測量以及社會人口學、臨床與社會環境特徵，並包含一項探討患者經驗的嵌入式質性研究。",
+  "sample": {
+    "size": null,
+    "populationZh": "接受異基因造血幹細胞移植的患者",
+    "locationZh": "愛爾蘭"
+  },
+  "mainFindingsZh": [
+    "本前瞻性世代研究將為接受異基因造血幹細胞移植患者的身體表現軌跡提供重要見解。",
+    "透過結合多個時間點的客觀與主觀評估，REACT研究將釐清移植後功能衰退與恢復的程度及模式。",
+    "納入患者報告結果、醫療利用數據與質性回饋，將有助於全面理解此群體的多元復健需求與優先事項。"
+  ],
+  "limitationsZh": [
+    "原文未提供明確的樣本數。"
+  ],
+  "practicalMeaningZh": "研究結果最終將有助於為發展標的化、基於證據的復健路徑提供資訊，以支持接受異基因造血幹細胞移植個體的康復、提升生活品質並優化長期結果。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依摘要，且具因果限制與樣本限制，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "allogeneic stem cell transplant",
+      "translationZh": "異基因造血幹細胞移植",
+      "explanationZh": "一種血液癌症的治療選項，具潛在治癒性但伴隨高毒性與嚴重併發症風險。"
+    },
+    {
+      "original": "longitudinal cohort study",
+      "translationZh": "縱向世代研究",
+      "explanationZh": "在多個時間點追蹤相同參與者的研究設計，用於觀察變化的軌跡。"
+    },
+    {
+      "original": "Short Physical Performance Battery",
+      "translationZh": "簡短身體表現量表",
+      "explanationZh": "本研究中用於客觀測量身體功能的工具。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.21956/hrbopenres.15939.r56447",
+  "doi": "10.21956/hrbopenres.15939.r56447",
+  "doiUrl": "https://doi.org/10.21956/hrbopenres.15939.r56447",
+  "openAccessUrl": "https://hrbopenresearch.org/articles/9-71/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

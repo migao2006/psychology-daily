@@ -1,0 +1,70 @@
+{
+  "id": "10-54536-ajhp-v4i2-6005",
+  "titleZh": "鞋履的心理學",
+  "titleOriginal": "The Psychology of Footwear",
+  "authors": [
+    "Dominick Agoot"
+  ],
+  "journalOrRepository": "American Journal of Human Psychology",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "人格與個別差異",
+  "researchQuestionZh": "人格類型與鞋履偏好之間是否存在可能的關聯？",
+  "backgroundZh": "每個人都有不同的特徵與偏好，使其獨一無二且與眾不同，這些個體差異對應到各種人格類型。個人的偏好展現了其人格，本研究旨在探討人格類型與鞋履偏好之間的可能關係。",
+  "methodsZh": "本研究使用史洛文公式（Slovin's Formula），隨機從各系所選取受試者。為了區分受試者的人格，使用了菲爾博士人格測驗（Dr. Phil's Personality test），並透過其與DISC人格的關聯來測量女性的人格類型，進而連結至她們的鞋履偏好。",
+  "sample": {
+    "size": 235,
+    "populationZh": "年齡介於17至19歲的女性",
+    "locationZh": "聖路易斯大學（University of Saint Louis, USL），路易斯安那州"
+  },
+  "mainFindingsZh": [
+    "根據研究設計推論，女性的人格類型與鞋履偏好之間沒有顯著差異。",
+    "研究結果顯示人格類型與鞋履偏好並無顯著關聯。"
+  ],
+  "limitationsZh": [
+    "樣本僅限於特定大學與特定年齡層的女性。",
+    "僅依據特定人格測驗工具來評估人格類型。"
+  ],
+  "practicalMeaningZh": "本研究有助於了解人格類型與日常鞋履偏好之間的關聯性，並提供相關心理學觀察。",
+  "cautionZh": "同儕審查狀態未知，且本內容僅依摘要進行分析，不得將相關性推論為因果關係。樣本受限於特定族群與地點，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Personality types",
+      "translationZh": "人格類型",
+      "explanationZh": "指個體獨特的特徵與偏好分類。"
+    },
+    {
+      "original": "Footwear preferences",
+      "translationZh": "鞋履偏好",
+      "explanationZh": "指個體對於鞋子選擇的傾向。"
+    },
+    {
+      "original": "DISC personality",
+      "translationZh": "DISC人格",
+      "explanationZh": "一種用以測量行為與人格特質的評估工具。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.54536/ajhp.v4i2.6005",
+  "doi": "10.54536/ajhp.v4i2.6005",
+  "doiUrl": "https://doi.org/10.54536/ajhp.v4i2.6005",
+  "openAccessUrl": "https://journals.e-palli.com/home/index.php/ajhp/article/download/6005/3640",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

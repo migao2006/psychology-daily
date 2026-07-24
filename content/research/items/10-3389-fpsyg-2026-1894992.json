@@ -1,0 +1,71 @@
+{
+  "id": "10-3389-fpsyg-2026-1894992",
+  "titleZh": "壓力下的使命感：使命感、恢復、情緒調節與心流如何形塑菁英運動表現",
+  "titleOriginal": "Purpose under pressure: how calling, recovery, emotional regulation and flow shape elite athletic performance",
+  "authors": [
+    "Liliana Pitacho",
+    "João Pedro Cordeiro"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "基準期的運動使命感是否直接與間接地透過知覺身心恢復、賽前心理狀態及心流，與競技表現產生關聯？",
+  "backgroundZh": "職業滑輪曲棍球的運動表現不僅受到體能、技術與戰術因素影響，也受到協助運動員調節壓力、維持恢復並進入最佳表現狀態的心理資源所影響。本研究從運動的需求-資源觀點出發，檢視運動使命感作為相對穩定的心理資源，如何幫助理解職業滑輪曲棍球在壓力下的表現。",
+  "methodsZh": "在為期四天的淘汰賽錦標賽期間，進行了一項包含重複測量的縱向現場設計，並運用線性混合模型與探索性時間特定中介分析來檢視資料。",
+  "sample": {
+    "size": 80,
+    "populationZh": "男性職業滑輪曲棍球運動員",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "基準期的運動使命感與賽事期間的競技表現、心流及自信呈正相關。",
+    "基準期的運動使命感與賽事期間較差的知覺恢復、認知焦慮及身體焦慮呈負相關。",
+    "運動使命感與表現之間的關聯與一、二階段賽事中的知覺恢復、自信與心流等間接途徑一致。"
+  ],
+  "limitationsZh": [
+    "本研究為縱向現場設計，根據研究設計推論無法確知變項間的因果關係。"
+  ],
+  "practicalMeaningZh": "本研究有助於運動心理學，將使命感定位為一個有潛力的建構，用以理解菁英運動情境中的表現、恢復與最佳體驗。",
+  "cautionZh": "根據研究設計推論，本研究無法確定因果關係；同儕審查狀態為未知；本內容僅依摘要；樣本僅限80名男性職業滑輪曲棍球運動員；仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "sport calling",
+      "translationZh": "運動使命感",
+      "explanationZh": "被視為一種相對穩定的心理、動機與身分認同資源，與壓力下的適應性心理功能及競技表現有關。"
+    },
+    {
+      "original": "flow",
+      "translationZh": "心流",
+      "explanationZh": "運動員在競賽中進入的最佳表現狀態與體驗。"
+    },
+    {
+      "original": "linear mixed models",
+      "translationZh": "線性混合模型",
+      "explanationZh": "本研究所採用之統計分析方法，用於處理重複測量資料。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1894992",
+  "doi": "10.3389/fpsyg.2026.1894992",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1894992",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1894992/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

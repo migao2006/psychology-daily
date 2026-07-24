@@ -1,0 +1,78 @@
+{
+  "id": "10-1192-bji-2026-10111",
+  "titleZh": "門診心理健康照護中數位病人自填結果指標（PROMs）與臨床結果的關聯：多中心橫斷研究",
+  "titleOriginal": "Association of digital patient-reported outcome measures (PROMs) with clinical outcomes in out-patient mental healthcare: multicentre, cross-sectional study",
+  "authors": [
+    "Marta del Olmo Rodríguez",
+    "Jorge Short Apellaniz",
+    "Catalina Paredes Coronel",
+    "Marco Antonio Villegas García",
+    "Raquel Álvarez-García",
+    "Raúl Córdoba",
+    "Bernadette Pfang",
+    "Enrique Baca-García"
+  ],
+  "journalOrRepository": "BJPsych International",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "描述多中心西班牙網絡中門診心理衛生服務的病人人口統計特徵與 PROMs 結果，並分析 PROMs 與服藥依從性、藥物副作用、自傷及自殺企圖之間的關聯。",
+  "backgroundZh": "病人自填結果指標（PROMs）是實踐以病人為中心的心理健康照護的核心，然而來自常規精神醫學中大規模數位化實施的證據仍然有限。",
+  "methodsZh": "一項多中心橫斷研究，納入於 2023 年 10 月至 2025 年 3 月期間前往門診心理健康診所並參與數位 PROMs（e-PROMs）計畫的成年人。透過病人網頁入口網站部署並整合至電子病歷中的經驗證西班牙語版量表包括 WHO-5、PHQ-9、GAD-7、AUDIT-C、DAST-10 及 PC-PTSD-5。使用單變量檢定與多變量羅吉斯迴歸分析關聯性。",
+  "sample": {
+    "size": 7925,
+    "populationZh": "參與數位 PROMs 計畫並完成評估的成年門診心理健康診所就診病人",
+    "locationZh": "西班牙多中心網絡"
+  },
+  "mainFindingsZh": [
+    "在 73140 名轉介病人中，7925 名（10.9%）完成了 PROMs，其中位年齡為 48 歲，68.8% 為女性。",
+    "多變量模型中，自殘的最強預測因子（勝算比大於 2）包含重度憂鬱、物質濫用風險、創傷後壓力症候群風險與中度憂鬱。",
+    "自殺企圖的最強預測因子包含各等級的憂鬱、創傷後壓力症候群風險及物質濫用。",
+    "酒精濫用風險與物質濫用風險預測了非依從性。"
+  ],
+  "limitationsZh": [
+    "本研究為橫斷研究設計。"
+  ],
+  "practicalMeaningZh": "大規模數位 PROMs 收集具可行性且具臨床資訊價值，支持其用於早期風險偵測與基於測量的精神醫學照護。",
+  "cautionZh": "根據研究設計推論，本研究未確知同儕審查狀態，僅依摘要，具因果限制、樣本限制與仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "patient-reported outcome measures (PROMs)",
+      "translationZh": "病人自填結果指標",
+      "explanationZh": "由病人直接填報其健康狀況或治療結果的指標。"
+    },
+    {
+      "original": "cross-sectional study",
+      "translationZh": "橫斷研究",
+      "explanationZh": "在特定時間點對族群或樣本進行觀察的研究設計。"
+    },
+    {
+      "original": "adherence",
+      "translationZh": "服藥依從性",
+      "explanationZh": "病人配合醫療人員指示進行治療或服藥的程度。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1192/bji.2026.10111",
+  "doi": "10.1192/bji.2026.10111",
+  "doiUrl": "https://doi.org/10.1192/bji.2026.10111",
+  "openAccessUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/3EEDB7890307F919D914B03A9A0E5564/S2056474026101111a.pdf/div-class-title-association-of-digital-patient-reported-outcome-measures-proms-with-clinical-outcomes-in-out-patient-mental-healthcare-multicentre-cross-sectional-study-div.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

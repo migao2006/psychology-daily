@@ -1,0 +1,71 @@
+{
+  "id": "10-3389-fpsyg-2026-1894573",
+  "titleZh": "運動作為社交焦慮症的輔助介入：一項迷你文獻回顧",
+  "titleOriginal": "Exercise as an adjunct intervention for social anxiety disorder: a mini-review",
+  "authors": [
+    "Liu Lele",
+    "Yang Xin",
+    "Yong-Gwan Song"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "randomized_trial",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "探討身體活動與結構化運動在管理社交焦慮症中的角色與現有證據。",
+  "backgroundZh": "社交焦慮症是一種常見且通常持續的精神健康狀況，常在青春期出現並伴隨顯著的功能損害。儘管認知行為療法和選擇性血清素再回收抑制劑仍是第一線治療，但許多患者面臨療效不完全、耐受性差、與污名相關的擔憂或醫療資源取得受限等問題。在此背景下，運動作為一種低成本、易取得且可擴展的輔助介入措施，引起了越來越多的關注。",
+  "methodsZh": "進行一項迷你文獻回顧，綜合目前關於身體活動與結構化運動在社交焦慮症管理中作用的證據。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "較高的身體活動水準通常與較低的社交焦慮症狀相關。",
+    "有氧運動、攀岩和團體運動計畫可能帶來心理效益。",
+    "運動可透過自我效能、韌性、身體形象、社交參與、認知偏誤調節、神經可塑性及壓力相關生理過程等途徑輔助主流治療。"
+  ],
+  "limitationsZh": [
+    "樣本數小",
+    "介入措施具異質性",
+    "缺乏長期追蹤",
+    "缺乏針對臨床診斷社交焦慮症的大型隨機對照試驗",
+    "許多現有證據來自非臨床或亞臨床族群"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，運動可被視為一種有前景的輔助介入，而非替代既定治療的方案。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態未知，且本內容僅依摘要、具因果限制、樣本限制，並仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Social anxiety disorder",
+      "translationZh": "社交焦慮症",
+      "explanationZh": "一種常見且通常持續的精神健康狀況，常在青春期出現並伴隨顯著功能損害。"
+    },
+    {
+      "original": "Adjunctive intervention",
+      "translationZh": "輔助介入",
+      "explanationZh": "作為主流治療之外的補充措施。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1894573",
+  "doi": "10.3389/fpsyg.2026.1894573",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1894573",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1894573/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

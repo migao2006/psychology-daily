@@ -1,0 +1,75 @@
+{
+  "id": "10-1007-s10803-026-07444-8",
+  "titleZh": "自閉症幼兒社交溝通問卷（Q-SoCiAL）口語版本的開發與心理計量驗證",
+  "titleOriginal": "Development and Psychometric Validation of the Questionnaire for Social Communication in Young Autistic Learners (Q-SoCiAL)-Verbal Version",
+  "authors": [
+    "Katherine M. Walton",
+    "Alayna Borowy",
+    "Jolynn Pek",
+    "Dee Adedipe",
+    "Luc Lecavalier"
+  ],
+  "journalOrRepository": "Journal of Autism and Developmental Disorders",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "qualitative",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "如何開發並驗證一個高品質、具效率且對變化敏感的測量工具，以捕捉年幼自閉症兒童的社交溝通能力？",
+  "backgroundZh": "目前領域中缺乏高品質、高效率且對變化敏感的測量工具來捕捉年幼自閉症兒童的社交溝通能力，本研究旨在運用患者報告測量工具開發的最佳實踐來開發此類測量工具。",
+  "methodsZh": "Q-SoCiAL的開發分為四個階段：(1)透過文獻回顧與家長、教師及專家的焦點團體進行建構定義與題項生成；(2)透過對自閉症兒童家長與教師的認知訪談進行題項精煉；(3)運用自閉症兒童與神經典型兒童家長的数据進行題項選擇與結構效度評估；(4)評估外部效度，包含已知群組比較與收斂/區辨效度證據。",
+  "sample": {
+    "size": 330,
+    "populationZh": "自閉症兒童與神經典型兒童的家長",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "初步分析、認知訪談與專家審查促成了一個包含46個題項的最終測量工具，適用於使用超過10個自發性詞彙的兒童。",
+    "針對330名兒童樣本的因素分析顯示其具有單維度結構，且內部一致性、重測信度與跨評量者一致性皆非常高。",
+    "Q-SoCiAL分數在自閉症組中與多個臨床及人口統計變項如預期般呈現相關。"
+  ],
+  "limitationsZh": [
+    "本研究樣本主要依據特定群組，外部效度與推論範圍受限於研究設計。",
+    "本研究僅基於現有摘要內容，未涵蓋完整論文的所有細節。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，這項新的測量工具填補了領域中的重要空白，並具有改善臨床實務與研究中社交溝通測量的潛力。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。同儕審查狀態為未知，本分析僅依據摘要內容，相關發現受限於研究設計無法直接推論因果關係，樣本有限，且仍需更多研究來進一步證實。",
+  "keyTerms": [
+    {
+      "original": "Questionnaire for Social Communication in Young Autistic Learners (Q-SoCiAL)",
+      "translationZh": "自閉症幼兒社交溝通問卷",
+      "explanationZh": "本研究所開發與驗證的口語版本測量工具，用於捕捉年幼自閉症兒童的社交溝通能力。"
+    },
+    {
+      "original": "structural validity",
+      "translationZh": "結構效度",
+      "explanationZh": "評估測量工具的內部結構是否符合預期建構的效度指標。"
+    },
+    {
+      "original": "convergent/divergent validity",
+      "translationZh": "收斂與區辨效度",
+      "explanationZh": "用以檢驗測量工具與相關變項之間是否如預期般具有關聯（收斂）或不相關（區辨）的效度證據。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s10803-026-07444-8",
+  "doi": "10.1007/s10803-026-07444-8",
+  "doiUrl": "https://doi.org/10.1007/s10803-026-07444-8",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s10803-026-07444-8.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

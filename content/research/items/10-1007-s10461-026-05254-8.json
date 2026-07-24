@@ -1,0 +1,73 @@
+{
+  "id": "10-1007-s10461-026-05254-8",
+  "titleZh": "酒精中毒對男男性行為者性風險行為之影響：考量 PrEP、HIV 病毒量與抑制衝突",
+  "titleOriginal": "The Effects of Alcohol Intoxication on Sexual Risk Behavior in Men Who Have Sex with Men: Considering PrEP, HIV Viral Load, and Inhibition Conflict",
+  "authors": [
+    "Neil Gleason",
+    "Eric R. Pedersen",
+    "Erik D. Storholm",
+    "William H. George"
+  ],
+  "journalOrRepository": "AIDS and Behavior",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討酒精使用與男男性行為者在事件層級下的性風險行為之關聯，以及 PrEP 和 HIV 病毒量是否會調節此關聯。",
+  "backgroundZh": "實驗研究顯示酒精對愛滋病毒相關性風險行為具有一致的因果影響，但事件層級的研究結果分歧。先前對於在暴露前預防性投藥（PrEP）及治療作為預防（TasP，即維持無法檢出的愛滋病毒病毒量）情境下之酒精與性風險的研究相當有限。",
+  "methodsZh": "本研究採用橫斷面樣本，並使用廣義階層線性迴歸分析回溯報告的性行為事件資料。",
+  "sample": {
+    "size": 464,
+    "populationZh": "男男性行為者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "在整體樣本中，酒精中毒與性風險行為顯示出不一致的關聯，但 PrEP 與 TasP 顯著調節了這些關聯。",
+    "未使用 PrEP 或目前沒有無法檢出病毒量的參與者，其酒精中毒與性風險行為呈正向關聯。",
+    "正在使用 PrEP 或回報無法檢出病毒量的參與者，則未顯示出此關聯。"
+  ],
+  "limitationsZh": [
+    "事件層級資料為回溯性報告。"
+  ],
+  "practicalMeaningZh": "結果凸顯出酒精對性風險行為的去抑制效果，可能主要與那些面臨最高愛滋病毒傳播風險的族群相關。",
+  "cautionZh": "根據研究設計推論，本研究同儕審查狀態為未知，且僅依摘要進行分析，不能推論因果關係，樣本具侷限性，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "men who have sex with men",
+      "translationZh": "男男性行為者",
+      "explanationZh": "指與同性發生性行為的男性群體。"
+    },
+    {
+      "original": "pre-exposure prophylaxis",
+      "translationZh": "暴露前預防性投藥",
+      "explanationZh": "簡稱 PrEP，用於預防感染 HIV 的藥物預防措施。"
+    },
+    {
+      "original": "HIV viral load",
+      "translationZh": "愛滋病毒病毒量",
+      "explanationZh": "血液中愛滋病毒的數量。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s10461-026-05254-8",
+  "doi": "10.1007/s10461-026-05254-8",
+  "doiUrl": "https://doi.org/10.1007/s10461-026-05254-8",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s10461-026-05254-8.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

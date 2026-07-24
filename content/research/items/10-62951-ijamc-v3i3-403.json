@@ -1,0 +1,73 @@
+{
+  "id": "10-62951-ijamc-v3i3-403",
+  "titleZh": "初中學生解決數學素養問題之行為分析",
+  "titleOriginal": "Analysis of Students’ Behavior in Solving Mathematical Literacy Problems at the Junior High School Level",
+  "authors": [
+    "Dwita Elfri Mayani",
+    "Heri Retnawati"
+  ],
+  "journalOrRepository": "International Journal of Applied Mathematics and Computing",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "qualitative",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "初中學生在解決數學素養問題時的行為表現為何？",
+  "backgroundZh": "數學素養是21世紀學習的關鍵核心能力，然而印尼學生的表現仍然偏低。先前的研究多數關注認知層面，而自我調節、數學工具使用以及自信等行為維度則未受到足夠重視，儘管這些層面在成功解決問題中扮演著關鍵角色。",
+  "methodsZh": "本研究採用質性方法，運用紮根理論。透過分層隨機抽樣，選取來自日惹三所公立初中的18名八年級學生作為參與者。資料透過數學素養測驗、半結構式訪談與觀察蒐集，並使用持續比較法進行分析，直到資料達飽和為止。",
+  "sample": {
+    "size": 18,
+    "populationZh": "八年級學生",
+    "locationZh": "日惹三所公立初中"
+  },
+  "mainFindingsZh": [
+    "分析揭示了一個新的行為類別，被稱為「半優異」，介於一般與優異行為之間。",
+    "自我調節、數學工具的使用與自信呈現動態互動。",
+    "具備較強自我調節與較高自信的學生表現出更多策略性與反思性的作法。",
+    "數學素養能力與行為傾向之間存在明顯的一致性。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究樣本規模較小且集中於特定地區。",
+    "本研究採用質性方法與紮根理論，其結果難以直接推論至其他群體。"
+  ],
+  "practicalMeaningZh": "數學教學必須整合認知、後設認知、心理動作與情感等能力。",
+  "cautionZh": "根據研究設計推論，本研究之同儕審查狀態為未知，且僅依摘要提供資訊，無法完全確認完整研究細節。因果關係受到研究方法限制，不應將相關性直接解讀為因果關係。樣本數量與範圍有限，仍需更多研究來進一步證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Mathematical literacy",
+      "translationZh": "數學素養",
+      "explanationZh": "21世紀學習中的關鍵核心能力。"
+    },
+    {
+      "original": "Self-regulation",
+      "translationZh": "自我調節",
+      "explanationZh": "影響問題解決行為的重要維度。"
+    },
+    {
+      "original": "Grounded theory",
+      "translationZh": "紮根理論",
+      "explanationZh": "本研究採用的質性方法途徑。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.62951/ijamc.v3i3.403",
+  "doi": "10.62951/ijamc.v3i3.403",
+  "doiUrl": "https://doi.org/10.62951/ijamc.v3i3.403",
+  "openAccessUrl": "https://international.arimsi.or.id/index.php/IJAMC/article/download/403/162",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

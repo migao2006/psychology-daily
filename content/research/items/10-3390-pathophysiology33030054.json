@@ -1,0 +1,71 @@
+{
+  "id": "10-3390-pathophysiology33030054",
+  "titleZh": "慢性口顏面痛動物模型中神經膠質細胞的病理生理機制：系統性文獻回顧",
+  "titleOriginal": "The Pathophysiological Mechanisms of Glia in Animal Models of Chronic Orofacial Pain: A Systematic Review",
+  "authors": [
+    "Afonso Brito",
+    "Bruno Daniel Carneiro",
+    "Daniel Humberto Pozza"
+  ],
+  "journalOrRepository": "Pathophysiology",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "動物研究中神經膠質細胞在慢性口顏面痛的病理生理學中扮演什麼角色？",
+  "backgroundZh": "慢性口顏面痛是一組影響三叉神經系統且異質性高的疾病，由於其複雜的病理生理學涉及神經膠質細胞在持續性疼痛狀態的發展與維持中，因此治療困難。",
+  "methodsZh": "在PROSPERO註冊後，依據PRISMA指南進行系統性文獻搜尋，以識別評估口顏面痛模型中神經膠質細胞參與的實驗動物研究。經過篩檢與資格評估後，有10項研究符合納入標準。提取並質性綜合有關實驗模型、所研究的神經膠質細胞群以及疼痛相關行為結果的數據。",
+  "sample": {
+    "size": 10,
+    "populationZh": "實驗動物研究",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "衛星神經膠質細胞、微膠細胞和小星形膠質細胞的活化，持續與三叉神經路徑內神經發炎訊號增加及神經元興奮性增強相關聯。",
+    "周邊及中樞神經組織皆參與其中，且數項研究報告藥理學調節神經膠質細胞活性可能會減少疼痛相關行為。"
+  ],
+  "limitationsZh": [
+    "本系統性回顧僅納入動物研究，需更多轉譯研究以釐清其對人類疼痛狀況的相關性。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，神經膠質細胞是透過神經免疫互動來調控慢性口顏面痛的關鍵調節者，有助於周邊及中樞敏感化，並突顯出具潛力的治療標的。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本分析僅依摘要進行，且基於相關性設計無法推論因果關係，樣本受限於動物研究，仍需更多研究。",
+  "keyTerms": [
+    {
+      "original": "Chronic orofacial pain",
+      "translationZh": "慢性口顏面痛",
+      "explanationZh": "影響三叉神經系統且具有異質性的持續性疼痛疾病群組。"
+    },
+    {
+      "original": "Glia",
+      "translationZh": "神經膠質細胞",
+      "explanationZh": "參與慢性口顏面痛發展與維持的細胞。"
+    },
+    {
+      "original": "Systematic review",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "綜合評估多項符合標準之文獻的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/pathophysiology33030054",
+  "doi": "10.3390/pathophysiology33030054",
+  "doiUrl": "https://doi.org/10.3390/pathophysiology33030054",
+  "openAccessUrl": "https://www.mdpi.com/1873-149X/33/3/54/pdf?version=1784619898",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "10-3389-fdpys-2026-1811938",
+  "titleZh": "社群媒體情感支持與內化症狀之間的關聯：針對美國青少年與新興成年人全國樣本的縱貫性研究",
+  "titleOriginal": "Associations between social media-based emotional support and internalizing symptoms: a longitudinal study in a national sample of U.S. adolescents and emerging adults",
+  "authors": [
+    "César G. Escobar-Viera",
+    "Tetsuya Yamada",
+    "Giovanna Porta",
+    "Tylar N. Schmitt",
+    "Lori N. Scott",
+    "Munmun De Choudhury",
+    "Xu Qin"
+  ],
+  "journalOrRepository": "Frontiers in Developmental Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "探討被感知的社群媒體情感支持與來自邊緣化背景的年輕人之內化心理健康症狀之間的縱貫性關聯。",
+  "backgroundZh": "年輕人的心理健康危機持續存在，來自少數背景的青少年與新興成年人面臨較高的內化症狀風險。雖然美國年輕人普遍使用社群媒體，但研究主要集中於使用時間與潛在危害，對情感支持等保護因素的關注有限。",
+  "methodsZh": "在2023年11月至2024年3月之間，透過社群媒體廣告招募了689名13至21歲、來自少數背景（種族／族裔、LGBTQ+或鄉村居住）的美國人。參與者在基準期以及兩個後續波次（基準期後4至5個月以及8至9個月）完成網路問卷。使用修改版的4題PROMIS情感支持量表測量社群媒體情感支持，並以多層次模型檢驗關聯。",
+  "sample": {
+    "size": 689,
+    "populationZh": "來自少數背景（種族／族裔、LGBTQ+或鄉村居住）的美國青少年與新興成年人",
+    "locationZh": "美國"
+  },
+  "mainFindingsZh": [
+    "在調整所有共變數後，第1波較高的社群媒體情感支持與較低的憂鬱、焦慮及孤獨感分數顯著相關。",
+    "這些關聯在為期10個月的研究期間保持穩定。",
+    "孤獨感分數隨著時間顯著下降，而憂鬱和焦慮分數未顯示顯著的時間變化。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論",
+    "僅依據摘要提供的資訊"
+  ],
+  "practicalMeaningZh": "社群媒體上的情感支持可能可以作為傳統形式社會支持的補充，特別是針對經歷邊緣化或歧視的年輕人。",
+  "cautionZh": "根據研究設計推論，本研究為縱貫性研究且僅探討關聯性而非因果關係。樣本受限於特定少數背景的美國青少年與新興成年人。同儕審查狀態為未知。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。仍需更多研究來確認與擴展這些發現。",
+  "keyTerms": [
+    {
+      "original": "internalizing symptoms",
+      "translationZh": "內化症狀",
+      "explanationZh": "指將情緒與痛苦內化的一類心理健康問題，例如憂鬱與焦慮。"
+    },
+    {
+      "original": "longitudinal study",
+      "translationZh": "縱貫性研究",
+      "explanationZh": "在多個時間點對同一群參與者進行追蹤的研究設計。"
+    },
+    {
+      "original": "emotional support",
+      "translationZh": "情感支持",
+      "explanationZh": "提供關懷、同理與傾聽等心理支持。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fdpys.2026.1811938",
+  "doi": "10.3389/fdpys.2026.1811938",
+  "doiUrl": "https://doi.org/10.3389/fdpys.2026.1811938",
+  "openAccessUrl": "https://www.frontiersin.org/journals/developmental-psychology/articles/10.3389/fdpys.2026.1811938/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

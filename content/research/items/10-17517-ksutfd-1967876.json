@@ -1,0 +1,71 @@
+{
+  "id": "10-17517-ksutfd-1967876",
+  "titleZh": "學校暴力對兒童與青少年心理健康的影響及全面性方法的必要性：卡赫拉曼马拉什案例",
+  "titleOriginal": "The Effects of School Violence on Child and Adolescent Mental Health and the Need for a Holistic Approach: The Kahramanmaraş Example",
+  "authors": [
+    "Şule Şirin Berk"
+  ],
+  "journalOrRepository": "Kahramanmaraş Sütçü İmam Üniversitesi Tıp Fakültesi Dergisi",
+  "publicationDate": "2026-07-22",
+  "language": "tr",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "學校暴力如何影響兒童與青少年的心理健康，以及為何需要採取全面性的方法來解決此問題？",
+  "backgroundZh": "學校本應是支持兒童與青少年社會情緒和學業發展的安全空間，但教育機構中的暴力事件破壞了這種安全感，使其成為一項關鍵的公共衛生問題。卡赫拉曼马拉什於2026年4月15日發生的學校暴力事件即為此威脅的當前案例，這類創傷性事件不僅影響直接受害者，也透過同儕、教師和媒體影響更廣泛暴露於事件中的群體，導致次級創傷。",
+  "methodsZh": "根據文獻回顧與針對特定事件（卡赫拉曼马拉什案例）的剖析，探討學校暴力與焦慮、憂鬱、創傷後壓力症候群（PTSD）、學業失敗及自殺傾向之間的關聯，並論述主動預防、心理韌性提升與全面性生物-心理-社會方法的必要性。",
+  "sample": {
+    "size": null,
+    "populationZh": "兒童與青少年",
+    "locationZh": "卡赫拉曼马拉什"
+  },
+  "mainFindingsZh": [
+    "直接或間接暴露於學校暴力與焦慮、憂鬱、創傷後壓力症候群（PTSD）、學業失敗及自殺傾向有所關聯。",
+    "在此發展敏感期中失去信任，會在個人身上留下長期的心理損害。",
+    "卡赫拉曼马拉什的事件顯示，學校安全無法僅透過實體措施來確保，必須採取全面且生物-心理-社會的方法。"
+  ],
+  "limitationsZh": [
+    "未來研究需要將「感知學校安全」的概念標準化。",
+    "未來研究需要聚焦於監測受影響社群的縱向研究。"
+  ],
+  "practicalMeaningZh": "在應對此慢性問題時，除了事後危機介入，增強心理韌性的主動與預防性方法至關重要，且學校安全需要全面性與生物-心理-社會的取徑。",
+  "cautionZh": "根據研究設計推論，本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。同儕審查狀態為未知，本內容僅依摘要撰寫，暴力與心理健康問題僅呈現相關性而非直接因果關係，樣本大小與特徵受限於現有資料，且仍需更多研究來證實。",
+  "keyTerms": [
+    {
+      "original": "School Violence",
+      "translationZh": "學校暴力",
+      "explanationZh": "發生在教育機構中、破壞學生安全感並對兒童與青少年心理健康造成威脅的暴力事件。"
+    },
+    {
+      "original": "Secondary Traumatization",
+      "translationZh": "次級創傷",
+      "explanationZh": "不僅影響直接受害者，也透過同儕、教師和媒體影響更廣泛暴露於創傷事件中的群體所產生的創傷反應。"
+    },
+    {
+      "original": "Bio-Psycho-Social Approach",
+      "translationZh": "生物-心理-社會方法",
+      "explanationZh": "一種認為健康與疾病受到生物、心理及社會多重因素共同影響的全面性應對架構。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.17517/ksutfd.1967876",
+  "doi": "10.17517/ksutfd.1967876",
+  "doiUrl": "https://doi.org/10.17517/ksutfd.1967876",
+  "openAccessUrl": "https://doi.org/10.17517/ksutfd.1967876",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

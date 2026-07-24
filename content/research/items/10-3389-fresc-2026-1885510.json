@@ -1,0 +1,86 @@
+{
+  "id": "10-3389-fresc-2026-1885510",
+  "titleZh": "重症成年病人的早期復健：統合性文獻回顧通訊協定",
+  "titleOriginal": "Early rehabilitation for critically ill adult patients: protocol for an umbrella review",
+  "authors": [
+    "Kun Sun",
+    "Yongming Tian",
+    "Yuanyuan Song",
+    "Biantong Jiang",
+    "Huan Liu",
+    "Aiping Du"
+  ],
+  "journalOrRepository": "Frontiers in Rehabilitation Sciences",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在綜合評估早期復健對重症成年病人的有效性與安全性、評估現有系統性文獻回顧的方法學品質，並評定關鍵結果的證據確定性。",
+  "backgroundZh": "重症醫療的進步提升了加護病房病人的短期存活率，但許多倖存者面臨持久的身體、認知與心理損傷，統稱為加護病房症候群。早期復健是降低此負擔的核心策略，但現有系統性文獻回顧在介入方案、族群範圍與方法學嚴謹度上差異極大，且針對高風險次族群的安全與療效證據仍不一致，缺乏全面的高品質證據綜合評估。",
+  "methodsZh": "本研究將檢索九個電子資料庫，涵蓋自資料庫建立起至2026年4月30日的文獻，並輔以手動參考文獻篩選與PROSPERO註冊檢索。兩位獨立審查員將進行標題摘要篩選與全文資格評估。將使用AMSTAR 2工具評估納入的系統性文獻回顧之方法學品質，並使用GRADE框架評定主要結果的證據確定性，同時進行敘述性證據綜合與次群組及敏感度分析。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "本研究為通訊協定，尚未產生實質的最終研究結果數據。",
+    "本計畫規劃透過系統性檢索與方法學品質評估，綜合現有關於重症病人早期復健的證據。"
+  ],
+  "limitationsZh": [
+    "本篇僅為研究通訊協定，尚未完成實際文獻綜合分析。",
+    "不同系統性文獻回顧之間可能存在介入方案與族群範圍的異質性。",
+    "重疊的研究樣本可能對量化統合分析造成偏誤。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，本統合性文獻回顧若證據確定性足夠，未來可能為實證臨床決策提供參考、支持標準化通訊協定之發展，並指認未來初級研究的優先證據缺口。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本篇摘要對應之研究文章的同儕審查狀態為未知，本分析僅依據目前提供的英文摘要內容進行推論。根據研究設計推論，本研究為通訊協定階段，無法直接推論出早期復健的實際療效與安全性的因果關係。由於原文未提供具體樣本數、族群與地點，樣本限制為尚無實質納入對象數據。本領域仍需更多研究以釐清相關證據。",
+  "keyTerms": [
+    {
+      "original": "umbrella review",
+      "translationZh": "統合性文獻回顧",
+      "explanationZh": "一種針對多項系統性文獻回顧進行綜合與評估的研究設計。"
+    },
+    {
+      "original": "early rehabilitation",
+      "translationZh": "早期復健",
+      "explanationZh": "針對重症病人早期介入以降低加護病房症候群負擔的核心策略。"
+    },
+    {
+      "original": "post-intensive care syndrome",
+      "translationZh": "加護病房症候群",
+      "explanationZh": "重症病人生存者常面臨的持久身體、認知與心理損傷統稱。"
+    },
+    {
+      "original": "AMSTAR 2",
+      "translationZh": "AMSTAR 2工具",
+      "explanationZh": "用於評估隨機或非隨機介入研究之系統性文獻回顧方法學品質的工具。"
+    },
+    {
+      "original": "GRADE framework",
+      "translationZh": "GRADE框架",
+      "explanationZh": "評定醫療衛生照護中證據品質與推薦強度分級的常用系統框架。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fresc.2026.1885510",
+  "doi": "10.3389/fresc.2026.1885510",
+  "doiUrl": "https://doi.org/10.3389/fresc.2026.1885510",
+  "openAccessUrl": "https://www.frontiersin.org/journals/rehabilitation-sciences/articles/10.3389/fresc.2026.1885510/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

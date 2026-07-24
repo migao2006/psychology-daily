@@ -4,7 +4,7 @@
   "status": "running",
   "activeWindowDays": 180,
   "noProgressRuns": 0,
-  "lastRunAt": "2026-07-24T00:02:22.079Z",
+  "lastRunAt": "2026-07-24T03:57:57.811Z",
   "completedAt": null,
   "rejectedCandidates": [
     {
@@ -16,6 +16,81 @@
       "fingerprint": "10.1007/s41347-026-00684-6",
       "code": "summary_grounding_failed",
       "attemptedAt": "2026-07-24T00:02:22.079Z"
+    },
+    {
+      "fingerprint": "10.1186/s12982-026-02603-9",
+      "code": "summary_audit_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.1080/10503307.2026.2692602",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.20566683",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21482145",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.3389/fpsyg.2026.1881332",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.51143/jksi.v11i1.1166",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.3389/fpsyg.2026.1834496",
+      "code": "summary_audit_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21500887",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.3310/nihropenres.14368.1",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.1080/09602011.2026.2702563",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21468764",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21482055",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21489525",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.23668/psycharchives.22333",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21499246",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T03:57:57.811Z"
     }
   ]
 }

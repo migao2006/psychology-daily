@@ -1,0 +1,83 @@
+{
+  "id": "10-1371-journal-pone-0324305",
+  "titleZh": "COVID-19與社會經濟不平等對精神疾病急診就醫的影響",
+  "titleOriginal": "The effect of COVID-19 and socioeconomic inequalities on emergency department accesses for psychiatric conditions",
+  "authors": [
+    "Chiara Schepisi",
+    "Martina Ventura",
+    "Anteo Di Napoli",
+    "Massimiliano Aragona",
+    "Roberta Ciampichini",
+    "Valeria Fano",
+    "Christian Napoli",
+    "Martina Pacifici",
+    "Claudio Rosini",
+    "Caterina Silvestri",
+    "Fabio Voller",
+    "Alberto Zucchi",
+    "Alessio Petrelli"
+  ],
+  "journalOrRepository": "PLOS One",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討COVID-19前後精神科診斷的急診就醫情況，並特別關注社會經濟因素的角色。",
+  "backgroundZh": "COVID-19對心理健康造成負面影響，且由於醫療服務可近性降低而未能妥善處理，在疫情期間，具社會經濟脆弱性的患者在取得醫療服務時面臨最大障礙。",
+  "methodsZh": "這是一項多中心縱向回顧性研究，納入居住於義大利三個大型區域、年滿10歲的居民與國家醫療服務體系受惠者組成的以人口為基礎的開放世代。主要關注結果為首次心理健康急診就醫（FMHEA）。使用中斷時間序列（ITS）分析，透過階躍負二項模型估計首次心理健康急診就醫的發生率比（IRR），並檢視每月數量的時間趨勢。",
+  "sample": {
+    "size": 5159363,
+    "populationZh": "年滿10歲的居民與國家醫療服務體系受惠者組成的以人口為基礎的開放世代",
+    "locationZh": "義大利三個大型區域"
+  },
+  "mainFindingsZh": [
+    "在追蹤期間觀察到56,762次首次心理健康急診就醫。",
+    "多元分析顯示，在COVID-19之前，高度剝奪者的首次心理健康急診就醫發生率較高。",
+    "研究發現COVID-19時期與剝奪程度之間存在顯著交互作用，減少首次心理健康急診就醫可能性的機率隨著剝奪程度增加。",
+    "COVID-19的最大影響發現在中年年齡層，導致疫後不同年齡層間的首次心理健康急診就醫發生率差異縮小。"
+  ],
+  "limitationsZh": [
+    "本研究為觀察性設計，根據研究設計推論，無法完全排除未測量干擾因子的影響。"
+  ],
+  "practicalMeaningZh": "本研究結果有助於了解COVID-19與社會經濟不平等對精神疾病急診就醫的影響，可作為相關健康政策與資源分配的參考。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依摘要，根據研究設計推論，無法確定因果關係，樣本受限於特定地區與族群，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Emergency Department (ED)",
+      "translationZh": "急診室",
+      "explanationZh": "醫院中提供緊急醫療服務的部門。"
+    },
+    {
+      "original": "First Mental Health Emergency Access (FMHEA)",
+      "translationZh": "首次心理健康急診就醫",
+      "explanationZh": "本研究所關注的主要結果，指個案首次因心理健康相關問題進行急診就醫。"
+    },
+    {
+      "original": "Interrupted Time Series (ITS)",
+      "translationZh": "中斷時間序列",
+      "explanationZh": "一種用於評估介入措施或重大事件前後時間序列資料變化的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1371/journal.pone.0324305",
+  "doi": "10.1371/journal.pone.0324305",
+  "doiUrl": "https://doi.org/10.1371/journal.pone.0324305",
+  "openAccessUrl": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0324305&type=printable",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

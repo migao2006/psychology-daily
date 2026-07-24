@@ -1,0 +1,67 @@
+{
+  "id": "10-3389-fpubh-2026-1884440",
+  "titleZh": "創傷知情音樂介入對兒童創傷暴露兒童情緒調節與社會適應影響之研究",
+  "titleOriginal": "Study on the influence of trauma-informed music intervention on emotional adjustment and social adaptability of children exposed to pediatric trauma",
+  "authors": [
+    "Xieping Chen",
+    "Qian Xie"
+  ],
+  "journalOrRepository": "Frontiers in Public Health",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "randomized_trial",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "創傷知情音樂介入是否能改善兒童創傷暴露兒童的情緒調節、社會適應及生理自主調節功能？",
+  "backgroundZh": "經歷創傷事件的兒童經常出現情緒調節障礙與社會適應受損，嚴重影響心理社會發展。創傷知情音樂介入作為一種非侵入性且耐受性良好的心理介入，對創傷兒童的情緒與社會功能具有潛在助益，但仍缺乏高品質的量化臨床試驗來佐證其臨床療效。",
+  "methodsZh": "本研究採用隨機對照試驗，招募符合條件的兒童並隨機分配至介入組與對照組。對照組僅接受標準心理照護，介入組則接受額外為期8週的創創傷知情音樂介入。使用兒童情緒調節問卷、社會技巧改善系統量表以及兒童焦慮相關情緒障礙篩查表進行評估，並測量呼吸性竇性心律不整作為生理生物標記。",
+  "sample": {
+    "size": 120,
+    "populationZh": "經歷兒童創傷暴露且住院的兒童",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "介入組在介入後的情緒調節總分與社會技巧總分顯著高於對照組。",
+    "介入組的焦慮憂鬱分數顯著降低，且呼吸性竇性心律不整幅度顯著提升。",
+    "所有與介入相關的改善效果在三個月追蹤期皆能穩定持續。"
+  ],
+  "limitationsZh": [
+    "樣本可能受限於特定機構住院兒童，推論至其他族群需謹慎。",
+    "研究結果基於現有追蹤與測量範疇。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，創傷知情音樂介入可作為創傷兒童心理復健的有效非藥物輔助方法。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本摘要涵蓋同儕審查狀態未知、僅依摘要、因果限制、樣本限制與仍需更多研究之考量。",
+  "keyTerms": [
+    {
+      "original": "Trauma-informed music intervention",
+      "translationZh": "創傷知情音樂介入",
+      "explanationZh": "結合創傷知情原則與結構化音樂活動的心理介入方式。"
+    },
+    {
+      "original": "Respiratory sinus arrhythmia (RSA)",
+      "translationZh": "呼吸性竇性心律不整",
+      "explanationZh": "作為自主神經調節功能生理生物標記的指標。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpubh.2026.1884440",
+  "doi": "10.3389/fpubh.2026.1884440",
+  "doiUrl": "https://doi.org/10.3389/fpubh.2026.1884440",
+  "openAccessUrl": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1884440/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

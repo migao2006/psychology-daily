@@ -1,0 +1,76 @@
+{
+  "id": "10-3389-fnut-2026-1870412",
+  "titleZh": "難治型憂鬱症的六週生酮飲食：前瞻性單臂可行性先導試驗",
+  "titleOriginal": "A 6-week ketogenic diet in treatment-resistant depression: a prospective single-arm feasibility pilot trial",
+  "authors": [
+    "Cemre Cukaci",
+    "Ulrich Rabl",
+    "Richard Frey"
+  ],
+  "journalOrRepository": "Frontiers in Nutrition",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "本研究旨在檢驗難治型憂鬱症患者接受六週生酮飲食介入的可行性、遵從性、安全性與初步臨床訊號。",
+  "backgroundZh": "在本次先導試驗開始招募前，生酮飲食介入難治型憂鬱症的先前證據非常有限。",
+  "methodsZh": "本研究為前瞻性、單臂、開放標籤的先導試驗，招募基線蒙哥馬利-艾斯貝格憂鬱症評量表分數至少為20分的成人難治型憂鬱症患者。介入為期六週的生酮飲食，既有的精神藥物治療在進入研究前必須穩定且在介入期間不予改變。透過每日檢測空腹微血管β-羥基丁酸來監測遵從性。在基線以及第2、4、6週評估蒙哥馬利-艾斯貝格憂鬱症評量表。反應定義為評量表分數較基線減少至少50%，緩解定義為評量表分數小於或等於10分。",
+  "sample": {
+    "size": 8,
+    "populationZh": "患有難治型憂鬱症且基線蒙哥馬利-艾斯貝格憂鬱症評量表分數至少為20分的成人患者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "共有13名符合條件的患者受邀參與，5名拒絕，8名入選，其中4名完成了完整的六週介入。",
+    "所有完成者皆記錄到營養性酮症，並伴隨其中3名完成者的顯著症狀改善。",
+    "在完成者中，2名患者在第6週達到緩解標準，1名顯示部分改善，另1名儘管維持營養性酮症但未顯示相關抗憂鬱效益。",
+    "該介入大致具可行性，但招募與留存具挑戰性。"
+  ],
+  "limitationsZh": [
+    "樣本數極小且僅有4名患者完成完整介入",
+    "招募困難且早期退出率高",
+    "臨床反應具異質性",
+    "根據研究設計推論，本研究為前瞻性單臂先導試驗，缺乏對照組，無法直接推論因果關係"
+  ],
+  "practicalMeaningZh": "本研究提供生酮飲食介入難治型憂鬱症的初步可行性與臨床訊號，並指出招募與留存上的挑戰。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，且本摘要僅依據原始文字內容，不具備因果推論能力。基於樣本數極小與研究設計限制，仍需更多研究來確認。",
+  "keyTerms": [
+    {
+      "original": "ketogenic diet",
+      "translationZh": "生酮飲食",
+      "explanationZh": "本研究中用於介入難治型憂鬱症的飲食方式。"
+    },
+    {
+      "original": "treatment-resistant depression",
+      "translationZh": "難治型憂鬱症",
+      "explanationZh": "本研究招募的患者群體所罹患之疾病。"
+    },
+    {
+      "original": "Montgomery-Åsberg Depression Rating Scale",
+      "translationZh": "蒙哥馬利-艾斯貝格憂鬱症評量表",
+      "explanationZh": "本研究用以評估憂鬱症狀嚴重程度的量表。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fnut.2026.1870412",
+  "doi": "10.3389/fnut.2026.1870412",
+  "doiUrl": "https://doi.org/10.3389/fnut.2026.1870412",
+  "openAccessUrl": "https://www.frontiersin.org/journals/nutrition/articles/10.3389/fnut.2026.1870412/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,71 @@
+{
+  "id": "10-61132-menawan-v4i4-2453",
+  "titleZh": "數位生態系統理解與人格特質對大學生數位創業意願之影響",
+  "titleOriginal": "Pengaruh Pemahaman Ekosistem Digital dan Personality Traits terhadap Minat Mahasiswa Berwirausaha Digital",
+  "authors": [
+    "Nikita Aprilia Sukmawidjaya",
+    "Dian Anita Nuswantara"
+  ],
+  "journalOrRepository": "MENAWAN : Jurnal Riset dan Publikasi Ilmu Ekonomi",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "數位生態系統理解與人格特質如何影響會計系學生的數位創業意願？",
+  "backgroundZh": "本研究旨在探討由數位素養、金融科技素養與人工智慧素養所代表的數位生態系統理解，以及基於大五人格模型的人格特質，對會計系學生從事數位創業意願的影響。",
+  "methodsZh": "本研究採用量化方法，利用立意抽樣收集一手資料，透過李克特量表問卷進行調查，並使用兩階段分析法（包含外側模型評估與內側模型評估）來檢定假設。",
+  "sample": {
+    "size": 100,
+    "populationZh": "會計系大學部學生",
+    "locationZh": "以創業為導向的大學"
+  },
+  "mainFindingsZh": [
+    "數位素養、金融科技素養與人工智慧素養對學生的數位創業意願具有正向且顯著的影響。",
+    "開放性、盡責性、外向性與親和性人格特質對數位創業意願顯示出正向且顯著的影響。",
+    "神經質對數位創業意願具有負向且顯著的影響。"
+  ],
+  "limitationsZh": [
+    "未來的研究建議採用縱貫性研究方法，以檢驗這些意願是否會導致實際的創業行為。"
+  ],
+  "practicalMeaningZh": "本研究整合了以數位生態系統為代表的外部因素與以人格特質為代表的內部因素，形成一個綜合框架，有助於理解大學生數位創業意願。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要，因果限制在於本研究為非實驗設計，樣本限制為樣本數為100位特定大學會計系學生，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Digital Ecosystem",
+      "translationZh": "數位生態系統",
+      "explanationZh": "指由數位素養、金融科技素養與人工智慧素養所代表的外部環境與能力因素。"
+    },
+    {
+      "original": "Personality Traits",
+      "translationZh": "人格特質",
+      "explanationZh": "基於大五人格模型的內部特質，包含開放性、盡責性、外向性、親和性與神經質。"
+    },
+    {
+      "original": "Digital Entrepreneurial Intention",
+      "translationZh": "數位創業意願",
+      "explanationZh": "學生從事數位創業的意圖與傾向。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.61132/menawan.v4i4.2453",
+  "doi": "10.61132/menawan.v4i4.2453",
+  "doiUrl": "https://doi.org/10.61132/menawan.v4i4.2453",
+  "openAccessUrl": "https://journal.areai.or.id/index.php/MENAWAN/article/download/2453/2126",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

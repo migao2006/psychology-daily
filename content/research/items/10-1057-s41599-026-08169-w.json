@@ -1,0 +1,75 @@
+{
+  "id": "10-1057-s41599-026-08169-w",
+  "titleZh": "個體人格特質是否會影響作為公共衛生介入措施的運動依從性？一項使用英國縱向調查數據的因果孟德爾隨機化研究",
+  "titleOriginal": "Could individual personality traits affect adherence to exercise as a public health intervention? A causal Mendelian randomization study using United Kingdom longitudinal survey data",
+  "authors": [
+    "Rowan Cherodian",
+    "Matthew Franklin",
+    "Adelina Gschwandtner",
+    "Rachael Hunter",
+    "Sarah L. Jewell",
+    "Uma Kambhampati"
+  ],
+  "journalOrRepository": "Humanities and Social Sciences Communications",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "神經質是否對運動具有因果影響？此關係是否受嚴謹自律性調節？",
+  "backgroundZh": "全球公共衛生政策與臨床指南強調運動對健康與福祉的重要性，但證據顯示人格特質會影響生活方式決策。大約20%的英國人口與神經質此一人格特質相關。",
+  "methodsZh": "使用孟德爾隨機化作為利用基因數據的工具變數方法，並採用基於廣義動差法的持續更新估計量來解決工具變數薄弱的問題。",
+  "sample": {
+    "size": null,
+    "populationZh": "具有與神經質相關之特定基因結構的子群體",
+    "locationZh": "英國"
+  },
+  "mainFindingsZh": [
+    "神經質程度的增加會導致運動量減少。",
+    "嚴謹自律性可能會調節神經質的影響，並有可能完全抵消神經質對運動的影響。"
+  ],
+  "limitationsZh": [
+    "分析受限於具有與神經質相關之特定基因結構的子群體。",
+    "遺傳資訊存在成為薄弱工具變數的潛在批評。"
+  ],
+  "practicalMeaningZh": "突顯了根據人格特質調整運動建議以提高其效能的必要性。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依摘要，基於工具變數假設推論因果關係，樣本受限於特定基因結構子群體，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Neuroticism",
+      "translationZh": "神經質",
+      "explanationZh": "與負面情緒相關的人格特質。"
+    },
+    {
+      "original": "Conscientiousness",
+      "translationZh": "嚴謹自律性",
+      "explanationZh": "希望把工作或職責做好且徹底的特質。"
+    },
+    {
+      "original": "Mendelian Randomisation",
+      "translationZh": "孟德爾隨機化",
+      "explanationZh": "利用基因數據作為工具變數的方法以估計因果效應。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1057/s41599-026-08169-w",
+  "doi": "10.1057/s41599-026-08169-w",
+  "doiUrl": "https://doi.org/10.1057/s41599-026-08169-w",
+  "openAccessUrl": "https://www.nature.com/articles/s41599-026-08169-w_reference.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

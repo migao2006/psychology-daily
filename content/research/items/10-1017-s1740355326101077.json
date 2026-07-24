@@ -1,0 +1,78 @@
+{
+  "id": "10-1017-s1740355326101077",
+  "titleZh": "誰在乎？英格蘭教會神職人員與信徒的環境主義",
+  "titleOriginal": "Who Cares? Environmentalism among Clergy and Lay People in the Church of England",
+  "authors": [
+    "Andrew Village",
+    "Leslie J. Francis"
+  ],
+  "journalOrRepository": "Journal of Anglican Studies",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "英格蘭教會的神職人員與信徒對環境主義的態度、行為以及相關影響因素為何？",
+  "backgroundZh": "本研究探討了宗教群體中的環境主義議題，特別關注英格蘭教會的神職人員與信徒。",
+  "methodsZh": "本研究採用橫斷面研究設計，參與者透過線上 Church 2024 調查填寫問卷，並使用三個親環境主義量表來測量環境關懷、為環境做出犧牲的意願以及親環境行為。",
+  "sample": {
+    "size": 3229,
+    "populationZh": "英格蘭教會的神職人員與信徒",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "參與者對污染或自然棲息地喪失的關懷最高，對人口過多的關懷最低。",
+    "參與者最願意接受更多的陸上風力發電場，最不愿意看到限制經濟成長。",
+    "女性、年長者、偏好直覺勝過感覺、偏好情感勝過思考以及受教育程度較高的人，表現出更明顯的親環境態度與行為。",
+    "神職人員比信徒更願意做出犧牲並展現更多積極行動，但兩者的關懷程度相似。",
+    "福音派信徒的分數低於其他傳統，這反映了他們較保守的教義與道德立場。"
+  ],
+  "limitationsZh": [
+    "本研究為橫斷面研究，無法確立變項間的因果關係。"
+  ],
+  "practicalMeaningZh": "研究結果可為推動教會的綠色議程提供實務上的意涵與參考。",
+  "cautionZh": "根據研究設計推論，本研究採用橫斷面研究設計，無法確立因果關係。同儕審查狀態為未知，本內容僅依摘要進行分析，樣本受限於英格蘭教會的參與者，且仍需更多研究來進一步證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "environmentalism",
+      "translationZh": "環境主義",
+      "explanationZh": "指對保護環境及自然資源的關注與支持態度。"
+    },
+    {
+      "original": "Clergy",
+      "translationZh": "神職人員",
+      "explanationZh": "指宗教組織中受過按立或具備宗教職務的人員。"
+    },
+    {
+      "original": "lay people",
+      "translationZh": "信徒",
+      "explanationZh": "指宗教團體中未受神職人員按立的普通信眾。"
+    },
+    {
+      "original": "cross_sectional",
+      "translationZh": "橫斷面",
+      "explanationZh": "指在單一時間點對樣本進行觀察與資料收集的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1017/s1740355326101077",
+  "doi": "10.1017/s1740355326101077",
+  "doiUrl": "https://doi.org/10.1017/s1740355326101077",
+  "openAccessUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/39BBD1C82F5DC9F996A6E92A4E45B82E/S1740355326101077a.pdf/div-class-title-who-cares-environmentalism-among-clergy-and-lay-people-in-the-church-of-england-div.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,74 @@
+{
+  "id": "10-1108-meq-03-2025-0179",
+  "titleZh": "基於顧客永續產品設計：數據驅動的方法",
+  "titleOriginal": "Customer-based sustainable product design: a data-driven approach",
+  "authors": [
+    "Najeeb Arghistani",
+    "Anna Paola Codini"
+  ],
+  "journalOrRepository": "Management of Environmental Quality: An International Journal",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "本研究旨在識別關鍵消費者價值、永續產品屬性與數據驅動的方法，並建立一個整合性的基於顧客的永續產品設計框架。",
+  "backgroundZh": "永續產品設計對於促進環境與經濟永續性至關重要，但現有方法往往無法有效納入消費者價值，導致永續產品與消費者期望出現落差。態度與行為差距、主觀知覺難以量化以及缺乏將多元偏好與設計屬性結合的強健方法，阻礙了永續產品的採用。",
+  "methodsZh": "本研究採用Scopus索引研究系統性文獻回顧，從2,256篇文章中透過布林檢索字串與多準則篩選，精煉出39篇實證研究，並在NVivo 14中使用事前編碼框架進行質性內容分析。",
+  "sample": {
+    "size": 39,
+    "populationZh": "Scopus索引的實證研究",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "回顧識別出六種消費者價值（功能性、社會性、情感性、認知性、條件性與綠色價值）及七組產品屬性群組（永續性線索、生態標籤、原產地、品質、價格、售後服務與設計）。",
+    "分析顯示價值層級並非普遍一致：功能性價值在耐用品與汽車情境中扮演不可妥協的把關角色，而在農食情境中則與綠色價值融合而難以區分。",
+    "現有永續產品設計研究過度依賴結構化調查與假設情境，限制了真實世界的適用性，因此本研究提出整合選擇實驗、機器學習與情感分析的數據驅動框架。"
+  ],
+  "limitationsZh": [
+    "將永續性視為獨立元素，可能限制設計決策中對美學、功能性與永續性的整體整合。",
+    "系統性文獻回顧僅依賴Scopus資料庫，排除了其他資料庫中的建築環境與產品服務系統研究。",
+    "橫斷面證據基礎限制了追蹤隨時間變化的動態消費者偏好轉變。",
+    "未探討不同監管與基礎設施情境下，價值層級與態度行為差距大小的文化差異。"
+  ],
+  "practicalMeaningZh": "從管理角度來看，此框架提供了一套可行的需求導向創新策略藍圖，透過迭代映射質性見解與量化分析，為特定市場區隔量身打造產品，以縮小態度與行為差距並降低綠色投資風險。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依據摘要編寫，未能涵蓋完整文章的所有細節。本研究的證據基礎限制了因果推論，且樣本與文獻來源具有特定侷限性，仍需更多研究來進一步驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Sustainable product design (SPD)",
+      "translationZh": "永續產品設計",
+      "explanationZh": "在整個產品設計過程中整合永續性原則的實踐。"
+    },
+    {
+      "original": "Attitude-behaviour gap",
+      "translationZh": "態度與行為差距",
+      "explanationZh": "消費者正面環保態度與實際購買行為之間的落差。"
+    },
+    {
+      "original": "Systematic Literature Review (SLR)",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "透過明確、系統化的方法篩選與分析現有文獻的科學檢視過程。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1108/meq-03-2025-0179",
+  "doi": "10.1108/meq-03-2025-0179",
+  "doiUrl": "https://doi.org/10.1108/meq-03-2025-0179",
+  "openAccessUrl": "https://doi.org/10.1108/meq-03-2025-0179",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

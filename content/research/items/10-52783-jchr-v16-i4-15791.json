@@ -1,0 +1,66 @@
+{
+  "id": "10-52783-jchr-v16-i4-15791",
+  "titleZh": "慢性軀體疾病患者認知障礙發展中血管與代謝因素的臨床與診斷意義",
+  "titleOriginal": "Clinical and Diagnostic Significance of Vascular and Metabolic Factors in the Development of Cognitive Impairment in Patients with Chronic Somatic Diseases",
+  "authors": [
+    "Dmitry Volkov"
+  ],
+  "journalOrRepository": "Journal of Chemical Health Risks",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "血管與代謝異常如何促成慢性軀體疾病患者的認知障礙，及其疾病特定與累積效應、診斷和預後意義為何？",
+  "backgroundZh": "認知障礙日益被視為慢性軀體疾病的重要臨床組成，高血壓、第2型糖尿病、肥胖與代謝症候群等多種疾病常共存，使大腦承受血管、代謝、發炎與缺氧損傷的累積負擔，並透過神經血管單元及多重病理機制影響大腦功能。",
+  "methodsZh": "本研究為一篇敘事性文獻回顧，探討血管與代謝異常促成慢性軀體疾病患者認知障礙的機制、疾病特定與累積效應、診斷與預後意義，並關注現有生物標記的限制以及長期多領域策略的需求。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "慢性軀體疾病的共存會透過神經血管單元與代謝干擾，對大腦造成血管、代謝、發炎與缺氧的累積損傷。",
+    "臨床表現具有異質性，包含資訊處理速度變慢、執行功能障礙、注意力受損及記憶主訴等。",
+    "傳統危險因子評估並不足夠，臨床評估需整合認知篩檢、功能評估、血管與代謝分析、神經影像學標記及血液指標。"
+  ],
+  "limitationsZh": [
+    "現有生物標記存在限制",
+    "需要更多前瞻性、多領域策略研究以在不可逆認知失能發生前識別風險患者"
+  ],
+  "practicalMeaningZh": "強調臨床評估不應僅依賴傳統危險因子，而需整合認知篩檢、血管與代謝分析及多種標記，以協助早期識別高風險患者。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，僅依摘要內容進行分析，根據研究設計推論，不得過度推論因果關係，且受限於未提供具體樣本數與族群，仍需更多研究支持。",
+  "keyTerms": [
+    {
+      "original": "Cognitive impairment",
+      "translationZh": "認知障礙",
+      "explanationZh": "指大腦在認知功能上的受損表現，是慢性軀體疾病中日益受到重視的臨床組成。"
+    },
+    {
+      "original": "Neurovascular unit",
+      "translationZh": "神經血管單元",
+      "explanationZh": "多種慢性疾病條件在該層級交會，其功能障礙會危及氧氣與代謝基質傳遞至神經網路。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.52783/jchr.v16.i4.15791",
+  "doi": "10.52783/jchr.v16.i4.15791",
+  "doiUrl": "https://doi.org/10.52783/jchr.v16.i4.15791",
+  "openAccessUrl": "https://jchr.org/index.php/JCHR/article/download/15791/8446",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

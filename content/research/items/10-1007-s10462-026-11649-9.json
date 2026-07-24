@@ -1,0 +1,76 @@
+{
+  "id": "10-1007-s10462-026-11649-9",
+  "titleZh": "用於心理健康的大型語言模型與多模態AI：早期診斷與監測的系統性文獻回顧",
+  "titleOriginal": "Large language models and multimodal AI for mental health: a systematic review of early diagnosis and monitoring",
+  "authors": [
+    "Fatma Eid",
+    "Shehzad Ali",
+    "Bobonazar Vokhobov",
+    "Akhmadjon Tursunov",
+    "Zubayda Temirova",
+    "Hanghao Yu",
+    "Farman Ali",
+    "Daehan Kwak"
+  ],
+  "journalOrRepository": "Artificial Intelligence Review",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "大型語言模型與多模態人工智慧如何應用於心理健康的早期診斷與監測？",
+  "backgroundZh": "心理健康障礙是全球面臨的急迫挑戰，早期診斷與持續監測對有效介入至關重要。然而，依賴患者自我報告與臨床訪談的傳統診斷方法具有主觀性，且常錯失微小的早期警訊，再加上污名化與取得照護管道受限，使問題更加嚴重。因此，人工智慧特別是大型語言模型與多模態學習技術的最新進展，或許能透過對各種行為與生理訊號進行具規模化、數據驅動且個人化的分析，來支援心理健康篩檢、監測與決策支援。",
+  "methodsZh": "本研究為一篇系統性文獻回顧，綜合分析目前基於大型語言模型與多模態的早期心理健康診斷與監測方法，檢視關鍵人工智慧框架及其架構，並探討技術、倫理與臨床上的挑戰。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "探討了人工智慧框架如何透過早期、晚期、混合與跨注意力等各種融合策略，整合文字、語音、神經造影與生理資料等模態以提升預測準確度。",
+    "批判性地討論了模型幻覺、演算法偏見、可解釋性限制以及隱私疑慮等技術、倫理與臨床挑戰。"
+  ],
+  "limitationsZh": [
+    "未提供具體樣本數與研究對象特徵。"
+  ],
+  "practicalMeaningZh": "本研究勾勒出公開挑戰與未來研究方向，旨在指引研究人員、臨床醫師與開發者推動負責任、以人為中心的心理健康照護人工智慧系統。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依摘要，不得將相關性推論為因果，樣本限制為缺乏明確樣本數據，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "large language models",
+      "translationZh": "大型語言模型",
+      "explanationZh": "指基於大量文字資料訓練、能理解與生成人類語言的人工智慧模型。"
+    },
+    {
+      "original": "multimodal AI",
+      "translationZh": "多模態人工智慧",
+      "explanationZh": "能同時處理與整合多種不同類型資料（如文字、語音、影像等）的人工智慧技術。"
+    },
+    {
+      "original": "systematic review",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "依循系統性與透明的方法來收集、評估與綜合現有研究文獻的研究類型。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s10462-026-11649-9",
+  "doi": "10.1007/s10462-026-11649-9",
+  "doiUrl": "https://doi.org/10.1007/s10462-026-11649-9",
+  "openAccessUrl": "https://doi.org/10.1007/s10462-026-11649-9",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

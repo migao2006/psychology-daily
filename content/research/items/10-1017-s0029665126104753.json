@@ -1,0 +1,75 @@
+{
+  "id": "10-1017-s0029665126104753",
+  "titleZh": "乳脂肪球膜對壓力、焦慮與憂鬱之治療潛力：一項統合分析",
+  "titleOriginal": "Therapeutic potential of milk fat globule membrane for stress, anxiety, and depression: a meta-analysis",
+  "authors": [
+    "Charlotte Mawson",
+    "Andrew Carroll",
+    "Maher Fuad",
+    "Johannie Spies",
+    "Stefanie Evas"
+  ],
+  "journalOrRepository": "Proceedings of the Nutrition Society",
+  "publicationDate": "2026-07-23",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "meta_analysis",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "乳脂肪球膜補充對於成人的壓力、焦慮與憂鬱心理健康結果是否有影響？",
+  "backgroundZh": "如壓力與焦慮等心理健康狀況日益受到透過調節神經生物學與發炎途徑之營養策略的關注。乳脂肪球膜是一種由極性脂質、神經節苷脂與醣蛋白組成的複雜結構，在臨床前與人體研究中已展現抗發炎、神經保護及腸道調節效果，但其對成人心理結果的影響尚未被系統性綜合探討。",
+  "methodsZh": "研究團隊對多個資料庫進行系統性文獻檢索直至2025年9月，納入隨機對照試驗，對成人參與者進行牛乳脂肪球膜補充，設立安慰劑或對照組，並測量壓力、焦慮或憂鬱結果。進行隨機效應統合分析，計算標準化均數差。",
+  "sample": {
+    "size": 438,
+    "populationZh": "成人參與者（20歲以上）",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "牛乳脂肪球膜補充對壓力產生微小但具統計顯著性的減少。",
+    "牛乳脂肪球膜補充對焦慮產生微小但具統計顯著性的減少。",
+    "對憂鬱的影響未達顯著性，但方向上有利。"
+  ],
+  "limitationsZh": [
+    "納入的研究數量較少。",
+    "詮釋受到研究數量的限制。"
+  ],
+  "practicalMeaningZh": "乳脂肪球膜可作為支持整體心理福祉之營養策略的一部分。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本分析僅依摘要進行，具備因果限制、樣本限制，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Milk fat globule membrane (MFGM)",
+      "translationZh": "乳脂肪球膜",
+      "explanationZh": "一種由極性脂質、神經節苷脂與醣蛋白組成的複雜結構。"
+    },
+    {
+      "original": "Meta-analysis",
+      "translationZh": "統合分析",
+      "explanationZh": "系統性結合多項獨立研究結果的統計方法。"
+    },
+    {
+      "original": "Randomised controlled trials (RCTs)",
+      "translationZh": "隨機對照試驗",
+      "explanationZh": "將參與者隨機分派至實驗組或對照組的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1017/s0029665126104753",
+  "doi": "10.1017/s0029665126104753",
+  "doiUrl": "https://doi.org/10.1017/s0029665126104753",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

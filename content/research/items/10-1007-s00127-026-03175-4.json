@@ -1,0 +1,83 @@
+{
+  "id": "10-1007-s00127-026-03175-4",
+  "titleZh": "探討青少年與年輕成人社群媒體使用與孤獨感之間的關係：系統性文獻回顧與統合分析",
+  "titleOriginal": "Exploring the relationship between social media use and loneliness in adolescents and young adults: a systematic review and meta-analysis",
+  "authors": [
+    "Hsin-Pei Feng",
+    "Yin-Ju Lien",
+    "Sih-Yu Cian",
+    "Wei-Ya Wang",
+    "Ying-Ting Li",
+    "Chao-Hui Chen",
+    "Yi-Yun Wu"
+  ],
+  "journalOrRepository": "Social Psychiatry and Psychiatric Epidemiology",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "meta_analysis",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "社群媒體使用與青少年及年輕成人的孤獨感之間有何關係？不同參與模式是否會影響此關係？",
+  "backgroundZh": "隨著社群媒體日益融入青少年的日常生活，人們對其與孤獨感之間潛在關聯的擔憂隨之增加，而孤獨感是此一發展階段中普遍存在的挑戰。本統合分析旨在檢驗社群媒體使用與孤獨感之間的關係，並特別關注不同的參與模式。",
+  "methodsZh": "對六個資料庫進行系統性搜尋，納入2000年1月至2025年5月期間發表的研究。共識別出59篇符合條件的研究，包含67個獨立樣本，總參與者人數為81,344名（59.5%為女性；平均年齡17.6歲，範圍12.5至24.9歲）。使用隨機效應模型計算合併效應量。元迴歸與次群組分析檢驗了潛在調節變項，包括地理區域、性別與發表年份。",
+  "sample": {
+    "size": 81344,
+    "populationZh": "青少年與年輕成人",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "問題性社群媒體使用與較高的孤獨感呈現中等且一致的關聯（r = 0.29）。",
+    "花在社群媒體上的時間與孤獨感呈現較小但顯著的相關（r = 0.07）。",
+    "主動使用與被動使用在與孤獨感的關聯上沒有顯著差異。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究僅能探討相關性而非因果關係。",
+    "樣本以特定年齡層之青少年與年輕成人為主，推論範圍受限。",
+    "仍需更多嚴謹的研究來釐清背後的機制。"
+  ],
+  "practicalMeaningZh": "本研究強調在檢驗社群媒體的心理影響時，區分使用模式的重要性，並指出需要更多嚴謹的調查來釐清其與青少年孤獨感關聯背後的機制。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要，無法建立因果關係，樣本涵蓋特定年齡層有限制，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "social media use",
+      "translationZh": "社群媒體使用",
+      "explanationZh": "指個人使用社群媒體平台的行為。"
+    },
+    {
+      "original": "loneliness",
+      "translationZh": "孤獨感",
+      "explanationZh": "個人主觀感受到人際連結不足或社交孤立的心理狀態。"
+    },
+    {
+      "original": "meta-analysis",
+      "translationZh": "統合分析",
+      "explanationZh": "一種結合多項獨立研究結果以獲得綜合結論的統計方法。"
+    },
+    {
+      "original": "problematic social media use",
+      "translationZh": "問題性社群媒體使用",
+      "explanationZh": "指具有強迫性、難以控制且對生活造成負面影響的社群媒體使用模式。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s00127-026-03175-4",
+  "doi": "10.1007/s00127-026-03175-4",
+  "doiUrl": "https://doi.org/10.1007/s00127-026-03175-4",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s00127-026-03175-4.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

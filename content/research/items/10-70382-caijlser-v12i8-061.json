@@ -1,0 +1,72 @@
+{
+  "id": "10-70382-caijlser-v12i8-061",
+  "titleZh": "即興與標準化教材對奈及利亞亞博地方政府基礎教育低年級學童數學保留與成就之影響",
+  "titleOriginal": "EFFECTS OF IMPROVISED AND STANDARDIZED INSTRUCTIONAL MATERIALS IN RETENTION AND ACHIEVEMENT OF YABO LOCAL GOVERNMENT’S LOWER BASIC EDUCATION PUPILS IN MATHEMATICS",
+  "authors": [
+    "UMAR ALTINE",
+    "AUDI ABUBAKAR AHMAD",
+    "YAKUBU GUNDE"
+  ],
+  "journalOrRepository": "International Journal of Library Science and Educational Research",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "randomized_trial",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "本研究探討即興與標準化教材對亞博地方政府基礎教育低年級學生數學（分數）保留與成就之影響。",
+  "backgroundZh": "本研究探討使用即興與標準化教材對基礎教育低年級學童數學學習的影響，以尋求改善數學教學的方法。",
+  "methodsZh": "採用準實驗設計，包含非隨機前測、後測與延遲後測控制組設計，使用分數成就測驗、分數興趣量表與分數保留測驗收集資料，並以平均數、標準差與共變數分析進行分析。",
+  "sample": {
+    "size": 450,
+    "populationZh": "亞博地方政府公立小學三年級學童",
+    "locationZh": "奈及利亞索科托州亞博地方政府"
+  },
+  "mainFindingsZh": [
+    "使用即興與標準化教材教學的學童與使用傳統方法的學童在平均保留分數上沒有顯著差異。",
+    "使用即興與標準化教材教學的男女學童在平均成就分數上有顯著差異。"
+  ],
+  "limitationsZh": [
+    "本研究樣本僅來自亞博地方政府的兩所公立小學，推論範圍受限。",
+    "根據研究設計推論，本研究採用準實驗設計，無法完全排除干擾變項的影響。"
+  ],
+  "practicalMeaningZh": "建議數學老師多加運用即興與標準化教材來提升學生的學習體驗、學業成就與興趣，且政府應針對相關教材的使用舉辦研討會與培訓。",
+  "cautionZh": "本研究的同儕審查狀態未知，且僅依摘要內容進行解析。根據研究設計推論，本研究樣本規模與代表性有限，因果關係推論亦受限，仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Instructional Materials",
+      "translationZh": "教材",
+      "explanationZh": "教學過程中用以輔助教師教學與學生學習的材料。"
+    },
+    {
+      "original": "Retention",
+      "translationZh": "保留",
+      "explanationZh": "學生在學習一段時間後，對所學知識的記憶與保持程度。"
+    },
+    {
+      "original": "Achievement",
+      "translationZh": "成就",
+      "explanationZh": "學生在學科學習後的表現與成果。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.70382/caijlser.v12i8.061",
+  "doi": "10.70382/caijlser.v12i8.061",
+  "doiUrl": "https://doi.org/10.70382/caijlser.v12i8.061",
+  "openAccessUrl": "https://cambridgeresearchpub.com/ijlser/article/download/1226/1141",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

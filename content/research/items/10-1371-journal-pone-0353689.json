@@ -1,0 +1,83 @@
+{
+  "id": "10-1371-journal-pone-0353689",
+  "titleZh": "以身體活動作為中介變項探討英國社區老年人認知功能與憂鬱症狀之間的雙向關聯",
+  "titleOriginal": "Bidirectional association between cognitive function and depressive symptoms in UK community elderly based on physical activity as mediator",
+  "authors": [
+    "Jiahui Liu",
+    "Yalong Li",
+    "Lei Song",
+    "Mu He",
+    "Jia Liu",
+    "Yuqi Lin",
+    "Jian Ma",
+    "Haoxuan Yang",
+    "Tingting Sun",
+    "Jizhao Li"
+  ],
+  "journalOrRepository": "PLOS One",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討中高齡族群中，身體活動在認知功能與憂鬱症狀雙向關聯中的中介角色與時間順序。",
+  "backgroundZh": "先前的研究顯示身體活動可以改善中高齡者的認知功能與憂鬱症狀，且兩者之間存在雙向關係，然而缺乏探討這三者時間順序與潛在機制的相關研究。",
+  "methodsZh": "採用縱貫性研究設計，使用英格蘭老化縱貫性研究（ELSA）於2014-2015年、2016-2017年與2018-2019年收集的資料。透過問卷評估身體活動、認知功能與憂鬱症狀，並使用斯皮爾曼相關分析、交叉滯後面板模型以及縱貫性中介模型進行分析。",
+  "sample": {
+    "size": 6787,
+    "populationZh": "50歲或以上的參與者，包含3,777名女性與3,010名男性，基準期中位數年齡為66歲",
+    "locationZh": "英國"
+  },
+  "mainFindingsZh": [
+    "較差的認知功能預測未來會出現更嚴重的憂鬱症狀，而更嚴重的憂鬱症狀也預測未來會出現較差的認知功能，其中認知功能是雙向負向關係中的主要因素。",
+    "認知功能與憂鬱症狀呈現顯著相關。",
+    "時間點一較差的認知功能預測時間點二較低的身體活動，且時間點二較低的身體活動預測時間點三更嚴重的憂鬱症狀。",
+    "身體活動中介了認知功能對憂鬱症狀的正向效果，但未能緩解憂鬱對認知功能的負面效果。"
+  ],
+  "limitationsZh": [],
+  "practicalMeaningZh": "本研究顯示積極參與身體活動有助於維持中高齡者的認知與心理健康。",
+  "cautionZh": "根據研究設計推論，本研究同儕審查狀態為未知，且本內容僅依摘要進行分析。因果關係與樣本具有一定限制，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "physical activity",
+      "translationZh": "身體活動",
+      "explanationZh": "指中高齡者參與的活動，在此研究中被評估並作為中介變項。"
+    },
+    {
+      "original": "cognitive function",
+      "translationZh": "認知功能",
+      "explanationZh": "與憂鬱症狀具有雙向負向關係的核心變項之一。"
+    },
+    {
+      "original": "depressive symptoms",
+      "translationZh": "憂鬱症狀",
+      "explanationZh": "與認知功能具雙向關聯，並受身體活動中介影響的心理健康指標。"
+    },
+    {
+      "original": "Cross-Lagged Panel Model",
+      "translationZh": "交叉滯後面板模型",
+      "explanationZh": "用於檢驗三個變項之間縱貫性因果關係的統計模型。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1371/journal.pone.0353689",
+  "doi": "10.1371/journal.pone.0353689",
+  "doiUrl": "https://doi.org/10.1371/journal.pone.0353689",
+  "openAccessUrl": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0353689&type=printable",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

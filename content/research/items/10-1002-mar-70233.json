@@ -1,0 +1,76 @@
+{
+  "id": "10-1002-mar-70233",
+  "titleZh": "數位時代的懷舊製造：永恆主義視角",
+  "titleOriginal": "Manufacturing Nostalgia in the Digital Age: A Foreverism Perspective",
+  "authors": [
+    "Dinara Davlembayeva",
+    "Davit Marikyan",
+    "Jonatan Sodergren",
+    "Savvas Papagiannidis",
+    "Simos Chari"
+  ],
+  "journalOrRepository": "Psychology &amp; Marketing",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "數位內容、工具與環境如何轉變復古消費體驗並改變其懷舊吸引力？",
+  "backgroundZh": "許多學者認為我們正經歷「復古」時代，這是由數位技術所強化、以懷舊為驅動的行銷與消費現象。然而，現有研究缺乏對當代市場中懷舊的批判性分析，以及數位內容、工具與環境如何轉變復古消費體驗並改變其懷舊吸引力。",
+  "methodsZh": "這是一項概念性研究，透過應用永恆主義的概念來挑戰對懷舊的傳統觀點。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "探討了由數位技術促進的三種永恆主義實踐（保存、修復與永恆化）是如何被執行的。",
+    "分析了永恆主義如何轉變懷舊的屬性，以及其對行銷、消費者心理與行為的影響。"
+  ],
+  "limitationsZh": [],
+  "practicalMeaningZh": "本研究提供了關於永恆化如何在數位遊戲及其他領域塑造個人行為的工具性知識，並在數位持久性時代使企業與消費者受益，同時概述了未來研究方向以推進演變中數位景觀下的復古行銷與消費研究。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要，基於概念性研究設計不得將相關推論為因果，無具體樣本資訊，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "foreverism",
+      "translationZh": "永恆主義",
+      "explanationZh": "本研究中用以挑戰傳統懷舊觀點的概念。"
+    },
+    {
+      "original": "preservation",
+      "translationZh": "保存",
+      "explanationZh": "永恆主義的三種實踐之一。"
+    },
+    {
+      "original": "restoration",
+      "translationZh": "修復",
+      "explanationZh": "永恆主義的三種實踐之一。"
+    },
+    {
+      "original": "foreverisation",
+      "translationZh": "永恆化",
+      "explanationZh": "永恆主義的三種實踐之一。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1002/mar.70233",
+  "doi": "10.1002/mar.70233",
+  "doiUrl": "https://doi.org/10.1002/mar.70233",
+  "openAccessUrl": "https://doi.org/10.1002/mar.70233",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

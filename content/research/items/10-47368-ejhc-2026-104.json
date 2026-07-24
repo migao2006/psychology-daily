@@ -1,0 +1,67 @@
+{
+  "id": "10-47368-ejhc-2026-104",
+  "titleZh": "當女性提醒我們時，我們會改變行為嗎？！",
+  "titleOriginal": "Do we Change Our Behaviour When Women Tell Us to?!",
+  "authors": [
+    "Janine N. Blessing",
+    "Hanna-Sophie Ruess",
+    "Susanne Kinnbrock",
+    "Thomas Koristka"
+  ],
+  "journalOrRepository": "European Journal of Health Communication",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "本研究探討專家性別（女性、男性、中立）如何影響被感知的可信度、態度與行為意圖，以及這些影響如何受到線上媒介類型、健康議題等情境因素，以及電子健康識能等個人因素所塑造。",
+  "backgroundZh": "女性在健康傳播中作為專家聲音的代表性仍然不足，且由於持續存在的刻板印象，常面臨可信度劣勢。",
+  "methodsZh": "研究一採用實驗設計來測試性別線索、線上媒介類型與電子健康識能之間的關係；研究二則使用有聲思考方法來檢視健康議題的隱性性別聯想如何形塑可信度判斷。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "實驗設計的結果顯示，性別捷思會影響態度與行為意圖，特別是在電子健康識能較低的個人中，而線上媒介類型則無此影響。",
+    "有聲思考方法的結果指出，議題性別化與專家性別評估之間存在解釋性的連結。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本摘要未提供具體的樣本數、族群與地點資料。"
+  ],
+  "practicalMeaningZh": "這些見解闡明了來源性別、議題框架與接收者特徵之間的複雜互動，為未來關於包容性線上健康傳播的研究提供了更清晰的基礎。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要進行分析。根據研究設計推論，無法確定因果關係，且缺乏樣本相關限制，仍需更多研究加以佐證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "expert gender",
+      "translationZh": "專家性別",
+      "explanationZh": "指健康傳播中專家的性別呈現（女性、男性或中立）。"
+    },
+    {
+      "original": "eHealth literacy",
+      "translationZh": "電子健康識能",
+      "explanationZh": "個人尋找、理解與評估電子健康資訊的能力。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.47368/ejhc.2026.104",
+  "doi": "10.47368/ejhc.2026.104",
+  "doiUrl": "https://doi.org/10.47368/ejhc.2026.104",
+  "openAccessUrl": "https://ejhc.org/article/download/9487/8096",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

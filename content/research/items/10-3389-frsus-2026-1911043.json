@@ -1,0 +1,66 @@
+{
+  "id": "10-3389-frsus-2026-1911043",
+  "titleZh": "獲得消費許可：永續品牌溝通如何引發道德許可效應以及品牌能做什麼",
+  "titleOriginal": "Licensed to consume: how sustainable brand communications trigger moral licensing and what brands can do about it",
+  "authors": [
+    "José Magano"
+  ],
+  "journalOrRepository": "Frontiers in Sustainability",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "永續品牌溝通如何引發道德許可效應，以及品牌可以採取什麼作法來應對？",
+  "backgroundZh": "人們普遍認為永續品牌溝通能激發更環保的消費者行為，但這項假設忽略了道德許可效應。道德許可效應指的是先前的良善行為會提升道德自我概念，並增加隨後發生有道德疑慮行為的可能性。本文探討永續品牌如何塑造消費者對其行為的解釋，進而影響後續的行為反應。",
+  "methodsZh": "透過綜合行為科學文獻中關於道德自我許可的研究以及永續品牌溝通的文獻，發展出一個概念框架。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "識別出永續品牌溝通可能激活道德許可的四種路徑：美德歸因、身分賦予、努力發訊與免罪框架。",
+    "發展出一個依預期許可風險區分的永續品牌原型 2 × 2 型態學，並凸顯帕塔哥尼亞悖論。",
+    "推導出五項抗許可設計原則：避免道德結案、將身分與購買解耦、明確表達系統性要求、壓制免罪訊號以及積極壓制成長訊號。"
+  ],
+  "limitationsZh": [
+    "本文為概念性框架發展，並非基於實證樣本的數據展示。",
+    "部分品牌原型產生的跨領域許可效應屬於理論命題，尚待證實。"
+  ],
+  "practicalMeaningZh": "提出五項抗許可設計原則，建議品牌應開啟而非結帳消費者的道德帳戶，並指出自願性溝通改革可能不足，需輔以機構安排來從屬營收成長於使命忠誠。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依摘要。本研究未涉及因果關係推論。由於本研究未包含實際樣本，受試者與地點限制均為未知。本研究仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "moral licensing",
+      "translationZh": "道德許可",
+      "explanationZh": "指先前的良善行為提升了道德自我概念，進而增加隨後發生有道德疑慮行為可能性的心理現象。"
+    },
+    {
+      "original": "Patagonia paradox",
+      "translationZh": "帕塔哥尼亞悖論",
+      "explanationZh": "指更強烈的永續品牌身分可能會產生跨領域許可效應的理論張力。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/frsus.2026.1911043",
+  "doi": "10.3389/frsus.2026.1911043",
+  "doiUrl": "https://doi.org/10.3389/frsus.2026.1911043",
+  "openAccessUrl": "https://www.frontiersin.org/journals/sustainability/articles/10.3389/frsus.2026.1911043/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

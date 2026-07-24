@@ -1,0 +1,74 @@
+{
+  "id": "10-54536-ijsscs-v2i2-7964",
+  "titleZh": "影響菲律賓另類學習系統學習者註冊的因素：結構化文獻回顧",
+  "titleOriginal": "Factors Influencing Learner Enrollment in the Alternative Learning System in the Philippines: A Structured Literature Review",
+  "authors": [
+    "Emil Arca"
+  ],
+  "journalOrRepository": "International Journal of Social Sciences &amp; Cultural Studies",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "影響菲律賓另類學習系統註冊的因素為何？",
+  "backgroundZh": "菲律賓的另類學習系統為失學青少年與成人提供教育機會。儘管先前的研究檢視了系統實施、學習者經驗與教育成果，但關於影響註冊因素的證據仍然分散。",
+  "methodsZh": "本研究採用結構化文獻回顧，使用Google Scholar與PubMed檢索2017年至2026年間出版的研究，並運用主題綜合分析相關研究。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "回顧識別出四個影響註冊的因素：教育取得與彈性學習途徑、個人轉變與教育企圖心、社會與機構支持系統，以及經濟發展與未來機會。",
+    "文獻提供了關於學習者動機與期望的較強證據，勝過對長期成果的證據。"
+  ],
+  "limitationsZh": [
+    "文獻對學習者動機與期望的證據較強，但對長期成果的證據較弱。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，學習者註冊反映了個人與情境影響的交互作用，支持了社會認知理論與人力資本理論。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本分析僅依據文獻摘要，基於文獻回顧設計無法確立因果關係，樣本細節未知，且仍需更多比較與縱貫研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Alternative Learning System",
+      "translationZh": "另類學習系統",
+      "explanationZh": "為菲律賓失學青少年與成人提供教育機會的系統。"
+    },
+    {
+      "original": "Structured Literature Review",
+      "translationZh": "結構化文獻回顧",
+      "explanationZh": "用以系統性檢索與分析現有文獻的研究方法。"
+    },
+    {
+      "original": "Social Cognitive Theory",
+      "translationZh": "社會認知理論",
+      "explanationZh": "強調個人、環境與成果相關因素對註冊決定影響的理論。"
+    },
+    {
+      "original": "Human Capital Theory",
+      "translationZh": "人力資本理論",
+      "explanationZh": "用以解釋將另類學習系統視為未來機會投資之知覺價值的理論。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.54536/ijsscs.v2i2.7964",
+  "doi": "10.54536/ijsscs.v2i2.7964",
+  "doiUrl": "https://doi.org/10.54536/ijsscs.v2i2.7964",
+  "openAccessUrl": "https://journals.e-palli.com/home/index.php/ijsscs/article/download/7964/3644",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T03:57:57.811Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}
