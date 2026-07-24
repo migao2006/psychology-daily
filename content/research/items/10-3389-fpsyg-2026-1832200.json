@@ -1,0 +1,74 @@
+{
+  "id": "10-3389-fpsyg-2026-1832200",
+  "titleZh": "常見心理健康疾患患者的顏色偏好：範圍性文獻回顧",
+  "titleOriginal": "Colour preferences among individuals with common mental health disorders: a scoping review",
+  "authors": [
+    "Saara Krishnamurthy",
+    "Ruonan Shen",
+    "Frederick Sundram",
+    "Misha Vorobyev"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "探討現有關於常見心理健康疾患患者顏色偏好的文獻，檢視不同診斷類別的模式，並辨識與健康參與者的差異。",
+  "backgroundZh": "長久以來，顏色一直被用作治療身體和心理疾患的輔助工具。儘管有大量軼事證據支持在治療情境中使用顏色，但科學證據仍然有限。",
+  "methodsZh": "在四個資料庫中進行了全面的文獻搜尋。本回顧遵循範圍性文獻回顧的 PRISMA-ScR 延伸規範與 JBI 指南，納入評估心理健康疾患患者最喜歡或偏好顏色的研究，並使用 QuADS 與 Elliot 指南評估納入研究的方法學品質。",
+  "sample": {
+    "size": 16,
+    "populationZh": "被診斷出患有心理健康疾患之個人與健康參與者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "憂鬱疾患患者偏好藍色，焦慮相關疾患患者偏好灰色，思覺失調症患者偏好黑色。",
+    "健康參與者並未偏好黑色或灰色等無彩色，且健康族群的顏色偏好呈現地理變異，歐洲參與者傾向偏好藍色，亞洲參與者則偏好紅色和黃色。",
+    "心理健康疾患患者則未觀察到明顯的地理模式，其偏好模式隨診斷類別而異。"
+  ],
+  "limitationsZh": [
+    "本研究為範圍性文獻回顧，未進行統合分析。",
+    "納入研究的方法學品質與樣本特性可能存在差異。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，本研究有助於了解常見心理健康疾患患者的顏色偏好模式與健康參與者的差異。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，僅依摘要內容所進行的分析存在因果限制與樣本限制，且仍需更多研究來證實。",
+  "keyTerms": [
+    {
+      "original": "Colour preferences",
+      "translationZh": "顏色偏好",
+      "explanationZh": "個體對特定顏色展現出的喜好或選擇傾向。"
+    },
+    {
+      "original": "Common mental health disorders",
+      "translationZh": "常見心理健康疾患",
+      "explanationZh": "包含憂鬱疾患、焦慮相關疾患與思覺失調症等常見心理健康問題。"
+    },
+    {
+      "original": "Scoping review",
+      "translationZh": "範圍性文獻回顧",
+      "explanationZh": "旨在繪製某一主題現有文獻圖景的系統化文獻檢閱方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1832200",
+  "doi": "10.3389/fpsyg.2026.1832200",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1832200",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1832200/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

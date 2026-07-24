@@ -1,0 +1,71 @@
+{
+  "id": "10-3389-fpos-2026-1721738",
+  "titleZh": "面對法拉奇：運用情緒成份處理模型理解跨國對奈傑爾·法拉奇遭竄改影片的反應",
+  "titleOriginal": "Facing Farage: using the componential processing model of emotion to understand cross-national response to manipulated video of Nigel Farage",
+  "authors": [
+    "Patrick Alan Stewart",
+    "Carl Senior",
+    "Erik P. Bucy"
+  ],
+  "journalOrRepository": "Frontiers in Political Science",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "情緒成份處理模型是否能有效應用於政治領域，並理解跨國受眾對政治人物影片及不同觀眾反應的反應？",
+  "backgroundZh": "基本情緒理論（BET）認為快樂、憤怒、噁心、恐懼和悲傷具有典型面部表情和生理特徵，但由於這些情緒的觀察或解釋不一致，因而受到重新審視。情緒成份處理模型（CPM）透過考慮個人如何使用包含情境因素的多階段前意識與意識過程來評估相關資訊，據稱改進了BET。",
+  "methodsZh": "使用一段約一分十九秒、由脫歐支持者奈傑爾·法拉奇批評英國移民政策的影片作為刺激物。跨實驗條件保持演講和影片不變，並在片段的自然停頓處疊加額外的音軌（掌聲、笑聲、噓聲或混合笑聲與噓聲）來操縱可觀察觀眾反應（OAR）。透過臉部動作編碼系統（FACS）手動編碼法拉奇的臉部行為，並使用跨文化線上實驗研究進行測試。",
+  "sample": {
+    "size": 356,
+    "populationZh": "美國與英國參與者",
+    "locationZh": "美國與英國"
+  },
+  "mainFindingsZh": [
+    "研究測試了情緒成份處理模型所測量的九個評估變項的效果。",
+    "評估模式的轉變在政治評估中具有重要意義。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為跨文化線上實驗研究，樣本與刺激物設定可能無法完全類推至真實世界的多元情境。"
+  ],
+  "practicalMeaningZh": "本研究有助於理解跨國受眾在面對政治影像與群體情境線索時的評估歷程與反應。",
+  "cautionZh": "本同儕審查狀態為未知，本內容僅依摘要，不得將相關推論為因果，樣本僅包含美國與英國參與者且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Componential Processing Model (CPM)",
+      "translationZh": "情緒成份處理模型",
+      "explanationZh": "透過多階段前意識與意識過程並納入情境因素來評估相關資訊的模型。"
+    },
+    {
+      "original": "Basic Emotion Theory (BET)",
+      "translationZh": "基本情緒理論",
+      "explanationZh": "認為特定情緒具有典型面部表情和生理特徵的理論。"
+    },
+    {
+      "original": "Facial Action Coding System (FACS)",
+      "translationZh": "臉部動作編碼系統",
+      "explanationZh": "用於手動編碼臉部行為的系統。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpos.2026.1721738",
+  "doi": "10.3389/fpos.2026.1721738",
+  "doiUrl": "https://doi.org/10.3389/fpos.2026.1721738",
+  "openAccessUrl": "https://www.frontiersin.org/journals/political-science/articles/10.3389/fpos.2026.1721738/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

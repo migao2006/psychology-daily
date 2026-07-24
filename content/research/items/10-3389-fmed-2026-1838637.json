@@ -1,0 +1,72 @@
+{
+  "id": "10-3389-fmed-2026-1838637",
+  "titleZh": "數位科技輔助待產室分娩支援對產婦疼痛與焦慮之影響：系統性回顧與統合分析",
+  "titleOriginal": "Digital technology-assisted labor support in delivery rooms on maternal pain and anxiety: a systematic review and meta-analysis",
+  "authors": [
+    "Shuijuan Zou",
+    "Ying Wang",
+    "Yinmei Fu"
+  ],
+  "journalOrRepository": "Frontiers in Medicine",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "meta_analysis",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "數位科技輔助待產室分娩支援對產婦疼痛與焦慮具有什麼樣的影響？",
+  "backgroundZh": "待產疼痛與焦慮是影響產婦生產經驗的重要因素。近年來，如虛擬實境（VR）止痛與人工智慧（AI）輔助胎心音監測解讀等數位科技輔助待產支援作為非藥物介入措施日益受到關注，但隨機對照試驗證據的量化綜合仍屬有限。",
+  "methodsZh": "系統性檢索 PubMed、Embase、Cochrane Central Register of Controlled Trials 與 Web of Science 資料庫至 2026 年 3 月。納入比較數位科技輔助待產支援與常規護理對產婦結果之隨機對照試驗（RCT）。兩位審查員獨立進行研究選擇、資料萃取與品質評估，並使用 RevMan 5.4 軟體進行統合分析。",
+  "sample": {
+    "size": 492,
+    "populationZh": "產婦",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "數位科技輔助待產支援顯著降低產婦疼痛強度。",
+    "數位科技輔助待產支援顯著降低產婦焦慮水準。"
+  ],
+  "limitationsZh": [
+    "納入研究數量有限。",
+    "納入研究具有高度異質性。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，數位科技輔助待產支援（特別是沉浸式虛擬實境介入）可能與產婦疼痛強度與焦慮水準的降低有關。",
+  "cautionZh": "本同儕審查狀態為未知，本內容僅依摘要，基於研究設計推論無法直接確立因果關係，樣本數及納入研究數量有限且具高度異質性，仍需更多高品質、大樣本之隨機對照試驗進行進一步驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Digital technology-assisted labor support",
+      "translationZh": "數位科技輔助分娩支援",
+      "explanationZh": "指在待產室中運用數位科技（如虛擬實境或人工智慧）作為非藥物介入的支援方式。"
+    },
+    {
+      "original": "Systematic review and meta-analysis",
+      "translationZh": "系統性回顧與統合分析",
+      "explanationZh": "綜合多項相關研究結果並進行統計量化分析的研究方法。"
+    },
+    {
+      "original": "Randomized controlled trials",
+      "translationZh": "隨機對照試驗",
+      "explanationZh": "將受試者隨機分配至實驗組或對照組以評估介入效果的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fmed.2026.1838637",
+  "doi": "10.3389/fmed.2026.1838637",
+  "doiUrl": "https://doi.org/10.3389/fmed.2026.1838637",
+  "openAccessUrl": "https://www.frontiersin.org/journals/medicine/articles/10.3389/fmed.2026.1838637/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

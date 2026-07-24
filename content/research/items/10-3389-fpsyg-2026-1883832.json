@@ -1,0 +1,83 @@
+{
+  "id": "10-3389-fpsyg-2026-1883832",
+  "titleZh": "嗅覺刺激對社會認知、偏見與情緒的影響：文獻系統性回顧",
+  "titleOriginal": "The influence of olfactory stimuli on social cognition, prejudice and emotions: a systematic review of the literature",
+  "authors": [
+    "Michela Alemanno",
+    "Simone Migliore",
+    "Simona Massimino",
+    "Francesca Ferraioli",
+    "Andrea Schito",
+    "Carmelo M. Vicario",
+    "Sara Invitto",
+    "Giuseppe Curcio"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "嗅覺刺激如何影響社會認知、情緒與偏見？",
+  "backgroundZh": "本篇回顧綜合了關於嗅覺刺激如何影響社會認知、情緒與偏見的研究。儘管嗅覺系統與杏仁核和海馬迴等邊緣系統有直接的神經連結，但此領域仍屬研究不足。",
+  "methodsZh": "根據PRISMA 2020指南，作者系統性地搜尋了PubMed與Web of Science（2000年至2025年），從569筆記錄中識別出21篇符合條件的研究。",
+  "sample": {
+    "size": 21,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "氣味發揮作用的三個核心機制包含社會刺激的早期知覺調節、透過厭惡與效價系統的情感啟動，以及社會判斷與道德評估的高階調節。",
+    "不愉快氣味會增加警覺性、偏誤情緒知覺，並放大對同性戀男性或移民等邊緣群體的內隱及外顯偏見。",
+    "雄甾二烯酮和二氫茉莉酮酸甲酯等假定的人類化學訊號會以情境相依的方式微妙地調節情緒、注意力和社會判斷。",
+    "神經影像學顯示氣味會活化包含杏仁核、腦島和額葉的分布式神經網路，進而影響早期與晚期的情緒處理。"
+  ],
+  "limitationsZh": [
+    "需要更多研究採用虛擬實境等生態效度高的範式，以更深入理解氣味如何形塑現實世界的人際與群體間動態。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，嗅覺刺激作為社會認知與偏見的調節因子，凸顯了將嗅覺維度整合至社會行為與偏見形成模型的必要性。",
+  "cautionZh": "根據同儕審查狀態不明、是否僅依摘要、因果限制、樣本限制與仍需更多研究之考量，本研究基於系統性回顧，未直接進行實驗操弄故無法確立因果關係，且樣本數與族群地點受限，仍需更多研究支持。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "olfactory stimuli",
+      "translationZh": "嗅覺刺激",
+      "explanationZh": "指透過嗅覺系統接收到的氣味或化學訊號刺激。"
+    },
+    {
+      "original": "social cognition",
+      "translationZh": "社會認知",
+      "explanationZh": "個體在社會環境中對他人與自身資訊的接收、解讀與處理歷程。"
+    },
+    {
+      "original": "prejudice",
+      "translationZh": "偏見",
+      "explanationZh": "對特定社會群體或其成員所持有的負面或不合理的態度。"
+    },
+    {
+      "original": "affective priming",
+      "translationZh": "情感啟動",
+      "explanationZh": "先前的刺激（如氣味）引發特定的情感狀態，進而影響後續刺激的處理與評估。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1883832",
+  "doi": "10.3389/fpsyg.2026.1883832",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1883832",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1883832/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "id": "10-1017-gmh-2026-10272",
+  "titleZh": "脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施：一項系統性文獻回顧",
+  "titleOriginal": "Mental Health and Psychosocial Support Interventions for Individuals Affected by Gender-Based Violence in Fragile Contexts: A Systematic Review",
+  "authors": [
+    "Tanya Ann Antony",
+    "Eamonn Whelan",
+    "Andrea Finnegan",
+    "Frederique Vallieres",
+    "Laurene Barlet",
+    "Meg Ryan",
+    "Esperanza Escorza",
+    "Geraldine Fitzgerald",
+    "Kristin Hadfield"
+  ],
+  "journalOrRepository": "Cambridge Prisms: Global Mental Health",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施為何？",
+  "backgroundZh": "本研究探討脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施。",
+  "methodsZh": "採用系統性文獻回顧方法進行研究。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "本內容為預覽或摘要預告，詳細主要發現未在原始文字中提供。",
+    "需要閱讀全文 PDF 以獲取完整的系統性文獻回顧結果。"
+  ],
+  "limitationsZh": [
+    "原始文字未提供研究限制詳細資訊。"
+  ],
+  "practicalMeaningZh": "本研究為脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施提供系統性文獻回顧參考。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態為未知，本內容僅依摘要，不得將相關推論過度延伸為因果，樣本與地點限制未明，且仍需更多研究來確認。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Gender-Based Violence",
+      "translationZh": "性別暴力",
+      "explanationZh": "基於性別差異而對個人施加的暴力行為。"
+    },
+    {
+      "original": "Systematic Review",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "針對特定研究問題進行全面文獻檢索與綜合評估的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1017/gmh.2026.10272",
+  "doi": "10.1017/gmh.2026.10272",
+  "doiUrl": "https://doi.org/10.1017/gmh.2026.10272",
+  "openAccessUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/56DB73710A54AF85432CB30DCBDD11CA/S2054425126102726a.pdf/div-class-title-mental-health-and-psychosocial-support-interventions-for-individuals-affected-by-gender-based-violence-in-fragile-contexts-a-systematic-review-div.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

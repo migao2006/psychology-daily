@@ -4,7 +4,18 @@
   "status": "running",
   "activeWindowDays": 180,
   "noProgressRuns": 0,
-  "lastRunAt": null,
+  "lastRunAt": "2026-07-24T00:02:22.079Z",
   "completedAt": null,
-  "rejectedCandidates": []
+  "rejectedCandidates": [
+    {
+      "fingerprint": "10.17605/osf.io/8r4bn",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T00:02:22.079Z"
+    },
+    {
+      "fingerprint": "10.1007/s41347-026-00684-6",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T00:02:22.079Z"
+    }
+  ]
 }

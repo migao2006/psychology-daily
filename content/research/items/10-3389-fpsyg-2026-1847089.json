@@ -1,0 +1,73 @@
+{
+  "id": "10-3389-fpsyg-2026-1847089",
+  "titleZh": "體育舞蹈評估實踐之地圖化：人工在環系統性文獻回顧",
+  "titleOriginal": "Mapping assessment practices in DanceSport: a Human-In-The-Loop systematic review",
+  "authors": [
+    "Yuwei Zhu",
+    "Guangyuan Liu",
+    "Xiaoyu Wang"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "體育舞蹈領域中出現了哪些主要主題、這些主題如何發展、應用了哪些技術，以及現有系統是如何被驗證的？",
+  "backgroundZh": "體育舞蹈是一項結合運動執行、藝術表達、音樂性與伴侶互動的審美運動。儘管正式評判仍是比賽的核心，但近期研究越來越多地探索技術輔助方法，以提供更多可測量且可追溯的證據。然而，該領域缺乏一個專注的綜合研究來解釋上述問題。",
+  "methodsZh": "本研究進行了一項透過人工在環主題建模增強的系統性文獻回顧。遵循 PRISMA 指導程序，從 Web of Science 核心合輯檢索了 1,957 筆記錄，評估了 192 篇全文文章的資格，最終納入 24 項研究進行回顧。對研究摘要應用探索性 LDA 主題建模以識別主要主題和基於相似性的主題轉變，同時對全文進行質性內容分析，檢驗評估方法、技術、舞種覆蓋範圍和驗證設計。",
+  "sample": {
+    "size": 24,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "識別出四個主要主題：3D 舞蹈動作感知、舞蹈姿勢與動作評估、動態舞蹈表現的影像分析，以及舞蹈評估的驗證。",
+    "研究格局日益以客觀且可測量的表現證據為中心，領域逐漸轉向技術輔助與數據驅動的評估，研究主要集中於姿勢、動作、平衡、節奏與動作識別等指標。",
+    "研究越來越多地採用動作捕捉、穿戴式感測器、電腦視覺與計算模型，但驗證仍受到舞種覆蓋不均以及持續依賴孤立動作、短表演片段或實驗室任務的限制。"
+  ],
+  "limitationsZh": [
+    "驗證仍受到舞種覆蓋不均的限制",
+    "持續依賴孤立動作、短表演片段或實驗室任務"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，體育舞蹈評估研究正朝著技術輔助與多模態證據系統發展，有助於未來發展跨舞競技數據集、比較摩登舞與拉丁舞、測試完整比賽套路，並將裁判、教練與運動員納入評估框架中。",
+  "cautionZh": "根據同儕審查狀態為未知、是否僅依摘要、因果限制、樣本限制與仍需更多研究，本研究僅為文獻回顧與相關性分析，無法確立因果關係，且樣本與舞種覆蓋有限，仍需更多研究進一步驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "DanceSport",
+      "translationZh": "體育舞蹈",
+      "explanationZh": "結合運動執行、藝術表達、音樂性與伴侶互動的審美運動。"
+    },
+    {
+      "original": "Human-In-The-Loop",
+      "translationZh": "人工在環",
+      "explanationZh": "本研究所使用之增強系統性文獻回顧的方法。"
+    },
+    {
+      "original": "LDA topic modeling",
+      "translationZh": "LDA 主題建模",
+      "explanationZh": "應用於研究摘要以識別主要主題和基於相似性主題轉變的探索性方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1847089",
+  "doi": "10.3389/fpsyg.2026.1847089",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1847089",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1847089/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,65 @@
+{
+  "id": "10-3389-frvir-2026-1864150",
+  "titleZh": "從規則式到生成式AI：VR面試訓練系統中演算法演進與多模態融合之系統性文獻回顧",
+  "titleOriginal": "From rule-based to generative AI: a systematic review of algorithmic evolution and multimodal fusion in VR interview training systems",
+  "authors": [
+    "Runlai Li",
+    "Riji Yu"
+  ],
+  "journalOrRepository": "Frontiers in Virtual Reality",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "沉浸式虛擬實境面試訓練系統的演算法演進與多模態融合情況為何？",
+  "backgroundZh": "面試表現對就業成功至關重要，而人工智慧與虛擬實境的結合為求職者提供了安全且可重複的沉浸式訓練環境。",
+  "methodsZh": "遵循 PRISMA 2020 指南，對 2015 年至 2025 年間 IEEE Xplore、ACM Digital Library、Web of Science 和 Google Scholar 中的沉浸式虛擬實境面試訓練系統進行系統性文獻回顧。",
+  "sample": {
+    "size": 23,
+    "populationZh": "沉浸式虛擬實境面試訓練系統相關研究",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "研究數量在 2020 年後增加，過半數發表於 2023 年至 2025 年間。",
+    "技術演進以互動、感知與決策的自適應介入迴圈為中心，從規則式系統和機器學習進展至生成式人工智慧與大型語言模型。"
+  ],
+  "limitationsZh": [
+    "面臨硬體成本、演算法偏見與隱私安全的挑戰。"
+  ],
+  "practicalMeaningZh": "本研究提供未來發展更公平且高效的次世代智慧面試系統之參考。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要，存在因果限制、樣本限制與仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "virtual reality",
+      "translationZh": "虛擬實境",
+      "explanationZh": "提供求職者安全且可重複沉浸式訓練環境的技術。"
+    },
+    {
+      "original": "generative artificial intelligence",
+      "translationZh": "生成式人工智慧",
+      "explanationZh": "包含大型語言模型等技術，顯著增強系統的互動性、個人化與自適應回饋能力。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/frvir.2026.1864150",
+  "doi": "10.3389/frvir.2026.1864150",
+  "doiUrl": "https://doi.org/10.3389/frvir.2026.1864150",
+  "openAccessUrl": "https://www.frontiersin.org/journals/virtual-reality/articles/10.3389/frvir.2026.1864150/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,77 @@
+{
+  "id": "10-3389-fpsyg-2026-1842585",
+  "titleZh": "生涯適應力、求職自我效能與外語英語專修大學生就業焦慮的關係：基於主動型人格的視角",
+  "titleOriginal": "The relationship between career adaptability, job search self-efficacy, and EFL college students’ employment anxiety: the perspective of proactive personality",
+  "authors": [
+    "Su Zou",
+    "Lisheng Liu"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "人格與個別差異",
+  "researchQuestionZh": "生涯適應力如何與外語英語專修大學生的就業焦慮相關？求職自我效能與主動型人格在其中扮演什麼樣的中介與調節角色？",
+  "backgroundZh": "在生涯前景高度不確定的時代，外語英語專修大學生普遍面臨就業焦慮的困境。儘管現有研究關注就業焦慮，但對於緩解此焦慮背後潛在心理機制的理解仍有限。本研究借鏡社會認知生涯理論，探討生涯適應力與就業焦慮的關聯。",
+  "methodsZh": "採用分層便利抽樣透過線上平台收集數據，並使用SPSS的PROCESS巨集進行路徑分析。",
+  "sample": {
+    "size": 916,
+    "populationZh": "外語英語專修大學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "生涯適應力與就業焦慮呈顯著負相關。",
+    "求職自我效能部分中介生涯適應力與就業焦慮的關係，佔總效果的33.78%。",
+    "具有較高主動型人格分數的學生能更好地運用生涯適應力與求職自我效能來應對就業焦慮。",
+    "不同性別與年級的外語英語專修大學生在就業焦慮上存在顯著差異。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷面研究，無法確立變項間的因果關係。"
+  ],
+  "practicalMeaningZh": "研究結果為優化大專院校的心理健康教育與就業指導服務提供了實證基礎。",
+  "cautionZh": "根據研究設計推論，本研究為橫斷面研究，無法確立變項間的因果關係。同儕審查狀態為未知，本內容僅依摘要進行分析，樣本受限於特定群體，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Career adaptability",
+      "translationZh": "生涯適應力",
+      "explanationZh": "個人應對生涯轉變與任務的心理資源與能力。"
+    },
+    {
+      "original": "Job search self-efficacy",
+      "translationZh": "求職自我效能",
+      "explanationZh": "個人對自己成功執行求職相關行為的信心。"
+    },
+    {
+      "original": "Employment anxiety",
+      "translationZh": "就業焦慮",
+      "explanationZh": "面對就業市場與求職過程所產生的焦慮情緒。"
+    },
+    {
+      "original": "Proactive personality",
+      "translationZh": "主動型人格",
+      "explanationZh": "不受環境限制、主動採取行動以影響周遭環境的人格特質。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1842585",
+  "doi": "10.3389/fpsyg.2026.1842585",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1842585",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1842585/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

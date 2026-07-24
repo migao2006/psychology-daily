@@ -1,0 +1,74 @@
+{
+  "id": "10-3389-fpsyg-2026-1857328",
+  "titleZh": "軍人的韌性？軍事中微觀、中觀和宏觀層面韌性因素的系統性文獻回顧",
+  "titleOriginal": "Soldiers’ resilience? A systematic review of micro-, meso-, and macro-level resilience factors in the military",
+  "authors": [
+    "Gloria Ch. Straub",
+    "Wolfgang H. Prinz",
+    "Brigitte Lueger-Schuster"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "旨在系統性回顧現役軍人的個人（微觀層面）與組織（中觀和宏觀層面）韌性因素。",
+  "backgroundZh": "軍人職業充滿挑戰，暴露於無法避免的潛在創傷性壓力源，這些壓力源與心理健康風險有關，因此軍中對韌性的需求變得至關重要。儘管研究已認識到在軍事族群中進行多層面韌性考量的重要性，但迄今相關研究仍相當有限。",
+  "methodsZh": "採用系統性文獻回顧方法，在搜尋過程中識別並納入九項研究，其中兩項使用質性方法，七項使用量化方法。",
+  "sample": {
+    "size": 9,
+    "populationZh": "現役軍人相關研究",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "在各個層面上共識別出 82 個韌性因素。",
+    "多數研究集中於微觀層面的因素，例如適應性應對或個人特徵。",
+    "中觀層面（例如領導行為）與宏觀層面（例如結構條件）的因素相對不足。",
+    "沒有任何納入的研究使用巢狀數據調查多層面因素。"
+  ],
+  "limitationsZh": [
+    "納入的研究數量有限且多數集中於微觀層面。",
+    "缺乏使用巢狀數據調查多層面因素的研究。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，韌性應透過重大的組織實踐來促進，以確保資源取得、增強歸屬感並減少汙名化，軍事組織應優先處理結構條件與韌性的文化障礙。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要撰寫，無法建立因果關係，樣本數與研究範圍有限，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "micro-level",
+      "translationZh": "微觀層面",
+      "explanationZh": "指個人層面的因素，例如適應性應對或個人特徵。"
+    },
+    {
+      "original": "meso- and macro-level",
+      "translationZh": "中觀和宏觀層面",
+      "explanationZh": "指組織與結構層面的因素，例如領導行為與結構條件。"
+    },
+    {
+      "original": "systematic review",
+      "translationZh": "系統性文獻回顧",
+      "explanationZh": "針對特定研究問題進行全面搜尋與分析文獻的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1857328",
+  "doi": "10.3389/fpsyg.2026.1857328",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1857328",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1857328/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

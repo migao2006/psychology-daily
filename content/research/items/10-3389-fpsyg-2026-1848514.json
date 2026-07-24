@@ -1,0 +1,78 @@
+{
+  "id": "10-3389-fpsyg-2026-1848514",
+  "titleZh": "運動介入對中國圍絕經期女性憂鬱症狀影響之系統性回顧與統合分析",
+  "titleOriginal": "Effects of exercise interventions on depressive symptoms in perimenopausal women in China: a systematic review and meta-analysis",
+  "authors": [
+    "Shuhan Dong",
+    "Tina Chan",
+    "Yuhong Wen"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "meta_analysis",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "運動介入對中國圍絕經期女性的憂鬱症狀是否有影響？",
+  "backgroundZh": "由於荷爾蒙及社會心理變化，圍絕經期女性罹患憂鬱症狀的風險增加，而針對中國族群中運動介入有效性的證據仍有限且不一致。",
+  "methodsZh": "根據PRISMA指引與PICOS框架進行系統性回顧與統合分析。檢索Web of Science、PubMed、Cochrane Library、CNKI、萬方及維普資料庫（自建庫起至2025年12月）。納入探討中國圍絕經期女性運動介入之隨機對照試驗。使用Stata 16.0進行統合分析，計算標準化平均差與95%信賴區間，並進行隨機效應模型、次群組分析與敏感度分析。",
+  "sample": {
+    "size": 1398,
+    "populationZh": "中國圍絕經期女性",
+    "locationZh": "中國"
+  },
+  "mainFindingsZh": [
+    "納入19項研究包含21個隨機對照試驗，共涉及1,398名中國圍絕經期女性。",
+    "與對照組相比，運動介入顯著降低了憂鬱症狀（SMD = -1.37, 95% CI: -2.06至-0.69, p < 0.001），但觀察到顯著的異質性（I² = 97.14%）。",
+    "次群組分析顯示，不同單次持續時間、頻率、強度與介入週期的運動介入皆與憂鬱症狀的改善相關。"
+  ],
+  "limitationsZh": [
+    "納入研究之間存在顯著的異質性。",
+    "可能存在發表偏倚。"
+  ],
+  "practicalMeaningZh": "運動介入可能是緩解中國圍絕經期女性憂鬱症狀的可行非藥物心理健康管理策略。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知。本內容僅依摘要，基於統合分析設計無法直接推論因果關係。樣本數受限於現有納入研究，且存在顯著異質性與潛在發表偏倚，仍需更多高品質研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Perimenopausal women",
+      "translationZh": "圍絕經期女性",
+      "explanationZh": "指女性絕經前後的過渡期，伴隨生理與荷爾蒙變化。"
+    },
+    {
+      "original": "Depressive symptoms",
+      "translationZh": "憂鬱症狀",
+      "explanationZh": "情緒低落、失去興趣等憂鬱相關的臨床表徵。"
+    },
+    {
+      "original": "Systematic review and meta-analysis",
+      "translationZh": "系統性回顧與統合分析",
+      "explanationZh": "綜合多項獨立研究結果並進行統計分析的研究方法。"
+    },
+    {
+      "original": "Randomized controlled trials",
+      "translationZh": "隨機對照試驗",
+      "explanationZh": "將受試者隨機分配至實驗組或對照組以評估介入效果的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1848514",
+  "doi": "10.3389/fpsyg.2026.1848514",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1848514",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1848514/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T00:02:22.079Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
-  "lastUpdatedAt": "2026-07-23T14:36:14.990Z",
-  "updateStatus": "updated",
+  "lastUpdatedAt": "2026-07-24T00:02:22.079Z",
+  "updateStatus": "backfilled",
   "features": [
     {
       "date": "2026-07-23",
@@ -9,6 +9,96 @@
     }
   ],
   "items": [
+    {
+      "id": "10-1017-gmh-2026-10272",
+      "path": "items/10-1017-gmh-2026-10272.json",
+      "titleZh": "脆弱環境中受性別暴力影響個體的心理健康與心理社會支持介入措施：一項系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-3389-fmed-2026-1838637",
+      "path": "items/10-3389-fmed-2026-1838637.json",
+      "titleZh": "數位科技輔助待產室分娩支援對產婦疼痛與焦慮之影響：系統性回顧與統合分析",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "meta_analysis",
+      "psychologyCategory": "發展心理學"
+    },
+    {
+      "id": "10-3389-fpos-2026-1721738",
+      "path": "items/10-3389-fpos-2026-1721738.json",
+      "titleZh": "面對法拉奇：運用情緒成份處理模型理解跨國對奈傑爾·法拉奇遭竄改影片的反應",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "experimental",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1832200",
+      "path": "items/10-3389-fpsyg-2026-1832200.json",
+      "titleZh": "常見心理健康疾患患者的顏色偏好：範圍性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1842585",
+      "path": "items/10-3389-fpsyg-2026-1842585.json",
+      "titleZh": "生涯適應力、求職自我效能與外語英語專修大學生就業焦慮的關係：基於主動型人格的視角",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "cross_sectional",
+      "psychologyCategory": "人格與個別差異"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1847089",
+      "path": "items/10-3389-fpsyg-2026-1847089.json",
+      "titleZh": "體育舞蹈評估實踐之地圖化：人工在環系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "認知心理學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1848514",
+      "path": "items/10-3389-fpsyg-2026-1848514.json",
+      "titleZh": "運動介入對中國圍絕經期女性憂鬱症狀影響之系統性回顧與統合分析",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "meta_analysis",
+      "psychologyCategory": "社會心理學"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1857328",
+      "path": "items/10-3389-fpsyg-2026-1857328.json",
+      "titleZh": "軍人的韌性？軍事中微觀、中觀和宏觀層面韌性因素的系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "心理健康"
+    },
+    {
+      "id": "10-3389-fpsyg-2026-1883832",
+      "path": "items/10-3389-fpsyg-2026-1883832.json",
+      "titleZh": "嗅覺刺激對社會認知、偏見與情緒的影響：文獻系統性回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "神經科學"
+    },
+    {
+      "id": "10-3389-frvir-2026-1864150",
+      "path": "items/10-3389-frvir-2026-1864150.json",
+      "titleZh": "從規則式到生成式AI：VR面試訓練系統中演算法演進與多模態融合之系統性文獻回顧",
+      "publicationDate": "2026-07-22",
+      "publicationStatus": "unknown",
+      "studyType": "systematic_review",
+      "psychologyCategory": "發展心理學"
+    },
     {
       "id": "10-1007-s40489-026-00579-5",
       "path": "items/10-1007-s40489-026-00579-5.json",
