@@ -57,4 +57,4 @@ Automated research backfill to 100（進行中）
 
 ## Draft PR
 
-NONE
+[#14 Add Groq high-throughput research backfill](https://github.com/migao2006/psychology-daily/pull/14)
