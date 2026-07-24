@@ -2,7 +2,7 @@ import { appendFile } from "node:fs/promises";
 import { backfillResearch } from "@/lib/research/backfill";
 
 async function main() {
-  const requested = Number(process.env.BACKFILL_BATCH_SIZE ?? "10");
+  const requested = Number(process.env.BACKFILL_BATCH_SIZE ?? "50");
   const result = await backfillResearch(process.cwd(), new Date(), {
     batchSize: requested,
     resetStalled: process.env.BACKFILL_FORCE_RETRY === "true",

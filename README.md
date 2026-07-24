@@ -48,7 +48,7 @@ pnpm audit --audit-level high
 
 ## 內容與研究更新
 
-人工課程位於 `content/lessons/`，每日流程不得修改。每日研究候選按 OpenAlex、Europe PMC、Crossref、Semantic Scholar fallback 取得；獨立自動回補流程每日聚合前三個主要來源，只有主要來源沒有合格結果時才查 Semantic Scholar。每批最多新增 10 篇，直到研究庫累積 100 篇，並兼顧分類覆蓋與預印本比例。候選通過英文內容、必要 metadata、心理學相關性、去重、確定性排名、Crossref 核對與合法公開版本檢查後，才交由 LLM 整理。
+人工課程位於 `content/lessons/`，每日流程不得修改。每日研究候選按 OpenAlex、Europe PMC、Crossref、Semantic Scholar fallback 取得；獨立自動回補流程每日聚合前三個主要來源，只有主要來源沒有合格結果時才查 Semantic Scholar。每批最多新增 50 篇，直到研究庫累積 100 篇，並兼顧分類覆蓋與預印本比例。候選通過英文內容、必要 metadata、心理學相關性、去重、確定性排名、Crossref 核對與合法公開版本檢查後，才交由 LLM 整理。LLM provider 可選 Groq、Gemini 或 OpenAI；所有 provider 都必須通過相同的結構化輸出、第二次查核與 Zod 驗證。
 
 LLM 只能接收已核對的來源欄位與英文摘要，不能自行搜尋或覆寫 metadata。輸出必須通過 provider JSON Schema、Zod、確定性 grounding 與第二次結構化摘要查核；無合格候選或驗證失敗時保留最後正常內容。
 

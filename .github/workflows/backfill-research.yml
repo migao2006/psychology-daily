@@ -6,11 +6,11 @@ on:
   workflow_dispatch:
     inputs:
       batch_size:
-        description: "本次最多新增篇數（1-10）"
+        description: "本次最多新增篇數（1-50）"
         required: true
-        default: "10"
+        default: "50"
         type: choice
-        options: ["1", "5", "10"]
+        options: ["10", "25", "50"]
       dry_run:
         description: "只產生與驗證，不提交 main"
         required: true
@@ -32,7 +32,7 @@ concurrency:
 jobs:
   backfill:
     runs-on: ubuntu-latest
-    timeout-minutes: 60
+    timeout-minutes: 120
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262 # v4
         with:
@@ -82,18 +82,20 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           test -n "$LLM_PROVIDER" || { echo "Missing repository variable: LLM_PROVIDER"; exit 1; }
           test -n "$LLM_MODEL" || { echo "Missing repository variable: LLM_MODEL"; exit 1; }
           if [ "$LLM_PROVIDER" = "openai" ]; then test -n "$OPENAI_API_KEY" || { echo "Missing Actions secret: OPENAI_API_KEY"; exit 1; }; fi
           if [ "$LLM_PROVIDER" = "gemini" ]; then test -n "$GEMINI_API_KEY" || { echo "Missing Actions secret: GEMINI_API_KEY"; exit 1; }; fi
+          if [ "$LLM_PROVIDER" = "groq" ]; then test -n "$GROQ_API_KEY" || { echo "Missing Actions secret: GROQ_API_KEY"; exit 1; }; fi
       - if: steps.preflight.outputs.run == 'true'
         run: pnpm install --frozen-lockfile
       - name: Backfill one validated batch
         id: backfill
         if: steps.preflight.outputs.run == 'true'
         env:
-          BACKFILL_BATCH_SIZE: ${{ inputs.batch_size || '10' }}
+          BACKFILL_BATCH_SIZE: ${{ inputs.batch_size || '50' }}
           BACKFILL_FORCE_RETRY: ${{ inputs.force_retry || false }}
           OPENALEX_API_KEY: ${{ secrets.OPENALEX_API_KEY }}
           UNPAYWALL_EMAIL: ${{ secrets.UNPAYWALL_EMAIL }}
@@ -101,6 +103,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: pnpm backfill:research
       - if: steps.preflight.outputs.run == 'true'
         run: pnpm lint

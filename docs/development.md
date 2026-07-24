@@ -20,7 +20,7 @@ pnpm dev
 - `validate-content.ts`：驗證課程、研究索引與研究項目。
 - `validate-research.ts`：只驗證研究內容。
 - `update-daily-research.ts`：執行完整每日研究更新。
-- `backfill-research.ts`：執行最多 10 篇的獨立研究回補批次。
+- `backfill-research.ts`：執行最多 50 篇的獨立研究回補批次。
 
 正規化、去重、排名、metadata 核對、合法公開版本與 summarizer 都由 `lib/research/` 提供。不要為每個函式建立一行式 script 轉接檔。
 

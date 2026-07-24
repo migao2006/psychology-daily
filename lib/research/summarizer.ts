@@ -44,6 +44,7 @@ const outputJsonSchema = {
   },
 };
 export const GEMINI_REQUEST_INTERVAL_MS = 6_500;
+export const GROQ_REQUEST_INTERVAL_MS = 15_000;
 
 export function nextProviderRequestDelay(
   lastStartedAt: number | null,
@@ -128,39 +129,65 @@ export function researchSummaryAuditPrompt(
     `繁中整理：${JSON.stringify(summary)}`,
   ].join("\n\n");
 }
-class OpenAiSummarizer implements ResearchSummarizer {
-  constructor(private key: string, private model: string) {}
+class OpenAiCompatibleSummarizer implements ResearchSummarizer {
+  private readonly pacer: ProviderRequestPacer;
+
+  constructor(
+    private key: string,
+    private model: string,
+    private provider: "openai" | "groq",
+    private endpoint: string,
+    minimumIntervalMs = 0,
+  ) {
+    this.pacer = new ProviderRequestPacer(minimumIntervalMs);
+  }
+
+  private async request(
+    prompt: string,
+    name: string,
+    schema: typeof outputJsonSchema | typeof auditJsonSchema,
+  ): Promise<string> {
+    await this.pacer.wait();
+    const data = await fetchJson<{
+      choices: Array<{ message: { content: string } }>;
+    }>(
+      this.endpoint,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `Bearer ${this.key}`,
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          model: this.model,
+          messages: [{ role: "user", content: prompt }],
+          temperature: 0,
+          response_format: {
+            type: "json_schema",
+            json_schema: { name, strict: true, schema },
+          },
+        }),
+      },
+      3,
+      45_000,
+    );
+    return data.choices[0]?.message.content ?? "";
+  }
+
   async summarize(source: ResearchSource): Promise<ResearchArticle> {
-    const data = await fetchJson<{ choices: Array<{ message: { content: string } }> }>("https://api.openai.com/v1/chat/completions", { method: "POST", headers: { Authorization: `Bearer ${this.key}`, "Content-Type": "application/json" }, body: JSON.stringify({ model: this.model, messages: [{ role: "user", content: buildResearchSummaryPrompt(source) }], temperature: 0, response_format: { type: "json_schema", json_schema: { name: "research_summary", strict: true, schema: outputJsonSchema } } }) }, 3, 45_000);
-    const summary = parseSummary(data.choices[0]?.message.content ?? "");
+    const summary = parseSummary(
+      await this.request(
+        buildResearchSummaryPrompt(source),
+        "research_summary",
+        outputJsonSchema,
+      ),
+    );
     const audit = parseAudit(
-      (
-          await fetchJson<{ choices: Array<{ message: { content: string } }> }>(
-            "https://api.openai.com/v1/chat/completions",
-            {
-              method: "POST",
-              headers: {
-                Authorization: `Bearer ${this.key}`,
-                "Content-Type": "application/json",
-              },
-              body: JSON.stringify({
-                model: this.model,
-                messages: [{ role: "user", content: researchSummaryAuditPrompt(source, summary) }],
-                temperature: 0,
-                response_format: {
-                  type: "json_schema",
-                  json_schema: {
-                    name: "research_grounding_audit",
-                    strict: true,
-                    schema: auditJsonSchema,
-                  },
-                },
-              }),
-            },
-            3,
-            45_000,
-          )
-        ).choices[0]?.message.content ?? "",
+      await this.request(
+        researchSummaryAuditPrompt(source, summary),
+        "research_grounding_audit",
+        auditJsonSchema,
+      ),
     );
     if (!audit.valid) {
       throw new CandidateRejectionError(
@@ -168,7 +195,7 @@ class OpenAiSummarizer implements ResearchSummarizer {
         "AI 摘要第二次查核未通過",
       );
     }
-    return assemble(summary, source, "openai", this.model);
+    return assemble(summary, source, this.provider, this.model);
   }
 }
 class GeminiSummarizer implements ResearchSummarizer {
@@ -247,8 +274,24 @@ function parseAudit(value: string): z.infer<typeof auditSchema> {
 export function createSummarizer(): ResearchSummarizer {
   const provider = process.env.LLM_PROVIDER?.toLowerCase(); const model = process.env.LLM_MODEL;
   if (!provider || !model) throw new Error("缺少 LLM_PROVIDER 或 LLM_MODEL；未修改既有研究內容");
-  if (provider === "openai" && process.env.OPENAI_API_KEY) return new OpenAiSummarizer(process.env.OPENAI_API_KEY, model);
+  if (provider === "openai" && process.env.OPENAI_API_KEY) {
+    return new OpenAiCompatibleSummarizer(
+      process.env.OPENAI_API_KEY,
+      model,
+      "openai",
+      "https://api.openai.com/v1/chat/completions",
+    );
+  }
+  if (provider === "groq" && process.env.GROQ_API_KEY) {
+    return new OpenAiCompatibleSummarizer(
+      process.env.GROQ_API_KEY,
+      model,
+      "groq",
+      "https://api.groq.com/openai/v1/chat/completions",
+      GROQ_REQUEST_INTERVAL_MS,
+    );
+  }
   if (provider === "gemini" && process.env.GEMINI_API_KEY) return new GeminiSummarizer(process.env.GEMINI_API_KEY, model);
-  throw new Error(`LLM Provider「${provider}」缺少對應 API Key；請設定 OPENAI_API_KEY 或 GEMINI_API_KEY`);
+  throw new Error(`LLM Provider「${provider}」缺少對應 API Key；請設定 GROQ_API_KEY、OPENAI_API_KEY 或 GEMINI_API_KEY`);
 }
 export { ensureGrounded, summarySchema };

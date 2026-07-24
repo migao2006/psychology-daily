@@ -32,11 +32,13 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: |
           test -n "$LLM_PROVIDER" || { echo "Missing repository variable: LLM_PROVIDER"; exit 1; }
           test -n "$LLM_MODEL" || { echo "Missing repository variable: LLM_MODEL"; exit 1; }
           if [ "$LLM_PROVIDER" = "openai" ]; then test -n "$OPENAI_API_KEY" || { echo "Missing Actions secret: OPENAI_API_KEY"; exit 1; }; fi
           if [ "$LLM_PROVIDER" = "gemini" ]; then test -n "$GEMINI_API_KEY" || { echo "Missing Actions secret: GEMINI_API_KEY"; exit 1; }; fi
+          if [ "$LLM_PROVIDER" = "groq" ]; then test -n "$GROQ_API_KEY" || { echo "Missing Actions secret: GROQ_API_KEY"; exit 1; }; fi
       - run: pnpm install --frozen-lockfile
       - name: Fetch, verify, and summarize research
         env:
@@ -46,6 +48,7 @@ jobs:
           LLM_MODEL: ${{ vars.LLM_MODEL }}
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
           OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+          GROQ_API_KEY: ${{ secrets.GROQ_API_KEY }}
         run: pnpm update:research
       - run: pnpm lint
       - run: pnpm typecheck

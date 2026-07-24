@@ -5,11 +5,13 @@ import { afterEach, describe, expect, it } from "vitest";
 import {
   BACKFILL_DAYS,
   BACKFILL_FALLBACK_DAYS,
+  BACKFILL_MAX_BATCH_SIZE,
   BACKFILL_NO_PROGRESS_LIMIT,
   BACKFILL_TARGET,
   advanceBackfillState,
   backfillFocusCategories,
   backfillResearch,
+  normalizeBackfillBatchSize,
 } from "@/lib/research/backfill";
 import {
   RESEARCH_CATEGORIES,
@@ -28,6 +30,15 @@ afterEach(async () => {
 });
 
 describe("research backfill", () => {
+  it("allows high-throughput batches without exceeding the safety ceiling", () => {
+    expect(normalizeBackfillBatchSize(25)).toBe(25);
+    expect(normalizeBackfillBatchSize(50)).toBe(50);
+    expect(normalizeBackfillBatchSize(500)).toBe(BACKFILL_MAX_BATCH_SIZE);
+    expect(normalizeBackfillBatchSize(Number.NaN)).toBe(
+      BACKFILL_MAX_BATCH_SIZE,
+    );
+  });
+
   it("is idempotent once the validated target is reached", async () => {
     const root = await mkdtemp(path.join(os.tmpdir(), "psychology-backfill-"));
     created.push(root);
