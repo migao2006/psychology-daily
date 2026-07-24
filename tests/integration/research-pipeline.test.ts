@@ -170,6 +170,29 @@ describe("mocked research APIs", () => {
     vi.stubGlobal("fetch", vi.fn().mockResolvedValue(response({ choices: [{ message: { content: "not-json" } }] })));
     await expect(createSummarizer().summarize(candidate)).rejects.toThrow();
   });
+  it("uses the Groq OpenAI-compatible endpoint without exposing its key", async () => {
+    process.env.LLM_PROVIDER = "groq";
+    process.env.LLM_MODEL = "configured-model";
+    process.env.GROQ_API_KEY = "test-groq-key";
+    const mocked = vi
+      .fn()
+      .mockResolvedValue(
+        response({ choices: [{ message: { content: "not-json" } }] }),
+      );
+    vi.stubGlobal("fetch", mocked);
+
+    await expect(createSummarizer().summarize(candidate)).rejects.toThrow(
+      /結構化 JSON/,
+    );
+    expect(mocked).toHaveBeenCalledWith(
+      "https://api.groq.com/openai/v1/chat/completions",
+      expect.objectContaining({
+        headers: expect.objectContaining({
+          Authorization: "Bearer test-groq-key",
+        }),
+      }),
+    );
+  });
   it("grounds the second audit in verified metadata and permits safety caveats", () => {
     const prompt = researchSummaryAuditPrompt(candidate, {
       titleZh: "注意力與青少年學習",
@@ -217,7 +240,7 @@ describe("mocked research APIs", () => {
     expect(script).not.toMatch(/^const result = await /m);
   });
   it("retains the last good research file when configuration is missing", async () => {
-    delete process.env.LLM_PROVIDER; delete process.env.LLM_MODEL; delete process.env.OPENAI_API_KEY; delete process.env.GEMINI_API_KEY;
+    delete process.env.LLM_PROVIDER; delete process.env.LLM_MODEL; delete process.env.OPENAI_API_KEY; delete process.env.GEMINI_API_KEY; delete process.env.GROQ_API_KEY;
     const root = await mkdtemp(path.join(os.tmpdir(), "psychology-daily-"));
     const daily = path.join(root, "content", "research", "daily"); await mkdir(daily, { recursive: true });
     const marker = '{"lastGood":true}\n'; await writeFile(path.join(daily, "last.json"), marker);

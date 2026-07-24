@@ -28,6 +28,7 @@ export const BACKFILL_FALLBACK_DAYS = 365;
 export const BACKFILL_MIN_PER_CATEGORY = 12;
 export const BACKFILL_PREPRINT_LIMIT = 20;
 export const BACKFILL_NO_PROGRESS_LIMIT = 3;
+export const BACKFILL_MAX_BATCH_SIZE = 50;
 
 export type BackfillOptions = {
   batchSize?: number;
@@ -50,6 +51,14 @@ export type BackfillResult = {
   openAccessCount: number;
 };
 
+export function normalizeBackfillBatchSize(requested: number): number {
+  if (!Number.isFinite(requested)) return BACKFILL_MAX_BATCH_SIZE;
+  return Math.max(
+    1,
+    Math.min(BACKFILL_MAX_BATCH_SIZE, Math.floor(requested)),
+  );
+}
+
 export async function backfillResearch(
   root = process.cwd(),
   now = new Date(),
@@ -57,11 +66,8 @@ export async function backfillResearch(
 ): Promise<BackfillResult> {
   const normalizedOptions =
     typeof options === "number" ? { batchSize: options } : options;
-  const requestedBatchSize = normalizedOptions.batchSize ?? 10;
-  const batchSize = Math.max(
-    1,
-    Math.min(10, Math.floor(requestedBatchSize)),
-  );
+  const requestedBatchSize = normalizedOptions.batchSize ?? BACKFILL_MAX_BATCH_SIZE;
+  const batchSize = normalizeBackfillBatchSize(requestedBatchSize);
   const researchDirectory = path.join(root, "content", "research");
   const indexPath = path.join(researchDirectory, "index.json");
   const statePath = path.join(researchDirectory, "backfill-state.json");
