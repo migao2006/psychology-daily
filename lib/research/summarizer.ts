@@ -175,7 +175,7 @@ class OpenAiCompatibleSummarizer implements ResearchSummarizer {
           },
         }),
       },
-      3,
+      this.provider === "groq" ? 1 : 3,
       45_000,
     );
     return data.choices[0]?.message.content ?? "";

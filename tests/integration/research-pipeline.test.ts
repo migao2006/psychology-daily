@@ -223,6 +223,62 @@ describe("mocked research APIs", () => {
       }),
     );
   });
+  it("fails over immediately instead of waiting for a Groq quota reset", async () => {
+    vi.useFakeTimers();
+    process.env.LLM_PROVIDER = "groq";
+    process.env.LLM_MODEL = "configured-groq-model";
+    process.env.GROQ_API_KEY = "test-groq-key";
+    process.env.GEMINI_API_KEY = "test-gemini-key";
+    process.env.GEMINI_FALLBACK_MODEL = "configured-gemini-model";
+    let geminiCalls = 0;
+    const mocked = vi.fn(async (input: string | URL | Request) => {
+      const url = String(input);
+      if (url.includes("api.groq.com")) {
+        return new Response("{}", {
+          status: 429,
+          headers: { "retry-after": "3600" },
+        });
+      }
+      geminiCalls += 1;
+      const content =
+        geminiCalls === 1
+          ? {
+              titleZh: "注意力與青少年學習",
+              researchQuestionZh: "研究注意力與學習之間的關聯。",
+              backgroundZh: "摘要描述青少年注意力研究。",
+              methodsZh: "研究使用調查方法。",
+              sample: {
+                size: 120,
+                populationZh: "青少年",
+                locationZh: null,
+              },
+              mainFindingsZh: ["摘要發現一。", "摘要發現二。"],
+              limitationsZh: [],
+              practicalMeaningZh: "結果仍需更多研究確認。",
+              cautionZh: "本研究不能直接確立因果。",
+              keyTerms: [],
+            }
+          : { valid: true, issues: [] };
+      return response({
+        candidates: [
+          { content: { parts: [{ text: JSON.stringify(content) }] } },
+        ],
+      });
+    });
+    vi.stubGlobal("fetch", mocked);
+
+    const request = createSummarizer().summarize(candidate);
+    await vi.runAllTimersAsync();
+    await expect(request).resolves.toEqual(
+      expect.objectContaining({ aiProvider: "gemini" }),
+    );
+    expect(
+      mocked.mock.calls.filter(([input]) =>
+        String(input).includes("api.groq.com"),
+      ),
+    ).toHaveLength(1);
+    vi.useRealTimers();
+  });
   it("grounds the second audit in verified metadata and permits safety caveats", () => {
     const prompt = researchSummaryAuditPrompt(candidate, {
       titleZh: "注意力與青少年學習",
