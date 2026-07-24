@@ -6,7 +6,7 @@ Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`docs/backfill-first-batch-handoff`
+`main`（campaign 由 GitHub Actions 排程續跑）
 
 ## Completed
 
@@ -53,4 +53,4 @@ Automated research backfill to 100（進行中）
 
 ## Draft PR
 
-https://github.com/migao2006/psychology-daily/pull/13
+NONE
