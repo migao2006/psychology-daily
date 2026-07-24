@@ -6,7 +6,7 @@ Automated research backfill to 100（進行中）
 
 ## Current Branch
 
-`fix/backfill-semantic-fallback`
+`fix/gemini-backfill-pacing`
 
 ## Completed
 
@@ -20,10 +20,11 @@ Automated research backfill to 100（進行中）
 - PR #8 已合併，第二次摘要查核現在可讀取 verified metadata。
 - PR #9 已合併，Actions 的 CommonJS `tsx` 入口已修正。
 - PR #10 已合併，分類查詢群組已改為依序執行。
+- PR #11 已合併，Semantic Scholar 只在主要來源無結果時使用。
 
 ## Remaining
 
-- 只在三個主要來源皆無合格候選時使用 Semantic Scholar fallback，再重跑第一批。
+- 為 Gemini 摘要與查核請求加入 6.5 秒最小間隔，再重跑第一批。
 - 由排程持續累積至 100 篇；若狀態變成 `stalled`，依 Actions Summary 人工檢查後決定是否 `force_retry`。
 
 ## Decisions
@@ -47,9 +48,10 @@ Automated research backfill to 100（進行中）
 - 首次正式回補 run `30053995494` 在內容寫入前因 CommonJS top-level await 失敗；main 未產生內容變更。
 - 第二次正式回補 run `30054244748` 因 Semantic Scholar 429 在內容寫入前中止；並行分類查詢需節流。
 - 第三次正式回補 run `30054451274` 的第一筆 Semantic Scholar 請求仍為 429；公開 fallback 不應阻塞已有主要來源結果。
+- 第四次正式回補 run `30054683057` 已進入 Gemini，但多次摘要／查核呼叫後因 429 在寫入前中止。
 - `main` 尚未啟用 branch protection；排程依既有受控自動寫入規則更新研究內容。
 - GitHub Actions 的第三方 actions 目前仍顯示 Node.js runtime 平台棄用警告，但 runner 以 Node.js 24 執行。
 
 ## Draft PR
 
-https://github.com/migao2006/psychology-daily/pull/11
+https://github.com/migao2006/psychology-daily/pull/12

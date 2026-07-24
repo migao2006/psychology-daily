@@ -43,6 +43,35 @@ const outputJsonSchema = {
     keyTerms: { type: "array", maxItems: 8, items: { type: "object", additionalProperties: false, required: ["original", "translationZh", "explanationZh"], properties: { original: { type: "string" }, translationZh: { type: "string" }, explanationZh: { type: "string" } } } },
   },
 };
+export const GEMINI_REQUEST_INTERVAL_MS = 6_500;
+
+export function nextProviderRequestDelay(
+  lastStartedAt: number | null,
+  now: number,
+  minimumIntervalMs: number,
+): number {
+  return lastStartedAt === null
+    ? 0
+    : Math.max(0, lastStartedAt + minimumIntervalMs - now);
+}
+
+class ProviderRequestPacer {
+  private lastStartedAt: number | null = null;
+
+  constructor(private readonly minimumIntervalMs: number) {}
+
+  async wait(): Promise<void> {
+    const delay = nextProviderRequestDelay(
+      this.lastStartedAt,
+      Date.now(),
+      this.minimumIntervalMs,
+    );
+    if (delay > 0) {
+      await new Promise((resolve) => setTimeout(resolve, delay));
+    }
+    this.lastStartedAt = Date.now();
+  }
+}
 function ensureGrounded(summary: SummaryFields, source: ResearchSource): void {
   if (summary.sample.size !== null) {
     const digits = String(summary.sample.size);
@@ -143,34 +172,46 @@ class OpenAiSummarizer implements ResearchSummarizer {
   }
 }
 class GeminiSummarizer implements ResearchSummarizer {
+  private readonly pacer = new ProviderRequestPacer(
+    GEMINI_REQUEST_INTERVAL_MS,
+  );
+
   constructor(private key: string, private model: string) {}
   async summarize(source: ResearchSource): Promise<ResearchArticle> {
     const endpoint = `https://generativelanguage.googleapis.com/v1beta/models/${encodeURIComponent(this.model)}:generateContent`;
+    await this.pacer.wait();
     const data = await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(endpoint, { method: "POST", headers: { "Content-Type": "application/json", "x-goog-api-key": this.key }, body: JSON.stringify({ contents: [{ role: "user", parts: [{ text: buildResearchSummaryPrompt(source) }] }], generationConfig: { temperature: 0, responseMimeType: "application/json", responseJsonSchema: outputJsonSchema } }) }, 3, 45_000);
     const summary = parseSummary(data.candidates[0]?.content.parts[0]?.text ?? "");
-    const audit = parseAudit(
-      (
-          await fetchJson<{ candidates: Array<{ content: { parts: Array<{ text: string }> } }> }>(
-            endpoint,
+    await this.pacer.wait();
+    const auditData = await fetchJson<{
+      candidates: Array<{ content: { parts: Array<{ text: string }> } }>;
+    }>(
+      endpoint,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          "x-goog-api-key": this.key,
+        },
+        body: JSON.stringify({
+          contents: [
             {
-              method: "POST",
-              headers: {
-                "Content-Type": "application/json",
-                "x-goog-api-key": this.key,
-              },
-              body: JSON.stringify({
-                contents: [{ role: "user", parts: [{ text: researchSummaryAuditPrompt(source, summary) }] }],
-                generationConfig: {
-                  temperature: 0,
-                  responseMimeType: "application/json",
-                  responseJsonSchema: auditJsonSchema,
-                },
-              }),
+              role: "user",
+              parts: [{ text: researchSummaryAuditPrompt(source, summary) }],
             },
-            3,
-            45_000,
-          )
-        ).candidates[0]?.content.parts[0]?.text ?? "",
+          ],
+          generationConfig: {
+            temperature: 0,
+            responseMimeType: "application/json",
+            responseJsonSchema: auditJsonSchema,
+          },
+        }),
+      },
+      3,
+      45_000,
+    );
+    const audit = parseAudit(
+      auditData.candidates[0]?.content.parts[0]?.text ?? "",
     );
     if (!audit.valid) {
       throw new CandidateRejectionError(
