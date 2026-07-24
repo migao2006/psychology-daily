@@ -1,0 +1,68 @@
+{
+  "id": "10-1007-s10612-026-09905-z",
+  "titleZh": "監獄研究中的情感作為實踐：情感、經驗與轉化的探索",
+  "titleOriginal": "Affect as Praxis in Prison Research: An Exploration of Emotion, Experience, and Transformation",
+  "authors": [
+    "Dwayne Antojado",
+    "Scott Beattie"
+  ],
+  "journalOrRepository": "Critical Criminology",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "情感作為實踐如何重塑當代刑罰學探究、挑戰以數據為驅動的方法論，並在刑事司法系統中促成轉化？",
+  "backgroundZh": "在當代刑罰學探究領域中，將情感作為實踐融入研究，有助於展現親身經歷的轉化潛力，並重新配置刑事司法系統中傳統的知識生產模式。",
+  "methodsZh": "本研究汲取女性主義知識論與關懷政治學，並在方法論上架橋理論與實踐，以闡明個人敘事、具身情感與情感投入如何作為挑戰去人性化方法的關鍵工具。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "曾經入監者的具身實踐透過敘事重構與同理抵抗，重塑了刑罰論述。",
+    "情感作為實踐有助於挑戰去人性化且以數據為驅動的方法論，並超越如再犯率等還原論指標。"
+  ],
+  "limitationsZh": [],
+  "practicalMeaningZh": "本研究強調情感在重塑學術探究與刑事司法實踐上的不可或缺性，為重新想像轉化式正義與恢復人性尊嚴提供了深刻見解。",
+  "cautionZh": "根據研究設計推論，本研究的同儕審查狀態為未知，內容僅依據摘要，不得過度推論因果關係，未提供具體樣本數與族群特徵，且仍需更多研究來證實相關發現。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Affect as praxis",
+      "translationZh": "情感作為實踐",
+      "explanationZh": "指將情感融入研究與行動中，作為一種知識生產與挑戰傳統方法的實踐方式。"
+    },
+    {
+      "original": "Feminist epistemologies",
+      "translationZh": "女性主義知識論",
+      "explanationZh": "強調經驗、情感與主體性在知識建構中重要性的哲學與理論觀點。"
+    },
+    {
+      "original": "Transformative justice",
+      "translationZh": "轉化式正義",
+      "explanationZh": "一種尋求從根本上改變或重塑刑事司法系統與社會關係的正義取向。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s10612-026-09905-z",
+  "doi": "10.1007/s10612-026-09905-z",
+  "doiUrl": "https://doi.org/10.1007/s10612-026-09905-z",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s10612-026-09905-z.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

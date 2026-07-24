@@ -1,0 +1,64 @@
+{
+  "id": "10-4324-9781003627890-25",
+  "titleZh": "透過採取建構主義的就業力學習方法來轉變畢業生成果",
+  "titleOriginal": "Transforming Graduate Outcomes by Adopting a Constructivist Approach to Employability Learning",
+  "authors": [
+    "Kim Bradley-Cole"
+  ],
+  "journalOrRepository": "Approaching the Classroom Creatively",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "如何透過在英國高等教育中採用建構主義的就業力學習方法來轉變畢業生成果？",
+  "backgroundZh": "在英國高等教育中，教授就業力仍然是一個持續存在的挑戰，特別是重技能的方法對於轉變畢業生成果（特別是擴大參與學生）幾乎沒有幫助。",
+  "methodsZh": "溫徹斯特大學心理學系開發了 Psychology Futures，這是一個具創造性、整合性的教學路徑，嵌入所有大學部年級，並採用行動研究方法以確保能持續回應學生的需求。",
+  "sample": {
+    "size": null,
+    "populationZh": "英國大學心理系學生",
+    "locationZh": "英國溫徹斯特大學"
+  },
+  "mainFindingsZh": [
+    "大多數學生回報自我理解增加。",
+    "大多數學生回報職涯自信心增加。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，未提供詳細的量化樣本數與對照組資訊。"
+  ],
+  "practicalMeaningZh": "高等教育機構可以透過建構主義的教學路徑與個人導師制度，支持學生發展個人化的職涯認同。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依摘要撰寫，根據研究設計推論無法確定因果關係，樣本限制為缺乏詳細數據與對照，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Constructivist Approach",
+      "translationZh": "建構主義方法",
+      "explanationZh": "強調透過自我發現與反思來建構個人意義與職涯認同的學習方式。"
+    },
+    {
+      "original": "Employability Learning",
+      "translationZh": "就業力學習",
+      "explanationZh": "培養學生未來就業所需技能與自我理解的教育過程。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.4324/9781003627890-25",
+  "doi": "10.4324/9781003627890-25",
+  "doiUrl": "https://doi.org/10.4324/9781003627890-25",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

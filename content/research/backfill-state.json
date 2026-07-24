@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "target": 100,
-  "status": "running",
+  "status": "completed",
   "activeWindowDays": 180,
   "noProgressRuns": 0,
-  "lastRunAt": "2026-07-24T03:57:57.811Z",
-  "completedAt": null,
+  "lastRunAt": "2026-07-24T04:13:05.435Z",
+  "completedAt": "2026-07-24T04:13:05.435Z",
   "rejectedCandidates": [
     {
       "fingerprint": "10.17605/osf.io/8r4bn",
@@ -91,6 +91,51 @@
       "fingerprint": "10.5281/zenodo.21499246",
       "code": "metadata_mismatch",
       "attemptedAt": "2026-07-24T03:57:57.811Z"
+    },
+    {
+      "fingerprint": "10.3389/fpsyt.2026.1861287",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21494021",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.3389/fpsyg.2026.1859781",
+      "code": "summary_audit_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.5281/zenodo.21499499",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.6084/m9.figshare.33027728.v3",
+      "code": "metadata_mismatch",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.15343/0104-7809.202650e18382025p",
+      "code": "summary_audit_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.51878/paedagogy.v6i3.13866",
+      "code": "summary_audit_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.4274/cjms.2026.2026-69",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
+    },
+    {
+      "fingerprint": "10.1136/bmjment-2025-302389",
+      "code": "summary_grounding_failed",
+      "attemptedAt": "2026-07-24T04:13:05.435Z"
     }
   ]
 }

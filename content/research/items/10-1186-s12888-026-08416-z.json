@@ -1,0 +1,76 @@
+{
+  "id": "10-1186-s12888-026-08416-z",
+  "titleZh": "近期有自殺意念的護理學生之焦慮、憂鬱症狀與自殺傾向的網路分析",
+  "titleOriginal": "Network analysis of anxiety, depressive symptoms, and suicidal tendencies among nursing students with recent suicidal ideation",
+  "authors": [
+    "Feiyang Nie",
+    "Wenjie Liang",
+    "Zhengyan Jiang",
+    "Chaohua Chen",
+    "Yuanping Qiu",
+    "Yu Fang"
+  ],
+  "journalOrRepository": "BMC Psychiatry",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討近期有自殺意念的護理學生之焦慮、憂鬱症狀與自殺傾向之間的複雜相互關係。",
+  "backgroundZh": "自殺預防日益受到重視，特別是針對有自殺意念的群體。護理學生面臨學術與臨床要求的獨特壓力，導致焦慮、憂鬱症狀與自殺傾向的比率很高。過去研究多關注盛行率與單一變項關聯，這些心理健康問題之間的複雜相互關係仍有待研究。",
+  "methodsZh": "採用橫斷研究設計，透過線上調查收集焦慮症狀（GAD-7）、憂鬱症狀（PHQ-9）與自殺傾向（BSI-CV）的資料。使用高斯圖模型與圖形最小絕對收縮和選擇運算子演算法進行網路建模，以識別關鍵症狀及其關係，並透過拔靴法評估網路穩定性。",
+  "sample": {
+    "size": 558,
+    "populationZh": "護理學生",
+    "locationZh": "廣西健康科學學院"
+  },
+  "mainFindingsZh": [
+    "網路模型包含30個症狀節點，平均可預測性為62%，顯示強烈的相互連結。",
+    "最核心的症狀為運動改變、實際自殺準備與缺乏精力。",
+    "易怒、快感缺失與憂鬱情緒成為關鍵的橋樑症狀，連結了焦慮、憂鬱與自殺傾向群體。",
+    "在自殺意念與自殺傾向的獨立網路中，實際自殺準備是最核心的症狀，而生存意願與被動自殺意願作為關鍵橋樑節點。"
+  ],
+  "limitationsZh": [
+    "本研究為橫斷研究設計，無法確立因果關係。"
+  ],
+  "practicalMeaningZh": "本研究的發現為針對此高風險群體發展具針對性的介入措施、改善心理健康與預防自殺行為提供了整體性的視角，並為自殺預防提供新穎的保護性標的。",
+  "cautionZh": "根據研究設計推論，本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，本分析僅依摘要進行，具備因果限制、樣本限制，且仍需更多研究。",
+  "keyTerms": [
+    {
+      "original": "Network analysis",
+      "translationZh": "網路分析",
+      "explanationZh": "一種用於探索心理健康問題中多個變項與症狀之間複雜相互關係的統計建模方法。"
+    },
+    {
+      "original": "Cross-sectional study",
+      "translationZh": "橫斷研究",
+      "explanationZh": "在單一時間點收集資料的研究設計，僅能呈現相關性而無法確立因果關係。"
+    },
+    {
+      "original": "Suicidal ideation",
+      "translationZh": "自殺意念",
+      "explanationZh": "考慮或企圖自殺的想法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1186/s12888-026-08416-z",
+  "doi": "10.1186/s12888-026-08416-z",
+  "doiUrl": "https://doi.org/10.1186/s12888-026-08416-z",
+  "openAccessUrl": "https://doi.org/10.1186/s12888-026-08416-z",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

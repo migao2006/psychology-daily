@@ -1,0 +1,78 @@
+{
+  "id": "10-3390-bs16071238",
+  "titleZh": "大學生的心理韌性、拒絕敏感性與短影音成癮之間的關係：一項跨落後分析",
+  "titleOriginal": "Relationships Between Psychological Resilience, Rejection Sensitivity, and Short-Video Addiction in University Students: A Cross-Lagged Analysis",
+  "authors": [
+    "Yang Liu",
+    "Min Xie",
+    "Shuyue Zhang"
+  ],
+  "journalOrRepository": "Behavioral Sciences",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在檢驗大學生群體中，心理韌性、拒絕敏感性和短影音成癮之間的縱向關係。",
+  "backgroundZh": "在抖音和TikTok等平台廣泛使用的背景下，短影音成癮已成為日益嚴重的行為問題，對年輕成人的心理健康構成潛在風險。心理韌性與拒絕敏感性被認為是發展成癮性媒體使用時的重要保護因子與風險因子，然而這些變項之間的縱向互動關係仍不夠明確。",
+  "methodsZh": "採用兩波次、間隔六個月的縱向設計。參與者完成了評估短影音成癮、心理韌性（CD-RISC-10）和拒絕敏感性（RSQ）的經過驗證的量表。運用跨落後面板模型（CLPM）來探討這些變項之間的雙向預測關聯，同時控制自迴歸效應。",
+  "sample": {
+    "size": 1394,
+    "populationZh": "中國大學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "所有三個建構在兩個測量波次之間均表現出顯著的時間穩定性。",
+    "時間點一較高的心理韌性能預測時間點二較低的拒絕敏感性與較低的短影音成癮。",
+    "時間點一較高的拒絕敏感性能預測隨時間推移較低的心理韌性與較高的短影音成癮。",
+    "這些縱向關聯雖具統計顯著性，但其效果量適中。"
+  ],
+  "limitationsZh": [
+    "本研究的縱向關聯效果量適中。"
+  ],
+  "practicalMeaningZh": "旨在增強心理韌性和降低拒絕敏感性的介入措施，可能有助於預防短影音成癮並促進大學生更健康的數位參與。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本分析僅依據英文摘要，研究為相關性設計無法推論因果，樣本僅限特定中國大學生，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Short-video addiction",
+      "translationZh": "短影音成癮",
+      "explanationZh": "指對觀看短影音平台產生過度且難以控制的依賴行為。"
+    },
+    {
+      "original": "Psychological resilience",
+      "translationZh": "心理韌性",
+      "explanationZh": "面對逆境或壓力時的心理適應與復原能力。"
+    },
+    {
+      "original": "Rejection sensitivity",
+      "translationZh": "拒絕敏感性",
+      "explanationZh": "對被他人拒絕的預期、感知與過度反應傾向。"
+    },
+    {
+      "original": "Cross-Lagged Analysis",
+      "translationZh": "跨落後分析",
+      "explanationZh": "一種用於探討多個變項在不同時間點之間前後預測關係的統計方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/bs16071238",
+  "doi": "10.3390/bs16071238",
+  "doiUrl": "https://doi.org/10.3390/bs16071238",
+  "openAccessUrl": "https://www.mdpi.com/2076-328X/16/7/1238/pdf?version=1784621458",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

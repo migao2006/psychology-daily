@@ -1,0 +1,74 @@
+{
+  "id": "10-3389-fpsyg-2026-1834444",
+  "titleZh": "再次懷孕期間不良妊娠結局及心理結果相關因素：一項橫斷面研究",
+  "titleOriginal": "Factors associated with adverse pregnancy outcome and psychological outcomes during re-pregnancy: a cross-sectional study",
+  "authors": [
+    "Ling Liu",
+    "Chongyu Yue",
+    "Yan Wang",
+    "Yiqian Wang",
+    "Meng Zhang"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討具備反覆性自然流產病史的患者在再次懷孕期間的知覺不確定感現況，並辨識相關的影響因素。",
+  "backgroundZh": "反覆性自然流產會導致巨大的心理創傷與不良的妊娠結局。",
+  "methodsZh": "本橫斷面研究採用便利抽樣法，於2025年6月至11月在一所三級甲等醫院招募再次懷孕且有反覆性自然流產病史的孕婦。使用一般人口學問卷、不確定感不耐量量表-12、廣泛性焦慮量表、簡易因應方式問卷以及家庭知覺社會支持量表收集資料，並進行單變量與多元線性迴歸分析。",
+  "sample": {
+    "size": 218,
+    "populationZh": "再次懷孕且有反覆性自然流產病史的孕婦",
+    "locationZh": "三級甲等醫院"
+  },
+  "mainFindingsZh": [
+    "再次懷孕之反覆性自然流產患者的知覺不確定感處於中等水準。",
+    "多元線性迴歸分析顯示，教育程度、家庭月收入、流產次數、晚期流產史、人工生殖技術史、家庭社會支持、廣泛性焦慮症以及因應方式，是與知覺不確定感相關的顯著獨立因素。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷面研究，無法確立因果關係。",
+    "樣本來自單一三級甲等醫院且採用便利抽樣，推論可能受限。"
+  ],
+  "practicalMeaningZh": "醫療人員應注意早期識別患者的不確定感、增強對患者的心理支持，並改善其心理健康。",
+  "cautionZh": "本研究同儕審查狀態為未知，且本內容僅依摘要進行分析。根據研究設計推論，本研究具備因果限制、樣本限制，且仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Recurrent spontaneous abortion",
+      "translationZh": "反覆性自然流產",
+      "explanationZh": "指連續發生多次自然流產的情況。"
+    },
+    {
+      "original": "Perceived uncertainty",
+      "translationZh": "知覺不確定感",
+      "explanationZh": "個體在面對疾病或懷孕等情境時，對於事件意義感到無法準確預測的認知狀態。"
+    },
+    {
+      "original": "Cross-sectional study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在單一時間點收集資料的研究設計，適用於探討變項間的相關性。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1834444",
+  "doi": "10.3389/fpsyg.2026.1834444",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1834444",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1834444/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

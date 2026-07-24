@@ -1,0 +1,72 @@
+{
+  "id": "10-51470-bf-2026-6-1-45",
+  "titleZh": "社群媒體引發的年輕成人焦慮與憂鬱：數位時代心理健康危機",
+  "titleOriginal": "Social media induced anxiety and depression among young adults: A digital age mental health crisis",
+  "authors": [
+    "Urmilla John",
+    "Shiwali Gupta",
+    "Satish Kumar"
+  ],
+  "journalOrRepository": "Biotechnology Frontiers",
+  "publicationDate": "2026-03-20",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "systematic_review",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "探討社群媒體使用與年輕成人心理健康之間的關係。",
+  "backgroundZh": "社群媒體平台的迅速擴展改變了年輕成人的溝通、社交互動與認同形成。雖然這些平台促進了社會連結與自我表達，但越來越多的證據表明，不適應的社群媒體使用模式與焦慮、憂鬱、睡眠障礙、情緒失調以及心理福祉降低有關。",
+  "methodsZh": "本研究為一篇敘事性回顧，批判性地綜合了2010年至2025年間發表的關於社群媒體使用與年輕成人心理健康關係的實證研究、縱向調查、系統性回顧與統合分析的現有證據。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "被動瀏覽、向上社會比較、網路霸凌、問題性社群媒體使用、錯失恐懼症（FOMO）以及睡眠結構受破壞是導致心理困擾的主要機制。",
+    "證據支持雙向關係，易受影響的個體可能會從事進一步加劇焦慮與憂鬱症狀的不適應線上行為。",
+    "神經行為學證據顯示，社群媒體參與會活化類似於行為成癮中所涉及的獎勵處理路徑。",
+    "性別、人格特質、情緒脆弱性以及演算法驅動的暴露模式等調節因素會進一步影響心理結果。"
+  ],
+  "limitationsZh": [
+    "依賴橫斷面數據與自我報告測量。"
+  ],
+  "practicalMeaningZh": "累積的證據凸顯了對數位素養計畫、早期臨床篩檢以及旨在促進更健康線上環境的平台級介入措施的迫切需求。",
+  "cautionZh": "根據研究設計推論，本篇同儕審查狀態為未知，內容僅依摘要，且具因果限制與樣本限制，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "fear of missing out (FOMO)",
+      "translationZh": "錯失恐懼症",
+      "explanationZh": "擔心錯過他人愉快經驗或重要活動的焦慮感受。"
+    },
+    {
+      "original": "upward social comparison",
+      "translationZh": "向上社會比較",
+      "explanationZh": "將自己與表現更好或更有優勢的人進行比較的心理歷程。"
+    },
+    {
+      "original": "problematic social media use",
+      "translationZh": "問題性社群媒體使用",
+      "explanationZh": "難以控制的社群媒體使用模式，並導致負面生活後果。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.51470/bf.2026.6.1.45",
+  "doi": "10.51470/bf.2026.6.1.45",
+  "doiUrl": "https://doi.org/10.51470/bf.2026.6.1.45",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

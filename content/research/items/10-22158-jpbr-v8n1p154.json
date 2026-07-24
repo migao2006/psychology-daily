@@ -1,0 +1,72 @@
+{
+  "id": "10-22158-jpbr-v8n1p154",
+  "titleZh": "精神健康與失眠之間的關聯是否存在性別差異？來自網路分析的證據",
+  "titleOriginal": "Are there Gender Differences in the Association between Mental Health and Insomnia? Evidence from Network Analyses",
+  "authors": [
+    "Jing Zhang",
+    "Pengjin Ding",
+    "Qian Yang",
+    "Zheng Zhang",
+    "Lan Pang",
+    "Fenrong Liang",
+    "Ying Luo",
+    "Ying Huang"
+  ],
+  "journalOrRepository": "Journal of Psychology &amp; Behavior Research",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "根據3P模型與心理病理網路理論，憂鬱、焦慮、壓力與失眠之間的症狀網路如何被解釋？",
+  "backgroundZh": "本研究旨在探討如何透過3P模型與心理病理網路理論，來解釋連結憂鬱、焦慮、壓力與失眠的症狀網路。",
+  "methodsZh": "採用橫斷面調查，使用憂鬱焦慮壓力量表-21（DASS-21）與雅典失眠量表（AIS）收集629名受試者的資料，並使用網路分析來確定症狀的整體結構並識別性別差異。",
+  "sample": {
+    "size": 629,
+    "populationZh": "受試者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "憂鬱、焦慮、壓力與失眠之間具有高度的相互關聯性，其中白天福祉與不安感是最核心的症狀之一。",
+    "網路結構存在性別差異，女性受試者具有較高的焦慮症狀水準，而男性受試者回報了較高的憂鬱症狀水準。",
+    "精神健康症狀與失眠之間的關係在不同性別之間有所不同，其中憂鬱對男性的失眠影響較大，而焦慮對女性的失眠影響較大。"
+  ],
+  "limitationsZh": [
+    "本研究採用橫斷面設計，無法建立明確的因果推論。"
+  ],
+  "practicalMeaningZh": "這些結果暗示了在治療失眠時應採取基於性別的介入目標。",
+  "cautionZh": "根據研究設計推論，本研究採用橫斷面設計，無法確定因果關係。樣本數為629名受試者，且本摘要未提供地點資訊。同儕審查狀態為未知，且本分析僅依據英文摘要。未來仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Network Analyses",
+      "translationZh": "網路分析",
+      "explanationZh": "一種用於分析心理症狀之間複雜交互作用與核心結構的統計方法。"
+    },
+    {
+      "original": "Cross-sectional survey",
+      "translationZh": "橫斷面調查",
+      "explanationZh": "在單一時間點收集資料的研究方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.22158/jpbr.v8n1p154",
+  "doi": "10.22158/jpbr.v8n1p154",
+  "doiUrl": "https://doi.org/10.22158/jpbr.v8n1p154",
+  "openAccessUrl": "https://www.scholink.org/ojs/index.php/jpbr/article/download/57883/13846",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

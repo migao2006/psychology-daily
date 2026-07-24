@@ -1,0 +1,81 @@
+{
+  "id": "10-3389-fpubh-2026-1640998",
+  "titleZh": "主動脈剝離手術後病人健康促進行為之軌跡與影響因素：一項縱貫性研究",
+  "titleOriginal": "The trajectory and influencing factors of health-promoting behavior in patients after aortic dissection surgery: a longitudinal study",
+  "authors": [
+    "Zhengkun He",
+    "Haiyan Pei",
+    "Qu Chen",
+    "Chaolin Fan",
+    "Zhonggui Shan",
+    "Yizhen Wang",
+    "Yan Chen"
+  ],
+  "journalOrRepository": "Frontiers in Public Health",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "探討主動脈剝離手術後病人健康促進行為的軌跡並識別其影響因素。",
+  "backgroundZh": "健康促進行為對於改善主動脈剝離手術後病人的健康結果指標至關重要，然而目前針對中國主動脈剝離病人健康促進行為軌跡的研究仍很有限。",
+  "methodsZh": "這是一項前瞻性縱貫性研究，納入自2024年8月至12月於廈門醫院心血管外科接受主動脈剝離手術的病人。病人在出院時（T0）、術後1個月（T1）、3個月（T2）與6個月（T3）進行評估，使用健康促進行為量表進行評估。採用生長混合模型（GMM）分析四個觀察期內的異質性健康促進行為子群，並使用單變量與邏輯斯迴歸分析來識別影響健康促進行為分類的因素及獨立危險因子。",
+  "sample": {
+    "size": null,
+    "populationZh": "主動脈剝離手術後病人",
+    "locationZh": "廈門醫院心血管外科"
+  },
+  "mainFindingsZh": [
+    "本研究識別出三種主動脈剝離病人的健康促進行為軌跡：低穩定組（33.80%）、中等波動組（43.20%）與高增長組軌跡（23%）。",
+    "與低穩定組相比，邏輯斯迴歸分析顯示中等波動組的顯著影響因素為年齡與高血壓病史。",
+    "高增長組與低穩定組的比較顯示，年齡、教育程度與高血壓病史皆為顯著影響因素。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為縱貫性設計，樣本來自特定醫院心血管外科。"
+  ],
+  "practicalMeaningZh": "理解這些發展軌跡的特徵，對於掌握不同健康促進行為子群的動態及指引有效介入措施至關重要。",
+  "cautionZh": "本同儕審查狀態為未知，本內容僅依摘要，基於縱貫性設計推論相關性而非因果關係，樣本受限於特定醫院，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "health-promoting behavior",
+      "translationZh": "健康促進行為",
+      "explanationZh": "有助於維持或提升健康狀態的行為。"
+    },
+    {
+      "original": "aortic dissection",
+      "translationZh": "主動脈剝離",
+      "explanationZh": "主動脈壁內膜撕裂的嚴重血管疾病。"
+    },
+    {
+      "original": "longitudinal study",
+      "translationZh": "縱貫性研究",
+      "explanationZh": "在多個時間點追蹤相同對象的研究設計。"
+    },
+    {
+      "original": "Growth mixture model",
+      "translationZh": "生長混合模型",
+      "explanationZh": "用於識別不同發展軌跡子群的統計模型。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpubh.2026.1640998",
+  "doi": "10.3389/fpubh.2026.1640998",
+  "doiUrl": "https://doi.org/10.3389/fpubh.2026.1640998",
+  "openAccessUrl": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1640998/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

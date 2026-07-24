@@ -1,0 +1,74 @@
+{
+  "id": "10-1371-journal-pmen-0000421",
+  "titleZh": "災難與痛苦：雙重負擔。巴基斯坦COVID-19大流行期間醫師的憂鬱、焦慮與創傷後壓力症候群",
+  "titleOriginal": "Disaster and distress: The double burden. Depression, anxiety, and post-traumatic stress disorder in doctors during the COVID-19 pandemic in Pakistan",
+  "authors": [
+    "Madah Fatima",
+    "Nazish Imran",
+    "Irum Aamer",
+    "Somia Iqtadar",
+    "Bilquis Shabbir"
+  ],
+  "journalOrRepository": "PLOS Mental Health",
+  "publicationDate": "2026-01-29",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "探討COVID-19大流行期間醫師憂鬱、焦慮與創傷後壓力症候群（PTSD）的盛行率，並探討各種相關因素。",
+  "backgroundZh": "醫療照護提供者由於獨特的工作需求，面臨職業壓力、心理痛苦與心理健康問題的高風險。COVID-19大流行對醫療照護帶來的空前負面影響，進一步加劇了此風險。",
+  "methodsZh": "於2021年7月至11月透過線上表單與紙本問卷，在巴基斯坦拉合爾的三級照護醫院的臨床醫師中進行橫斷面調查。使用患者健康問卷（PHQ-9）、廣泛性焦慮量表（GAD-7）與事件影響量表修正版（IES-R）。應用非參數曼-惠特尼U檢定與卡方獨立性檢定進行推論性資料分析。",
+  "sample": {
+    "size": 304,
+    "populationZh": "年齡介於20至60歲、工作於巴基斯坦拉合爾公立醫院的醫師",
+    "locationZh": "巴基斯坦拉合爾三級照護醫院"
+  },
+  "mainFindingsZh": [
+    "憂鬱的盛行率為25%，焦慮為31.9%，創傷後壓力症候群（PTSD）為15.8%，重度憂鬱為13.8%，重度焦慮為7.2%。",
+    "女性與初級員工的焦慮與憂鬱症狀相對較嚴重。",
+    "精神病史與重度憂鬱及創傷後壓力症候群（PTSD）有關，但與焦慮無關。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷面調查，無法確立因果關係。",
+    "樣本採用非機率便利抽樣，且侷限於特定地區的公立醫院醫師。"
+  ],
+  "practicalMeaningZh": "本研究結果強調關注醫療照護提供者心理福祉的重要性，並有助於在疫情過後仍優先辨識出有效的介入措施。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要進行分析。根據研究設計推論，本研究為橫斷面設計，無法證實因果關係；樣本受限於特定地區的便利抽樣醫師；且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "cross-sectional",
+      "translationZh": "橫斷面",
+      "explanationZh": "一種在單一時間點收集資料的研究設計，用於評估特定族群的狀況與相關因素。"
+    },
+    {
+      "original": "post-traumatic stress disorder (PTSD)",
+      "translationZh": "創傷後壓力症候群",
+      "explanationZh": "經歷創傷事件後可能產生的心理健康狀況。"
+    },
+    {
+      "original": "prevalence",
+      "translationZh": "盛行率",
+      "explanationZh": "在特定時間點，某群體中某種狀況存在的比例。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1371/journal.pmen.0000421",
+  "doi": "10.1371/journal.pmen.0000421",
+  "doiUrl": "https://doi.org/10.1371/journal.pmen.0000421",
+  "openAccessUrl": "https://doi.org/10.1371/journal.pmen.0000421",
+  "sourceApis": [
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

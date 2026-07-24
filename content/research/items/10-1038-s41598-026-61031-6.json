@@ -1,0 +1,80 @@
+{
+  "id": "10-1038-s41598-026-61031-6",
+  "titleZh": "員工在認知任務中對演算法領導者的建言意願高於人類領導者：基於公平感知與心理安全感",
+  "titleOriginal": "Employees show greater willingness to voice toward algorithmic than human leaders in cognitive tasks through fairness perception and psychological safety",
+  "authors": [
+    "Shiqi Wang",
+    "Xiaoling Sun",
+    "Suhang Ni",
+    "Mingzheng Wu",
+    "Kexin Hu"
+  ],
+  "journalOrRepository": "Scientific Reports",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "員工在面對演算法領導者與人類領導者時，其建言行為的意願是否有差異？其潛在機制與影響條件為何？",
+  "backgroundZh": "隨著人工智慧技術的發展，演算法逐漸承擔組織中原由人類經理人完成的管理任務，進而出現了演算法領導者與人類部屬之間的新型人機互動關係。探索人們如何回應演算法領導者以及他們對人類領導者的不同反應具有重要價值。",
+  "methodsZh": "本研究進行了三項實驗研究，均使用基於情境的材料。跨越三項研究中，自變項為領導者類型（演算法領導者與人類領導者），依變項為對領導者的建言意願。研究一檢驗人類員工對不同類型領導者的建言意願差異；研究二探討任務類型的調節作用，檢驗在認知與情感任務中與不同類型領導者互動時的建言意願差異；研究三聚焦於序列中介機制，測量實驗中的公平感知與心理安全感。",
+  "sample": {
+    "size": null,
+    "populationZh": "招募自 Credamo 平台的參與者",
+    "locationZh": "中國"
+  },
+  "mainFindingsZh": [
+    "研究一發現，員工對演算法領導者的建言意願高於人類領導者。",
+    "研究二發現，任務類型影響了兩種領導者類型之間的差異，員工在認知任務中對演算法領導者的建言意願高於人類領導者，但在情感任務中未發現此效果。",
+    "研究三發現，個體對演算法領導者的公平感知高於人類領導者，這與更高的心理安全感相關，進而帶來更高的建言意願。"
+  ],
+  "limitationsZh": [
+    "本研究使用基於情境的實驗材料，可能與真實組織環境中的實際行為有所不同。",
+    "樣本招募自特定平台並基於中國，推論範圍可能受限。"
+  ],
+  "practicalMeaningZh": "本研究揭示了演算法領導與人類部屬建言意願之間的關聯，並為在組織環境中部署與設計演算法系統提供了實務見解。",
+  "cautionZh": "根據研究設計推論，本研究僅呈現相關性而非直接因果關係。本同儕審查狀態未知，且僅依摘要進行分析，樣本與情境具有侷限性，仍需更多研究加以佐證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "voice behavior",
+      "translationZh": "建言行為",
+      "explanationZh": "員工向上溝通與促進組織發展的關鍵行為。"
+    },
+    {
+      "original": "algorithmic leader",
+      "translationZh": "演算法領導者",
+      "explanationZh": "在組織中承擔管理任務的演算法系統。"
+    },
+    {
+      "original": "fairness perception",
+      "translationZh": "公平感知",
+      "explanationZh": "個體對於公平性的主觀知覺。"
+    },
+    {
+      "original": "psychological safety",
+      "translationZh": "心理安全感",
+      "explanationZh": "個體對團隊或組織環境中冒險行為安全性的認知。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1038/s41598-026-61031-6",
+  "doi": "10.1038/s41598-026-61031-6",
+  "doiUrl": "https://doi.org/10.1038/s41598-026-61031-6",
+  "openAccessUrl": "https://www.nature.com/articles/s41598-026-61031-6_reference.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

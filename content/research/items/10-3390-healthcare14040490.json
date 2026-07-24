@@ -1,0 +1,74 @@
+{
+  "id": "10-3390-healthcare14040490",
+  "titleZh": "抑鬱、焦慮和壓力對秘魯醫療專業人員心理健康的影響",
+  "titleOriginal": "Impact of Depression, Anxiety, and Stress on Mental Health Among Peruvian Healthcare Professionals",
+  "authors": [
+    "Diego Ismael Valencia-Pecho",
+    "Silvana Varela-Guevara",
+    "Miguel Basauri-Delgado",
+    "Jacksaint Saintila"
+  ],
+  "journalOrRepository": "Healthcare",
+  "publicationDate": "2026-02-14",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "experimental",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "探討抑鬱、焦慮和壓力相關症狀對醫療專業人員心理健康的影響。",
+  "backgroundZh": "醫療專業人員的心理健康是臨床實踐的關鍵層面，因為他們暴露在要求嚴苛的工作條件下，經常導致抑鬱、焦慮和壓力的症狀。",
+  "methodsZh": "進行了一項定量、非實驗、橫斷面研究，使用抑鬱、焦慮和壓力量表（DASS-21）以及心理健康量表-5（MHI-5）兩種工具進行施測。",
+  "sample": {
+    "size": 123,
+    "populationZh": "醫療專業人員",
+    "locationZh": "秘魯一家醫院"
+  },
+  "mainFindingsZh": [
+    "超過75%的醫療專業人員呈現輕度程度的抑鬱（82.1%）與壓力（89.4%），超過半數報告輕度程度的焦慮（63.4%）。",
+    "根據年齡與服務年資觀察到顯著差異（p < 0.05）。",
+    "心理健康與抑鬱（r = −0.706）、焦慮（r = −0.742）以及壓力（r = −0.698）呈顯著負相關。",
+    "預測模型解釋了59.2%的變異量，且具有中等效果量。"
+  ],
+  "limitationsZh": [
+    "採用橫斷面研究設計，無法確立因果關係。",
+    "樣本僅來自秘魯一家醫院的123名醫療專業人員，推論範圍受限。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，這些相關性的強度突顯了需要更好地理解並解決醫療人員所經歷的負面情緒影響。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，本分析僅依據研究摘要，研究設計無法確立因果，樣本僅來自秘魯一家醫院的123名醫療專業人員且具推論限制，仍需更多研究來證實。",
+  "keyTerms": [
+    {
+      "original": "Depression, Anxiety, and Stress Scale (DASS-21)",
+      "translationZh": "抑鬱、焦慮和壓力量表（DASS-21）",
+      "explanationZh": "用於評估抑鬱、焦慮和壓力症狀的測量工具。"
+    },
+    {
+      "original": "Mental Health Inventory–5 (MHI-5)",
+      "translationZh": "心理健康量表-5（MHI-5）",
+      "explanationZh": "用於評估個人心理健康狀況的五題量表。"
+    },
+    {
+      "original": "Cross-sectional study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在單一時間點收集數據的研究設計，無法確定因果關係。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/healthcare14040490",
+  "doi": "10.3390/healthcare14040490",
+  "doiUrl": "https://doi.org/10.3390/healthcare14040490",
+  "openAccessUrl": "https://www.mdpi.com/2227-9032/14/4/490/pdf?version=1771051820",
+  "sourceApis": [
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

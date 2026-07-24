@@ -1,0 +1,78 @@
+{
+  "id": "10-3389-fgwh-2026-1837763",
+  "titleZh": "子宮內膜異位症女性之健康與生活型態因素與多維度生活品質的相關性：一項橫斷面研究",
+  "titleOriginal": "Associations of health and lifestyle factors with multidimensional quality of life among women with endometriosis: a cross-sectional study",
+  "authors": [
+    "Marijana Matek Sarić",
+    "Marija Ljubičić",
+    "Tamara Sorić",
+    "Ana Sarić",
+    "Emili Marušić",
+    "Salma Abdi Mahmoud",
+    "Miran Čoklo"
+  ],
+  "journalOrRepository": "Frontiers in Global Women's Health",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "評估子宮內膜異位症女性的多維度生活品質，並檢視其與疾病相關症狀、身體質量指數（BMI）及生活型態特徵之間的關聯。",
+  "backgroundZh": "子宮內膜異位症是一種慢性疾病，與疼痛、生育困難及生活品質降低有關。除了臨床症狀外，健康與生活型態行為可能會影響該疾病的長期衝擊。",
+  "methodsZh": "透過橫斷面線上問卷調查，由 153 位年滿 18 歲且自我通報患有子宮內膜異位症的女性完成。資料包含社會人口學特徵、體重、身體活動、飲食、吸菸以及排便疼痛等消化道症狀。使用子宮內膜異位症影響問卷（Endometriosis Impact Questionnaire）評估多個回顧期間的身體、心理、社會、性與親密、生育、教育、就業與財務，以及生活型態生活品質。採用無母數檢定與多元線性迴歸模型來評估群體差異及與生活品質維度和整體影響相關的因素。",
+  "sample": {
+    "size": 153,
+    "populationZh": "年滿 18 歲且自我通報患有子宮內膜異位症的女性",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "生育、身體和心理維度承受最大的負擔，特別是在過去 12 個月中。",
+    "自症狀出現以來的體重變化與所有生活品質領域較差的結果相關。",
+    "吸菸與較大的生活型態影響以及較高的整體影響相關。",
+    "排便疼痛與較大的心理、性與親密影響及較高的整體影響相關。"
+  ],
+  "limitationsZh": [
+    "採用橫斷面研究設計",
+    "依賴自我通報的子宮內膜異位症與相關資料"
+  ],
+  "practicalMeaningZh": "整合醫療與生活型態的方法可能有助於改善子宮內膜異位症的長期疾病影響。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本研究僅依摘要，為橫斷面研究設計無法確立因果關係，樣本數較小且具特定族群限制，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Endometriosis",
+      "translationZh": "子宮內膜異位症",
+      "explanationZh": "一種與疼痛、生育困難及生活品質降低有關的慢性疾病。"
+    },
+    {
+      "original": "Cross-sectional study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在特定時間點收集資料以評估變項之間關聯的研究設計。"
+    },
+    {
+      "original": "Quality of life (QoL)",
+      "translationZh": "生活品質",
+      "explanationZh": "在此研究中透過多維度問卷評估個體在身體、心理、社會等各方面的狀態。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fgwh.2026.1837763",
+  "doi": "10.3389/fgwh.2026.1837763",
+  "doiUrl": "https://doi.org/10.3389/fgwh.2026.1837763",
+  "openAccessUrl": "https://www.frontiersin.org/journals/global-womens-health/articles/10.3389/fgwh.2026.1837763/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,94 @@
+{
+  "id": "10-1186-s12982-026-02593-8",
+  "titleZh": "非洲阿茲海默症治療與復健之不平等現象觀點",
+  "titleOriginal": "A perspective on the disparities in Alzheimer’s disease treatment and rehabilitation in Africa",
+  "authors": [
+    "Tejiri Napoleon",
+    "Ishaq Oyeshina Sanusi",
+    "Deborah Akinride",
+    "Emmanuela Ojoagefu Egwu",
+    "Eleyinmi Oluwafunmilayo",
+    "Chioma Nnedinma Duru",
+    "Ojo Israel Ifeoluwa",
+    "Ucheobi Nonso Christopher",
+    "Elete Shola Tabitha",
+    "Ogheneakpobor Ogbodu",
+    "Emmanuel Kodizuru Chukwuemeka",
+    "Angel Clement",
+    "Awokunle Joshua Anuoluwapo",
+    "Ogunmekan Precious Anuoluwapo",
+    "Omoyajowo Moyinoluwa",
+    "Olaniran Oluwatosin Emmanuel",
+    "Ogban Nsenanzama Eko",
+    "Ehiwogwu Victoria Ifeoma",
+    "Tony Efe",
+    "Chinazaekpere Blessing Onwurah",
+    "Olaoluwa T. Oluwayemisi",
+    "Sodiq Lawal",
+    "Davies Oluwasijibomi Ogheneruona",
+    "Chinwekene Okoye",
+    "Victor Femi-Lawal",
+    "Evelyn Faith Ogungbemi",
+    "Roys-Ugbobuaku Macqueen",
+    "Ukah Queeneth",
+    "Toluwalogo Niji-Olawepo"
+  ],
+  "journalOrRepository": "Discover Public Health",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "非洲在阿茲海默症的診斷、治療與復健方面存在哪些不平等現象？",
+  "backgroundZh": "阿茲海默症是非洲日益普遍的神經退化性疾病，對個人、家庭和衛生系統構成日益嚴峻的公共衛生挑戰。",
+  "methodsZh": "綜合現有證據探討衛生系統、社會經濟和文化障礙。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": "非洲"
+  },
+  "mainFindingsZh": [
+    "有限的診斷能力、專科醫師短缺以及文化上的誤解導致阿茲海默症的辨識與管理延遲。",
+    "社會經濟限制、城鄉服務不平等以及高昂且不穩定的藥物成本進一步限制了治療的取得。",
+    "非藥物介入措施（如認知刺激、職能治療與照顧者培訓）非常稀少，且大限度地局限於城市的三級醫療設施中。",
+    "非正式的家庭照護占主導地位，增加了照顧者的負擔，且非洲族群在流行病學研究和臨床試驗中代表性不足。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本文章為觀點探討與證據綜合，並未進行原創性實證數據收集。"
+  ],
+  "practicalMeaningZh": "減少非洲的阿茲海默症不平等需要將其納入國家非傳染性疾病策略、加強基層醫療，並擴大經濟實惠的藥物與復健服務。",
+  "cautionZh": "本同儕審查狀態為未知，本內容僅依摘要進行推論，因果關係受限於研究設計，樣本資訊不明且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Alzheimer’s disease",
+      "translationZh": "阿茲海默症",
+      "explanationZh": "一種日益普遍的神經退化性疾病。"
+    },
+    {
+      "original": "Non-pharmacological interventions",
+      "translationZh": "非藥物介入措施",
+      "explanationZh": "包含認知刺激、職能治療與照顧者培訓等方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1186/s12982-026-02593-8",
+  "doi": "10.1186/s12982-026-02593-8",
+  "doiUrl": "https://doi.org/10.1186/s12982-026-02593-8",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1186/s12982-026-02593-8.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "10-1007-s40653-026-00946-8",
+  "titleZh": "情緒調節困難解釋了童年虐待與成年早期知覺壓力之間的關聯",
+  "titleOriginal": "Emotion Regulation Difficulties Account for the Associations Between Childhood Maltreatment and Perceived Stress in Young Adulthood",
+  "authors": [
+    "Gaia Lapomarda",
+    "Beatrice Frajo-Apor",
+    "Gerald Autengruber",
+    "Alex Hofer",
+    "Carmen Morawetz"
+  ],
+  "journalOrRepository": "Journal of Child &amp; Adolescent Trauma",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在檢驗情緒調節困難是否解釋了童年虐待與成年期知覺壓力之間的共變異數。",
+  "backgroundZh": "童年暴露於創傷事件會產生持久的負面影響，特別是對壓力知覺與整體福祉的影響。情緒調節困難經常見於有人際創傷史的個體，並被認為是連結童年虐待與成年期壓力升高的建構。",
+  "methodsZh": "使用關聯變數分析（Associational Variable Analysis, AVA），透過自我報告評估工具（CTQ、DERS、PSS-10）進行測量。",
+  "sample": {
+    "size": 351,
+    "populationZh": "大學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "在總分層級上，情緒調節困難顯著解釋了情緒疏忽與知覺壓力之間的關聯，而情緒虐待與性虐待則維持與壓力的直接關聯。",
+    "在次量表層級上，特定的情緒調節困難解釋了情緒虐待和情緒疏忽與知覺無助及知覺自我效能之間的關聯。",
+    "情緒調節策略取得有限以及難以進行目標導向行為，是最相關的調節面向。"
+  ],
+  "limitationsZh": [
+    "需要縱向設計才能得出因果結論"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，這些發現凸顯了情緒調節困難是連結童年情緒虐待與成年期知覺壓力的重要建構。",
+  "cautionZh": "根據研究設計推論，本研究狀態為同儕審查狀態未明，且僅依摘要內容、具因果限制、樣本限制為大學生，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Childhood Maltreatment",
+      "translationZh": "童年虐待",
+      "explanationZh": "指童年時期遭受創傷、虐待或疏忽的經驗。"
+    },
+    {
+      "original": "Emotion Regulation Difficulties",
+      "translationZh": "情緒調節困難",
+      "explanationZh": "指管理與調節情緒反應時產生的困難。"
+    },
+    {
+      "original": "Perceived Stress",
+      "translationZh": "知覺壓力",
+      "explanationZh": "個體主觀知覺到生活中壓力源的程度。"
+    },
+    {
+      "original": "Associational Variable Analysis",
+      "translationZh": "關聯變數分析",
+      "explanationZh": "本研究所使用的分析方法（簡稱AVA）。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s40653-026-00946-8",
+  "doi": "10.1007/s40653-026-00946-8",
+  "doiUrl": "https://doi.org/10.1007/s40653-026-00946-8",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s40653-026-00946-8.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

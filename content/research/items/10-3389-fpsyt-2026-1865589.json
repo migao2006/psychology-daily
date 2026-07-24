@@ -1,0 +1,84 @@
+{
+  "id": "10-3389-fpsyt-2026-1865589",
+  "titleZh": "缺血性中風患者主觀復發風險與負向情緒關聯之機制：一項橫斷面研究",
+  "titleOriginal": "Mechanisms underlying the association between perceived recurrence risk and negative emotions in patients with ischemic stroke: a cross-sectional study",
+  "authors": [
+    "Renlong Liang",
+    "Xuyan Liu",
+    "Rui Jian",
+    "Heng Ding",
+    "Tingting Cai"
+  ],
+  "journalOrRepository": "Frontiers in Psychiatry",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討缺血性中風患者的主觀復發風險、尋求專業心理協助態度、負向情緒與家庭照顧之間的關係，並檢驗有調節的中介模型。",
+  "backgroundZh": "為了探討中風患者的主觀復發風險、尋求專業心理協助態度、負向情緒與家庭照顧的關係，並檢驗調節中介模型，以提供優化臨床心理介入與家庭支持策略的科學依據。",
+  "methodsZh": "採用橫斷面調查，使用測量主觀復發風險、求助態度、負向情緒與家庭照顧的已驗證量表收集資料，並使用SPSS 27.0與PROCESS巨集進行中介與有調節的中介分析。",
+  "sample": {
+    "size": 311,
+    "populationZh": "缺血性中風患者",
+    "locationZh": "中國四川省三所三級醫院"
+  },
+  "mainFindingsZh": [
+    "主觀復發風險與負向情緒呈正向關聯。",
+    "尋求專業心理協助態度在此關聯中具有部分中介效果。",
+    "家庭照顧調節了中介模型的兩個路徑：高家庭照顧減弱了主觀復發風險對求助態度的負向關聯，並增強了求助態度與較低負向情緒之間的保護性關聯。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，因果關係無法確立。"
+  ],
+  "practicalMeaningZh": "這些發現突顯了心理與以家庭為中心的支持在缺血性中風復健中的重要性。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要、因果限制、樣本限制與仍需更多研究。根據研究設計推論，本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Ischemic stroke",
+      "translationZh": "缺血性中風",
+      "explanationZh": "一種因腦部血管阻塞導致腦組織缺血受損的疾病。"
+    },
+    {
+      "original": "Perceived recurrence risk",
+      "translationZh": "主觀復發風險",
+      "explanationZh": "患者主觀感受到疾病再次發作的可能性。"
+    },
+    {
+      "original": "Negative emotions",
+      "translationZh": "負向情緒",
+      "explanationZh": "如焦慮、憂鬱等不良情緒狀態。"
+    },
+    {
+      "original": "Family care",
+      "translationZh": "家庭照顧",
+      "explanationZh": "來自家庭成員的支持與照顧。"
+    },
+    {
+      "original": "Cross-sectional study",
+      "translationZh": "橫斷面研究",
+      "explanationZh": "在單一時間點收集資料的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyt.2026.1865589",
+  "doi": "10.3389/fpsyt.2026.1865589",
+  "doiUrl": "https://doi.org/10.3389/fpsyt.2026.1865589",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychiatry/articles/10.3389/fpsyt.2026.1865589/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

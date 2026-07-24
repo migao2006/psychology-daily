@@ -1,0 +1,66 @@
+{
+  "id": "10-1093-9780197857427-001-0001",
+  "titleZh": "玻璃屋",
+  "titleOriginal": "Glass Houses",
+  "authors": [
+    "Jason Brennan"
+  ],
+  "journalOrRepository": "OpenAlex",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "為什麼我們難以減少對他人的評判，以及人類是否應該放棄評判他人而選擇包容的品德？",
+  "backgroundZh": "大多數人認為我們應該減少評判他人，但很少人能做到。傳統觀點常將其歸咎於缺乏意志力或善良，但本研究從道德心理學與政治哲學出發探討此現象。",
+  "methodsZh": "結合道德心理學與政治哲學的論述分析。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "人類在進行道德評判時往往充滿偏見、自我欺騙與部落主義，且更傾向於提升自身地位而非追求真相。",
+    "人類傾向放大自身美德、誇大他人缺點，並將憤怒誤認為正義。",
+    "作者主張一種被忽視的美德——人類的包容（grace），即預設展現善意，不把分歧轉為定罪，並克制評判他人品格的衝動。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為理論性與觀點性討論，缺乏實證數據支持。",
+    "樣本與地點等具體背景資訊未明。"
+  ],
+  "practicalMeaningZh": "提醒人們在充滿道德確信與懲罰意圖的世界中，保持謙遜並克制評判他人的衝動，有助於減少無謂的對立。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要進行推論，因果關係受限於理論性探討，樣本與地點資訊有限，且仍需更多研究來支持。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "moral judgment",
+      "translationZh": "道德評判",
+      "explanationZh": "指對他人道德行為或品格做出評估與判斷的過程。"
+    },
+    {
+      "original": "grace",
+      "translationZh": "包容",
+      "explanationZh": "指不經審查他人是否應得就預設展現善意，並拒絕武器化道德確信的品德。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1093/9780197857427.001.0001",
+  "doi": "10.1093/9780197857427.001.0001",
+  "doiUrl": "https://doi.org/10.1093/9780197857427.001.0001",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

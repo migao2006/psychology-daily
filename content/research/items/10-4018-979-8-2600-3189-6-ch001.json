@@ -1,0 +1,69 @@
+{
+  "id": "10-4018-979-8-2600-3189-6-ch001",
+  "titleZh": "策略組織心理學",
+  "titleOriginal": "Strategic Organizational Psychology",
+  "authors": [
+    "S. Nandhini"
+  ],
+  "journalOrRepository": "Organizational Psychology, Leadership, and Sustainable Performance",
+  "publicationDate": "2026-07-22",
+  "language": "ng",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "職場動機理論與應用心理學如何促進可持續的生產力、員工投入以及企業的競爭優勢？",
+  "backgroundZh": "在以快速科技進步、日益劇烈的競爭與不斷上升的認知需求為特徵的現代商業環境中，員工動機對於商業成功與可持續生產力依然至關重要。",
+  "methodsZh": "本章回顧了職場動機的基礎與當代理論，將這些理論與該主題的當代實證知識進行綜合，並探討了動機因素作為可持續職場生產力驅動力的角色。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "職場動機理論在促進可持續生產力與員工投入方面扮演核心角色。",
+    "有效的動機系統與應用心理學相結合，可以驅動可持續的競爭優勢。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為文獻回顧與理論綜合，未提供直接的實地介入數據。"
+  ],
+  "practicalMeaningZh": "企業可以透過整合應用心理學與有效的動機系統，來提升員工投入並獲得可持續的商業競爭優勢。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要進行分析。根據研究設計推論，由於屬於文獻回顧與理論綜合，無法建立確切的因果關係。本研究未提供具體的樣本數、族群與地點限制，因此推論範圍有限。未來仍需更多研究來驗證相關理論在不同情境下的適用性。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Workplace Motivation",
+      "translationZh": "職場動機",
+      "explanationZh": "指在工作環境中驅動員工投入與表現的心理動機。"
+    },
+    {
+      "original": "Applied Psychology",
+      "translationZh": "應用心理學",
+      "explanationZh": "將心理學原理應用於解決實際職場與商業問題的領域。"
+    },
+    {
+      "original": "Sustainable Productivity",
+      "translationZh": "可持續生產力",
+      "explanationZh": "指長期維持且不以犧牲員工福祉為代價的生產效能。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.4018/979-8-2600-3189-6.ch001",
+  "doi": "10.4018/979-8-2600-3189-6.ch001",
+  "doiUrl": "https://doi.org/10.4018/979-8-2600-3189-6.ch001",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

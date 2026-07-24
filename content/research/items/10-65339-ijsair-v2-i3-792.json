@@ -1,0 +1,71 @@
+{
+  "id": "10-65339-ijsair-v2-i3-792",
+  "titleZh": "犯罪學學生在混合式學習設定下的心理健康與心理適應性",
+  "titleOriginal": "Mental Health and Psychological Adaptability on Hybrid Learning Set-Up of Criminology Students",
+  "authors": [
+    "Nanies Barnuevo"
+  ],
+  "journalOrRepository": "International Journal of Sustainability and Advanced Integrated Research",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在確定卡馬里內斯蘇省第一區犯罪學學生在混合式學習設定下的心理健康狀況與心理適應性，評估其壓力、焦慮與憂鬱程度，確定其心理適應性水準，檢視人口特徵、心理健康狀況與心理適應性之間的關係，並提出一項介入計畫以改善學生的心理適應性。",
+  "backgroundZh": "本研究基於學生心理健康理論、後設認知理論與行為學習理論，探討混合式學習環境下的心理健康與適應，並有助於永續發展目標3與目標4。",
+  "methodsZh": "採用描述性相關研究設計，使用研究者自製的調查問卷蒐集資料，並透過次數分配、百分比技術、加權平均數與皮爾森積差相關進行分析。",
+  "sample": {
+    "size": 329,
+    "populationZh": "一至四年級的犯罪學學生",
+    "locationZh": "卡馬里內斯蘇省第一區的兩所機構"
+  },
+  "mainFindingsZh": [
+    "犯罪學學生經歷了中等程度的壓力、焦慮與憂鬱。",
+    "學生在應對這些挑戰時展現了中等偏高的心理適應性。",
+    "部分人口變項與特定的心理健康面向具有顯著關係，而心理健康狀況與心理適應性之間的關係在各個指標上有所不同。"
+  ],
+  "limitationsZh": [
+    "使用研究者自製的調查問卷蒐集資料",
+    "樣本侷限於卡馬里內斯蘇省第一區兩所機構的犯罪學學生"
+  ],
+  "practicalMeaningZh": "提出了一項介入計畫以強化學生的心理健康意識與心理適應性，並有助於教育與機構的永續性。",
+  "cautionZh": "根據研究設計推論。本研究的同儕審查狀態為未知，本內容僅依摘要，不得將相關性推論為因果關係，樣本僅限特定地區與科系，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Hybrid Learning Set-Up",
+      "translationZh": "混合式學習設定",
+      "explanationZh": "結合線上與實體等不同學習模式的教學安排。"
+    },
+    {
+      "original": "Psychological Adaptability",
+      "translationZh": "心理適應性",
+      "explanationZh": "個體在面對環境挑戰時調整心理狀態的能力。"
+    },
+    {
+      "original": "Descriptive-Correlational",
+      "translationZh": "描述性相關",
+      "explanationZh": "描述變項特徵並檢驗其關聯性的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.65339/ijsair.v2.i3.792",
+  "doi": "10.65339/ijsair.v2.i3.792",
+  "doiUrl": "https://doi.org/10.65339/ijsair.v2.i3.792",
+  "openAccessUrl": "https://doi.org/10.65339/ijsair.v2.i3.792",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

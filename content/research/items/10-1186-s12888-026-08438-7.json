@@ -1,0 +1,72 @@
+{
+  "id": "10-1186-s12888-026-08438-7",
+  "titleZh": "索馬利蘭波羅馬大學健康專業學系大學部學生的憂鬱、焦慮與壓力盛行率及相關因素：一項橫斷研究",
+  "titleOriginal": "Prevalence and associated factors of depression, anxiety, and stress among undergraduate health professions students in Borama, Somaliland: a cross-sectional study",
+  "authors": [
+    "Kahsay Hailu Negash",
+    "Abdilahi Abdkarim Osman",
+    "Ahmed Moumin Abdilahi",
+    "Farhan Muse Omar",
+    "Osman Said Guelleh",
+    "Mohamed Abdi Farah",
+    "Mekonin Meskelu Shegere"
+  ],
+  "journalOrRepository": "BMC Psychiatry",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討索馬利蘭波羅馬健康專業學系大學部學生的憂鬱、焦慮與壓力盛行率及相關因素。",
+  "backgroundZh": "精神疾患的特徵在於個人的思考、情緒控制及行為模式出現顯著受損。大學生經常罹患憂鬱、焦慮與壓力等精神疾患。",
+  "methodsZh": "採用以機構為基礎的量化橫斷研究設計，利用結構式問卷與 DASS-21 量表收集資料，並以二元邏輯斯迴歸分析來評估相關性。",
+  "sample": {
+    "size": 315,
+    "populationZh": "健康專業學系大學部學生",
+    "locationZh": "索馬利蘭波羅馬"
+  },
+  "mainFindingsZh": [
+    "憂鬱、焦慮與壓力的盛行率分別為 47.6%、49.5% 與 55.6%。",
+    "憂鬱與學業失敗、時間管理不良、缺乏支持的朋友或家人、藥物使用以及已診斷的健康狀況有關。",
+    "焦慮與學業失敗或留校察看、缺乏支持的朋友或家人以及已診斷的健康狀況有關，而單身則具保護作用。",
+    "壓力與有時感到學業負擔過重、學業失敗或留校察看、時間管理不良、缺乏支持的朋友或家人以及已診斷的健康狀況有關，而單身則具保護作用。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為橫斷研究，無法確立因果關係。"
+  ],
+  "practicalMeaningZh": "每學期使用 DASS-21 篩檢學生並建立同儕支持計畫，有助於減少心理健康挑戰並提升學業表現。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態為未知，本內容僅依摘要撰寫，具有因果限制與樣本限制，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "cross-sectional study",
+      "translationZh": "橫斷研究",
+      "explanationZh": "在特定時間點收集資料的研究設計，用於評估變項間的相關性。"
+    },
+    {
+      "original": "DASS-21",
+      "translationZh": "DASS-21 量表",
+      "explanationZh": "用於評估憂鬱、焦慮與壓力嚴重程度的自我報告量表。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1186/s12888-026-08438-7",
+  "doi": "10.1186/s12888-026-08438-7",
+  "doiUrl": "https://doi.org/10.1186/s12888-026-08438-7",
+  "openAccessUrl": "https://doi.org/10.1186/s12888-026-08438-7",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

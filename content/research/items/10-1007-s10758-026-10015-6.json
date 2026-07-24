@@ -1,0 +1,72 @@
+{
+  "id": "10-1007-s10758-026-10015-6",
+  "titleZh": "使講座更易取得：基於人工智慧的影片內容抽象式摘要",
+  "titleOriginal": "Making Lectures Accessible: AI-Based Abstractive Summarisation for Video Content",
+  "authors": [
+    "Helard Becerra",
+    "Muireann Walsh",
+    "Conor Fagan",
+    "Andrew Hines"
+  ],
+  "journalOrRepository": "Technology, Knowledge and Learning",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "當前的人工智慧模型在為錄製的講座內容產生文字式抽象式摘要的效用如何？",
+  "backgroundZh": "通用學習設計（UDL）是一個促進教育無障礙以容納最廣泛學習者的框架，本研究專注於提供多種表徵方式，特別是透過摘要作為傳達影片講座內容的替代方式。",
+  "methodsZh": "透過比較學生對人工智慧產生摘要與人類產生摘要的看法，並進行體驗品質分析以識別形塑學習體驗的因素以及學習引導者可用的控制程度。",
+  "sample": {
+    "size": null,
+    "populationZh": "學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "當前的人工智慧模型有能力產生連貫且有價值的講座摘要。",
+    "從學生的角度來看，這些人工智慧產生的摘要被視為其學習材料的有益補充。"
+  ],
+  "limitationsZh": [
+    "需要教育工作者策劃這些摘要以確保其品質。"
+  ],
+  "practicalMeaningZh": "人工智慧產生的摘要可作為學習材料的有益補充，但教育工作者需要對其進行策劃以確保品質。",
+  "cautionZh": "根據研究設計推論，本摘要對應的同儕審查狀態為未知，本內容僅依摘要，不得因果推論，樣本限制為具體人數未知且地點未知，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Universal design for learning (UDL)",
+      "translationZh": "通用學習設計",
+      "explanationZh": "一個促進教育無障礙以容納最廣泛學習者的框架。"
+    },
+    {
+      "original": "Abstractive summarisation",
+      "translationZh": "抽象式摘要",
+      "explanationZh": "使用人工智慧模型產生文字式摘要作為呈現影片講座內容的互補方法。"
+    },
+    {
+      "original": "Quality of experience",
+      "translationZh": "體驗品質",
+      "explanationZh": "用以識別形塑學習體驗之因素的分析方法。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s10758-026-10015-6",
+  "doi": "10.1007/s10758-026-10015-6",
+  "doiUrl": "https://doi.org/10.1007/s10758-026-10015-6",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s10758-026-10015-6.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

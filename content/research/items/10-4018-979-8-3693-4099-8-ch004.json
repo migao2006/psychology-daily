@@ -1,0 +1,64 @@
+{
+  "id": "10-4018-979-8-3693-4099-8-ch004",
+  "titleZh": "AI倫理與領導力中的跨文化考量",
+  "titleOriginal": "Cross-Cultural Considerations in AI Ethics and Leadership",
+  "authors": [
+    "Mustafa Kayyali"
+  ],
+  "journalOrRepository": "Advances in Computational Intelligence and Robotics",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "多樣的道德框架如何影響全球各地對AI技術的期望、反應與阻力，以及AI時代的道德領導力如何因應？",
+  "backgroundZh": "隨著人工智慧嵌入全球組織的決策過程，其倫理影響已無法從單一文化視角切入。",
+  "methodsZh": "透過汲取跨學科觀點（從道德哲學、文化心理學到組織行為與全球治理）進行探討，並結合來自亞洲、中東、歐洲和非洲的案例範例。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "AI時代的道德領導力必須超越合規清單，培養真正的跨文化敏感度與道德想像力。",
+    "文化背景會改變各地對AI系統中公平、隱私、當責與人類尊嚴的詮釋。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究未提供確切的量化樣本數據與因果關係。"
+  ],
+  "practicalMeaningZh": "在全球數位系統跨越國界但人類價值仍扎根於在地的情況下，領導者必須學習以道德羅盤和文化同理心來導航。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要編寫。根據研究設計推論，無法建立因果關係，樣本限制為缺乏明確數據，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Artificial Intelligence",
+      "translationZh": "人工智慧",
+      "explanationZh": "嵌入全球組織決策過程中的數位系統技術。"
+    },
+    {
+      "original": "Cross-Cultural Leadership",
+      "translationZh": "跨文化領導力",
+      "explanationZh": "在AI時代需要具備跨文化敏感度與道德想像力的領導方式。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.4018/979-8-3693-4099-8.ch004",
+  "doi": "10.4018/979-8-3693-4099-8.ch004",
+  "doiUrl": "https://doi.org/10.4018/979-8-3693-4099-8.ch004",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

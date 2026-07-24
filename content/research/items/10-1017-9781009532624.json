@@ -1,0 +1,65 @@
+{
+  "id": "10-1017-9781009532624",
+  "titleZh": "政治的維根斯坦",
+  "titleOriginal": "The Political Wittgenstein",
+  "authors": [
+    "Alice Crary",
+    "Joel de Lara"
+  ],
+  "journalOrRepository": "Cambridge University Press eBooks",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "維根斯坦的哲學具有怎样的政治意義與政治取向？",
+  "backgroundZh": "自維根斯坦於1951年逝世以來，讀者們對其哲學的政治意義提出了眾多不同的主張，包括保守或反動傾向、相對主義傾向，以及與古典自由主義、新自由主義或馬克主義的關聯。",
+  "methodsZh": "透過四個章節長度的敘事，探討對維根斯坦思想政治意義之不同觀點的發展。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "檢視了探討維根斯坦哲學政治意義之不同觀點的發展領域。",
+    "主張將維根斯坦的哲學根本上解讀為具有政治性、解放性且迫切相關的。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為文獻與思想敘事探討，未涉及實證數據與因果推論。"
+  ],
+  "practicalMeaningZh": "為理解維根斯坦思想的政治取向與相關方法提供了深入的導論。",
+  "cautionZh": "本研究的同儕審查狀態為未知，且本內容僅依摘要進行分析；受限於文獻敘事設計，無法推論因果關係；本研究未提供具體樣本資訊；仍需更多研究來全面驗證。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Wittgenstein",
+      "translationZh": "維根斯坦",
+      "explanationZh": "指哲學家維根斯坦及其思想。"
+    },
+    {
+      "original": "Political significance",
+      "translationZh": "政治意義",
+      "explanationZh": "哲學思想在政治領域中所代表的意涵或影響。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1017/9781009532624",
+  "doi": "10.1017/9781009532624",
+  "doiUrl": "https://doi.org/10.1017/9781009532624",
+  "openAccessUrl": "https://www.cambridge.org/core/services/aop-cambridge-core/content/view/21F7503EA010AF21B77B99233E685241/9781009532662AR.pdf/the-political-wittgenstein.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

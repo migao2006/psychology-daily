@@ -1,0 +1,62 @@
+{
+  "id": "https-openalex-org-W7170115409",
+  "titleZh": "破碎的玻璃：在破碎中尋找安娜",
+  "titleOriginal": "Shattered Glass: Finding Anna in the Brokenness",
+  "authors": [
+    "Tracy A Scoville"
+  ],
+  "journalOrRepository": "Scholars Crossing (Liberty University)",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "preprint",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "如何在文學創作與評論中透過個人經驗與對話呈現雙極性情感疾患第二型患者的掙扎？",
+  "backgroundZh": "本研究源於作者多年前開始撰寫關於一名患有精神疾病女性的小說，並進一步發展為部分小說與藝術家聲明。研究透過雙極性情感疾患第二型的視角，檢視安娜在思考、行為及壓力處理上的掙扎，同時探討對話在文學創作中的重要性。",
+  "methodsZh": "透過藝術家聲明與評論論文的方式，結合個人經驗與文學創作，分析角色對話對塑造個別角色的必要性，並呈現在創意手稿《破碎的玻璃：在破碎中尋找安娜》中。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "安娜的掙扎是透過雙極性情感疾患第二型的視角來加以檢視，涵蓋思考、行為與壓力處理方式。",
+    "良好的對話對於讓文學創作中的角色活靈活現具有重要性，且對話需要適合個別角色。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究基於作者個人經驗與文學創作進行分析，缺乏廣泛的客觀量化數據。"
+  ],
+  "practicalMeaningZh": "本研究有助於理解如何透過文學與藝術創作來反映精神疾病患者的內在掙扎與對話設計的重要性。",
+  "cautionZh": "本研究為預印本，尚未經過正式同儕審查。本內容僅依摘要進行解讀，且屬於文學與藝術創作之質性探討，無法建立因果關係，亦缺乏樣本數據支持，仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "bipolar II disorder",
+      "translationZh": "雙極性情感疾患第二型",
+      "explanationZh": "一種精神疾病，在此研究中被用作檢視主角安娜思考、行為與壓力處理的視角。"
+    },
+    {
+      "original": "Shattered Glass: Finding Anna in the Brokenness",
+      "translationZh": "破碎的玻璃：在破碎中尋找安娜",
+      "explanationZh": "作者創作的創意手稿與小說名稱。"
+    }
+  ],
+  "originalUrl": "https://digitalcommons.liberty.edu/masters/1516",
+  "doi": null,
+  "doiUrl": null,
+  "openAccessUrl": "https://digitalcommons.liberty.edu/context/masters/article/2520/viewcontent/5_Scoville_2C_20Tracy_20_28L23880754_29.pdf",
+  "sourceApis": [
+    "OpenAlex"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": false,
+    "urlVerified": true
+  }
+}

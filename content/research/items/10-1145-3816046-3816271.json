@@ -1,0 +1,73 @@
+{
+  "id": "10-1145-3816046-3816271",
+  "titleZh": "導航轉變：構想交談式使用者介面以支援國際學生",
+  "titleOriginal": "Navigating Transitions: Envisioning Conversational User Interfaces to Support International Students",
+  "authors": [
+    "Yuhui Xu",
+    "Isabel Blijenburg",
+    "Bhakti Moghe",
+    "Maarten Houben",
+    "Daniel Tetteroo",
+    "Wijnand IJsselsteijn",
+    "Minha Lee"
+  ],
+  "journalOrRepository": "Proceedings of the 8th ACM Conference on Conversational User Interfaces",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "交談式使用者介面（CUIs）如何支援國際學生在適應主辦國過程中的需求與福祉？",
+  "backgroundZh": "國際學生在適應主辦國時面臨掙扎，比本地學生更容易受到心理健康問題的影響。雖然交談式使用者介面（CUIs）日益受到研究與實施，但關於其如何幫助國際大學學生的研究仍然稀少。",
+  "methodsZh": "與國際學生進行參與式設計工作坊，讓他們分享留學的觀點與掙扎，並構想交談式使用者介面（CUIs）作為支援轉變的輔助工具。",
+  "sample": {
+    "size": null,
+    "populationZh": "國際學生",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "參與者提出了交談式使用者介面（CUI）的功能，以應對不確定感、孤獨感以及對文化差異的誤解。",
+    "研究揭示了國際學生的需求，並為支援其福祉的交談式使用者介面（CUIs）提供了設計啟示。"
+  ],
+  "limitationsZh": [],
+  "practicalMeaningZh": "本研究揭示了國際學生的需求，並為支援其福祉的交談式使用者介面（CUIs）提供了設計啟示。",
+  "cautionZh": "根據研究設計推論，本研究未確知同儕審查狀態，僅依摘要內容，不得作因果推論，樣本限制未提供具體數量與地點，且仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Conversational User Interfaces",
+      "translationZh": "交談式使用者介面",
+      "explanationZh": "透過自然語言與使用者互動的使用者介面系統"
+    },
+    {
+      "original": "International students",
+      "translationZh": "國際學生",
+      "explanationZh": "前往外國求學的學生群體"
+    },
+    {
+      "original": "Participatory design workshops",
+      "translationZh": "參與式設計工作坊",
+      "explanationZh": "邀請使用者共同參與設計過程的互動工作坊"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1145/3816046.3816271",
+  "doi": "10.1145/3816046.3816271",
+  "doiUrl": "https://doi.org/10.1145/3816046.3816271",
+  "openAccessUrl": "https://doi.org/10.1145/3816046.3816271",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

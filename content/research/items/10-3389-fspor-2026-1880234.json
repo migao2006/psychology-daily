@@ -1,0 +1,71 @@
+{
+  "id": "10-3389-fspor-2026-1880234",
+  "titleZh": "菁英與業餘足球員之後設認知信念與競爭性焦慮的關係",
+  "titleOriginal": "The relationship between metacognitive beliefs and competitive anxiety among elite and amateur soccer players",
+  "authors": [
+    "Magnus Ueland Nygaard",
+    "Audun Havnen"
+  ],
+  "journalOrRepository": "Frontiers in Sports and Active Living",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "社會心理學",
+  "researchQuestionZh": "探討挪威足球員後設認知信念與競爭性焦慮之間的關聯，並調查菁英與業餘球員以及女性與男性球員在競爭性焦慮上的差異。",
+  "backgroundZh": "競爭性焦慮是競技運動中常見的心理現象，後設認知信念與臨床及非臨床族群的焦慮有關，但很少研究探討後設認知信念與競爭性焦慮之間的關係。",
+  "methodsZh": "採用橫斷研究設計，參與者完成後設認知問卷30（MCQ-30）、運動焦慮量表2（SAS-2）、患者健康問卷9（PHQ-9）及人口統計變項。進行獨立樣本t檢定以探討組別差異，並進行階層迴歸分析以檢驗後設認知信念與競爭性焦慮總分及三個子量表的關係。",
+  "sample": {
+    "size": 150,
+    "populationZh": "挪威足球員",
+    "locationZh": "挪威"
+  },
+  "mainFindingsZh": [
+    "業餘球員的競爭性焦慮得分顯著高於菁英球員，女性球員的得分高於男性球員。",
+    "正向後設認知信念與身體焦慮相關，而負向後設認知信念與認知自我意識則與SAS-2的擔心子量表相關。",
+    "後設認知信念與SAS-2總分及專注力干擾無關。"
+  ],
+  "limitationsZh": [
+    "本研究採用橫斷研究設計，無法建立因果關係。"
+  ],
+  "practicalMeaningZh": "根據研究設計推論，本研究結果顯示後設認知信念與足球員的身體焦慮和擔心有關，未來研究應探討旨在挑戰後設認知信念以減少競爭性焦慮的干預措施。",
+  "cautionZh": "根據研究設計推論，同儕審查狀態為未知，本內容僅依摘要，不得將相關改寫成因果，受限於樣本，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "metacognitive beliefs",
+      "translationZh": "後設認知信念",
+      "explanationZh": "關於自身思考過程的信念"
+    },
+    {
+      "original": "competitive anxiety",
+      "translationZh": "競爭性焦慮",
+      "explanationZh": "在競技運動情境中體驗到的焦慮反應"
+    },
+    {
+      "original": "cross-sectional study",
+      "translationZh": "橫斷研究",
+      "explanationZh": "在單一時間點收集資料的研究設計"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fspor.2026.1880234",
+  "doi": "10.3389/fspor.2026.1880234",
+  "doiUrl": "https://doi.org/10.3389/fspor.2026.1880234",
+  "openAccessUrl": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2026.1880234/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

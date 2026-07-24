@@ -1,0 +1,82 @@
+{
+  "id": "10-3389-fpubh-2026-1891071",
+  "titleZh": "陪產假持續時間與母親憂鬱症狀：日本父親參與及共同親職的縱貫性研究",
+  "titleOriginal": "Paternity leave duration and maternal depressive symptoms: a longitudinal study of paternal involvement and coparenting in Japan",
+  "authors": [
+    "Aiko Hironaka",
+    "Hiroko Watanabe"
+  ],
+  "journalOrRepository": "Frontiers in Public Health",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "longitudinal",
+  "psychologyCategory": "發展心理學",
+  "researchQuestionZh": "本研究旨在檢驗陪產假持續時間、母親回報的父親參與及共同親職，以及產後 3 至 6 個月母親憂鬱症狀之間的結構與間接關聯，並依生育胎次分別探討。",
+  "backgroundZh": "陪產假可能透過父親的參與和共同親職與母親的心理健康相關，但早期產後短期內的家庭歷程關聯仍不清楚。",
+  "methodsZh": "採用兩波線上調查，運用多群組兩波結構方程式模型來估計結構與間接關聯，並使用 5,000 次拔靴抽樣與偏差校正的 95% 信賴區間來評估間接關聯。",
+  "sample": {
+    "size": 396,
+    "populationZh": "日本母親（包含 244 名初產婦與 152 名經產婦）",
+    "locationZh": "日本"
+  },
+  "mainFindingsZh": [
+    "相較於無陪產假，產假天數較長與兩組生育胎次中產後 3 個月較高的父親參與相關，而產假天數較短則與父親參與沒有明確關聯。",
+    "父親參與和共同親職在產後 3 個月到 6 個月之間展現出連續性。",
+    "在初產婦中獲得統計支持共同親職與憂鬱症狀的關聯以及長假與憂鬱症狀間的總間接關聯，但在經產婦中則否，且群組間的正式比較並未達到顯著差異。"
+  ],
+  "limitationsZh": [
+    "所有主要變項皆由母親回報。",
+    "僅探討短期產後觀察關聯。"
+  ],
+  "practicalMeaningZh": "本研究描述了陪產假持續時間、父親參與、共同親職與母親憂鬱症狀在產後短期的觀察關聯，有助於理解初產婦與經產婦在家庭歷程上的異同。",
+  "cautionZh": "根據研究設計推論，本研究僅能推論變項間的觀察關聯而非因果關係。本同儕審查狀態為未知，且本內容僅依摘要進行分析，樣本包含 396 名日本母親，研究結果顯示仍需更多研究來釐清相關機制。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Paternity leave",
+      "translationZh": "陪產假",
+      "explanationZh": "父親在子女出生後可請的假別。"
+    },
+    {
+      "original": "Maternal depressive symptoms",
+      "translationZh": "母親憂鬱症狀",
+      "explanationZh": "母親在產後經驗到的憂鬱相關症狀。"
+    },
+    {
+      "original": "Paternal involvement",
+      "translationZh": "父親參與",
+      "explanationZh": "父親在照顧與家務等四個面向的參與程度。"
+    },
+    {
+      "original": "Coparenting",
+      "translationZh": "共同親職",
+      "explanationZh": "父母雙方共同參與及分工教養子女的歷程。"
+    },
+    {
+      "original": "Longitudinal study",
+      "translationZh": "縱貫性研究",
+      "explanationZh": "在不同時間點對相同對象進行追蹤的研究設計。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpubh.2026.1891071",
+  "doi": "10.3389/fpubh.2026.1891071",
+  "doiUrl": "https://doi.org/10.3389/fpubh.2026.1891071",
+  "openAccessUrl": "https://www.frontiersin.org/journals/public-health/articles/10.3389/fpubh.2026.1891071/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

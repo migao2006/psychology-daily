@@ -1,0 +1,72 @@
+{
+  "id": "10-1007-s11162-026-09921-6",
+  "titleZh": "女性在學術發展路徑中的流失點在哪裡？來自日本十年國家數據的證據",
+  "titleOriginal": "Where Do Women Exit the Academic Pipeline?: Evidence from a Decade of National Data in Japan",
+  "authors": [
+    "Mayumi Saegusa"
+  ],
+  "journalOrRepository": "Research in Higher Education",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "女性在學術生涯的哪一個階段以及在何種程度上退出學術職涯？",
+  "backgroundZh": "全球學術界的性別不平等依然存在，但關於女性退出學術職涯的具體位置、階段與程度，實證證據仍然有限。",
+  "methodsZh": "使用日本2014至2023年間為期十年的全面性國家數據集，針對六個學科領域與四個學術職級進行系統層級的性別流失分析，區分潛在母體、申請者母體與錄用結果，藉此將申請階段的過程與錄用階段的結果分開。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": "日本"
+  },
+  "mainFindingsZh": [
+    "申請階段是女性學術職涯中的主要瓶頸，女性代表性不足主要是因為許多符合資格的女性未申請學術職位，而非在選拔點處於劣勢。",
+    "一旦提出申請，錄用結果通常保持中立或對女性有利，其中講師層級的招募顯示出積極介入的證據。",
+    "職級層級分析顯示，女性的流失在職涯初期特別明顯，並在大多數領域的中期與資深職涯階段持續發生。",
+    "學科層級分析凸顯出流失發生方式與時機的顯著異質性。"
+  ],
+  "limitationsZh": [
+    "數據來自單一國家日本，其外部效度可能受限於特定的國家脈絡。",
+    "部分分析可能受限於可用數據的範圍。"
+  ],
+  "practicalMeaningZh": "本研究強調收集詳細申請者流動數據的政策相關性，並指出針對特定階段與學科的介入措施對於解決學術界持續存在的性別差距至關重要。",
+  "cautionZh": "根據研究設計推論。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，且本分析僅依據文章摘要，無法排除相關性不等於因果關係，樣本代表性亦受限，仍需更多研究進一步證實。",
+  "keyTerms": [
+    {
+      "original": "Academic Pipeline",
+      "translationZh": "學術發展路徑",
+      "explanationZh": "指個人從進入學術訓練到各個學術職級晉升的發展過程。"
+    },
+    {
+      "original": "Gendered Attrition",
+      "translationZh": "性別化流失",
+      "explanationZh": "指不同性別在學術生涯各階段中離開職涯的現象與模式。"
+    },
+    {
+      "original": "Applicant Pool",
+      "translationZh": "申請者母體",
+      "explanationZh": "指實際提出學術職位申請的人群範圍。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1007/s11162-026-09921-6",
+  "doi": "10.1007/s11162-026-09921-6",
+  "doiUrl": "https://doi.org/10.1007/s11162-026-09921-6",
+  "openAccessUrl": "https://link.springer.com/content/pdf/10.1007/s11162-026-09921-6.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

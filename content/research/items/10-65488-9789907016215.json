@@ -1,0 +1,75 @@
+{
+  "id": "10-65488-9789907016215",
+  "titleZh": "神經多樣性與外語英語教學",
+  "titleOriginal": "NEURODIVERSITY AND THE TEACHING OF ENGLISH AS A FOREIGN LANGUAGE",
+  "authors": [
+    "Diego Josué Nieto Herrera",
+    "Lister Antonio Ramos Saltos",
+    "Lady Viviana Quintuña Barrera",
+    "Margarita Elisa Montero Bastidas",
+    "Jefferson Alberto Sánchez Paguay"
+  ],
+  "journalOrRepository": "OpenAlex",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "如何建立概念、教學與法律框架，以協助厄瓜多高等教育中的大學英語作為外語（EFL）教師，以學術嚴謹度和真正的包容性回應神經多樣性學生的存在？",
+  "backgroundZh": "這本書探討了厄瓜多高等教育中一個被系統性忽略的現實：大學英語作為外語課程中存在著統計上不可避免的神經多樣性學生，包括注意力不足過動症、閱讀障礙和自閉症類群障礙。此研究以神經多樣性典範為基礎，將神經差異視為自然的人類差異而非缺陷。",
+  "methodsZh": "透過分析各病症的神經生物學基礎、轉化為差異化技能對應狀況、實證為基礎的策略與評量選項，並在前四章後整合通用學習設計（UDL）框架、重新設計評量以確保效度、公平性與無障礙性，最後以三個厄瓜多綜合案例研究及專業發展計畫作結，並提供二十二種可直接使用且無需額外資源的工具。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "建立了能讓英語作為外語教師以學術嚴謹度與真正包容性回應神經多樣性的概念、教學與法律框架。",
+    "前四章分析了注意力不足過動症、閱讀障礙和自閉症類群障礙的神經生物學基礎，並轉化為實證策略與評量選項。",
+    "第五章將相關內容整合至通用學習設計框架中，第六章則重新設計評量以提升效度、公平性與無障礙性。",
+    "提供了三個厄瓜多綜合案例研究、一個專業發展計畫以及二十二種無需額外資源即可應用的現成工具。"
+  ],
+  "limitationsZh": [
+    "僅依據現有文獻與案例研究進行概念與教學框架建構，未進行實地大型實驗。"
+  ],
+  "practicalMeaningZh": "為英語作為外語教師提供具體可行的教學策略、評量選項與現成工具，以增進對神經多樣性學生的包容與教學品質。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態為未知，本內容僅依摘要，不得將相關推論為因果，樣本與地點資訊不足，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Neurodiversity",
+      "translationZh": "神經多樣性",
+      "explanationZh": "將神經學上的變異視為自然的人類差異而非缺陷的典範。"
+    },
+    {
+      "original": "EFL",
+      "translationZh": "外語英語教學",
+      "explanationZh": "英語作為外語的教學課程。"
+    },
+    {
+      "original": "UDL",
+      "translationZh": "通用學習設計",
+      "explanationZh": "旨在提供所有人平等學習機會的教學設計框架。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.65488/9789907016215",
+  "doi": "10.65488/9789907016215",
+  "doiUrl": "https://doi.org/10.65488/9789907016215",
+  "openAccessUrl": "https://libros.revistaricac.com/index.php/home/catalog/download/21/28/135",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "id": "10-3390-ejihpe16070104",
+  "titleZh": "結語社論：主觀時間——認知、情感與超越",
+  "titleOriginal": "Closing Editorial: Subjective Time—Cognition, Emotion and Beyond",
+  "authors": [
+    "Quentin Hallez",
+    "Sandrine Gil"
+  ],
+  "journalOrRepository": "European Journal of Investigation in Health, Psychology and Education",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "認知心理學",
+  "researchQuestionZh": "探討主觀時間在心理科學中作為認知與情感研究對象的角色與範疇。",
+  "backgroundZh": "時間對心理科學而言是一個特殊的研究對象，涉及認知、情感以及更多相關層面。",
+  "methodsZh": "採用結語社論的形式進行論述。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "主觀時間是心理科學中一個獨特且重要的研究對象。",
+    "研究範疇涵蓋了認知、情感及相關的擴展領域。"
+  ],
+  "limitationsZh": [
+    "本研究為結語社論性質，未提供實證數據。"
+  ],
+  "practicalMeaningZh": "為理解主觀時間在心理與教育領域的相關研究提供宏觀視野。",
+  "cautionZh": "根據研究設計推論。同儕審查狀態為未知，本內容僅依摘要，不得推論因果關係，樣本限制為無實證樣本，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Subjective Time",
+      "translationZh": "主觀時間",
+      "explanationZh": "個體對時間流逝與長度的心理感受與認知。"
+    },
+    {
+      "original": "Cognition",
+      "translationZh": "認知",
+      "explanationZh": "涉及思考、記憶與知覺等心理歷程。"
+    },
+    {
+      "original": "Emotion",
+      "translationZh": "情感",
+      "explanationZh": "個體的情緒體驗與感受。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3390/ejihpe16070104",
+  "doi": "10.3390/ejihpe16070104",
+  "doiUrl": "https://doi.org/10.3390/ejihpe16070104",
+  "openAccessUrl": "https://www.mdpi.com/2254-9625/16/7/104/pdf?version=1784604490",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

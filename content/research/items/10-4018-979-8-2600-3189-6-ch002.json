@@ -1,0 +1,69 @@
+{
+  "id": "10-4018-979-8-2600-3189-6-ch002",
+  "titleZh": "為永續生產力與投入發展組織心理學框架",
+  "titleOriginal": "Developing an Organisational Psychological Framework for Sustainable Productivity and Engagement",
+  "authors": [
+    "V. Bharathi Kannamma",
+    "R. Madhangi",
+    "M. K. Durgamani",
+    "R. Swaminathan"
+  ],
+  "journalOrRepository": "Organizational Psychology, Leadership, and Sustainable Performance",
+  "publicationDate": "2026-07-22",
+  "language": "ng",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "應用心理學框架如何透過連結個人、團隊與組織特質至績效成果，來提升組織中的生產力、投入度與員工動機，並影響員工行為與組織效能？",
+  "backgroundZh": "本研究專注於應用心理學及其在組織中提升生產力、投入度與員工動機的方式，並利用工作要求－資源模型與自我決定理論等心理學模型來探討相關框架如何影響員工行為與組織效能。",
+  "methodsZh": "本研究採用探討應用心理學框架的方式，運用工作要求－資源模型與自我決定理論等心理學模型，分析個人、團隊與組織特質對績效成果的連結，以及其對員工行為與組織效能的影響。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "綜合性的組織心理學框架將個人、團隊與組織特質的成就與績效成果連結起來。",
+    "運用工作要求－資源模型與自我決定理論等心理學模型，探討框架如何影響員工行為與組織效能。",
+    "投入、福祉與動機變數共同促進了組織內能留任員工且具長期性的創新。",
+    "將心理學實務與競爭成果相連結，使應用心理學成為在動態企業環境中獲得長期競爭優勢的工具。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究未提供具體的樣本數、研究對象族群與研究地點資訊。"
+  ],
+  "practicalMeaningZh": "本研究提出的組織心理學框架可作為組織在動態企業環境中獲得長期競爭優勢的工具，有助於透過心理學實務連結競爭成果，進而提升生產力、員工投入、動機與創新留任。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依據摘要推論，基於研究設計不得將相關性直接解讀為因果關係，且缺乏具體樣本資訊，仍需更多研究予以證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Job Demands – Resource model",
+      "translationZh": "工作要求－資源模型",
+      "explanationZh": "探討工作中的要求與資源如何影響員工身心壓力與動機的心理學模型。"
+    },
+    {
+      "original": "Self-Determination Theory",
+      "translationZh": "自我決定理論",
+      "explanationZh": "關注人類內在動機與基本心理需求的心理學理論。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.4018/979-8-2600-3189-6.ch002",
+  "doi": "10.4018/979-8-2600-3189-6.ch002",
+  "doiUrl": "https://doi.org/10.4018/979-8-2600-3189-6.ch002",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

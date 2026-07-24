@@ -1,0 +1,68 @@
+{
+  "id": "10-12934-jkpmhn-2026-35-2-185",
+  "titleZh": "高危險妊娠住院女性之懷孕壓力與憂鬱：正念與焦慮之序列多重中介作用",
+  "titleOriginal": "Pregnancy Stress and Depression among Hospitalized Women with High-Risk Pregnancies: Serial Multiple Mediation by Mindfulness and Anxiety",
+  "authors": [
+    "Myungji Kim",
+    "Heekyung Hong",
+    "Hyunkyung Choi"
+  ],
+  "journalOrRepository": "Journal of Korean Academy of psychiatric and Mental Health Nursing",
+  "publicationDate": "2026-06-30",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "本研究旨在探討正念與焦慮在高危險妊娠住院女性之懷孕壓力與憂鬱之間的關聯中是否具有中介角色。",
+  "backgroundZh": "本研究受到壓力與因應交易模型的指引，探討高危險妊娠住院女性的心理健康狀況。",
+  "methodsZh": "採用橫斷式描述性設計，使用 IBM SPSS 27.0 與 Hayes 的 PROCESS 巨集（版本 4.2）進行資料分析。",
+  "sample": {
+    "size": 109,
+    "populationZh": "高危險妊娠住院女性",
+    "locationZh": "韓國母胎加護病房"
+  },
+  "mainFindingsZh": [
+    "根據研究設計推論，在高危險妊娠住院女性中，懷孕壓力與憂鬱之間存在顯著的正念與焦慮序列多重中介效果（Effect=0.03, 95% CI=0.01 至 0.05）。",
+    "根據研究設計推論，懷孕壓力與憂鬱之間的關聯完全透過正念與焦慮的順序互動來達成中介。"
+  ],
+  "limitationsZh": [],
+  "practicalMeaningZh": "建議針對高危險妊娠住院女性在住院期間實施基於正念的壓力管理與情緒支持計畫。",
+  "cautionZh": "本研究的同儕審查狀態為未知，本內容僅依摘要，基於橫斷式研究設計無法推論因果關係，樣本僅包含韓國特定加護病房之 109 名高危險妊娠女性且具侷限性，仍需更多研究來進一步確認。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "High-Risk Pregnancies",
+      "translationZh": "高危險妊娠",
+      "explanationZh": "指具有較高併發症風險的懷孕狀況。"
+    },
+    {
+      "original": "Mindfulness",
+      "translationZh": "正念",
+      "explanationZh": "一種有意識地將注意力集中於當下且不加評判的覺察狀態。"
+    },
+    {
+      "original": "Serial Multiple Mediation",
+      "translationZh": "序列多重中介",
+      "explanationZh": "指多個中介變項以特定順序串聯並傳遞自變項對依變項影響的統計模型。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.12934/jkpmhn.2026.35.2.185",
+  "doi": "10.12934/jkpmhn.2026.35.2.185",
+  "doiUrl": "https://doi.org/10.12934/jkpmhn.2026.35.2.185",
+  "openAccessUrl": "https://www.jkpmhn.org/upload/pdf/jkpmhn-2026-35-2-185.pdf",
+  "sourceApis": [
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

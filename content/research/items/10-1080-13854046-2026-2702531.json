@@ -1,0 +1,68 @@
+{
+  "id": "10-1080-13854046-2026-2702531",
+  "titleZh": "結構化偽裝症狀量表（SIMS）在檢測高齡成人假裝認知障礙方面的診斷效用",
+  "titleOriginal": "Diagnostic utility of the Structured Inventory of Malingered Symptomatology (SIMS) in detecting feigned cognitive impairment in older adults",
+  "authors": [
+    "Marie Kompasova",
+    "Lenka Kramska",
+    "Ales Bartos"
+  ],
+  "journalOrRepository": "The Clinical Neuropsychologist",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "評估結構化偽裝症狀量表（SIMS）在檢測高齡成人假裝認知障礙（透過自我報告的認知與神經症狀）方面的診斷效用。",
+  "backgroundZh": "本研究旨在探討如何透過自我報告的認知與神經症狀，使用結構化偽裝症狀量表來檢測高齡成人中的假裝認知障礙。",
+  "methodsZh": "本研究使用結構化偽裝症狀量表（SIMS）作為主要研究工具。認知表現使用RBANS與MoCA進行評估，情緒狀態與功能能力則使用GDS-15、BAI與FAQ進行測量。",
+  "sample": {
+    "size": 172,
+    "populationZh": "56名認知障礙患者（包含33名MCI患者與23名失智症患者）、54名作為模擬組的健康老年自願者，以及62名健康老年誠實作答者",
+    "locationZh": "捷克共和國布拉格皇家維諾赫拉迪大學醫院"
+  },
+  "mainFindingsZh": [
+    "SIMS總分在建議的截斷分數 > 20 時，產生了 100% 的敏感度與特異度。",
+    "AM 量表的截斷分數 > 7 時，敏感度達到 89%，特異度達到 98%。",
+    "NI 量表的截斷分數 > 6 時，達到了 87% 的敏感度與 96% 的特異度。",
+    "這些量表的 AUC 值均超過 .959。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究未提及其他潛在限制。"
+  ],
+  "practicalMeaningZh": "調整後的標準將能最小化偽陽性結果的風險，同時擴大 SIMS 在臨床與法醫環境中的潛在應用。",
+  "cautionZh": "本同儕審查狀態為未知，本內容僅依摘要，基於研究設計推論無法直接推導絕對因果關係，樣本數為172名且受限於特定醫院族群，仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Structured Inventory of Malingered Symptomatology (SIMS)",
+      "translationZh": "結構化偽裝症狀量表",
+      "explanationZh": "本研究中用以檢測假裝認知障礙的主要研究工具。"
+    },
+    {
+      "original": "feigned cognitive impairment",
+      "translationZh": "假裝認知障礙",
+      "explanationZh": "研究中欲檢測之自我報告認知與神經症狀的狀況。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1080/13854046.2026.2702531",
+  "doi": "10.1080/13854046.2026.2702531",
+  "doiUrl": "https://doi.org/10.1080/13854046.2026.2702531",
+  "openAccessUrl": "https://www.tandfonline.com/doi/pdf/10.1080/13854046.2026.2702531?needAccess=true",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,76 @@
+{
+  "id": "10-1145-3816046-3816301",
+  "titleZh": "介面之後：對話式AI時代中人類能動性的重新定位",
+  "titleOriginal": "After the Interface: Relocating Human Agency in the Age of Conversational AI",
+  "authors": [
+    "Mengke Wu",
+    "Mike Yao"
+  ],
+  "journalOrRepository": "Proceedings of the 8th ACM Conference on Conversational User Interfaces",
+  "publicationDate": "2026-07-21",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "隨著AI系統具備更大自主性，人機互動中的人類能動性究竟是消退了，還是轉移了？",
+  "backgroundZh": "隨著AI系統承擔更多自主性，人機互動社群產生了一種隱秘的焦慮，認為人類能動性正在侵蝕，使用者不再掌控執行，介面退場，機器在做決定。本研究認為這種焦慮反映的是框架問題而非實證發現，能動性並未減少而是重新定位了。",
+  "methodsZh": "透過重新檢視控制作為診斷鏡頭，區分過程控制與結果控制，並將不同系統在此空間中進行映射，以探討人機互動中能動性的轉移。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "人類能動性並未消失，而是從介面功能轉移到互動本身，包含闡述目標、評估輸出以及協商結果。",
+    "表面上看起來能動性的消失，實際上是能動性的重新分配。",
+    "基於結果的能動性在產生貌似合理但無法驗證的輸出的系統中可能是幻覺，這揭示了人機互動中能動性的真正需求。"
+  ],
+  "limitationsZh": [
+    "本研究為理論性探討，未包含實證資料與具體樣本。"
+  ],
+  "practicalMeaningZh": "本研究邀請人機互動社群重新思考能動性的意義、所在之處及其要求，包含誰能擁有能動性以及當其失敗時誰該承擔責任。",
+  "cautionZh": "根據研究設計推論，本同儕審查狀態為未知，本內容僅依摘要，不得將相關改寫成因果，且無具體樣本。仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Human agency",
+      "translationZh": "人類能動性",
+      "explanationZh": "指人類採取行動、自主做決定並對結果負責的能力。"
+    },
+    {
+      "original": "Conversational AI",
+      "translationZh": "對話式AI",
+      "explanationZh": "指透過自然語言與使用者互動的AI系統。"
+    },
+    {
+      "original": "Process control",
+      "translationZh": "過程控制",
+      "explanationZh": "指對互動執行過程的掌控。"
+    },
+    {
+      "original": "Outcome control",
+      "translationZh": "結果控制",
+      "explanationZh": "指對互動最終產出與結果的掌控。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1145/3816046.3816301",
+  "doi": "10.1145/3816046.3816301",
+  "doiUrl": "https://doi.org/10.1145/3816046.3816301",
+  "openAccessUrl": "https://arxiv.org/pdf/2605.15064",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

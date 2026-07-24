@@ -1,0 +1,71 @@
+{
+  "id": "10-3389-fpsyg-2026-1887747",
+  "titleZh": "大腦狀況中的預測處理具身化：精確度的角色",
+  "titleOriginal": "The predictive processing embodied in brain conditions: the role of precision",
+  "authors": [
+    "A. B. Lao-Rodríguez",
+    "S. Cacciato-Salcedo",
+    "M. S. Malmierca"
+  ],
+  "journalOrRepository": "Frontiers in Psychology",
+  "publicationDate": "2026-07-22",
+  "language": "unknown",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "精確度加權在預測編碼理論中扮演什麼角色，以及神經調節系統如何影響心理與精神病理現象？",
+  "backgroundZh": "預測編碼理論提出大腦透過階層式推論持續最小化預測誤差，而越來越多證據顯示其解釋力取決於預測生成與精確度加權。",
+  "methodsZh": "採用理論探討與文獻綜合的方式，探討預測編碼理論、精確度加權、神經調節系統與精神病理學之間的關聯。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "心理與精神現象可能源自於適應不良的精確度分配，進而導致顯著性歸因改變、推論扭曲與行為反應缺乏彈性。",
+    "神經調節系統被認為是這些過程的關鍵生物基礎，能調節各皮質階層中預測誤差的增益。"
+  ],
+  "limitationsZh": [
+    "未提供明確的樣本數與實證數據。"
+  ],
+  "practicalMeaningZh": "本研究有助於從預測處理與神經調節的視角來理解心理病理學。",
+  "cautionZh": "根據研究設計推論，本研究狀態為同儕審查狀態未知，本內容僅依摘要，不得直接推論因果關係，缺乏具體樣本限制，且仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "predictive coding theory",
+      "translationZh": "預測編碼理論",
+      "explanationZh": "提出大腦透過階層式推論持續最小化預測誤差的理論。"
+    },
+    {
+      "original": "precision weighting",
+      "translationZh": "精確度加權",
+      "explanationZh": "大腦估計感官、內感官與情境信號可靠性的過程。"
+    },
+    {
+      "original": "neuromodulatory systems",
+      "translationZh": "神經調節系統",
+      "explanationZh": "調節皮質階層中預測誤差增益的關鍵生物基礎。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.3389/fpsyg.2026.1887747",
+  "doi": "10.3389/fpsyg.2026.1887747",
+  "doiUrl": "https://doi.org/10.3389/fpsyg.2026.1887747",
+  "openAccessUrl": "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2026.1887747/pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

@@ -1,0 +1,85 @@
+{
+  "id": "10-1371-journal-pone-0351308",
+  "titleZh": "人類內源性反轉錄病毒在具圍產期憂鬱症病史母親及其後代神經發展障礙風險中的新興角色：一項先導研究結果",
+  "titleOriginal": "Emerging role of human endogenous retroviruses in mothers with history of perinatal depression and risk of neurodevelopmental disorders in offspring: Results from a pilot study",
+  "authors": [
+    "Chiara Cipriani",
+    "Martina Siracusano",
+    "Martina Giudice",
+    "Vita Petrone",
+    "Assia Riccioni",
+    "Elisa Carloni",
+    "Ilaria Adulti",
+    "Irene Sferra",
+    "Martino Tony Miele",
+    "Marialaura Ferrara",
+    "Enrico Garaci",
+    "Claudia Matteucci",
+    "Paola Sinibaldi-Vallebona",
+    "Cinzia Niolu",
+    "Luigi Mazzone",
+    "Emanuela Balestrieri"
+  ],
+  "journalOrRepository": "PLOS One",
+  "publicationDate": "2026-07-21",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "本研究旨在探討具圍產期憂鬱症病史的母親與無此病史的母親，及其各自依據自閉症光譜症候群診斷分層的兒童，其周邊血單核細胞中不同人類內源性反轉錄病毒與特定細胞激素的表現譜。",
+  "backgroundZh": "圍產期憂鬱症影響了百分之十至十五的孕婦，被認為可能與後代神經發展障礙特別是自閉症光譜症候群的病因有關。科學證據支持人類內源性反轉錄病毒在自閉症中的角色，作為環境刺激、表觀遺傳重塑與生物過程之間的連結。",
+  "methodsZh": "使用即時聚合酶鏈鎖反應，分析具圍產期憂鬱症病史的母親、無圍產期憂鬱症病史的母親及其各自兒童之周邊血單核細胞中不同人類內源性反轉錄病毒與特定細胞激素的表現譜，並使用漢密頓憂鬱量表評估母親。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "自閉症兒童及其圍產期憂鬱症母親共享異常的 pHERV-W、syncytin-2 與 IL-6 表現。",
+    "具圍產期憂鬱症病史的母親其 pHERV-W 水平與漢密頓憂鬱量表評估結果呈現正相關。"
+  ],
+  "limitationsZh": [
+    "本研究為先導研究，原文摘要未提供明確的樣本數。",
+    "根據研究設計推論，本研究僅能指出相關性，無法確定因果關係。"
+  ],
+  "practicalMeaningZh": "圍產期憂鬱症與人類內源性反轉錄病毒活性改變相關，可被視為自閉症發病機制中的一項額外風險因子，增強了自閉症背景下母子關聯的觀點。",
+  "cautionZh": "同儕審查狀態為未知，本內容僅依摘要編寫。根據研究設計推論，研究結果僅顯示相關性而非因果關係。樣本大小與族群資訊未明。本研究仍需更多研究來證實。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "Perinatal depression",
+      "translationZh": "圍產期憂鬱症",
+      "explanationZh": "發生在懷孕期間或產後不久的憂鬱症。"
+    },
+    {
+      "original": "Human Endogenous Retroviruses",
+      "translationZh": "人類內源性反轉錄病毒",
+      "explanationZh": "整合到人類基因組中的古老反轉錄病毒序列。"
+    },
+    {
+      "original": "Autism Spectrum Disorder",
+      "translationZh": "自閉症光譜症候群",
+      "explanationZh": "影響社交溝通與行為的神經發展障礙。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1371/journal.pone.0351308",
+  "doi": "10.1371/journal.pone.0351308",
+  "doiUrl": "https://doi.org/10.1371/journal.pone.0351308",
+  "openAccessUrl": "https://journals.plos.org/plosone/article/file?id=10.1371/journal.pone.0351308&type=printable",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

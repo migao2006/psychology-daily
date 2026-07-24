@@ -1,0 +1,77 @@
+{
+  "id": "10-1038-s41598-026-63308-2",
+  "titleZh": "解構卵巢荷爾蒙在女性樣本中對擔憂與錯誤相關大腦活動關聯的個體間與個體內效應",
+  "titleOriginal": "Disaggregating between- and within- person effects of ovarian hormones on the association between worry and error-related brain activity in a female sample",
+  "authors": [
+    "Courtney C. Louis",
+    "Lilianne M. Gloe",
+    "Darwin A. Guevarra",
+    "Kelly L. Klump",
+    "Teona Velehorschi",
+    "Ashley Hayden",
+    "Jason S. Moser"
+  ],
+  "journalOrRepository": "Scientific Reports",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "卵巢荷爾蒙（雌二醇與黃體素）在月經週期中如何調節女性擔憂與錯誤相關負波（ERN）之間的關聯？",
+  "backgroundZh": "擔憂在女性群體中與增加的錯誤監控有關，並以較大的錯誤相關負波（ERN）作為指標。儘管雌二醇和黃體素會影響焦慮及參與錯誤監控的神經區域，但很少有研究檢驗它們在擔憂與ERN關聯中的角色。",
+  "methodsZh": "參與者在完整的一個月經週期中，每天提供唾液樣本並完成賓州大學擔憂問卷。參與者出席最多四次實體實驗室訪問，期間在記錄腦電圖（EEG）的同時完成Flanker任務。",
+  "sample": {
+    "size": 132,
+    "populationZh": "女性",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "雌二醇與擔憂之間出現顯現顯著交互作用，對於雌二醇水平較低者，擔憂與擴大的ERN有關。",
+    "黃體素與擔憂之間則出現方向相反的顯著交互作用，平均黃體素高者其較高的平均擔憂與擴大的ERN有關。",
+    "擔憂、雌二醇和黃體素的個體內變化對ERN未出現顯著效應。"
+  ],
+  "limitationsZh": [
+    "僅檢驗了女性樣本",
+    "未觀察到個體內變化的顯著效應"
+  ],
+  "practicalMeaningZh": "突顯了在更大的神經認知框架內理解擔憂與ERN關聯的關鍵需求，有助於釐清擔憂的影響何時以及對哪些人更具損害性。",
+  "cautionZh": "根據研究設計推論，本研究為相關性設計，無法建立因果關係。樣本僅限於女性。同儕審查狀態未知，本內容僅依摘要。仍需更多研究。本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。",
+  "keyTerms": [
+    {
+      "original": "error-related negativity (ERN)",
+      "translationZh": "錯誤相關負波",
+      "explanationZh": "用作錯誤監控指標的大腦活動電生理訊號。"
+    },
+    {
+      "original": "estradiol",
+      "translationZh": "雌二醇",
+      "explanationZh": "一種卵巢荷爾蒙。"
+    },
+    {
+      "original": "progesterone",
+      "translationZh": "黃體素",
+      "explanationZh": "一種卵巢荷爾蒙。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1038/s41598-026-63308-2",
+  "doi": "10.1038/s41598-026-63308-2",
+  "doiUrl": "https://doi.org/10.1038/s41598-026-63308-2",
+  "openAccessUrl": "https://www.nature.com/articles/s41598-026-63308-2_reference.pdf",
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

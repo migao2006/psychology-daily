@@ -1,0 +1,85 @@
+{
+  "id": "10-1177-13591053261417464",
+  "titleZh": "瑜伽練習量與應對、壓力、憂鬱及焦慮之關聯是否受將瑜伽精神應用於日常生活中所調節？",
+  "titleOriginal": "Does taking yoga “off the mat” moderate associations between amount of yoga practice and coping, stress, depression, and anxiety?",
+  "authors": [
+    "Sarah E. Ahmadi",
+    "Crystal L. Park",
+    "Lauren M. Carney"
+  ],
+  "journalOrRepository": "Journal of Health Psychology",
+  "publicationDate": "2026-02-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "cross_sectional",
+  "psychologyCategory": "心理健康",
+  "researchQuestionZh": "探討瑜伽練習量與應對、壓力、憂鬱及焦慮的關聯是否受到將瑜伽精神應用於日常生活所調節。",
+  "backgroundZh": "關於瑜伽練習在日常生活中的角色，例如練習量如何與福祉相關，或者練習者如何將瑜伽精神應用於日常生活中，仍有許多疑問。",
+  "methodsZh": "對瑜伽練習者進行問卷調查，內容涵蓋瑜伽練習情況、將瑜伽帶入日常生活的程度、知覺應對能力、壓力、憂鬱與焦慮，並透過迴歸模型檢視瑜伽練習量、將瑜伽帶入日常生活及其互動對這些結果的影響。",
+  "sample": {
+    "size": null,
+    "populationZh": "瑜伽練習者",
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "瑜伽練習量與將瑜伽帶入日常生活在預測壓力與憂鬱上具有互動效果。",
+    "在瑜伽練習量較多的情況下，將瑜伽帶入日常生活程度較低或平均者，會經歷較高的壓力與憂鬱。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，這些發現具相關性，無法直接推導出因果關係。"
+  ],
+  "practicalMeaningZh": "在日常生活中應用瑜伽的教導與練習，可能有助於練習者感到更有能力應對，並可能減輕瑜伽練習與壓力及憂鬱之間的負向關聯。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。同儕審查狀態未知，本分析僅依摘要進行，具因果限制與樣本限制，且仍需更多研究。",
+  "keyTerms": [
+    {
+      "original": "yoga practice",
+      "translationZh": "瑜伽練習",
+      "explanationZh": "指個人進行瑜伽練習的數量或程度。"
+    },
+    {
+      "original": "taking yoga off the mat",
+      "translationZh": "將瑜伽帶入日常生活",
+      "explanationZh": "指將瑜伽的教導與練習應用於日常生活中的程度。"
+    },
+    {
+      "original": "coping",
+      "translationZh": "應對",
+      "explanationZh": "指個體面對壓力的應對能力。"
+    },
+    {
+      "original": "stress",
+      "translationZh": "壓力",
+      "explanationZh": "指個體感受到的壓力狀態。"
+    },
+    {
+      "original": "depression",
+      "translationZh": "憂鬱",
+      "explanationZh": "指個體感受到的憂鬱情緒或症狀。"
+    },
+    {
+      "original": "anxiety",
+      "translationZh": "焦慮",
+      "explanationZh": "指個體感受到的焦慮情緒或症狀。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1177/13591053261417464",
+  "doi": "10.1177/13591053261417464",
+  "doiUrl": "https://doi.org/10.1177/13591053261417464",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}

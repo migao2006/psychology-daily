@@ -1,0 +1,71 @@
+{
+  "id": "10-1201-9781003500025-9",
+  "titleZh": "肥胖及其對大腦健康的影響",
+  "titleOriginal": "Obesity and Its Impact on Brain Health",
+  "authors": [
+    "Irma Wati Ngadimon",
+    "Alina Arulsamy"
+  ],
+  "journalOrRepository": "Neurological Disorders",
+  "publicationDate": "2026-07-22",
+  "language": "en",
+  "publicationStatus": "unknown",
+  "studyType": "other",
+  "psychologyCategory": "神經科學",
+  "researchQuestionZh": "肥胖如何透過各種機制影響大腦健康，並與神經退化性疾病及心理健康問題產生關聯？",
+  "backgroundZh": "肥胖是眾多神經退化性疾病的重要風險因子，會透過多種路徑損害神經功能。",
+  "methodsZh": "結合近期研究與臨床觀察進行探討。",
+  "sample": {
+    "size": null,
+    "populationZh": null,
+    "locationZh": null
+  },
+  "mainFindingsZh": [
+    "肥胖透過慢性發炎、胰島素阻抗、氧化壓力、血腦屏障破壞與腸腦軸干擾等路徑損害神經功能。",
+    "相關機制與認知衰退、阿茲海默症、帕金森氏症以及焦慮和憂鬱等心理健康問題有關聯。",
+    "研究強調需要針對肥胖的神經影響採取標靶介入措施，並為緩解這些影響提供新的治療策略方向。"
+  ],
+  "limitationsZh": [
+    "根據研究設計推論，本研究為文獻與臨床觀察探討，未提供具體樣本數與詳細研究設計數據。"
+  ],
+  "practicalMeaningZh": "有助於理解肥胖對神經系統的影響，並為未來的治療策略與標靶介入提供新的方向。",
+  "cautionZh": "本內容為心理學教育與研究摘要，不構成醫療、心理治療或診斷建議。本研究的同儕審查狀態為未知，且此分析僅依據現有摘要內容。根據研究設計推論，相關發現僅代表關聯性，未能確立因果關係。樣本數、族群與地點皆未明列，且仍需更多研究來證實相關機制與介入效果。",
+  "keyTerms": [
+    {
+      "original": "Obesity",
+      "translationZh": "肥胖",
+      "explanationZh": "作為神經退化與大腦健康風險因子的身體狀態。"
+    },
+    {
+      "original": "Neurodegenerative conditions",
+      "translationZh": "神經退化性疾病",
+      "explanationZh": "包含阿茲海默症與帕金森氏症等大腦功能退化相關疾病。"
+    },
+    {
+      "original": "Gut-brain axis",
+      "translationZh": "腸腦軸",
+      "explanationZh": "腸道與大腦之間的雙向溝通系統，其干擾與神經功能受損有關。"
+    }
+  ],
+  "originalUrl": "https://doi.org/10.1201/9781003500025-9",
+  "doi": "10.1201/9781003500025-9",
+  "doiUrl": "https://doi.org/10.1201/9781003500025-9",
+  "openAccessUrl": null,
+  "sourceApis": [
+    "OpenAlex",
+    "Crossref",
+    "Unpaywall"
+  ],
+  "retrievedAt": "2026-07-24T04:13:05.435Z",
+  "summaryBasis": "abstract",
+  "aiGenerated": true,
+  "aiProvider": "gemini",
+  "aiModel": "gemini-3.5-flash-lite",
+  "metadataVerification": {
+    "titleVerified": true,
+    "authorsVerified": true,
+    "dateVerified": true,
+    "doiVerified": true,
+    "urlVerified": true
+  }
+}
